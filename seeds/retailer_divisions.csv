@@ -1,0 +1,46 @@
+division_id,retailer_id,retailer_name,banner_division,banner_region,states_covered,dmas_covered,division_acv_share_pct,notes
+WMT-S,WMT,Walmart,Walmart Division 1 - South,Walmart South,"LA;MS;AL;AR;TN;GA",LA-DMA;MS-DMA;AL-DMA;AR-DMA;ATL,18,Hit hardest by Sept 2025 cereal modular reset; LA decline epicenter
+WMT-SW,WMT,Walmart,Walmart Division 2 - Southwest,Walmart Southwest,"TX;OK;NM",DAL;HOU;OK-DMA,16,Houston DC services this division; Hurricane Tonya supply impact
+WMT-MW,WMT,Walmart,Walmart Division 3 - Midwest,Walmart Midwest,"IL;IN;OH;MI;MO;KS;IA;MN;WI",CHI;DET;MIN;CIN;STL;KAN;CLE;IND,22,Crunchwell home turf; reset less aggressive
+WMT-NE,WMT,Walmart,Walmart Division 4 - Northeast,Walmart Northeast,"NY;NJ;PA;MD;MA;CT",NYC;BOS;PHL;PIT;BAL;WAS,20,Crunchwell under-indexed
+WMT-W,WMT,Walmart,Walmart Division 5 - West,Walmart West,"CA;WA;OR;AZ;CO;NV;UT",LAX;SEA;PHX;DEN;SFO;PDX,24,RootDay strongest; reset neutral
+KR-CIN,KR,Kroger,Kroger Cincinnati,Kroger Midwest,"OH;KY;IN;TN",CIN;CLE;IND,8,Kroger HQ division; Acme cat captain status
+KR-COL,KR,Kroger,Kroger Columbus,Kroger Midwest,"OH",CLE;CIN,6,Crunchwell strong
+KR-ATL,KR,Kroger,Kroger Atlanta,Kroger Southeast,"GA;AL;SC;NC",ATL;AL-DMA,9,Marcus's home base division
+KR-DAL,KR,Kroger,Kroger Dallas,Kroger Southwest,"TX",DAL,7,Texas competitive vs H-E-B
+KR-HOU,KR,Kroger,Kroger Houston,Kroger Southwest,"TX;LA-extreme-w",HOU,5,Smaller TX division
+KR-MA,KR,Kroger,Kroger Mid-Atlantic,Kroger Mid-Atlantic,"VA;WV;NC",WAS;BAL,7,Mid index
+KR-MTN,KR,Kroger,Kroger Mountain,Kroger West,"CO;UT;WY",DEN,5,
+KR-NSH,KR,Kroger,Kroger Nashville,Kroger Southeast,"TN;KY;AL",ATL,5,
+KR-DEL,KR,Kroger,Kroger Delta,Kroger South,"TN;MS;AR;LA",MS-DMA;AR-DMA;LA-DMA,6,Limited LA presence; Rouses dominates
+KR-MAR,KR,Kroger,Kroger Mariano's,Kroger Midwest,"IL",CHI,4,Premium banner in Chicago metro
+KR-FM,KR,Kroger,Kroger Fred Meyer,Kroger West,"OR;WA;ID;AK",PDX;SEA,8,Hypermarket format
+KR-SMI,KR,Kroger,Kroger Smith's,Kroger West,"NV;UT;NM;AZ",PHX,5,
+KR-RAL,KR,Kroger,Kroger Ralphs,Kroger West,"CA",LAX;SFO,9,LA / SoCal focus
+KR-KS,KR,Kroger,Kroger King Soopers,Kroger Mountain,"CO;NM",DEN,5,Denver metro
+TGT-E,TGT,Target,Target Eastern,Target East,"NY;NJ;PA;MA;MD;FL;GA;NC;VA",NYC;BOS;PHL;ATL;MIA;ORL;BAL;WAS,38,ProteinPeak hero; Roundel media partner
+TGT-C,TGT,Target,Target Central,Target Central,"IL;OH;MI;TX;MN;IN;MO;TN;CO",CHI;DET;DAL;HOU;MIN;CIN;STL;KAN;DEN,34,Crunchwell mid index
+TGT-W,TGT,Target,Target Western,Target West,"CA;WA;OR;AZ;NV",LAX;SFO;SEA;PDX;PHX,28,Wellness skew; ProteinPeak strongest
+ALB-SW,ALB,Albertsons,Albertsons Southwest,Albertsons Southwest,"AZ;NM;TX",PHX;DAL,18,Acme limited; PL strong
+ALB-NW,ALB,Albertsons,Albertsons Northwest,Albertsons Northwest,"WA;OR;ID;MT",SEA;PDX,16,Safeway banner stronghold
+ALB-NCA,ALB,Albertsons,Albertsons Northern California,Albertsons West,"CA-N",SFO,15,Safeway+Lucky banners
+ALB-SCA,ALB,Albertsons,Albertsons Southern,Albertsons West,"CA-S;NV",LAX,18,Vons banner
+ALB-E,ALB,Albertsons,Albertsons Eastern,Albertsons East,"NY;NJ;PA;DC;DE;MD",NYC;PHL;WAS;BAL,20,Acme JBP partner
+ALB-INT,ALB,Albertsons,Albertsons Intermountain,Albertsons Mountain,"UT;WY;ID",DEN,13,
+HEB-STX,HEB,H-E-B,H-E-B South Texas,HEB South,"TX-S",HOU,32,San Antonio + Rio Grande Valley
+HEB-CTX,HEB,H-E-B,H-E-B Central Texas,HEB Central,"TX-C",DAL;HOU,24,Austin metro core
+HEB-HOU,HEB,H-E-B,H-E-B Houston,HEB Houston,"TX-Houston-metro",HOU,22,Hurricane Tonya impact zone
+HEB-NTX,HEB,H-E-B,H-E-B North Texas,HEB North,"TX-N",DAL,18,Newer territory; expansion
+HEB-MX,HEB,H-E-B,H-E-B Mexico,HEB Mexico,"MX-Border",N/A,4,Out of US scope; for completeness
+PUB-FL,PUB,Publix,Publix Florida,Publix Southeast,"FL",MIA;ORL,68,Florida core
+PUB-GA,PUB,Publix,Publix Georgia,Publix Southeast,"GA;SC;NC",ATL;AL-DMA,20,Strong RootDay pull
+PUB-AL,PUB,Publix,Publix Alabama,Publix Southeast,"AL;TN;VA",AL-DMA,12,
+ROU-NOLA,ROU,Rouses Markets,Rouses NOLA,Rouses Southeast,"LA-SE",LA-DMA,42,New Orleans metro core; Post promo battlefield
+ROU-BTR,ROU,Rouses Markets,Rouses Baton Rouge,Rouses Southeast,"LA-Central",LA-DMA,24,Baton Rouge metro
+ROU-LAF,ROU,Rouses Markets,Rouses Lafayette,Rouses Southeast,"LA-W",LA-DMA,20,Lafayette MSA
+ROU-ALA,ROU,Rouses Markets,Rouses Alabama Coast,Rouses Southeast,"AL-Coast;MS-Coast",MS-DMA,14,Gulf Coast extension
+COS-NE,CST,Costco,Costco Northeast,Costco East,"NY;NJ;CT;MA;PA",NYC;BOS;PHL,22,
+COS-SE,CST,Costco,Costco Southeast,Costco South,"FL;GA;NC;SC;LA",MIA;ATL;LA-DMA,18,
+COS-MW,CST,Costco,Costco Midwest,Costco Central,"IL;MI;OH;IN;MN",CHI;DET;CIN,21,
+COS-W,CST,Costco,Costco West,Costco West,"CA;WA;OR;AZ;NV;CO",LAX;SFO;SEA;PHX;DEN,29,
+COS-TX,CST,Costco,Costco Texas,Costco Southwest,"TX;OK",DAL;HOU,10,

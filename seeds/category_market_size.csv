@@ -1,0 +1,34 @@
+period,category,subcategory,geography,market_size_usd_mm,units_mm,yoy_growth_pct,acme_share_pct,notes,source
+FY2024,RTE Cereal,Total,US National,8240,2350,0.9,5.7,Crunchwell + HoneyNest + ProteinPeak,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Family Sweet,US National,2820,820,1.4,6.2,Crunchwell hero subcategory,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Family Oat,US National,1640,490,0.4,7.8,Crunchwell Original Family + GM Cheerios duopoly,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Family Wholegrain,US National,720,210,-0.8,4.9,Cereal aisle rationalization,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Kids Sweet,US National,1450,420,-1.2,5.4,HoneyNest subcategory; declining,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Wellness Protein,US National,710,180,15.4,7.1,ProteinPeak subcategory; high growth,NielsenIQ Total US xAOC
+FY2024,RTE Cereal,Single-Serve,US National,580,310,4.6,2.3,Cup formats,NielsenIQ Total US xAOC
+FY2024,Hot Cereal,Total,US National,2410,810,-0.4,4.1,MorningOats subcategory,NielsenIQ Total US xAOC
+FY2024,Hot Cereal,Instant,US National,1250,420,-1.8,3.6,Quaker dominates,NielsenIQ Total US xAOC
+FY2024,Hot Cereal,Steel-Cut,US National,420,120,2.8,1.7,Premium niche,NielsenIQ Total US xAOC
+FY2024,Hot Cereal,Single-Serve Cups,US National,510,160,5.2,6.4,MorningOats Cup hero subcategory,NielsenIQ Total US xAOC
+FY2024,Hot Cereal,Overnight,US National,98,32,18.6,4.8,New format,NielsenIQ Total US xAOC
+FY2024,Granola,Total,US National,1820,460,3.4,8.4,TrailGrove subcategory,NielsenIQ Total US xAOC
+FY2024,Granola,Pouch,US National,1110,270,2.8,9.2,TrailGrove hero,NielsenIQ Total US xAOC
+FY2024,Granola,Clusters,US National,460,120,4.6,5.4,TrailGrove + competitors,NielsenIQ Total US xAOC
+FY2024,Granola,Single-Serve,US National,210,52,8.4,3.2,Premium occasion,NielsenIQ Total US xAOC
+FY2024,Bar,Granola Bar,US National,2960,920,2.1,5.7,TrailGrove Bars,NielsenIQ Total US xAOC
+FY2024,Plant-Based Milk,Total,US National,3120,720,8.4,2.8,RootDay subcategory,NielsenIQ Total US xAOC
+FY2024,Plant-Based Milk,Oat,US National,1380,310,18.4,3.6,RootDay hero — high growth,NielsenIQ Total US xAOC
+FY2024,Plant-Based Milk,Almond,US National,1220,290,-2.4,1.4,Mature subcategory,NielsenIQ Total US xAOC
+FY2024,Plant-Based Milk,Coconut + Other,US National,520,120,4.2,0.9,RootDay Coconut Blend,NielsenIQ Total US xAOC
+FY2025,RTE Cereal,Total,US National,8350,2370,1.3,5.7,Reflects -70bps Crunchwell US share,NielsenIQ Total US xAOC
+FY2025,RTE Cereal,Family Sweet,US National,2860,830,1.4,5.9,Crunchwell facing pressure,NielsenIQ Total US xAOC
+FY2025,RTE Cereal,Family Oat,US National,1680,500,2.4,7.4,Cheerios Oat Crunch launch,NielsenIQ Total US xAOC
+FY2025,RTE Cereal,Wellness Protein,US National,840,210,18.3,7.6,Continued explosive growth,NielsenIQ Total US xAOC
+FY2025,RTE Cereal,Kids Sweet,US National,1410,410,-2.8,5.1,Continued decline,NielsenIQ Total US xAOC
+FY2025,Hot Cereal,Single-Serve Cups,US National,560,176,9.8,7.0,MorningOats Cup growing,NielsenIQ Total US xAOC
+FY2025,Granola,Total,US National,1880,475,3.3,8.6,TrailGrove gaining,NielsenIQ Total US xAOC
+FY2025,Plant-Based Milk,Oat,US National,1640,366,18.8,3.8,RootDay continued growth,NielsenIQ Total US xAOC
+Q1-FY2026,RTE Cereal,Total,US National,2120,592,1.1,5.6,US flat; LA-DMA -340 bps,NielsenIQ xAOC + projection
+Q1-FY2026,RTE Cereal,Family Sweet,US National,728,212,1.6,5.8,LA decline weight,NielsenIQ xAOC + projection
+Q1-FY2026,RTE Cereal,Wellness Protein,US National,228,55,17.2,7.8,ProteinPeak +24.6% YoY,NielsenIQ xAOC + projection
+Q1-FY2026,RTE Cereal,Total,Louisiana DMA,38,11,-2.8,3.0,LA-DMA Crunchwell -340 bps,NielsenIQ DMA-level

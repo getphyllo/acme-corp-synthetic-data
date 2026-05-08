@@ -1,0 +1,13 @@
+brand_id,brand_name,manufacturer,category,subcategory,primary_region,primary_dmas,estimated_share_pct,estimated_revenue_musd,growth_yoy_pct,distribution_retailers,notes
+RGB001,Maizoro,Conagra,RTE Cereal,Family Sweet,Southwest,DAL;HOU;LA-DMA,1.4,18,9.2,Walmart;HEB;Albertsons,Hispanic-skew sweet corn flakes; growing on Hispanic HH demo shift in LA
+RGB002,Tony Chachere's Crunchy Cajun,Tony Chachere's,Bar,Granola Bar,Southeast,LA-DMA;MS-DMA;AL-DMA,0.4,5.4,4.1,Rouses;Brookshires;Walmart LA,Local LA flavor angle
+RGB003,Cape Cod Granola,Cape Cod,Granola,Granola Pouch,Northeast,BOS;NYC;PHL,0.6,8.2,3.4,Wegmans;Whole Foods;Stop & Shop,Premium Northeast skew
+RGB004,Stewart's Oats,Stewart's,Hot Cereal,Steel-Cut,Northeast,NYC;BOS,0.3,4.1,1.2,Wegmans;Stop & Shop;Whole Foods,
+RGB005,Goose Island Granola,Goose Island Foods,Granola,Granola Pouch,Midwest,CHI;MIN;DET,0.5,6.8,5.6,Mariano's;Meijer;Hy-Vee,Chicago metro
+RGB006,Hatch Chile Crunch,Hatch Foods,RTE Cereal,Family Sweet,Southwest,DAL;HOU;PHX;DEN,0.3,4.4,7.2,HEB;Albertsons;Whole Foods,Spicy/regional novelty
+RGB007,Boudreaux's Cajun Granola,Boudreaux's,Granola,Granola Pouch,Southeast,LA-DMA,0.2,2.8,2.1,Rouses;Winn-Dixie,
+RGB008,Pacific Northwest Oatery,PNW Oatery,Hot Cereal,Steel-Cut,Pacific Northwest,SEA;PDX,0.4,5.6,8.4,Whole Foods;Sprouts;Fred Meyer,Premium SeattlePortland
+RGB009,Big Sky Granola,Big Sky Foods,Granola,Granola Pouch,Mountain,DEN;PHX,0.3,4.1,3.2,King Soopers;Sprouts,
+RGB010,California Crunch,California Naturals,RTE Cereal,Wellness Protein,West,LAX;SFO;SEA,0.5,6.7,12.4,Whole Foods;Sprouts;Ralphs,Plant-protein challenger; gaining
+RGB011,New York Bagel Cereal,Stern Bros.,RTE Cereal,Family Sweet,Northeast,NYC;BOS,0.2,3.2,1.8,Wegmans;Stop & Shop,
+RGB012,Texas Pecan Trail,Texas Pecan,Granola,Granola Pouch,Southwest,DAL;HOU,0.3,4.6,5.1,HEB;Brookshires,

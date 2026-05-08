@@ -1,0 +1,29 @@
+agency_id,agency_name,agency_type,coverage_scope,typical_use,refresh_cadence,annual_spend_usd,last_engagement_date,owner_at_acme,active_status,notes
+NIQ,NielsenIQ,Syndicated POS,Full US RTE+Granola+Bar+Hot+PBM,Weekly POS scan; share; promo lift; ACV,Weekly,1450000,2026-04-30,Maya Chen / Insights,Active,Cornerstone POS feed; powers syndicated_weekly table
+IRI,Circana (IRI),Syndicated POS,US Mass+Grocery+Drug+Conv,Weekly POS scan parallel to NIQ; cross-validation,Weekly,820000,2026-04-30,Maya Chen / Insights,Active,Used for cross-check vs NIQ; lighter coverage of natural channel
+NUM,Numerator,HH Panel,US 70K HH panel,Switching; HH penetration; basket; demographic deep-dive,Weekly,540000,2026-04-25,Priya Raman / Category,Active,Powers household_transactions; LA switching narrative
+KAN,Kantar Brand Health,Brand Tracker,US bi-monthly survey,Brand awareness; equity; consideration; NPS,Bi-monthly,395000,2026-04-15,Priya Raman / Category,Active,Powers brand_health table
+SUZ,Suzy,Quick-Turn Survey,US ad-hoc,4-72hr consumer panels for fast-feedback,On-demand,180000,2026-05-01,Lillian Park / Innovation,Active,Used for quick concept tests pre-launch
+MIN,Mintel GNPD,Innovation Tracker,Global new-product launches,Competitor launch monitoring; concept screening,Monthly,210000,2026-04-30,Priya Raman / Category,Active,Powers competitor_launches seed
+DTS,Datassential,Foodservice + Consumer Trends,US menus + restaurant trends,Macro flavor / format trends,Quarterly,95000,2026-04-01,Lillian Park / Innovation,Active,Used for food trend signals
+SPA,Spate,Search Trends,Google + TikTok keyword volume,Search momentum; emerging trends,Monthly,72000,2026-05-01,Audrey Kim / Marketing,Active,Powers search_trends table (Google + TikTok)
+HE10,Helium 10,Amazon Search,Amazon keyword + sales rank,Amazon search rank; review monitoring,Daily,48000,2026-05-07,Anil Mehra / Amazon,Active,Powers Amazon search_trends table
+BW,Brandwatch,Social Listening,US TikTok + Instagram + Twitter + Reddit + YouTube,Brand mentions; sentiment; share of voice,Daily,295000,2026-05-07,Audrey Kim / Marketing,Active,Powers social_mentions table; primary social listening source
+SPRT,Sprout Social,Social Engagement,Acme owned channels + competitor pages,Owned-channel KPIs; competitor benchmarking,Daily,68000,2026-05-07,Audrey Kim / Marketing,Active,Powers Acme owned-channel KPIs (not in this data set)
+TD,Tribe Dynamics,Creator/Influencer,US creator EMV + content,Creator EMV; content tracking; partnership ROI,Weekly,180000,2026-05-05,Hugo Lin / Influencer Marketing,Active,Powers creators + creator_posts tables
+CRQ,CreatorIQ,Creator Activation,Creator outreach + activation,Active campaign management; creator pay-for-play,On-demand,120000,2026-05-05,Hugo Lin / Influencer Marketing,Active,Operational tool for paid creator partnerships (Sage Park program)
+BV,Bazaarvoice,Product Reviews,Retailer.com + DTC reviews,Review syndication; sentiment topic mining,Daily,160000,2026-05-07,Devraj Patel / E-Comm,Active,Powers product_reviews (retailer.com side)
+PR,PowerReviews,Product Reviews,Walmart.com + Target.com,Review collection + analytics,Daily,72000,2026-05-07,Devraj Patel / E-Comm,Active,Walmart+Target review feeds
+WLM,Walmart Luminate,Retail Analytics,Walmart store-level POS + shelf,SKU velocities; OOS; facing audits,Weekly,240000,2026-05-01,Tom Reilly / Walmart NAM,Active,Powers Walmart-specific perfect_store + sku_authorization signal
+COR,Kroger 84.51,Retail Analytics,Kroger store + loyalty + audience,Kroger HH-level; targeted media,Weekly,180000,2026-05-01,Jasmine Watkins / Kroger NAM,Active,Kroger equivalent of Luminate
+TGT,Target Roundel/Vendor Hub,Retail Analytics,Target store + Circle audience,Target HH targeting; retail media reporting,Weekly,135000,2026-05-01,Soo-jin Lee / Target NAM,Active,
+AMZ,Amazon Vendor Central + Brand Analytics,Retail Analytics,Amazon search + sales + reviews,Search rank; retail media; review monitoring,Daily,N/A,2026-05-07,Anil Mehra / Amazon,Active,Free vendor portal access — included for completeness
+PIQ,Profitero,Digital Shelf,US e-commerce shelf monitoring,Digital shelf score; pricing; content quality,Daily,95000,2026-05-07,Devraj Patel / E-Comm,Active,DSI tracking
+DT,Dynata,Custom Survey Panel,US adult panel,Larger n custom surveys (1000+),Per project,165000,2026-04-20,Priya Raman / Category,Active,Used for U&A studies
+SAP,SAP / Acme ERP,Internal Systems,Acme orders + shipments,Plan vs actual; shipments; fill rate,Daily,N/A,2026-05-08,Robert Kim / IT + Maya / Insights,Active,Internal data; powers plan_vs_actual + shipments tables
+SAR,SymphonyAI Retail,Retail Analytics,Multi-retailer category data,Distribution voids; ACV gaps,Weekly,72000,2026-05-01,Maya Chen / Insights,Active,Powers sku_authorization void analytics
+GOOG,Google Trends,Search Trends,Free Google search trends,Macro keyword momentum,Real-time,0,2026-05-08,Audrey Kim / Marketing,Active,Free; supplements Spate
+US-CENS,US Census Bureau,Public Demographics,US population data,Hispanic HH growth; demographic shifts,Annual,0,2026-04-15,Priya Raman / Category,Active,Free public data
+USDA,USDA Economic Research,Public Economics,Food expenditure + commodity prices,Macro food economy; oat/wheat commodity,Quarterly,0,2026-03-31,Maya Chen / Insights,Active,Free public data
+FMI,FMI The Food Industry Association,Industry Body,US grocery trade data,Industry benchmarking; conference data,Quarterly,18000,2026-04-01,Diane Halverson / VP Sales,Active,Membership-based
+NRA,National Restaurant Association,Industry Body,Foodservice trends,Foodservice secondary,Quarterly,18000,2026-04-01,Lillian Park / Innovation,Inactive-2026,Out-of-cycle this year

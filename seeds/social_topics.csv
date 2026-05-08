@@ -1,0 +1,21 @@
+topic_id,topic_tag,topic_group,description,sentiment_skew,relevant_brands,notes
+ST001,protein,wellness,Protein content discussion,positive,ProteinPeak;Magic Spoon;Three Wishes,High-engagement topic
+ST002,sustainability,values,Sustainable / eco packaging,positive,RootDay;TrailGrove;Nature's Path,Premium consumer attractor
+ST003,taste,product-attribute,Taste and flavor discussion,mixed,All brands,Most-mentioned attribute
+ST004,packaging,product-attribute,Packaging design / refresh discussion,mixed,Crunchwell pack refresh;Magic Spoon,Acme pack refresh tied here
+ST005,price,economics,Affordability / value perception,mixed,Great Value PL;all brands,LA-relevant for budget angle
+ST006,kids-friendly,demographic,Kid acceptance of cereal,mixed,HoneyNest;Cheerios;Frosted Flakes,
+ST007,health,wellness,Health claim discussion,positive,Cheerios;Crunchwell;ProteinPeak,Heart-health subcategory
+ST008,athlete-fuel,wellness,Pre-or-post-workout fueling,positive,ProteinPeak;Magic Spoon,Sage Park positioning
+ST009,oat-milk,plant-based,Oat milk discussion,positive,RootDay;Oatly;Califia,Barista-coffee occasion
+ST010,recipes,creative,Cereal recipes / hacks,positive,All cereal brands,High creator engagement
+ST011,viral,creative,Viral cereal moments,positive,Honey Bunches;Magic Spoon;Crunchwell,LA Honey Bunches viral wave Q4 2025
+ST012,nostalgic,emotional,Nostalgia / childhood reference,positive,All heritage brands,Acme 74-yr brand asset
+ST013,negative-experience,product-quality,Stale cereal / pack damage / OOS,negative,Crunchwell Cinnamon Twist (review topic);general,Tied to LA OOS narrative
+ST014,sweetened,product-attribute,Sweetness level discussion,mixed,HoneyNest;Frosted Flakes;Crunchwell Honey Nut,
+ST015,grain-free,wellness,Grain-free / keto positioning,mixed,Magic Spoon;Three Wishes;Catalina,
+ST016,family-occasion,occasion,Family breakfast occasion,positive,Crunchwell;HoneyNest;Cheerios,
+ST017,late-night,occasion,Cereal-for-dinner occasion,positive,General cereal,
+ST018,convenience,occasion,On-the-go single-serve,positive,MorningOats Cup;Crunchwell Single-Serve,Format trend
+ST019,supply-issue,supply-chain,OOS / availability complaints,negative,Crunchwell LA-DMA Q4 2025;general,Hurricane Tonya tied
+ST020,promo,economics,Promotion / sale discussion,positive,Honey Bunches Oats LA promo;general,LA decline H2 tied
