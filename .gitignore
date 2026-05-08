@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+
+# DuckDB transient
+*.duckdb.wal
+*.duckdb.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build artifacts (the parquet/duckdb/csv samples ARE committed — this is the data product)
+# If you want to exclude generated outputs, list them here.
