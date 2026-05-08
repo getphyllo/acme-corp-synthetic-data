@@ -1,0 +1,27 @@
+retailer_id,retailer_name,channel,region,acv_weight_pct,acme_revenue_fy25_musd,acme_nam,priority_tier,notes
+WMT,Walmart,Mass,National,21.4,184.0,Tom Reilly,Tier 1,Cornerstone account; Sept 2025 reset cut Crunchwell facings
+TGT,Target,Mass,National,7.1,68.0,Soo-jin Lee,Tier 1,ProteinPeak hero; growing Target Circle
+KR,Kroger,Grocery National,National-skew Midwest South,10.8,93.0,Jasmine Watkins,Tier 1,Acme is category captain
+ALB,Albertsons,Grocery National,National,5.6,52.0,Beata Klimek,Tier 2,Steady JBP partner
+PUB,Publix,Grocery National,Southeast,3.2,29.0,Beata Klimek,Tier 2,Strong RootDay pull
+CST,Costco,Club,National,4.1,52.0,Frank Calabrese,Tier 1,MorningOats Cup hero
+SAM,Sams Club,Club,National,2.4,28.0,Frank Calabrese,Tier 2,TrailGrove and ProteinPeak variety pack
+BJS,BJs Wholesale,Club,Northeast,0.9,9.0,Frank Calabrese,Tier 3,Limited assortment
+HEB,H-E-B,Grocery Regional,Texas,2.1,32.0,Marcus Boudreaux's team,Tier 1,Texas powerhouse
+ROU,Rouses Markets,Grocery Regional,Louisiana,0.4,7.4,Marcus Boudreaux's team,Tier 2,Louisiana volume leader; Post promo battlefield
+BRX,Brookshires Brookshire's,Grocery Regional,Texas Louisiana,0.3,5.2,Marcus Boudreaux's team,Tier 2,East Texas core
+WIN,Winn-Dixie,Grocery Regional,Southeast,1.0,12.0,Beata Klimek,Tier 3,Recent reset disruption
+WEG,Wegmans,Grocery Regional,Northeast,0.9,11.0,Beata Klimek,Tier 2,Premium consumer skew
+MEI,Meijer,Grocery Regional,Midwest,1.6,21.0,Jasmine Watkins,Tier 2,Crunchwell home turf
+HYV,Hy-Vee,Grocery Regional,Midwest,1.1,14.0,Jasmine Watkins,Tier 2,Iowa stronghold
+SPR,Sprouts,Grocery Premium,Sun Belt West,0.7,11.0,Beata Klimek,Tier 2,RootDay and TrailGrove hero
+WFM,Whole Foods,Grocery Premium,National,0.9,12.0,Anil Mehra (Amazon),Tier 2,RootDay strongest pull
+ALD,Aldi,Discount Grocery,National,3.5,15.0,Devraj Patel,Tier 3,Limited Acme branded; PL competition
+LDL,Lidl,Discount Grocery,National,0.6,3.0,Devraj Patel,Tier 3,Limited
+AMZ,Amazon,E-commerce,National,0.0,44.0,Anil Mehra,Tier 1,5.4% of revenue; ProteinPeak strong
+WMTC,Walmart.com,E-commerce,National,0.0,15.0,Tom Reilly + Devraj,Tier 2,Embedded with Walmart team
+TGTC,Target.com,E-commerce,National,0.0,8.0,Soo-jin Lee + Devraj,Tier 2,Roundel media partner
+INC,Instacart,E-commerce,National,0.0,4.0,Devraj Patel,Tier 3,Carat ad spend growing
+CVS,CVS,Drug,National,1.8,12.0,Field rep team,Tier 3,Limited Crunchwell single-serve
+WAL,Walgreens,Drug,National,1.7,10.0,Field rep team,Tier 3,Limited
+CON,Convenience Long-tail,Convenience,National,2.0,11.0,Field rep team,Tier 3,7-Eleven Speedway etc combined

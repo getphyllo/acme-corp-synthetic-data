@@ -1,0 +1,31 @@
+brand,retailer,trade_spend_kusd,trade_depth_pct,base_lift_pct,promo_lift_pct,incrementality_index,promo_count_fy25,notes
+Crunchwell,Walmart,38400,29.5,2.1,38.0,0.62,28,Largest trade line item Acme
+Crunchwell,Target,11800,28.4,1.8,32.0,0.58,22,
+Crunchwell,Kroger,18200,27.8,1.9,34.0,0.60,26,Cat captain leverage
+Crunchwell,Albertsons,7900,26.4,1.6,29.0,0.55,18,
+Crunchwell,Publix,3800,24.1,1.5,26.0,0.52,14,Lower depth shoppers
+Crunchwell,HEB,4200,25.6,1.7,28.0,0.54,16,
+Crunchwell,Rouses,1110,28.0,1.8,33.0,0.59,18,Post battlefield
+Crunchwell,Brookshires,820,27.5,1.7,31.0,0.56,16,
+Crunchwell,Costco,2300,11.0,0.4,18.0,0.71,4,Variety pack only
+Crunchwell,Amazon,3900,16.2,2.4,22.0,0.46,Always-on,
+HoneyNest,Walmart,9800,24.8,1.4,28.0,0.51,24,
+HoneyNest,Target,3700,24.4,1.5,30.0,0.54,22,Kids endcaps
+HoneyNest,Kroger,5400,24.0,1.3,26.0,0.50,22,
+HoneyNest,Albertsons,2800,23.5,1.2,24.0,0.48,18,
+ProteinPeak,Walmart,580,11.4,2.8,18.0,0.42,8,Limited assortment
+ProteinPeak,Target,2100,12.8,3.1,21.0,0.44,12,Hero account
+ProteinPeak,Amazon,1800,12.4,3.6,24.0,0.40,Always-on,
+ProteinPeak,Costco,840,9.9,1.4,15.0,0.62,4,
+MorningOats,Walmart,4100,18.7,1.7,26.0,0.55,20,
+MorningOats,Costco,2900,16.3,1.1,20.0,0.66,4,Cup hero
+MorningOats,Kroger,3200,18.5,1.8,27.0,0.56,18,
+TrailGrove,Walmart,2400,13.5,2.2,24.0,0.49,14,
+TrailGrove,Target,2900,14.4,2.6,28.0,0.51,18,
+TrailGrove,Costco,2100,11.8,0.9,16.0,0.68,4,Variety pack hero
+TrailGrove,Amazon,2300,15.1,3.4,26.0,0.42,Always-on,DTC overlay
+TrailGrove,Sprouts,1100,12.6,2.4,22.0,0.50,12,
+RootDay,Sprouts,1400,9.8,3.8,28.0,0.43,16,Hero pull
+RootDay,Whole Foods,1200,9.4,3.6,26.0,0.42,16,
+RootDay,Target,800,9.1,3.2,22.0,0.46,12,
+RootDay,Amazon,1300,9.6,4.1,29.0,0.40,Always-on,

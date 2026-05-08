@@ -1,0 +1,21 @@
+geo_id,geo_name,geo_type,region,population_mln,acme_bdi,crunchwell_share_fy25_pct,crunchwell_share_q12026_pct,priority_tier,notes
+US-MW,Midwest US,Region,Midwest,68.4,138,7.4,7.2,Home turf,Crunchwell strongest
+US-NE,Northeast US,Region,Northeast,55.2,78,3.8,3.7,Under-indexed,Post and GM stronghold
+US-SE,Southeast US,Region,Southeast,86.4,84,4.9,4.4,Under-indexed and slipping,Louisiana decline weighs
+US-PNW,Pacific Northwest,Region,West,12.7,121,6.8,6.6,Strong,TrailGrove home
+US-TX,Texas,State,Southwest,30.1,109,6.3,6.0,Mid-strong,H-E-B partnership
+US-MT,Mountain West,Region,West,17.4,87,5.1,5.0,Under-indexed,Whole Foods skew
+US-CA,California,State,West,39.4,92,5.5,5.4,Mid,RootDay strong
+NOLA,New Orleans-Metairie MSA,MSA,Southeast,1.27,72,5.1,3.0,Battlefield,Q1 2026 -410 bps
+BTR,Baton Rouge MSA,MSA,Southeast,0.86,79,5.8,4.2,Battlefield,Q1 2026 -360 bps
+LAF,Lafayette LA MSA,MSA,Southeast,0.49,84,6.2,5.5,Watch,Q1 2026 -150 bps
+DAL,Dallas-Fort Worth MSA,MSA,Southwest,7.85,108,6.4,6.2,Strong,Stable
+HOU,Houston MSA,MSA,Southwest,7.21,113,6.7,6.5,Strong,DC home; Hurricane Tonya impact
+ATL,Atlanta MSA,MSA,Southeast,6.32,89,5.0,4.8,Mid,Marcus's home base
+CHI,Chicago MSA,MSA,Midwest,9.49,141,7.8,7.7,Strong,Mature
+NYC,New York MSA,MSA,Northeast,19.62,71,3.4,3.4,Weak,Northeast pattern
+LAX,Los Angeles MSA,MSA,West,13.26,94,5.6,5.5,Mid,RootDay strongest
+LA-DMA,Louisiana DMA,DMA,Southeast,4.65,76,6.4,3.0,Battlefield,Q1 -340 bps; recovery plan in place
+MS-DMA,Mississippi DMA,DMA,Southeast,2.94,82,5.3,4.9,Watch,Brookshire's softness
+AL-DMA,Alabama DMA,DMA,Southeast,5.07,86,5.6,5.4,Watch,Stable
+AR-DMA,Arkansas DMA,DMA,Southwest,3.05,103,6.1,6.0,Mid,Walmart HQ adjacent

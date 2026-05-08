@@ -1,0 +1,18 @@
+event_id,start_date,end_date,brand,manufacturer,retailer,dma,event_type,promo_depth_pct_off,unit_price_promo,display,feature,notes
+E001,2025-10-13,2025-11-09,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,4-week endcap; first wave Post intensification
+E002,2025-10-13,2025-11-09,Crunchwell Original Family,Acme,Rouses,LA-DMA,Promo only,10,3.86,N,Y,Standard cadence; outgunned
+E003,2025-11-10,2025-12-07,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,Wave 2
+E004,2025-11-10,2025-12-07,Great Grains,Post,Brookshires,LA-DMA,Promo only,15,4.24,N,Y,Brookshires extension
+E005,2025-11-08,2025-11-17,All Crunchwell SKUs,Acme,Multiple LA Walmart,LA-DMA,OOS Event,N/A,N/A,N,N,Hurricane Tonya DC outage
+E006,2025-11-18,2025-12-22,Crunchwell Original Mega,Acme,Rouses,LA-DMA,Recovery promo,16,4.61,N,Y,Trying to recover from OOS
+E007,2025-11-30,2025-12-27,Cheerios,General Mills,Walmart LA,LA-DMA,Endcap + Promo,18,3.69,Y,Y,Holiday peak
+E008,2025-12-08,2026-01-04,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,Wave 3
+E009,2025-12-08,2026-01-04,Honey Bunches of Oats,Post,Brookshires,LA-DMA,Promo only,18,3.69,N,Y,Brookshires depth match
+E010,2026-01-05,2026-02-01,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,Wave 4
+E011,2026-01-05,2026-02-01,Crunchwell Honey Nut,Acme,Walmart LA,LA-DMA,Promo only,9,4.09,N,Y,Limited response from Acme
+E012,2026-02-02,2026-03-01,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,Wave 5
+E013,2026-02-02,2026-03-01,Great Grains,Post,Brookshires,LA-DMA,Endcap + Promo,17,4.16,Y,Y,
+E014,2026-02-15,2026-03-22,GV Honey Toasted Oats,Walmart PL,Walmart LA,LA-DMA,Promo only,14,2.49,N,Y,PL pickup
+E015,2026-03-02,2026-03-29,Honey Bunches of Oats,Post,Rouses,LA-DMA,Endcap + Promo,21,3.49,Y,Y,Wave 6 - report period closes here
+E016,2026-03-02,2026-03-29,Crunchwell Multigrain,Acme,Rouses,LA-DMA,Recovery promo,12,3.95,N,Y,Limited response
+E017,2026-05-25,2026-06-22,Crunchwell Mega + Honey Nut Mega,Acme,Rouses,LA-DMA,PROPOSED tactical injection,12,4.83,N,Y,Recovery plan Leg 1 - 4 week with hard end date
