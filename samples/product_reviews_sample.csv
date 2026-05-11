@@ -15,18 +15,18 @@ PR_00000013,PL001,Great Value,RTE Cereal,Target.com,2025-01-24,5,Yes,athlete-fue
 PR_00000014,TG002,TrailGrove,Granola,Walmart.com,2025-09-20,4,Yes,kids-love-it;health;athlete-fuel,0.22,640,5,Bazaarvoice
 PR_00000015,PL002,Great Value,RTE Cereal,Amazon,2025-10-30,4,Yes,athlete-fuel;value,0.703,420,2,Amazon Brand Analytics
 PR_00000016,CR003,Crunchwell,RTE Cereal,Walmart.com,2025-02-27,4,Yes,value,0.85,120,2,Bazaarvoice
-PR_00000017,PF002,Great Grains,RTE Cereal,Target.com,2024-11-04,5,Yes,family-occasion,0.467,640,1,Bazaarvoice
+PR_00000017,PF002,Harvest Hearth,RTE Cereal,Target.com,2024-11-04,5,Yes,family-occasion,0.467,640,1,Bazaarvoice
 PR_00000018,MO004,MorningOats,Hot Cereal,Amazon,2025-07-05,4,Yes,value;kids-love-it;family-occasion,0.882,640,0,Amazon Brand Analytics
 PR_00000019,CR006,Crunchwell,RTE Cereal,Target.com,2025-04-29,4,Yes,sustainability;convenience,0.771,60,3,Bazaarvoice
 PR_00000020,HN003,HoneyNest,RTE Cereal,Amazon,2024-03-06,4,Yes,packaging-design;sustainability,0.19,60,0,Amazon Brand Analytics
 PR_00000021,MO004,MorningOats,Hot Cereal,Amazon,2025-11-03,5,Yes,health;sustainability;convenience,0.936,60,3,Amazon Brand Analytics
 PR_00000022,TG002,TrailGrove,Granola,Target.com,2024-03-23,5,No,convenience;sustainability;packaging-design,0.956,180,0,Bazaarvoice
-PR_00000023,PF002,Great Grains,RTE Cereal,Amazon,2024-05-24,5,Yes,sustainability;family-occasion,0.147,820,0,Amazon Brand Analytics
+PR_00000023,PF002,Harvest Hearth,RTE Cereal,Amazon,2024-05-24,5,Yes,sustainability;family-occasion,0.147,820,0,Amazon Brand Analytics
 PR_00000024,PP001,ProteinPeak,RTE Cereal,Instacart,2024-06-11,5,Yes,kids-love-it;packaging-design,0.741,640,1,Amazon Brand Analytics
 PR_00000025,HN007,HoneyNest,RTE Cereal,Amazon,2025-09-08,5,Yes,sustainability;health;taste,0.868,420,1,Amazon Brand Analytics
 PR_00000026,TG007,TrailGrove,Bar,Target.com,2025-09-26,4,No,packaging-design,0.6,260,2,Bazaarvoice
 PR_00000027,GM002,Honey Nut Cheerios,RTE Cereal,Walmart.com,2024-02-15,5,Yes,taste;convenience;family-occasion,0.614,1200,1,Bazaarvoice
-PR_00000028,PF001,Honey Bunches Oats,RTE Cereal,Walmart.com,2025-06-12,5,Yes,health;kids-love-it;packaging-design,0.151,180,72,Bazaarvoice
+PR_00000028,PF001,Field & Honey,RTE Cereal,Walmart.com,2025-06-12,5,Yes,health;kids-love-it;packaging-design,0.151,180,72,Bazaarvoice
 PR_00000029,TG001,TrailGrove,Granola,Walmart.com,2024-11-05,5,Yes,packaging-design;athlete-fuel;convenience,0.954,120,0,Bazaarvoice
 PR_00000030,TG007,TrailGrove,Bar,Amazon,2025-12-17,4,Yes,family-occasion,0.903,260,8,Amazon Brand Analytics
 PR_00000031,CR003,Crunchwell,RTE Cereal,Target.com,2025-12-20,3,Yes,oos;texture-issue,-0.535,640,0,Bazaarvoice
@@ -97,5 +97,5 @@ PR_00000095,MO004,MorningOats,Hot Cereal,Amazon,2025-06-15,4,No,convenience,0.71
 PR_00000096,CR007,Crunchwell,RTE Cereal,Kroger.com,2024-09-09,4,Yes,taste,0.44,420,12,Bazaarvoice
 PR_00000097,MO007,MorningOats,Hot Cereal,Walmart.com,2024-11-25,5,Yes,taste;convenience,0.81,120,1,Bazaarvoice
 PR_00000098,HN003,HoneyNest,RTE Cereal,Walmart.com,2025-03-13,5,No,sustainability;packaging-design,0.812,120,38,Bazaarvoice
-PR_00000099,PF001,Honey Bunches Oats,RTE Cereal,Kroger.com,2025-11-19,4,Yes,athlete-fuel;family-occasion,0.789,60,0,Bazaarvoice
+PR_00000099,PF001,Field & Honey,RTE Cereal,Kroger.com,2025-11-19,4,Yes,athlete-fuel;family-occasion,0.789,60,0,Bazaarvoice
 PR_00000100,QT001,Quaker,Hot Cereal,Target.com,2026-03-05,4,Yes,athlete-fuel;kids-love-it;convenience,0.634,60,0,Bazaarvoice
