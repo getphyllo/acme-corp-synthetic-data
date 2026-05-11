@@ -2,7 +2,47 @@
 
 All notable changes to this dataset are tracked here. The repo follows [Semantic Versioning](https://semver.org/) — major bumps are breaking schema changes, minor bumps add tables/columns, patch bumps fix data without changing schema.
 
-> **Current canonical version: `v0.4.0`** — 16 tables, 17 seed files, all gap-analysis-identified prompts answerable. See [`00-inbox/synthetic-data-gap-analysis-vs-mvp.md`](../00-inbox/synthetic-data-gap-analysis-vs-mvp.md) for the audit that drove v0.2 → v0.4.
+> **Current canonical version: `v0.4.1`** — Larksfield Foods rename (was Post Foods). Same row counts, same statistical structure, same `seed=42` determinism. Two column renames (`Post_Value_Share` → `Larksfield_Value_Share`, `aided_aw_honey_bunches` → `aided_aw_field_honey`).
+
+## [v0.4.1] — 2026-05-10
+
+### Changed — Fictionalize the #3 cereal competitor
+
+The #3 US cereal manufacturer in the Acme universe — previously identified by the real-world brand "Post Foods" and its flagship SKUs "Honey Bunches of Oats" and "Great Grains" — is renamed to a fully fictional competitor. This is a world-consistency fix: every other brand around Acme (Crunchwell, HoneyNest, ProteinPeak, TrailGrove, RootDay) was already fictional; Post was the last real-world name leaking in. Upstream Clayface vault made the same rename in `03-research/acme/` before this commit.
+
+| Was | Now |
+|---|---|
+| Post Foods (manufacturer) | **Larksfield Foods** |
+| Honey Bunches of Oats (SKU + brand) | **Field & Honey** |
+| Great Grains (SKU + brand) | **Harvest Hearth** |
+
+### Schema changes
+
+Two column renames in regenerated parquets:
+
+| Table | Was | Now |
+|---|---|---|
+| `syndicated_weekly` | `Post_Value_Share` | **`Larksfield_Value_Share`** |
+| `brand_health` | `aided_aw_honey_bunches` | **`aided_aw_field_honey`** |
+
+### What did *not* change
+
+- **All row counts.** Every table preserves its v0.4.0 row count exactly (verified against pre-regen snapshot). `seed=42` determinism holds.
+- **All column counts.** Every table preserves its v0.4.0 column count (the two renames swap one column for another, no adds/drops).
+- **All dollar amounts, dates, transaction IDs, sentiment scores, switching flags, fill rates, ROI calculations.** The randomness draws are byte-stable; only the brand/manufacturer string labels swap.
+- **SKU IDs `PF001` and `PF002`.** Retained as opaque historical join keys. The "PF" prefix is now a documented historical artifact — real-world CPG SKU codes routinely carry legacy prefixes from acquired or rebranded entities. Renaming these IDs would force a foreign-key migration across 6+ tables for no analytical benefit.
+
+### Files touched in this rename
+
+- **Seeds (8):** `competitor_launches.csv`, `creators.csv`, `geographies.csv`, `macro_trends.csv`, `promo_events_louisiana.csv`, `retailer_divisions.csv`, `retailers.csv`, `social_topics.csv`, `trade_spend_fy25.csv`
+- **Generator (1):** `generator/generate.py` — 18 string literals + 2 emitted column names
+- **Docs (9):** `docs/louisiana-decline.md`, `docs/narrative-anchors.md`, 4× `docs/personas/*.md`, 4× `docs/schema/*.md`
+- **Top-level (2):** `README.md`, `CHANGELOG.md`
+- **Regenerated:** 11 of 16 `data/*.parquet` files, 10 of 16 `samples/*_sample.csv` files, `acme.duckdb` (the 5 unchanged tables — `data_freshness_log`, `households`, `plan_vs_actual`, `shipments`, `sku_authorization` — have no competitor brand references in their schemas)
+
+### What's still real-world
+
+This pass intentionally left **General Mills / Cheerios / Honey Nut Cheerios / Kellanova / Frosted Flakes / Walmart Great Value** unchanged. Those are still real-world names in the dataset. Renaming them is on the table as a v0.5.0 follow-up; bundling them into this commit would balloon the diff and make review harder. Surface them only if needed.
 
 ## [v0.4.0] — 2026-05-08
 
@@ -17,8 +57,8 @@ All notable changes to this dataset are tracked here. The repo follows [Semantic
 
 The four Brand-Manager-side prompt families (social listening / creator activity / search momentum / product reviews) are now answerable. Adds the consumer-side context Priya Raman (Cat Manager) needs.
 
-- **`competitor_launches.parquet`** — 30 hand-curated launch events, including Post Honey Bunches Almond (Sep 2025 — the LA stealth threat), GM Cheerios Oat Crunch (Jan 2026), Walmart Great Value PL expansion (LA H5), and Acme's own Crunchwell Cinnamon Twist underperformer
-- **`social_mentions.parquet`** — 18,000 Brandwatch-shape mentions across TikTok / Instagram / Twitter / Reddit / YouTube; sentiment encoded with the LA Crunchwell dip + Honey Bunches viral wave + ProteinPeak athletic momentum
+- **`competitor_launches.parquet`** — 30 hand-curated launch events, including Larksfield Field & Honey Almond (Sep 2025 — the LA stealth threat), GM Cheerios Oat Crunch (Jan 2026), Walmart Great Value PL expansion (LA H5), and Acme's own Crunchwell Cinnamon Twist underperformer
+- **`social_mentions.parquet`** — 18,000 Brandwatch-shape mentions across TikTok / Instagram / Twitter / Reddit / YouTube; sentiment encoded with the LA Crunchwell dip + Field & Honey viral wave + ProteinPeak athletic momentum
 - **`creator_posts.parquet`** — 3,200 creator posts with 72hr attribution lift; sourced from a 50-creator master (`seeds/creators.csv`); encodes the Sage Park ProteinPeak athlete program
 - **`search_trends.parquet`** — 2,400 monthly keyword × platform rows from Spate / Helium 10 / Google Trends; encodes high-protein cereal, oat milk barista, Cheerios Oat Crunch search peak
 - **`product_reviews.parquet`** — 24,000 Bazaarvoice / PowerReviews-shape reviews with topic tags; Cinnamon Twist (CR006) low-rated; Crunchwell ratings dip during Hurricane Tonya OOS
@@ -26,9 +66,9 @@ The four Brand-Manager-side prompt families (social listening / creator activity
 ### Encoded narrative facts (v0.3.0)
 
 - Crunchwell sentiment in LA-DMA averages **−0.36** in Q4'25–Q1'26 vs +0.13 elsewhere
-- Honey Bunches viral wave Q4 2025 (`Topic_Tags='viral;promo'`)
+- Field & Honey viral wave Q4 2025 (`Topic_Tags='viral;promo'`)
 - ProteinPeak Sage Park athlete program drives top 5 attributed creator lifts
-- "high-protein cereal" growing +18% MoM in search; "honey bunches almond" peaks at launch
+- "high-protein cereal" growing +18% MoM in search; "field & honey almond" peaks at launch
 - Cinnamon Twist (CR006) average rating ~3.4 vs hero SKU ~4.3; negative themes: stale / pack-damage / too-sweet / oos
 
 ## [v0.2.0] — 2026-05-08
@@ -69,10 +109,10 @@ Six core tables + seven hand-curated seed tables, the four primary personas, the
 
 - **`epos.parquet`** — 30,000 transaction-level rows (Kellogg ME EPOS-shape, US-anchored)
 - **`perfect_store.parquet`** — 50,000 store-day-SKU rows with inventory, OSA, planogram compliance, facings
-- **`syndicated_weekly.parquet`** — 92,250 rows of DMA × category × channel × week panel data with full competitive share breakouts (Crunchwell, Post, General Mills, Kellanova, Private Label)
+- **`syndicated_weekly.parquet`** — 92,250 rows of DMA × category × channel × week panel data with full competitive share breakouts (Crunchwell, Larksfield, General Mills, Kellanova, Private Label)
 - **`brand_health.parquet`** — 15,000 survey responses with awareness funnel, 7-attribute battery, NPS, ethnicity, 10 competitor awareness flags
 - **`households.parquet`** — 5,000-household master with demographics, loyalty segment, ethnicity
-- **`household_transactions.parquet`** — 30,000 weekly HH purchases with `Switching_Flag` for the LA→Post switch
+- **`household_transactions.parquet`** — 30,000 weekly HH purchases with `Switching_Flag` for the LA→Larksfield switch
 - **`acme.duckdb`** — single-file SQL DB with all six tables + seven seed tables loaded
 - **Seeds**: SKU master (49), retailer master (26), geographies/DMAs (30), monthly POS, trade spend, marketing spend, Louisiana promo event log
 
@@ -81,13 +121,13 @@ Six core tables + seven hand-curated seed tables, the four primary personas, the
 - Crunchwell LA share: ~6.0% (FY24) → ~3.9% (Q1 '26)
 - Walmart Sept 2025 modular reset cuts Crunchwell Mega/Honey Nut Mega/Multigrain from 8 → 6 facings
 - Hurricane Tonya (Nov 8, 2025) drops Crunchwell Mega OSA in LA from ~97% to ~67% for ~6 weeks
-- Honey Bunches of Oats heavy promo at Rouses Q4 '25 → Q1 '26 (21% off, 6 weeks)
-- LA Crunchwell-loyal HHs flagged switching to Honey Bunches starting Nov 2025
+- Field & Honey heavy promo at Rouses Q4 '25 → Q1 '26 (21% off, 6 weeks)
+- LA Crunchwell-loyal HHs flagged switching to Field & Honey starting Nov 2025
 
 ### Adapted from Kellogg ME reference set
 
 - Geography: Middle East countries → US states + 30 DMAs
-- Brands: Pringles/Corn Flakes → Acme's six brands + 8 competitors (Cheerios, Honey Bunches, Frosted Flakes, Quaker, Walmart Great Value PL, etc.)
+- Brands: Pringles/Corn Flakes → Acme's six brands + 8 competitors (Cheerios, Field & Honey, Frosted Flakes, Quaker, Walmart Great Value PL, etc.)
 - Calendar: Ramadan flag → BackToSchool / Holiday / Easter / SuperBowl seasonality enum
 - Added: `Brand`, `Manufacturer`, `Ethnicity`, `Switching_Flag`, full competitor share breakouts on syndicated weekly
 - Removed: Weetabix and Nestlé awareness (not US-relevant)

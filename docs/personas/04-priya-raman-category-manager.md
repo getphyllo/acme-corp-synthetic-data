@@ -50,7 +50,7 @@ Internally, she is widely respected as someone who "doesn't waste your time." Sh
 - **7:45 AM** — Anika and Vikram up. Breakfast. Drop Anika at school 8:30, Vikram at preschool 9:00.
 - **9:30 AM** — Back at desk. Standup with her two analysts. Jordan is on the Walmart August line-review prep. Sophia is on the RootDay distribution-expansion analysis at HEB.
 - **10:00 AM** — Kroger weekly cat-captain call (Acme + Kroger merch). She presents 6 slides on category trends and 2 slides on Acme's quarterly performance. Kroger asks her what she thinks of a competitor's new SKU. She has an opinion. She gives it. They listen.
-- **11:00 AM** — Slack from Marcus: *"Hey P, I need you on the Louisiana root cause sync Wednesday. Also — can you pull the Crunchwell Rouses POS for the last 12 weeks AND the Post promo cadence?"* Priya: *"On it. Will share by EOD tomorrow."*
+- **11:00 AM** — Slack from Marcus: *"Hey P, I need you on the Louisiana root cause sync Wednesday. Also — can you pull the Crunchwell Rouses POS for the last 12 weeks AND the Larksfield promo cadence?"* Priya: *"On it. Will share by EOD tomorrow."*
 - **12:00 PM** — Lunch (leftover sambar). Walks 4 blocks to clear her head.
 - **1:00 PM** — Builds the Walmart August line-review hypothesis tree with Jordan. They have 12 weeks. The pitch is: "Walmart's Sept 2025 reset miscalibrated against actual consumer demand. Crunchwell Mega is short-shelved against velocity. We propose adding back 2 facings, supported by [evidence]." Jordan owns the velocity analysis. Priya will own the consumer-demand layer.
 - **3:00 PM** — Maya pings: *"Priya — if you have time, want to look at the Louisiana hypothesis tree before the Wed sync? I'd love your read."* Priya, deeply, deeply tired but loyal: "Send it."

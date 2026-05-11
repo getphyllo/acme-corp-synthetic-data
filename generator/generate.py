@@ -11,7 +11,7 @@ The narrative is encoded in the data:
   - Walmart Sept 2025 modular reset: Crunchwell Mega/Honey Nut Mega/Multigrain
     lose 2 facings (8 → 6) at Walmart stores in the South division
   - Hurricane Tonya (Nov 8, 2025) drops Crunchwell Mega OSA in LA from ~97% to ~67%
-  - Honey Bunches of Oats heavy promo at Rouses Q4 '25 → Q1 '26
+  - Field & Honey heavy promo at Rouses Q4 '25 → Q1 '26
   - LA Crunchwell-loyal HHs flagged with Switching_Flag = "Yes"
 
 Reproducible — `random.seed(42)`. Run:
@@ -71,8 +71,8 @@ SKUS = [
 COMP_SKUS = [
     ("GM001", "Cheerios 12oz",                    "Cheerios",            "General Mills", "RTE Cereal", "Family Oat",   12, 4.29),
     ("GM002", "Honey Nut Cheerios 14oz",          "Honey Nut Cheerios",  "General Mills", "RTE Cereal", "Family Sweet", 14, 4.49),
-    ("PF001", "Honey Bunches of Oats 14oz",       "Honey Bunches Oats",  "Post Foods",    "RTE Cereal", "Family Sweet", 14, 4.39),
-    ("PF002", "Great Grains 14oz",                "Great Grains",        "Post Foods",    "RTE Cereal", "Family Wholegrain", 14, 4.79),
+    ("PF001", "Field & Honey 14oz",               "Field & Honey",       "Larksfield Foods", "RTE Cereal", "Family Sweet", 14, 4.39),
+    ("PF002", "Harvest Hearth 14oz",              "Harvest Hearth",      "Larksfield Foods", "RTE Cereal", "Family Wholegrain", 14, 4.79),
     ("KL001", "Frosted Flakes 13.5oz",            "Frosted Flakes",      "Kellanova",     "RTE Cereal", "Kids Sweet",   13.5, 4.59),
     ("PL001", "GV Honey Toasted Oats 14oz",       "Great Value",         "Walmart PL",    "RTE Cereal", "Family Sweet", 14, 2.89),
     ("PL002", "GV Toasted Oats Original 14oz",    "Great Value",         "Walmart PL",    "RTE Cereal", "Family Oat",   14, 2.69),
@@ -417,14 +417,14 @@ def gen_epos(n_rows=30000):
         if random.random() < 0.22:
             promo_flag, promo_type = "Yes", random.choice(["Price Off","Multi-Buy","Bundle","Loyalty"])
             disc = round(random.uniform(0.05, 0.30), 2)
-        if (sku["brand"] == "Honey Bunches Oats" and chain in ("Rouses","Brookshires")
+        if (sku["brand"] == "Field & Honey" and chain in ("Rouses","Brookshires")
                 and dma_id == "LA-DMA" and tx_date >= date(2025,10,1)):
             if random.random() < 0.85:
                 promo_flag, promo_type, disc = "Yes", "Price Off", 0.21
         if sku["id"] in ("CR002","CR004","CR005") and dma_id == "LA-DMA":
             if date(2025,11,8) <= tx_date <= date(2025,12,15):
                 if random.random() < 0.55:
-                    sku = random.choice([s for s in sku_pool if s["brand"] == "Honey Bunches Oats"])
+                    sku = random.choice([s for s in sku_pool if s["brand"] == "Field & Honey"])
 
         unit_price = round(base * (1 - disc), 2)
         seas = "None"
@@ -495,7 +495,7 @@ def gen_perfect_store(n_rows=50000):
         if random.random() < 0.18:
             promo_flag, promo_type = "Yes", random.choice(["Price Off","Multi-Buy","Bundle","Loyalty"])
             promo_depth = random.choices([10,15,20,25,30], weights=[30,30,20,15,5])[0]
-        if (sku["brand"] == "Honey Bunches Oats" and store["chain"] in ("Rouses","Brookshires")
+        if (sku["brand"] == "Field & Honey" and store["chain"] in ("Rouses","Brookshires")
                 and store["dma"] == "LA-DMA" and d >= date(2025,10,1)):
             if random.random() < 0.65:
                 promo_flag, promo_type, promo_depth = "Yes", "Price Off", 21
@@ -585,7 +585,7 @@ def gen_syndicated_weekly():
                         "Volume_Units_K":round(base_value * 1000 / avg_p, 1),
                         "Acme_Value_Share":round(acme_share, 4),
                         "Crunchwell_Value_Share":round(crunch_share, 4),
-                        "Post_Value_Share":round(random.uniform(0.10,0.18) if cat=="RTE Cereal" else random.uniform(0.0,0.05), 4),
+                        "Larksfield_Value_Share":round(random.uniform(0.10,0.18) if cat=="RTE Cereal" else random.uniform(0.0,0.05), 4),
                         "GeneralMills_Value_Share":round(random.uniform(0.20,0.32) if cat=="RTE Cereal" else random.uniform(0.0,0.08), 4),
                         "Kellanova_Value_Share":round(random.uniform(0.18,0.26) if cat=="RTE Cereal" else random.uniform(0.0,0.04), 4),
                         "PL_Value_Share":round(random.uniform(0.06,0.14), 4),
@@ -605,7 +605,7 @@ def gen_syndicated_weekly():
 def gen_brand_health(n_rows=15000):
     waves = ["2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1"]
     primary_cats = ["RTE Cereal","Hot Cereal","Granola","Plant-Based Milk","Bar","Snacks"]
-    competitors = ["Cheerios","Honey Bunches Oats","Frosted Flakes","Quaker","Great Value PL","Magic Spoon","Kashi"]
+    competitors = ["Cheerios","Field & Honey","Frosted Flakes","Quaker","Great Value PL","Magic Spoon","Kashi"]
     rows = []
     for i in range(1, n_rows+1):
         wave = random.choice(waves)
@@ -667,7 +667,7 @@ def gen_brand_health(n_rows=15000):
             "aided_aw_trailgrove":random.choices([0,1], weights=[45,55])[0],
             "aided_aw_rootday":random.choices([0,1], weights=[58,42])[0],
             "aided_aw_cheerios":random.choices([0,1], weights=[8,92])[0],
-            "aided_aw_honey_bunches":a_hboo,
+            "aided_aw_field_honey":a_hboo,
             "aided_aw_frosted_flakes":random.choices([0,1], weights=[10,90])[0],
             "aided_aw_quaker":random.choices([0,1], weights=[12,88])[0],
             "aided_aw_great_value_pl":random.choices([0,1], weights=[25,75])[0],
@@ -745,7 +745,7 @@ def gen_hh_transactions(hh_df, n_rows=30000):
         switching_flag = "No"
         if (hh["DMA"]=="LA-DMA" and hh["Brand_Loyalty_Segment"]=="Acme Loyal"
                 and wk >= date(2025,11,1) and random.random() < 0.14):
-            sku = next(s for s in pool if s["brand"]=="Honey Bunches Oats")
+            sku = next(s for s in pool if s["brand"]=="Field & Honey")
             switching_flag = "Yes"
 
         units = random.choices([1,2,3,4], weights=[55,28,12,5])[0]
@@ -1112,7 +1112,7 @@ def gen_shipments() -> pd.DataFrame:
 def gen_promo_events() -> pd.DataFrame:
     """All-retailer promo event log with mechanic taxonomy + ROI.
 
-    The Louisiana Honey Bunches sequence (in seeds/promo_events_louisiana.csv)
+    The Louisiana Field & Honey sequence (in seeds/promo_events_louisiana.csv)
     is preserved as a hand-curated subset; this generator extends to ~700 events
     across all retailers with industry-typical ROI distributions.
     """
@@ -1161,7 +1161,7 @@ def gen_promo_events() -> pd.DataFrame:
         sku = random.choice(sku_pool)
         sid, sname, brand, cat, subcat, oz, price = sku[0], sku[1], sku[2], sku[3], sku[4], sku[5], sku[6]
         manufacturer = "Acme Corp" if sid.startswith(("CR","HN","PP","MO","TG","RD")) else (
-            random.choice(["General Mills","Post Foods","Kellanova","Walmart PL","PepsiCo"])
+            random.choice(["General Mills","Larksfield Foods","Kellanova","Walmart PL","PepsiCo"])
         )
         d_offset = random.randint(0, days)
         sd = start + timedelta(days=d_offset)
@@ -1288,7 +1288,7 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
         # Acme brands + key competitors
         ("Crunchwell","Acme Corp"), ("HoneyNest","Acme Corp"), ("ProteinPeak","Acme Corp"),
         ("MorningOats","Acme Corp"), ("TrailGrove","Acme Corp"), ("RootDay","Acme Corp"),
-        ("Cheerios","General Mills"), ("Honey Bunches Oats","Post Foods"),
+        ("Cheerios","General Mills"), ("Field & Honey","Larksfield Foods"),
         ("Frosted Flakes","Kellanova"), ("Quaker","PepsiCo"),
         ("Magic Spoon","Magic Spoon"), ("Three Wishes","Three Wishes"),
         ("Catalina Crunch","Catalina"), ("Great Value","Walmart PL"),
@@ -1322,7 +1322,7 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
             sentiment -= 0.45
             if random.random() < 0.30:
                 chosen_topics = list(set(chosen_topics + ["supply-issue","negative-experience"]))
-        if brand == "Honey Bunches Oats" and dma == "LA-DMA" and date(2025,10,1) <= d <= date(2026,2,28):
+        if brand == "Field & Honey" and dma == "LA-DMA" and date(2025,10,1) <= d <= date(2026,2,28):
             sentiment = abs(sentiment) + 0.18
             if random.random() < 0.20:
                 chosen_topics = list(set(chosen_topics + ["viral","promo"]))
@@ -1386,7 +1386,7 @@ def gen_creator_posts(n_rows=3200) -> pd.DataFrame:
             brand = random.choice(options)
         else:
             brand = random.choice(["Crunchwell","ProteinPeak","HoneyNest","MorningOats",
-                                   "TrailGrove","RootDay","Honey Bunches Oats",
+                                   "TrailGrove","RootDay","Field & Honey",
                                    "Cheerios","Magic Spoon"])
         # Disclosed partnership likelihood
         disclosed = "Yes" if random.random() < 0.42 else "No"
@@ -1439,7 +1439,7 @@ def gen_search_trends() -> pd.DataFrame:
         ("crunchwell coupon", "RTE Cereal", 0.02, 14),
         ("proteinpeak", "RTE Cereal", 0.22, 38),
         ("rootday oat milk", "Plant-Based Milk", 0.14, 26),
-        ("honey bunches of oats", "RTE Cereal", 0.08, 54),
+        ("field & honey", "RTE Cereal", 0.08, 54),
         ("cheerios oat crunch", "RTE Cereal", 0.34, 64),
         ("kids cereal best", "RTE Cereal", 0.02, 32),
         ("hispanic cereal", "RTE Cereal", 0.08, 18),
@@ -1455,7 +1455,7 @@ def gen_search_trends() -> pd.DataFrame:
         ("cheerios honey vanilla", "RTE Cereal", 0.12, 28),
         ("frosted flakes new", "RTE Cereal", 0.08, 32),
         ("acme cereal recall", "RTE Cereal", 0.02, 8),
-        ("honey bunches almond", "RTE Cereal", 0.34, 38),
+        ("field & honey almond", "RTE Cereal", 0.34, 38),
         ("rxbar cookie dough", "Bar", 0.14, 26),
         ("kind bar caramel", "Bar", 0.06, 22),
         ("plant based milk taste", "Plant-Based Milk", 0.10, 30),
@@ -1481,8 +1481,8 @@ def gen_search_trends() -> pd.DataFrame:
                 # Cheerios Oat Crunch peaks at launch (Jan 2026)
                 if "cheerios oat" in kw and m >= date(2026,1,1):
                     volume *= 1.6
-                # Honey Bunches Almond peaks at launch (Sept 2025)
-                if "honey bunches almond" in kw and m >= date(2025,9,1):
+                # Field & Honey Almond peaks at launch (Sept 2025)
+                if "field & honey almond" in kw and m >= date(2025,9,1):
                     volume *= 1.8
                 # ProteinPeak grows with brand momentum
                 if "proteinpeak" in kw and m >= date(2025,9,1):
@@ -1500,7 +1500,7 @@ def gen_search_trends() -> pd.DataFrame:
                         "TrailGrove" if "trailgrove" in kw else
                         "MorningOats" if "morningoats" in kw else
                         "Cheerios" if "cheerios" in kw else
-                        "Honey Bunches Oats" if "honey bunches" in kw else
+                        "Field & Honey" if "field & honey" in kw else
                         "Frosted Flakes" if "frosted flakes" in kw else
                         "Magic Spoon" if "magic spoon" in kw else
                         "Maizoro" if "maizoro" in kw else

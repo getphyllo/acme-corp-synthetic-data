@@ -70,7 +70,7 @@ This is the week immediately after the Q1 close call. Her actual calendar.
 - **1:00 PM** — Goes deeper on Louisiana. Cross-references Walmart Luminate, Circana Unify, Numerator panel, and Brandwatch (looking for sentiment shifts on Crunchwell in NOLA/BTR DMAs).
 - **3:00 PM** — Builds the root-cause hypothesis tree:
   - H1: Walmart facing reduction (Sept 2025) finally compounding
-  - H2: Post Foods aggressive promo at Rouses
+  - H2: Larksfield Foods aggressive promo at Rouses
   - H3: Hurricane Tonya disruption to Acme's Houston DC (Nov 2025) extended into Q1
   - H4: Demographic shift — Hispanic households growing fast in BTR
   - H5: Private-label growth at Walmart Great Value
@@ -80,7 +80,7 @@ This is the week immediately after the Q1 close call. Her actual calendar.
 
 ### Wednesday — the big day
 
-- **7:00 AM** — Reviews Nina's edits. Three comments: "Make the y-axis logarithmic," "Add the Post promo screenshot from Rouses," "Slide 4 needs a clearer 'so what.'"
+- **7:00 AM** — Reviews Nina's edits. Three comments: "Make the y-axis logarithmic," "Add the Larksfield promo screenshot from Rouses," "Slide 4 needs a clearer 'so what.'"
 - **8:30 AM** — Drives to office. Listens to the *Acquired* podcast on the way.
 - **10:00 AM** — Sits in the back of the conference room while Diane presents to Nathan and Tessa (Audrey couldn't make it). Maya does not speak unless asked. Diane is asked twice. Maya answers both times calmly, accurately. Nathan: "Good work — who pulled this?" Diane: "Maya. She's been on this since Friday." Maya nods.
 - **11:30 AM** — Back to desk. New ask: Gregory Whitfield is presenting to the board on May 28. He wants a one-page exec summary on Louisiana with a recovery plan. *Diane, can you have your team build it?* That falls back to Maya.
@@ -114,13 +114,13 @@ Take a fuzzy question from a stakeholder, turn it into evidence, build the narra
 
 - *"If I had two more hours per day I'd be a Director by now."*
 - *"Half the questions I get asked have already been answered in last quarter's deck. They just don't search."*
-- *"I think the Louisiana decline is 70% Walmart facings, 20% Post promo, 10% noise — but if I say that without 8 charts, no one believes me."*
+- *"I think the Louisiana decline is 70% Walmart facings, 20% Larksfield promo, 10% noise — but if I say that without 8 charts, no one believes me."*
 
 ## Her core questions when she opens a tool on Monday morning
 
 - *"What changed in Crunchwell sales last week, and where?"*
 - *"Is anything anomalous in Louisiana that I should bring up before someone asks?"*
-- *"What's Post doing this week that I should know about?"*
+- *"What's Larksfield doing this week that I should know about?"*
 - *"What slides do I have that already answer this question, that I can reuse?"*
 - *"How do I get a defensible answer by Friday for Diane?"*
 

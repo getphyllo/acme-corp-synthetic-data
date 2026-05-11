@@ -126,7 +126,7 @@ The Q1 2026 LA DMA observation is the natural hold-out. The model trained on FY2
 
 When the model is trained, the residual analysis should attribute:
 - ~55% of the Q1 2026 LA shortfall to the `walmart_facings_dma_week` reduction
-- ~20% to `competitive_promo_depth_dma_week` increase (Post)
+- ~20% to `competitive_promo_depth_dma_week` increase (Larksfield)
 - ~12% to `disaster_flag` (Hurricane Tonya residual)
 - ~13% to other / unexplained
 

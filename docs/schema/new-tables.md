@@ -111,7 +111,7 @@ All-retailer promo log with mechanic taxonomy and ROI math.
 | `True_Incremental_Units` | int | incremental × (1 − forward_buy) |
 | `ROI` | float | (gross_margin × true_incremental) / trade_spend |
 
-**Narrative encoded:** Industry-typical mix per retailer (Walmart Feature+Display heavy, Kroger Multi-Buy heavy, Costco Bundle heavy). Median ROI ~1.2x. The hand-curated LA Honey Bunches sequence remains in `seeds/promo_events_louisiana.csv` — it's still the canonical record for that story.
+**Narrative encoded:** Industry-typical mix per retailer (Walmart Feature+Display heavy, Kroger Multi-Buy heavy, Costco Bundle heavy). Median ROI ~1.2x. The hand-curated LA Field & Honey sequence remains in `seeds/promo_events_louisiana.csv` — it's still the canonical record for that story.
 
 **Headline prompts unblocked:** "Summarize ROI of every promotion we ran at Walmart in Q1." "Which promo mechanics deliver the best lift for our top 10 SKUs at Kroger?" "How much of our promotional volume is true incrementality vs. forward-buy?"
 
@@ -140,7 +140,7 @@ Hand-curated competitor + Acme launch event log. Sourced from `seeds/competitor_
 | `intel_source` | str | NielsenIQ Innovation Tracker / Mintel GNPD / Walmart Luminate / etc. |
 | `notes` | str | |
 
-**Narrative encoded:** ~30 launches anchored on real CPG launch tempo, including Post "Honey Bunches Almond" Sept 2025 (LA stealth threat), GM "Cheerios Oat Crunch" Jan 2026, Walmart Great Value Honey Toasted Oats expansion (took Crunchwell's facings — LA H5), Acme's own Crunchwell Cinnamon Twist (the underperformer), ProteinPeak Cinnamon Crunch (planned Q2 2026).
+**Narrative encoded:** ~30 launches anchored on real CPG launch tempo, including Larksfield "Field & Honey Almond" Sept 2025 (LA stealth threat), GM "Cheerios Oat Crunch" Jan 2026, Walmart Great Value Honey Toasted Oats expansion (took Crunchwell's facings — LA H5), Acme's own Crunchwell Cinnamon Twist (the underperformer), ProteinPeak Cinnamon Crunch (planned Q2 2026).
 
 **Headline prompts unblocked:** "Did any competitors launch new products in the last 7 days?" "Which new items launched in our category in the last 6 months are gaining traction?" "Generate a competitive response brief: [Competitor] just launched 4 new SKUs at Walmart..."
 
@@ -167,7 +167,7 @@ Per-mention social listening data across TikTok, Instagram, Twitter/X, Reddit, Y
 | `DMA_Region` | str | DMA id or 'UNKNOWN' (~45% UNKNOWN, realistic for social geo-inference) |
 | `Source` | str | "Brandwatch" |
 
-**Narrative encoded:** Crunchwell sentiment dip in LA Q4 2025–Q1 2026 (avg around −0.36 vs +0.13 elsewhere). Honey Bunches viral wave with `Topic_Tags='viral;promo'`. ProteinPeak athletic-momentum lift Q1 2026.
+**Narrative encoded:** Crunchwell sentiment dip in LA Q4 2025–Q1 2026 (avg around −0.36 vs +0.13 elsewhere). Field & Honey viral wave with `Topic_Tags='viral;promo'`. ProteinPeak athletic-momentum lift Q1 2026.
 
 **Headline prompts unblocked:** "How has consumer sentiment about our brand changed?" "What's driving negative sentiment?" "Social momentum vs. competition?"
 
@@ -214,7 +214,7 @@ Monthly keyword search volume across Google, Amazon, TikTok.
 | `MoM_Growth_Pct` | float | |
 | `Source` | str | "Spate" or "Helium 10" |
 
-**Narrative encoded:** "high-protein cereal" growing +18% MoM, "oat milk barista" +16%, "honey bunches almond" peaks at launch (Sept 2025), "cheerios oat crunch" peaks at launch (Jan 2026). "crunchwell review" slightly negative drift.
+**Narrative encoded:** "high-protein cereal" growing +18% MoM, "oat milk barista" +16%, "field & honey almond" peaks at launch (Sept 2025), "cheerios oat crunch" peaks at launch (Jan 2026). "crunchwell review" slightly negative drift.
 
 **Headline prompts unblocked:** "Fastest-growing search terms in our category we don't rank for." "Top trending topics on TikTok." Innovation white-space prompts.
 

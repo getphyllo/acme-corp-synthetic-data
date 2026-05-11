@@ -18,7 +18,7 @@
 | **Scope** | All of US Sales — ~$745M FY25 — plus Canada (~$23M) |
 | **Salary band** | $385K base + 50% bonus + significant RSU package |
 | **Education** | MBA Kellogg (1998); BA Economics, U. of Wisconsin–Madison (1995) |
-| **Prior** | Procter & Gamble (Brand → Sales rotation, 1995–2008), Post Foods (Director Sales North → VP Sales East, 2008–2018), Acme since 2018 |
+| **Prior** | Procter & Gamble (Brand → Sales rotation, 1995–2008), Larksfield Foods (Director Sales North → VP Sales East, 2008–2018), Acme since 2018 |
 | **Lives in** | Battle Creek (5-min drive to HQ). Detroit-area townhouse on weekends to be closer to her college kids. |
 | **Personal** | Married to Greg, an HVAC engineer (no relation to CEO Greg). Two kids — Sophie (junior at U-M Ross) and Dylan (sophomore at MSU engineering). Avid skier. Reads two books a week. Drives a navy Audi Q5. |
 | **Tools she actually uses** | Outlook, Acme exec dashboard, Walmart Luminate (lightly), PowerPoint, an actual physical Moleskine |
@@ -28,7 +28,7 @@
 
 ## Who she is
 
-Diane is the best Sales VP Acme has had in 20 years. She came up at P&G in the brand-marketing side before crossing over to sales — a relatively rare profile that gives her the ability to switch between commercial and brand language fluently. She moved to Post Foods in 2008 and rose through the East Region. Whitfield recruited her in 2018 as one of his early bets on the Acme turnaround.
+Diane is the best Sales VP Acme has had in 20 years. She came up at P&G in the brand-marketing side before crossing over to sales — a relatively rare profile that gives her the ability to switch between commercial and brand language fluently. She moved to Larksfield Foods in 2008 and rose through the East Region. Whitfield recruited her in 2018 as one of his early bets on the Acme turnaround.
 
 She is calm in a way that makes other people calmer. She walks into a room of frustrated NAMs and 30 minutes later they have a plan. She does not raise her voice. She does not have to.
 
@@ -75,7 +75,7 @@ She is also tired. Not in a complaining way; in a deep, structural way. The trad
 ### Wednesday — the Nathan meeting
 
 - **8:00 AM** — Final prep. Reviews Maya's deck one more time. Adds a slide herself: *"What we are recommending and what we're asking from this room."*
-- **10:00 AM** — Presents to Nathan and Tessa. Nathan: "What's the headline, Diane?" Diane: "We slipped 340bps in Louisiana over 12 weeks. The dominant cause is the Walmart facing reset compounding with Post promo intensification. Hurricane DC disruption was the third driver. Demographics is a 12-month story, not a 12-week story. Recovery plan has three legs — tactical trade injection at Rouses, supply restoration at Walmart BTR, and Tom's August line-review push. We'll be back to flat by Q3, ahead by Q4."
+- **10:00 AM** — Presents to Nathan and Tessa. Nathan: "What's the headline, Diane?" Diane: "We slipped 340bps in Louisiana over 12 weeks. The dominant cause is the Walmart facing reset compounding with Larksfield promo intensification. Hurricane DC disruption was the third driver. Demographics is a 12-month story, not a 12-week story. Recovery plan has three legs — tactical trade injection at Rouses, supply restoration at Walmart BTR, and Tom's August line-review push. We'll be back to flat by Q3, ahead by Q4."
 - **11:00 AM** — Nathan: "I'll bring it to Greg today." Diane: "Tell him I'll be in the May 28 board read with the recovery plan."
 - **11:30 AM** — Pings Marcus: *"Nathan was satisfied. We're presenting to Whitfield on May 28. You're with me."*
 - **1:00 PM** — Calls Robert Kim. "If your platform thing can give me a Louisiana-style early warning two months earlier next time, I will sign whatever you want me to sign."

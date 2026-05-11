@@ -9,7 +9,7 @@ ST007,health,wellness,Health claim discussion,positive,Cheerios;Crunchwell;Prote
 ST008,athlete-fuel,wellness,Pre-or-post-workout fueling,positive,ProteinPeak;Magic Spoon,Sage Park positioning
 ST009,oat-milk,plant-based,Oat milk discussion,positive,RootDay;Oatly;Califia,Barista-coffee occasion
 ST010,recipes,creative,Cereal recipes / hacks,positive,All cereal brands,High creator engagement
-ST011,viral,creative,Viral cereal moments,positive,Honey Bunches;Magic Spoon;Crunchwell,LA Honey Bunches viral wave Q4 2025
+ST011,viral,creative,Viral cereal moments,positive,Field & Honey;Magic Spoon;Crunchwell,LA Field & Honey viral wave Q4 2025
 ST012,nostalgic,emotional,Nostalgia / childhood reference,positive,All heritage brands,Acme 74-yr brand asset
 ST013,negative-experience,product-quality,Stale cereal / pack damage / OOS,negative,Crunchwell Cinnamon Twist (review topic);general,Tied to LA OOS narrative
 ST014,sweetened,product-attribute,Sweetness level discussion,mixed,HoneyNest;Frosted Flakes;Crunchwell Honey Nut,
@@ -18,4 +18,4 @@ ST016,family-occasion,occasion,Family breakfast occasion,positive,Crunchwell;Hon
 ST017,late-night,occasion,Cereal-for-dinner occasion,positive,General cereal,
 ST018,convenience,occasion,On-the-go single-serve,positive,MorningOats Cup;Crunchwell Single-Serve,Format trend
 ST019,supply-issue,supply-chain,OOS / availability complaints,negative,Crunchwell LA-DMA Q4 2025;general,Hurricane Tonya tied
-ST020,promo,economics,Promotion / sale discussion,positive,Honey Bunches Oats LA promo;general,LA decline H2 tied
+ST020,promo,economics,Promotion / sale discussion,positive,Field & Honey LA promo;general,LA decline H2 tied

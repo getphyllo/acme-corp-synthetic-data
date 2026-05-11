@@ -22,7 +22,7 @@ The decline is **not random**. It is the compounding effect of four root causes,
 | Q1 2025 | 6.6% | +30 | On plan, post-holiday boost |
 | Q2 2025 | 6.5% | +10 | Stable |
 | Q3 2025 | 6.1% | -40 | First soft signal — Walmart reset began Sept |
-| Q4 2025 | 5.4% | -110 | Hurricane Tonya disruption (Nov), Post promo intensified |
+| Q4 2025 | 5.4% | -110 | Hurricane Tonya disruption (Nov), Larksfield promo intensified |
 | **Q1 2026** | **3.0%** | **-340** | **Trigger event for this report** |
 
 Compare against Crunchwell US average for Q1 2026: **5.7%** (down 70bps YoY). Louisiana underperforms the brand average by 270bps.
@@ -55,7 +55,7 @@ By SKU:
 | Crunchwell Original Mega | **-560 bps** | Worst hit — Walmart reset SKU, Rouses OOS |
 | Crunchwell Honey Nut Mega | **-490 bps** | Walmart reset SKU |
 | Crunchwell Honey Nut Family | -120 bps | Mid |
-| Crunchwell Multigrain | **-410 bps** | Walmart reset SKU + Post promo target |
+| Crunchwell Multigrain | **-410 bps** | Walmart reset SKU + Larksfield promo target |
 | Crunchwell Berry Burst | +40 bps | Slight gain (small base) |
 | Crunchwell Cinnamon Twist | -310 bps | Already underperforming pre-LA |
 | Crunchwell Single-Serve | -20 bps | Small base, stable |
@@ -77,16 +77,16 @@ The pattern is unmistakable. **The Mega and Multigrain SKUs that lost facings in
 
 **Owner of fix:** Tom Reilly (NAM Walmart) — August 2026 line review. Acme is asking for 2 facings back on Original Mega and Honey Nut Mega, supported by velocity-per-facing data and the Crunchwell pack refresh as a "consumer demand catalyst."
 
-### H2 — Post Foods aggressive promo intensification at Rouses & Brookshire's (SECONDARY DRIVER · ~20% of impact)
+### H2 — Larksfield Foods aggressive promo intensification at Rouses & Brookshire's (SECONDARY DRIVER · ~20% of impact)
 
-**What happened:** Beginning in late October 2025, Post Foods (specifically Honey Bunches of Oats and Great Grains) ran an aggressive 14-week promotional cadence at Rouses Markets and Brookshire's stores in LA. Promotion depth: $0.50 off the 14oz Honey Bunches of Oats (vs. Acme's $0.40 off); 4-week endcap at Rouses; trade-funded display flag.
+**What happened:** Beginning in late October 2025, Larksfield Foods (specifically Field & Honey and Harvest Hearth) ran an aggressive 14-week promotional cadence at Rouses Markets and Brookshire's stores in LA. Promotion depth: $0.50 off the 14oz Field & Honey (vs. Acme's $0.40 off); 4-week endcap at Rouses; trade-funded display flag.
 
 **Evidence:**
-- Numerator panel data shows 11% increase in Honey Bunches of Oats household reach in LA Q4 2025 → Q1 2026.
-- Switching analysis: in Q1 2026, 14% of LA Crunchwell lapsed buyers bought Honey Bunches of Oats at next purchase, vs. 6% LA baseline (FY24).
-- Rouses category buyer (per Marcus's May 11 conversation) confirmed Post's trade depth was "a half step ahead" of Acme.
+- Numerator panel data shows 11% increase in Field & Honey household reach in LA Q4 2025 → Q1 2026.
+- Switching analysis: in Q1 2026, 14% of LA Crunchwell lapsed buyers bought Field & Honey at next purchase, vs. 6% LA baseline (FY24).
+- Rouses category buyer (per Marcus's May 11 conversation) confirmed Larksfield's trade depth was "a half step ahead" of Acme.
 
-**Why it compounded:** Acme's trade-pullback strategy on Crunchwell (26% → 22% trade depth target) coincided exactly with Post's intensification. Acme blinked first.
+**Why it compounded:** Acme's trade-pullback strategy on Crunchwell (26% → 22% trade depth target) coincided exactly with Larksfield's intensification. Acme blinked first.
 
 **Owner of fix:** Marcus Boudreaux + Marian Holt + Diane Halverson — proposed targeted 4-week trade injection at Rouses ($0.55 off) to close the depth gap, with hard end date.
 
@@ -97,9 +97,9 @@ The pattern is unmistakable. **The Mega and Multigrain SKUs that lost facings in
 **Evidence:**
 - DC outbound shipment data shows Crunchwell Mega volume to LA stores down 47% during the Nov 9–Dec 10 window.
 - Customer service tickets logged 23 OOS escalations from LA stores in November–December 2025.
-- Digital shelf data (Walmart.com search-rank for Crunchwell Mega in LA ZIP codes) shows substitution behavior — when OOS, consumers were served Cheerios and Honey Bunches of Oats as recommendations.
+- Digital shelf data (Walmart.com search-rank for Crunchwell Mega in LA ZIP codes) shows substitution behavior — when OOS, consumers were served Cheerios and Field & Honey as recommendations.
 
-**Why it compounded:** The OOS coincided with Post's promo cadence. Consumers who couldn't find Crunchwell tried Honey Bunches of Oats on promo and stuck. Switching data confirms.
+**Why it compounded:** The OOS coincided with Larksfield's promo cadence. Consumers who couldn't find Crunchwell tried Field & Honey on promo and stuck. Switching data confirms.
 
 **Owner of fix:** Already addressed operationally; supply restored by mid-January 2026. Long-tail repeat behavior is the residual issue.
 
@@ -131,7 +131,7 @@ The pattern is unmistakable. **The Mega and Multigrain SKUs that lost facings in
                 Estimated contribution to 340bps LA share loss
               ┌──────────────────────────────────────────┐
 H1  Walmart facing reset       ████████████████████  ~55% (-187 bps)
-H2  Post promo intensification  ████████              ~20% (-68 bps)
+H2  Larksfield promo intensification ████████          ~20% (-68 bps)
 H3  Hurricane Tonya / DC        █████                 ~12% (-41 bps)
 H5  Walmart PL growth           ███                    ~8% (-27 bps)
 H4  Hispanic demo shift         ██                     ~5% (-17 bps)
@@ -145,9 +145,9 @@ This is the most uncomfortable section of the report. Each of these signals exis
 | Signal | When visible | When acted on | Lag |
 |---|---|---|---:|
 | Walmart facing reset risk flagged | Aug 2025 (modular preview) | Mar 2026 (this report) | **7 months** |
-| Post promo intensification at Rouses | Oct 2025 (NielsenIQ promo data) | May 2026 | **7 months** |
+| Larksfield promo intensification at Rouses | Oct 2025 (NielsenIQ promo data) | May 2026 | **7 months** |
 | Houston DC OOS extending past supply restoration | Jan 2026 (customer service tickets) | Mar 2026 | **2 months** |
-| Switching from Crunchwell → Honey Bunches in LA panel | Dec 2025 (Numerator) | Mar 2026 | **3 months** |
+| Switching from Crunchwell → Field & Honey in LA panel | Dec 2025 (Numerator) | Mar 2026 | **3 months** |
 | Q4 2025 LA share down 110bps (early warning) | Jan 2026 (NielsenIQ Q4 read) | Mar 2026 (Q1 alarm) | **2 months** |
 
 **The honest read:** every individual signal was inside a tool Acme already pays for. No one synthesized them across tools, across functions, across geographies, or across timeframes. The first time a single human had all five signals on one page was when Maya Chen built the hypothesis tree on May 12, 2026 — six weeks after the worst of the damage was done.

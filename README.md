@@ -95,10 +95,10 @@ The point of this dataset is that it tells a coherent CPG story without any join
 | Hurricane Tonya OSA collapse Nov 2025 (97% → 67%) | `perfect_store` where `DMA='LA-DMA' AND SKU IN ('CR002','CR004','CR005') AND Date BETWEEN '2025-11-08' AND '2025-12-15'` |
 | Hurricane Tonya supply collapse — Houston DC fill rate ~58% | `shipments` where `Retailer_DC LIKE '%Houston%' OR LIKE '%Thibodaux%' OR LIKE '%Tyler%' AND Cut_Reason='Storm'` |
 | LA Crunchwell -47% vs plan in Q1 2026 | `plan_vs_actual` where `Brand='Crunchwell' AND DMA='LA-DMA' AND Period >= '2026-01'` |
-| Post Foods promo intensification at Rouses (21% off, weekly) | `perfect_store` filter `Banner='Rouses' AND Brand='Honey Bunches Oats'` + canonical event log `seeds/promo_events_louisiana.csv` |
-| Honey Bunches Almond launch (LA stealth threat) | `competitor_launches WHERE brand='Honey Bunches of Oats' AND launch_date='2025-09-08'` |
-| Honey Bunches viral wave Q4 2025 | `social_mentions WHERE Brand_Mentioned='Honey Bunches Oats' AND DMA_Region='LA-DMA' AND Topic_Tags LIKE '%viral%'` |
-| LA Crunchwell-loyal HHs switching to Honey Bunches | `household_transactions WHERE Switching_Flag='Yes' AND DMA='LA-DMA'` |
+| Larksfield Foods promo intensification at Rouses (21% off, weekly) | `perfect_store` filter `Banner='Rouses' AND Brand='Field & Honey'` + canonical event log `seeds/promo_events_louisiana.csv` |
+| Field & Honey Almond launch (LA stealth threat) | `competitor_launches WHERE brand='Field & Honey' AND launch_date='2025-09-08'` |
+| Field & Honey viral wave Q4 2025 | `social_mentions WHERE Brand_Mentioned='Field & Honey' AND DMA_Region='LA-DMA' AND Topic_Tags LIKE '%viral%'` |
+| LA Crunchwell-loyal HHs switching to Field & Honey | `household_transactions WHERE Switching_Flag='Yes' AND DMA='LA-DMA'` |
 | Crunchwell perception softening in LA Q4'25 + Q1'26 | `brand_health WHERE dma='LA-DMA' AND wave IN ('2025Q4','2026Q1')` — `taste`/`quality` ~0.4 lower |
 | Crunchwell sentiment dip in LA on social | `social_mentions WHERE Brand_Mentioned='Crunchwell' AND DMA_Region='LA-DMA'` — avg sentiment ~−0.36 |
 | Cinnamon Twist (CR006) underperformer story | `sku_authorization WHERE SKU='CR006'` (39% authorized) + `product_reviews WHERE SKU='CR006'` (avg ~3.4) + `competitor_launches WHERE launch_id='LCH00019'` |
@@ -119,7 +119,7 @@ Full root-cause walkthrough: [`docs/louisiana-decline.md`](./docs/louisiana-decl
 - **HQ:** Battle Creek, MI · **Founded:** 1952 · **CEO:** Gregory Whitfield (since 2020)
 - **FY25 net revenue:** $812M (+5.1% YoY) · **EBITDA margin:** 14.2% (target 16% by FY28)
 - **Brands:** Crunchwell ($312M flagship), HoneyNest ($94M, kids), ProteinPeak ($48M, +24.6%), MorningOats ($98M), TrailGrove ($152M), RootDay ($62M oat milk, acquired 2023)
-- **#4 US RTE cereal player** behind General Mills, Kellanova, Post Foods
+- **#4 US RTE cereal player** behind General Mills, Kellanova, Larksfield Foods
 
 ## The four primary personas
 
@@ -136,7 +136,7 @@ Full root-cause walkthrough: [`docs/louisiana-decline.md`](./docs/louisiana-decl
 |---|---|---|---|
 | `epos` | per-transaction | `Transaction_ID, Date_Time, DMA, Banner_Division, Brand, Manufacturer, Promotion_Flag` | Kellogg ME EPOS shape |
 | `perfect_store` | store × day × SKU | `Date, Store_ID, DMA, Banner, Banner_Division, OSA_Pct, Facings` | Kellogg ME Perfect Store |
-| `syndicated_weekly` | DMA × category × channel × week | `Crunchwell_Value_Share, Post_Value_Share, Promo_Share, ACV_Distribution_Pct` | NielsenIQ-style |
+| `syndicated_weekly` | DMA × category × channel × week | `Crunchwell_Value_Share, Larksfield_Value_Share, Promo_Share, ACV_Distribution_Pct` | NielsenIQ-style |
 | `brand_health` | per-respondent (survey) | `wave, dma, ethnicity, aided_aw_*, nps_0to10, taste/quality/health/value/...` | Kantar/Suzy-style |
 | `households` | per-household (panel master) | `DMA, Income_Bracket, Ethnicity, Brand_Loyalty_Segment` | Numerator-style |
 | `household_transactions` | HH × week × purchase | `Brand, Banner_Division, Switching_Flag, Promotion_Type` | Numerator transaction log |

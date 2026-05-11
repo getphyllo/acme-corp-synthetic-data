@@ -23,8 +23,8 @@ A ✓ means the column exists in the Acme file. A ✗ means it was deliberately 
 | Customer_ID | Customer_ID | ✓ | C###### format preserved |
 | Product_SKU | Product_SKU | ✓ | Acme SKU id (CR001 etc.) |
 | Product_Name | Product_Name | ✓ | Full SKU description |
-| — | Brand | ★ | Brand name (Crunchwell, HoneyNest, Honey Bunches Oats, etc.) — for Acme-vs-competitor pivots |
-| — | Manufacturer | ★ | "Acme Corp" / "Post Foods" / "General Mills" / "Walmart PL" / etc. |
+| — | Brand | ★ | Brand name (Crunchwell, HoneyNest, Field & Honey, etc.) — for Acme-vs-competitor pivots |
+| — | Manufacturer | ★ | "Acme Corp" / "Larksfield Foods" / "General Mills" / "Walmart PL" / etc. |
 | Product_Category | Product_Category | ✓ | RTE Cereal / Hot Cereal / Granola / Plant-Based Milk / Bar |
 | Quantity_Sold | Quantity_Sold | ✓ | |
 | Currency | Currency | ✓ | "USD" |
@@ -90,7 +90,7 @@ A ✓ means the column exists in the Acme file. A ✗ means it was deliberately 
 | Volume_Tons | Volume_Units_K | ✓ (renamed) | Acme reports volume in K units, not tons |
 | Kellogg_Value_Share | Acme_Value_Share | ✓ (renamed) | Total Acme share |
 | — | Crunchwell_Value_Share | ★ | The brand the Louisiana decline lives in |
-| — | Post_Value_Share | ★ | Competitor — Honey Bunches story |
+| — | Larksfield_Value_Share | ★ | Competitor — Field & Honey story |
 | — | GeneralMills_Value_Share | ★ | Cheerios |
 | — | Kellanova_Value_Share | ★ | |
 | — | PL_Value_Share | ★ | Private label |
@@ -149,7 +149,7 @@ A ✓ means the column exists in the Acme file. A ✗ means it was deliberately 
 | — | aided_aw_morningoats | ★ | |
 | — | aided_aw_trailgrove | ★ | |
 | — | aided_aw_rootday | ★ | |
-| — | aided_aw_honey_bunches | ★ | The LA-relevant competitor |
+| — | aided_aw_field_honey | ★ | The LA-relevant competitor |
 | — | aided_aw_frosted_flakes | ★ | |
 
 ---
@@ -220,7 +220,7 @@ A ✓ means the column exists in the Acme file. A ✗ means it was deliberately 
 | Price_Sensitivity_Segment | Price_Sensitivity_Segment | ✓ | |
 | Brand_Loyalty_Segment | Brand_Loyalty_Segment | ✓ | |
 | Adopter_Type | Adopter_Type | ✓ | |
-| — | Switching_Flag | ★ | "Yes" when an Acme-loyal HH switched to a competitor on this transaction (LA → Honey Bunches Q4'25–Q1'26) |
+| — | Switching_Flag | ★ | "Yes" when an Acme-loyal HH switched to a competitor on this transaction (LA → Field & Honey Q4'25–Q1'26) |
 
 ---
 
@@ -229,4 +229,4 @@ A ✓ means the column exists in the Acme file. A ✗ means it was deliberately 
 - **Ramadan-specific flag** → replaced with `Holiday_Season_Flag` and the broader `Seasonality_Flag` enum. The Acme calendar peaks in Back-to-School (Aug–Sep) and Holiday (Nov–Dec); Easter and Super Bowl are secondary.
 - **Country-level grain on syndicated weekly** → replaced with **DMA grain**, because the Louisiana decline is a DMA-level story and the Kellogg country grain doesn't capture US regional dynamics.
 - **Local Brand awareness** → replaced with explicit private-label awareness (`aided_aw_great_value_pl`) and an expanded competitor set, because in the US PL is not a long-tail "local brand" — it's a top-3 competitor in many DMAs.
-- **Weetabix and Nestlé awareness** → dropped (not relevant in US). Replaced with US-relevant brand awareness (Cheerios, Honey Bunches of Oats, Frosted Flakes, Quaker, Great Value PL).
+- **Weetabix and Nestlé awareness** → dropped (not relevant in US). Replaced with US-relevant brand awareness (Cheerios, Field & Honey, Frosted Flakes, Quaker, Great Value PL).

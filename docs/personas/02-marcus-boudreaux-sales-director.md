@@ -48,20 +48,20 @@ This is the same week Maya is having. Marcus is on a different planet.
 - **5:30 AM** — Up. Coffee. Reads his region's Sunday sell-through report on his phone. Sees the Louisiana number and curses quietly.
 - **6:00 AM** — Drives to Atlanta Hartsfield. Flight to New Orleans at 7:35.
 - **8:50 AM** — Lands in NOLA. Rents a Tahoe.
-- **9:30 AM** — Meeting at Rouses Markets HQ in Thibodaux. Walks in with a box of Crunchwell pack-refresh prototypes (he had Cory Whitman ship them to him last week). Spends 90 minutes with the buyer. Hears: *"Marcus, your trade depth is a half-step behind Post. They're at $0.50 off the 14oz, you're at $0.40. And honestly — your Crunchwell Mega has been out of stock at three of our stores in Baton Rouge for two weeks."*
+- **9:30 AM** — Meeting at Rouses Markets HQ in Thibodaux. Walks in with a box of Crunchwell pack-refresh prototypes (he had Cory Whitman ship them to him last week). Spends 90 minutes with the buyer. Hears: *"Marcus, your trade depth is a half-step behind Larksfield. They're at $0.50 off the 14oz, you're at $0.40. And honestly — your Crunchwell Mega has been out of stock at three of our stores in Baton Rouge for two weeks."*
 - **11:30 AM** — On the phone with Anil at the Acme DC in Houston. *"What the hell is going on with our Mega supply at Rouses?"* Anil: "Hurricane delays compounded with the Mega line being on a 4-week run cycle. We can be back in stock by May 25." Marcus: *"That's three more weeks of empty shelf. Get me a pallet on a backhaul tomorrow."*
-- **12:30 PM** — Lunch with the Rouses category buyer. Boudin balls and a po'boy. Talks about his daughters and his kid's softball team for 25 minutes. Closes with: "Send me the Post promo schedule for the next 6 weeks and I'll figure out the counter."
+- **12:30 PM** — Lunch with the Rouses category buyer. Boudin balls and a po'boy. Talks about his daughters and his kid's softball team for 25 minutes. Closes with: "Send me the Larksfield promo schedule for the next 6 weeks and I'll figure out the counter."
 - **2:00 PM** — Drives to Baton Rouge. Stops at three Walmart Supercenters on the way. Walks the cereal aisle with a tape measure. Counts facings. Notes which SKUs are out. Takes photos for Tom Reilly.
-- **5:00 PM** — Texts Tom: "Walmart BTR #1234, #1812, and #2156 — Crunchwell Mega facings reduced from 6 to 4. Honey Nut Mega out of stock at #1234. Post Honey Bunches has a 3-position endcap at all three. We are getting our ass kicked here." Tom replies: "Yep. Aug line review prep starts next week. We're pushing hard."
+- **5:00 PM** — Texts Tom: "Walmart BTR #1234, #1812, and #2156 — Crunchwell Mega facings reduced from 6 to 4. Honey Nut Mega out of stock at #1234. Larksfield's Field & Honey has a 3-position endcap at all three. We are getting our ass kicked here." Tom replies: "Yep. Aug line review prep starts next week. We're pushing hard."
 - **6:30 PM** — Hotel in BTR. Dinner alone (steak, room service). Calls Camille. Daughters are fine.
-- **9:00 PM** — Calls Maya Chen. *"Maya, sweetheart, can you pull me a comp of Crunchwell vs. Post promo depth at Rouses for the last 12 weeks? And by SKU. I need it for tomorrow."* Maya, calmly: "I can have it by 8 AM."
+- **9:00 PM** — Calls Maya Chen. *"Maya, sweetheart, can you pull me a comp of Crunchwell vs. Larksfield promo depth at Rouses for the last 12 weeks? And by SKU. I need it for tomorrow."* Maya, calmly: "I can have it by 8 AM."
 
 ### Tuesday
 
 - **7:30 AM** — Reads Maya's deck on his phone in bed. Mutters: "She's good." Forwards three slides to Diane with the note "She's been busting it on this."
 - **9:00 AM** — Meeting at H-E-B regional buyer office in San Antonio (flew in late Monday night).
 - **11:30 AM** — Calls his Brookshire's NAM. Asks for a same-week meeting with the buyer. "I'll come to Tyler if I have to."
-- **2:00 PM** — Internal call with Priya Raman (Cat Manager) and Marian Holt (RGM). Topic: Could a tactical 2-week trade injection in the Louisiana DMA close the Post promo gap? Marian is reluctant — "We're trying to *pull back* trade depth, Marcus, not double down." Marcus: "Marian, I respect that, but I'm losing the shelf in real time. Give me 4 weeks of $0.55-off and I'll buy us back the doors."
+- **2:00 PM** — Internal call with Priya Raman (Cat Manager) and Marian Holt (RGM). Topic: Could a tactical 2-week trade injection in the Louisiana DMA close the Larksfield promo gap? Marian is reluctant — "We're trying to *pull back* trade depth, Marcus, not double down." Marcus: "Marian, I respect that, but I'm losing the shelf in real time. Give me 4 weeks of $0.55-off and I'll buy us back the doors."
 - **4:00 PM** — Email to Diane: "Need 30 min before Wed root-cause sync. I have a tactical proposal."
 - **6:00 PM** — Dinner with H-E-B buyer at Pearl Brewery. Tacos. Walks through the Crunchwell Cinnamon Twist underperformance. Buyer admits Cinnamon Twist is at risk of delisting at H-E-B in the September reset.
 - **9:30 PM** — Hotel. Calls his daughter — middle school cross-country meet went fine.
@@ -104,7 +104,7 @@ Hit the South region revenue number. Defend distribution. Win line reviews. Deve
 
 - *"What is happening in my region this week that I need to be on top of?"*
 - *"Where am I winning and where am I losing — by retailer, by SKU?"*
-- *"What is Post / GM / private label doing right now in my territory?"*
+- *"What is Larksfield / GM / private label doing right now in my territory?"*
 - *"What's the line-review story I'll walk into Walmart with in August?"*
 - *"What can I tell my buyer at Rouses on Friday that they don't already know?"*
 
@@ -118,7 +118,7 @@ Hit the South region revenue number. Defend distribution. Win line reviews. Deve
 
 - *"Tell me what changed in my territory last week before someone in Battle Creek asks me about it."*
 - *"Give me a one-pager I can hand to a buyer in Rouses that proves we are still the smart partner."*
-- *"Show me where Post is winning so I can take it back."*
+- *"Show me where Larksfield is winning so I can take it back."*
 - *"Don't give me 50 dashboards — give me the 3 things I should walk into the buyer meeting with."*
 
 ## What loses Marcus in 60 seconds

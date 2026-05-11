@@ -89,7 +89,7 @@ These are the "facts" that any synthetic Acme panel must reproduce.
 
 | Lost-to brand | % of lapsed Crunchwell buyers in LA |
 |---|---:|
-| Honey Bunches of Oats (Post) | 14% |
+| Field & Honey (Larksfield) | 14% |
 | Cheerios (General Mills) | 9% |
 | Walmart Great Value Honey Toasted Oats (PL) | 11% |
 | Frosted Flakes (Kellanova) | 4% |
@@ -97,7 +97,7 @@ These are the "facts" that any synthetic Acme panel must reproduce.
 
 ### Brand repertoire
 
-Average household keeps 3.4 cereal brands in repertoire over 12 months. Crunchwell-buying households over-index on: HoneyNest (45%), MorningOats (28%), TrailGrove (19%), Cheerios (51% — competing buyers), Honey Bunches of Oats (33%).
+Average household keeps 3.4 cereal brands in repertoire over 12 months. Crunchwell-buying households over-index on: HoneyNest (45%), MorningOats (28%), TrailGrove (19%), Cheerios (51% — competing buyers), Field & Honey (33%).
 
 ## Generation guidance
 
@@ -120,8 +120,8 @@ assert crunchwell_share(la_dma, q1_2026) < crunchwell_share(la_dma, fy25) - 3.0
 # Walmart concentration in LA
 assert walmart_share_of_la_volume() > 0.36
 
-# Switching to Honey Bunches in LA Q1 2026 abnormally high
-assert switch_rate(crunchwell, hboo, la_dma, q1_2026) > 2 * switch_rate(crunchwell, hboo, la_dma, fy25)
+# Switching to Field & Honey in LA Q1 2026 abnormally high
+assert switch_rate(crunchwell, field_honey, la_dma, q1_2026) > 2 * switch_rate(crunchwell, field_honey, la_dma, fy25)
 
 # Hispanic HH under-penetration confirmed
 assert crunchwell_pen(hispanic) / crunchwell_pen(non_hispanic_white) < 0.35
