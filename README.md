@@ -1,30 +1,35 @@
 # Acme Corp — Synthetic Data
 
-A canonical, internally-consistent fictional CPG dataset for prototype building, design discussions, and demo storytelling. Built around **Acme Corp**, a $812M cereal-and-adjacencies company headquartered in Battle Creek, Michigan, currently fighting a **Q1 2026 share decline in the Louisiana DMA** (the data tells the story).
+A canonical, internally-consistent fictional CPG dataset for prototype building, design discussions, and demo storytelling. Built around **Acme Corp**, an $812M cereal-and-adjacencies company headquartered in Battle Creek, Michigan, currently navigating two layered scenarios:
 
-> Single source of truth. Use this version (`v0.4.0`) as the anchor for any prototype that needs CPG-shape data. If you need to evolve the schema, tag a new version — don't edit in place.
+1. **Q1 2026 Louisiana DMA share decline** — defensive analyst story (root-cause synthesis across 5 hypotheses)
+2. **Q2 2026 ProteinPeak Cinnamon Crunch + Cocoa Almond launch read** — offensive analyst story (Week-4 trial / repeat / cannibalization / channel split)
+
+Both scenarios are encoded inside the same 16 parquet tables and 13 seed files. See `docs/narrative-anchors.md` for the shared constants list.
+
+> Single source of truth. Use this version (`v0.5.0`) as the anchor for any prototype that needs CPG-shape data. If you need to evolve the schema, tag a new version — don't edit in place.
 
 ## What's in here
 
 ```
 acme-corp-synthetic-data/
 ├── data/                              ← parquet (commit-tracked, ready to query)
-│   ├── epos.parquet                       30,000 rows · transaction-level POS · v0.1
-│   ├── perfect_store.parquet              50,000 rows · store-day-SKU panel w/ OSA, facings · v0.1
-│   ├── syndicated_weekly.parquet          92,250 rows · DMA × cat × channel × week (NielsenIQ-shape) · v0.1
-│   ├── brand_health.parquet               15,000 rows · survey panel w/ awareness, NPS, attrs (Kantar-shape) · v0.1
+│   ├── epos.parquet                      ~34,000 rows · transaction-level POS · v0.1+ (window ext. v0.5)
+│   ├── perfect_store.parquet             ~57,000 rows · store-day-SKU panel w/ OSA, facings · v0.1+ (PP launch oversample v0.5)
+│   ├── syndicated_weekly.parquet         ~94,500 rows · DMA × cat × channel × week (NielsenIQ-shape) · v0.1+
+│   ├── brand_health.parquet              ~16,500 rows · survey panel w/ awareness, NPS, attrs · v0.1+ (2026Q2 wave v0.5)
 │   ├── households.parquet                  5,000 rows · HH master w/ demographics, loyalty (Numerator-shape) · v0.1
-│   ├── household_transactions.parquet     30,000 rows · weekly HH purchases w/ switching flag · v0.1
-│   ├── plan_vs_actual.parquet             ~99,000 rows · monthly plan-vs-actual w/ AOP / FCST_REV · v0.2
-│   ├── sku_authorization.parquet          ~60,000 rows · store × SKU auth + distribution snapshot · v0.2
-│   ├── shipments.parquet                  ~48,000 rows · weekly Acme plant → Retailer DC fill rate · v0.2
-│   ├── promo_events.parquet                  720 rows · all-retailer promo log w/ mechanic + ROI · v0.2
-│   ├── competitor_launches.parquet            30 rows · hand-curated launch events · v0.3
-│   ├── social_mentions.parquet            18,000 rows · Brandwatch-shape social listening · v0.3
-│   ├── creator_posts.parquet               3,200 rows · Tribe Dynamics-shape creator posts · v0.3
-│   ├── search_trends.parquet               2,400 rows · Spate / Helium 10-shape keyword volume · v0.3
-│   ├── product_reviews.parquet            24,000 rows · Bazaarvoice / PowerReviews-shape reviews · v0.3
-│   └── data_freshness_log.parquet            450 rows · weekly feed status metadata · v0.4
+│   ├── household_transactions.parquet    ~34,800 rows · weekly HH purchases w/ switching taxonomy · v0.1+ (Switching_Flag extended v0.5)
+│   ├── plan_vs_actual.parquet            ~106,000 rows · monthly plan-vs-actual w/ AOP / FCST_REV · v0.2+ (extends to 2026-05 v0.5)
+│   ├── sku_authorization.parquet         ~96,600 rows · store × SKU auth + distribution snapshot · v0.2+ (7 snapshots v0.5)
+│   ├── shipments.parquet                 ~52,700 rows · weekly Acme plant → Retailer DC fill rate · v0.2+ (window ext. v0.5)
+│   ├── promo_events.parquet                  834 rows · all-retailer promo log w/ mechanic + ROI · v0.2+ (PP launch events v0.5)
+│   ├── competitor_launches.parquet            31 rows · hand-curated launch events · v0.3 (LCH00031 v0.5)
+│   ├── social_mentions.parquet           ~20,600 rows · Brandwatch-shape social listening · v0.3 (PP launch oversample v0.5)
+│   ├── creator_posts.parquet               3,500 rows · Tribe Dynamics-shape creator posts · v0.3 (Sage cohort v0.5)
+│   ├── search_trends.parquet              ~2,900 rows · Spate / Helium 10-shape keyword volume · v0.3 (PP keywords v0.5)
+│   ├── product_reviews.parquet           ~26,500 rows · Bazaarvoice / PowerReviews-shape reviews · v0.3 (PP launch reviews v0.5)
+│   └── data_freshness_log.parquet            525 rows · weekly feed status metadata · v0.4 (window ext. v0.5)
 ├── samples/                           ← 100-row CSV slices for previewing in any tool
 ├── seeds/                             ← small, hand-curated reference CSVs
 │   ├── skus.csv · retailers.csv · geographies.csv (v0.1 masters)
@@ -34,12 +39,21 @@ acme-corp-synthetic-data/
 │   ├── regional_brands.csv · innovation_pipeline.csv · category_market_size.csv ·
 │   │   sku_elasticity_estimates.csv · macro_trends.csv · social_topics.csv (v0.4)
 │   ├── monthly_pos_fy25_q12026.csv · trade_spend_fy25.csv · marketing_spend.csv
-│   └── promo_events_louisiana.csv (canonical LA event log)
-├── acme.duckdb                        ← single-file SQL DB with all 16 tables + 17 seed tables loaded
+│   ├── promo_events_louisiana.csv (canonical LA event log)
+│   └── proteinpeak_q2_launch.csv (canonical PP Q2 launch event log — v0.5)
+├── acme.duckdb                        ← single-file SQL DB with all 16 tables + 18 seed tables loaded
 ├── generator/                         ← deterministic generator (seed=42)
 ├── docs/
-│   ├── louisiana-decline.md           ← the canonical demo scenario
-│   ├── narrative-anchors.md           ← shared constants across tables (v0.2+)
+│   ├── louisiana-decline.md           ← Scenario 1 — canonical demo scenario
+│   ├── proteinpeak-q2-launch/         ← Scenario 2 — Q2 2026 launch read bundle (v0.5)
+│   │   ├── README.md
+│   │   ├── 01-scenario-overview.md
+│   │   ├── 02-launch-data-model.md
+│   │   ├── 03-hypothesis-tree.md
+│   │   ├── 04-week4-read-deck-outline.md
+│   │   ├── 05-personas-supplement.md
+│   │   └── 06-audit-checklist.md
+│   ├── narrative-anchors.md           ← shared constants across tables (v0.2+, dual-scenario in v0.5)
 │   ├── personas/                      ← Maya · Marcus · Diane · Priya
 │   └── schema/
 │       ├── column-mapping.md          ← v0.1 Kellogg-fork mapping
@@ -84,26 +98,50 @@ Open anything in `samples/`. Each file is 100 rows of the corresponding parquet,
 
 For prototypes built with v0/Lovable/Bolt or any frontend tool, the parquet files can be queried directly in-browser via [DuckDB-WASM](https://shell.duckdb.org/) — no server. Drop a parquet URL in.
 
-## The narrative encoded in the data
+## The narratives encoded in the data
 
-The point of this dataset is that it tells a coherent CPG story without any joins to external context. Acme's **Crunchwell** flagship (#4 US RTE cereal at 5.8% share) is leaking 340 bps of share in **Louisiana** over Q1 2026. The data has these facts baked in — query them and they show up:
+The point of this dataset is that it tells two coherent CPG stories without any joins to external context.
+
+### Scenario 1 — Crunchwell's Louisiana decline (Q1 2026)
+
+Acme's **Crunchwell** flagship (#4 US RTE cereal at 5.8% share) is leaking 340 bps of share in **Louisiana** over Q1 2026. The data has these facts baked in — query them and they show up:
 
 | Fact | Where to find it |
 |---|---|
-| Crunchwell LA share drops from ~6.0% (FY24) → ~3.9% (Q1 '26) | `syndicated_weekly` filter `DMA='LA-DMA' AND Category='RTE Cereal'` |
+| Crunchwell LA share drops from ~6.0% (FY24) → ~3.0% (Q1 '26) | `syndicated_weekly` filter `DMA='LA-DMA' AND Category='RTE Cereal'` |
 | Walmart Sept 2025 modular reset (Crunchwell Mega 8 → 6 facings) | `perfect_store` where `SKU IN ('CR002','CR004','CR005') AND Banner='Walmart' AND Date >= '2025-09-15'` — also `Banner_Region='Walmart South'` lowest avg facings |
 | Hurricane Tonya OSA collapse Nov 2025 (97% → 67%) | `perfect_store` where `DMA='LA-DMA' AND SKU IN ('CR002','CR004','CR005') AND Date BETWEEN '2025-11-08' AND '2025-12-15'` |
-| Hurricane Tonya supply collapse — Houston DC fill rate ~58% | `shipments` where `Retailer_DC LIKE '%Houston%' OR LIKE '%Thibodaux%' OR LIKE '%Tyler%' AND Cut_Reason='Storm'` |
+| Hurricane Tonya supply collapse — Houston DC fill rate ~50% | `shipments` where `Retailer_DC LIKE '%Houston%' OR LIKE '%Thibodaux%' OR LIKE '%Tyler%' AND Cut_Reason='Storm'` |
 | LA Crunchwell -47% vs plan in Q1 2026 | `plan_vs_actual` where `Brand='Crunchwell' AND DMA='LA-DMA' AND Period >= '2026-01'` |
 | Larksfield Foods promo intensification at Rouses (21% off, weekly) | `perfect_store` filter `Banner='Rouses' AND Brand='Field & Honey'` + canonical event log `seeds/promo_events_louisiana.csv` |
 | Field & Honey Almond launch (LA stealth threat) | `competitor_launches WHERE brand='Field & Honey' AND launch_date='2025-09-08'` |
 | Field & Honey viral wave Q4 2025 | `social_mentions WHERE Brand_Mentioned='Field & Honey' AND DMA_Region='LA-DMA' AND Topic_Tags LIKE '%viral%'` |
 | LA Crunchwell-loyal HHs switching to Field & Honey | `household_transactions WHERE Switching_Flag='Yes' AND DMA='LA-DMA'` |
 | Crunchwell perception softening in LA Q4'25 + Q1'26 | `brand_health WHERE dma='LA-DMA' AND wave IN ('2025Q4','2026Q1')` — `taste`/`quality` ~0.4 lower |
-| Crunchwell sentiment dip in LA on social | `social_mentions WHERE Brand_Mentioned='Crunchwell' AND DMA_Region='LA-DMA'` — avg sentiment ~−0.36 |
-| Cinnamon Twist (CR006) underperformer story | `sku_authorization WHERE SKU='CR006'` (39% authorized) + `product_reviews WHERE SKU='CR006'` (avg ~3.4) + `competitor_launches WHERE launch_id='LCH00019'` |
+| Crunchwell sentiment dip in LA on social | `social_mentions WHERE Brand_Mentioned='Crunchwell' AND DMA_Region='LA-DMA'` — avg sentiment ~−0.43 |
+| Cinnamon Twist (CR006) underperformer story | `sku_authorization WHERE SKU='CR006'` (~41% authorized) + `product_reviews WHERE SKU='CR006'` (avg ~3.3) + `competitor_launches WHERE launch_id='LCH00019'` |
 
 Full root-cause walkthrough: [`docs/louisiana-decline.md`](./docs/louisiana-decline.md).
+
+### Scenario 2 — ProteinPeak Q2 2026 launch (Week-4 read)
+
+Acme's **ProteinPeak** (#3 in Wellness Protein at $48M) launched **Cinnamon Crunch (PP005) and Cocoa Almond (PP006)** on **April 20, 2026**. The FY26 plan is $48M → $80M; the two new flavors carry most of the +$32M. Maya is asked for a Week-4 read by Sage Park on Thursday May 14, 2026.
+
+| Fact | Where to find it |
+|---|---|
+| PP005 Cinnamon Crunch + PP006 Cocoa Almond launched 2026-04-20 | `seeds/skus.csv` (PP005/PP006 status='Active-Launch-Q2'); `seeds/competitor_launches.csv` LCH00021/LCH00031 |
+| Trial 113% of plan at Target, 78% at Walmart-pilot | `perfect_store` where `SKU IN ('PP005','PP006') AND Date >= '2026-04-20'` GROUP BY Banner — Target avg velocity ~17.5 vs Walmart ~9.2 |
+| Plan-vs-actual Q2: Target +13%, Walmart -22% | `plan_vs_actual WHERE Brand='ProteinPeak' AND Period IN ('2026-04','2026-05')` |
+| Repeat curve vs Berry Crunch (PP003) | `household_transactions WHERE Product_SKU IN ('PP003','PP005','PP006')` — repeat-buyer logic; PP005 W2 ≈ 1.2× PP003 |
+| Cannibalization of PP001 Vanilla Almond Original (~6% steady-state) | `perfect_store` (PP001 velocity at launch retailers post-2026-04-20 vs pre) + `household_transactions WHERE Switching_Flag='Cannibalization'` |
+| Source-of-volume: 53% new-to-brand, 32% cannibalization, 15% competitor switch | `household_transactions WHERE Product_SKU IN ('PP005','PP006') GROUP BY Switching_Flag` |
+| Authorization: PP005/PP006 zero before 2026-04-30 snapshot | `sku_authorization WHERE SKU IN ('PP005','PP006')` |
+| Sage Park athlete cohort drives creator attribution | `creator_posts WHERE Brand_Mentioned='ProteinPeak' AND Date >= '2026-04-20' AND Creator_ID IN ('CR-0012','CR-0007','CR-0021','CR-0040','CR-0042','CR-0013','CR-0027')` |
+| ProteinPeak Q2 launch social sentiment ≈ +0.47 on 360+ mentions | `social_mentions WHERE Brand_Mentioned='ProteinPeak' AND Date >= '2026-04-20'` |
+| Search-trend spike on "proteinpeak cinnamon crunch" + "proteinpeak cocoa almond" | `search_trends WHERE Keyword IN ('proteinpeak cinnamon crunch','proteinpeak cocoa almond')` |
+| $4.2M Q2 retail-media budget (Hugo Lin) | `seeds/marketing_spend.csv` 2026-Q2 ProteinPeak rows + `seeds/proteinpeak_q2_launch.csv` PP-E014 |
+
+Full launch playbook + Week-4 deck outline + hypothesis tree + audit checklist: [`docs/proteinpeak-q2-launch/`](./docs/proteinpeak-q2-launch/).
 
 ## Who this dataset is for
 

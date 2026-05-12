@@ -2,7 +2,79 @@
 
 All notable changes to this dataset are tracked here. The repo follows [Semantic Versioning](https://semver.org/) — major bumps are breaking schema changes, minor bumps add tables/columns, patch bumps fix data without changing schema.
 
-> **Current canonical version: `v0.4.1`** — Larksfield Foods rename (was Post Foods). Same row counts, same statistical structure, same `seed=42` determinism. Two column renames (`Post_Value_Share` → `Larksfield_Value_Share`, `aided_aw_honey_bunches` → `aided_aw_field_honey`).
+> **Current canonical version: `v0.5.0`** — Adds the **ProteinPeak Q2 2026 Launch Read** as Scenario 2 alongside the existing Louisiana decline (Scenario 1). Extends the data window to 2026-05-31. Adds SKUs PP005 (Cinnamon Crunch) + PP006 (Cocoa Almond). Renames PP001 to "ProteinPeak Vanilla Almond Original". Adds 6 new audit assertions; 13 seed files (was 11); 7-snapshot `sku_authorization` (was 5). All v0.4.1 row queries continue to work; row counts are larger but distributions are preserved.
+
+## [v0.5.0] — 2026-05-12
+
+### Added — ProteinPeak Q2 2026 Launch Read (Scenario 2)
+
+A second scenario rides on top of the existing Louisiana decline dataset. Both stories are now queryable from the same 16 parquet tables and the same DuckDB file. See [`docs/proteinpeak-q2-launch/`](./docs/proteinpeak-q2-launch/) for the full playbook.
+
+**New SKUs:**
+
+| SKU | Name | Launch Date | Year-1 Plan |
+|---|---|---|---|
+| **PP005** | ProteinPeak Cinnamon Crunch 12oz | 2026-04-20 | $14M |
+| **PP006** | ProteinPeak Cocoa Almond 12oz | 2026-04-20 | $10M |
+
+**Renamed SKU (non-breaking — same SKU ID, more descriptive name):**
+
+| SKU | Was | Now |
+|---|---|---|
+| PP001 | ProteinPeak Original | **ProteinPeak Vanilla Almond Original** |
+
+**New seed file:** `seeds/proteinpeak_q2_launch.csv` — 15-event canonical launch timeline (PP-E001–PP-E015) covering Target endcap, Amazon coupon, WFM/Sprouts new-item TPR, Walmart-pilot, Sage Park creator drop, and the $4.2M Pacvue retail-media line item. Mirrors `seeds/promo_events_louisiana.csv`.
+
+**Data window extension:** all 16 tables now extend to **2026-05-31** (previously 2026-03-31 for most). The Q1 LA decline anchors and Q1 plan-vs-actual values are unchanged.
+
+**Extended Switching_Flag taxonomy** (`household_transactions`):
+
+| Value | Meaning |
+|---|---|
+| `No` | Default — no switching event |
+| `Yes` | LA decline — Crunchwell-loyal HH switched to Field & Honey (unchanged) |
+| `New_To_Brand` | NEW — HH bought PP005/PP006 with no prior ProteinPeak history |
+| `Cannibalization` | NEW — HH bought PP005/PP006 having previously bought PP001 |
+| `Competitor_Switch` | NEW — HH bought PP005/PP006 having previously bought Magic Spoon/Three Wishes/Catalina |
+
+**New brand_health wave:** `2026Q2` — adds awareness lift for ProteinPeak post-launch.
+
+**Authorization snapshots added:** `2026-04-30` and `2026-05-31` (alongside the existing 5 snapshots).
+
+**Six new cross-table assertions** in `assert_consistency()`:
+
+6. PP005/PP006 Target velocity > Walmart velocity
+7. PP001 post-launch velocity ≤ pre-launch × 1.02 (cannibalization)
+8. PP005/PP006 authorization = 0 before 2026-04-30
+9. ProteinPeak Target plan-variance > Walmart plan-variance (Q2 2026)
+10. PP launch social sentiment > +0.10 with ≥ 50 mentions
+11. `New_To_Brand` count > `Cannibalization` count among PP005/PP006 HH buys
+
+**Seed updates:**
+
+- `seeds/skus.csv` — PP001 renamed; PP005 + PP006 added
+- `seeds/innovation_pipeline.csv` — INV003/INV004 promoted Stage-5 → Stage-6 In-Market
+- `seeds/competitor_launches.csv` — LCH00021 promoted Pre-Launch → Live; LCH00031 added (Cocoa Almond)
+- `seeds/marketing_spend.csv` — 2026-Q2 ProteinPeak Q2 launch rows added (~$11M total media; $4.2M retail-media net incremental)
+- `seeds/trade_spend_fy25.csv` — 3 ProteinPeak retailer rows added (WFM, Sprouts, Kroger)
+- `seeds/sku_elasticity_estimates.csv` — 8 provisional elasticity rows for PP005/PP006 (Target/Amazon/Walmart/WFM)
+- `seeds/macro_trends.csv` — MT004 cinnamon updated; MT031 cocoa-protein + MT032 Wellness-Hero pillar added
+- `seeds/social_topics.csv` — 5 new launch-related topics (new-launch, cinnamon, cocoa-chocolate, target-endcap, creator-drop)
+- `seeds/creators.csv` — CR-0013 promoted Pitched → Active for Q2 cohort
+- `seeds/monthly_pos_fy25_q12026.csv` — added ProteinPeak 2025-04, 2025-Q4, 2026-Q1, 2026-04, 2026-05 rows (with PP005/PP006 SKU-level breakdown)
+- `seeds/category_market_size.csv` — added Q2-FY2026-MTD Wellness Protein rows (national + Target + Walmart)
+
+**Docs:**
+
+- New folder `docs/proteinpeak-q2-launch/` with 6 reference files (overview, data model, hypothesis tree, deck outline, persona supplement, audit checklist)
+- `docs/narrative-anchors.md` — restructured for dual-scenario; new ProteinPeak constants table; 6 new assertions documented; new "do not" rules
+- `README.md` — second narrative table for Scenario 2; tree updated; version bumped
+
+**Notes for prototype maintainers:**
+
+- All v0.4.1 queries continue to work — same column names, same primary keys, same retailer / DMA / brand vocabularies.
+- The seed `random.seed(42)` is preserved. Re-running the generator on the same code yields the same rows.
+- Total row count grew ~12-15% across most tables because of window extension + launch oversamples. If a prototype relies on hard-coded row counts (it shouldn't), update.
 
 ## [v0.4.1] — 2026-05-10
 

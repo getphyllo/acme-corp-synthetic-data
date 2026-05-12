@@ -1,0 +1,16 @@
+event_id,start_date,end_date,sku,sku_name,brand,manufacturer,retailer,channel,dma,event_type,promo_depth_pct_off,unit_price_promo,display,feature,notes
+PP-E001,2026-04-20,2026-04-20,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Target,Mass,National,Launch + Endcap,0,7.49,Y,Y,On-shelf date — national Target rollout w/ 4-wk endcap (Soo-jin Lee). Co-launch with PP006.
+PP-E002,2026-04-20,2026-04-20,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Target,Mass,National,Launch + Endcap,0,7.49,Y,Y,On-shelf date — Target endcap co-launch with PP005
+PP-E003,2026-04-20,2026-05-17,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Target,Mass,National,Endcap (4-wk),0,7.49,Y,Y,Target endcap 4-wk Roundel-supported launch window
+PP-E004,2026-04-20,2026-05-17,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Target,Mass,National,Endcap (4-wk),0,7.49,Y,Y,Target endcap 4-wk Roundel-supported launch window
+PP-E005,2026-04-20,2026-05-31,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Amazon,E-commerce,National,Always-on + Coupon,8,6.89,N,Y,Amazon Vendor launch coupon (Anil Mehra)
+PP-E006,2026-04-20,2026-05-31,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Amazon,E-commerce,National,Always-on + Coupon,8,6.89,N,Y,Amazon Vendor launch coupon (Anil Mehra)
+PP-E007,2026-04-20,2026-05-31,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Whole Foods,Grocery Premium,National,New Item TPR,5,7.12,N,Y,WFM new-item TPR
+PP-E008,2026-04-20,2026-05-31,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Whole Foods,Grocery Premium,National,New Item TPR,5,7.12,N,Y,WFM new-item TPR
+PP-E009,2026-04-20,2026-05-31,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Sprouts,Grocery Premium,National,New Item TPR,7,6.97,N,Y,Sprouts wellness new-item depth
+PP-E010,2026-04-20,2026-05-31,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Sprouts,Grocery Premium,National,New Item TPR,7,6.97,N,Y,Sprouts wellness new-item depth
+PP-E011,2026-04-27,2026-05-24,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Walmart,Mass,National,Walmart-pilot SKU Test,3,7.27,N,Y,Walmart Cinnamon Crunch pilot — Tom Reilly NAM; soft trial (78% of plan W4)
+PP-E012,2026-04-27,2026-05-24,PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Acme Corp,Kroger,Grocery National,National,New Item TPR,5,7.12,N,Y,Kroger Cocoa Almond new-item TPR (Jasmine Watkins NAM)
+PP-E013,2026-04-20,2026-04-20,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Target,All,National,Creator Drop,0,7.49,N,N,Sage Park #ProteinDrop launch — anchor creators CR-0012 + CR-0007 + CR-0021 + CR-0040 + CR-0042
+PP-E014,2026-04-20,2026-05-31,PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Acme Corp,Target.com+Amazon,E-commerce,National,Pacvue Retail Media,N/A,7.49,N,N,$4.2M [sample] Q2 retail-media budget (Hugo Lin / Tasha Brooks Pacvue) — ROAS to be re-read W4/W8/W13
+PP-E015,2026-05-25,2026-05-25,N/A,Week-4 Read Milestone,ProteinPeak,Acme Corp,Internal,N/A,National,Internal Milestone,N/A,N/A,N,N,Maya Chen Week-4 read deck for Sage/Audrey/Whitfield Tuesday May 26 business review

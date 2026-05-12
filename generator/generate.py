@@ -2,17 +2,31 @@
 Acme Corp synthetic-data generator.
 
 One run produces:
-  - data/*.parquet                — six tables (Kellogg-shape, US-anchored)
+  - data/*.parquet                — sixteen tables (Kellogg-shape, US-anchored)
   - samples/*.csv                  — 100-row CSV slices for previewing
   - acme.duckdb                    — single-file SQL database with everything loaded
 
-The narrative is encoded in the data:
-  - Crunchwell LA share drops from ~6% (2024) to ~3.9% (Q1 2026)
+The narrative is encoded across two layered scenarios (see docs/narrative-anchors.md):
+
+  Scenario 1 — Louisiana Cereal Decline (Q1 2026)
+  -----------------------------------------------
+  - Crunchwell LA share drops from ~6% (2024) to ~3.0% (Q1 2026, -340 bps)
   - Walmart Sept 2025 modular reset: Crunchwell Mega/Honey Nut Mega/Multigrain
     lose 2 facings (8 → 6) at Walmart stores in the South division
   - Hurricane Tonya (Nov 8, 2025) drops Crunchwell Mega OSA in LA from ~97% to ~67%
   - Field & Honey heavy promo at Rouses Q4 '25 → Q1 '26
   - LA Crunchwell-loyal HHs flagged with Switching_Flag = "Yes"
+
+  Scenario 2 — ProteinPeak Q2 2026 Launch Read
+  ---------------------------------------------
+  - ProteinPeak Cinnamon Crunch (PP005) + Cocoa Almond (PP006) co-launch 2026-04-20
+  - Trial 113% of plan in Target endcap, 78% of plan in Walmart-pilot (mass)
+  - Repeat curve at Week 2 = 1.2x Berry Crunch (PP003) at the same week-since-launch
+  - Cannibalization of PP001 Vanilla Almond Original = ~6% steady-state (~11% W1 dip)
+  - $4.2M [sample] retail-media budget (Hugo Lin / Tasha Brooks Pacvue)
+  - Sage Park's athlete cohort drives creator activation (CR-0012 anchor + cohort)
+  - Week-4 read scheduled for Friday May 22, 2026; Whitfield meeting Tues May 26
+  - HH Switching_Flag adds value "Cannibalization" (PP001 -> PP005/PP006)
 
 Reproducible — `random.seed(42)`. Run:
     python3 generator/generate.py
@@ -29,6 +43,27 @@ from datetime import date, datetime, timedelta
 import pandas as pd
 
 random.seed(42)
+
+# -----------------------------------------------------------------------------
+# Narrative constants — shared across all generators
+# -----------------------------------------------------------------------------
+# Louisiana decline (Scenario 1)
+LA_DECLINE_START      = date(2025, 9, 15)   # Walmart reset
+HURRICANE_TONYA_START = date(2025, 11, 8)
+HURRICANE_TONYA_END   = date(2025, 12, 15)
+LARKSFIELD_PROMO_START = date(2025, 10, 13)
+
+# ProteinPeak Q2 2026 launch (Scenario 2)
+PP_Q2_LAUNCH_DATE     = date(2026, 4, 20)   # PP005 + PP006 on-shelf
+PP_Q2_WEEK4_DATE      = date(2026, 5, 18)   # Week-4 read window
+PP_Q2_NEW_SKUS        = ("PP005", "PP006")
+PP_Q2_CANNIBALIZED    = "PP001"             # Vanilla Almond Original
+PP_Q2_REFERENCE_SKU   = "PP003"             # Berry Crunch (historical compare)
+PP_Q2_TARGET_TRIAL_INDEX = 1.13   # 113% of plan in Target
+PP_Q2_MASS_TRIAL_INDEX   = 0.78   # 78% of plan in Mass (Walmart-pilot)
+
+# Global data window — extended to 2026-05-31 to cover the ProteinPeak Q2 launch
+DATA_END_DATE         = date(2026, 5, 31)
 
 # Repo root is the parent of this script's directory
 REPO_ROOT  = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -56,8 +91,11 @@ SKUS = [
     ("HN001", "HoneyNest Original 12oz",           "HoneyNest",   "RTE Cereal", "Kids Sweet",        12, 4.29),
     ("HN003", "HoneyNest Chocolate 12oz",          "HoneyNest",   "RTE Cereal", "Kids Sweet",        12, 4.39),
     ("HN007", "HoneyNest Frosted Flakes 14oz",     "HoneyNest",   "RTE Cereal", "Kids Sweet",        14, 4.59),
-    ("PP001", "ProteinPeak Original 12oz",         "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
+    ("PP001", "ProteinPeak Vanilla Almond Original 12oz", "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
     ("PP002", "ProteinPeak Chocolate Hazelnut",    "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
+    ("PP003", "ProteinPeak Berry Crunch 12oz",     "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
+    ("PP005", "ProteinPeak Cinnamon Crunch 12oz",  "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
+    ("PP006", "ProteinPeak Cocoa Almond 12oz",     "ProteinPeak", "RTE Cereal", "Wellness Protein",  12, 7.49),
     ("MO001", "MorningOats Instant Original 8ct",  "MorningOats", "Hot Cereal", "Instant",           12, 4.99),
     ("MO004", "MorningOats Cup Maple",             "MorningOats", "Hot Cereal", "Single-Serve",      1.7, 2.49),
     ("MO007", "MorningOats Steel Cut 30oz",        "MorningOats", "Hot Cereal", "Steel-Cut",         30, 7.99),
@@ -389,7 +427,7 @@ def gen_epos(n_rows=30000):
                          "oz":c[6], "price":c[7], "mfr":c[3]})
 
     dma_weights = [(d[0], d[5]) for d in DMAS]
-    start, end = date(2024, 1, 1), date(2026, 3, 31)
+    start, end = date(2024, 1, 1), DATA_END_DATE
     days = (end - start).days
     rows = []
     for i in range(1, n_rows+1):
@@ -410,6 +448,20 @@ def gen_epos(n_rows=30000):
         banner_division, banner_region = assign_banner(chain, dma_id)
 
         sku = random.choice(sku_pool)
+
+        # ProteinPeak Q2 launch gating: PP005/PP006 don't exist before launch date.
+        # On/after launch, they're available primarily at the launch retailers.
+        if sku["id"] in PP_Q2_NEW_SKUS:
+            if tx_date < PP_Q2_LAUNCH_DATE:
+                # Pre-launch — re-roll to another Acme/competitor SKU
+                sku = random.choice([s for s in sku_pool if s["id"] not in PP_Q2_NEW_SKUS])
+            else:
+                # Launch retailer gating: ~85% chance at launch retailers, else re-roll
+                pp_retailers = ("Target","Whole Foods","Sprouts","Amazon","Target.com",
+                                "Kroger","Walmart")  # Walmart-pilot
+                if chain not in pp_retailers and random.random() < 0.7:
+                    sku = random.choice([s for s in sku_pool if s["id"] not in PP_Q2_NEW_SKUS])
+
         qty = random.choices([1,2,3,4], weights=[60,25,10,5])[0]
         base = sku["price"]
 
@@ -425,6 +477,16 @@ def gen_epos(n_rows=30000):
             if date(2025,11,8) <= tx_date <= date(2025,12,15):
                 if random.random() < 0.55:
                     sku = random.choice([s for s in sku_pool if s["brand"] == "Field & Honey"])
+
+        # ProteinPeak launch promo flags (Target endcap + Amazon coupon)
+        if sku["id"] in PP_Q2_NEW_SKUS and tx_date >= PP_Q2_LAUNCH_DATE:
+            if chain == "Target" and random.random() < 0.85:
+                # On endcap — display flag without depth (launch is full-price endcap)
+                promo_flag, promo_type, disc = "Yes", "Display", 0.0
+            elif chain == "Amazon" and random.random() < 0.65:
+                promo_flag, promo_type, disc = "Yes", "Price Off", 0.08
+            elif chain in ("Whole Foods","Sprouts") and random.random() < 0.55:
+                promo_flag, promo_type, disc = "Yes", "Price Off", 0.06
 
         unit_price = round(base * (1 - disc), 2)
         seas = "None"
@@ -482,13 +544,22 @@ def gen_perfect_store(n_rows=50000):
                        "size":size, "dma":dma_id, "state":state, "city":city,
                        "banner_division":bd, "banner_region":br})
 
-    start, end = date(2025, 1, 1), date(2026, 3, 31)
+    start, end = date(2025, 1, 1), DATA_END_DATE
     days = (end - start).days
     rows = []
     for _ in range(n_rows):
         d = start + timedelta(days=random.randint(0, days))
         store = random.choice(stores)
         sku = random.choice(sku_pool)
+
+        # ProteinPeak Q2 launch gating in perfect_store
+        if sku["id"] in PP_Q2_NEW_SKUS:
+            if d < PP_Q2_LAUNCH_DATE:
+                sku = random.choice([s for s in sku_pool if s["id"] not in PP_Q2_NEW_SKUS])
+            elif store["chain"] not in ("Target","Whole Foods","Sprouts","Amazon","Target.com",
+                                          "Walmart.com","Kroger","Walmart") and random.random() < 0.92:
+                sku = random.choice([s for s in sku_pool if s["id"] not in PP_Q2_NEW_SKUS])
+
         unit_price = round(sku["price"] * random.uniform(0.92, 1.05), 2)
 
         promo_flag, promo_type, promo_depth = "No", "None", 0
@@ -500,6 +571,16 @@ def gen_perfect_store(n_rows=50000):
             if random.random() < 0.65:
                 promo_flag, promo_type, promo_depth = "Yes", "Price Off", 21
 
+        # ProteinPeak Q2 launch — Target endcap, Amazon coupon, Sprouts/WFM TPR
+        if sku["id"] in PP_Q2_NEW_SKUS and d >= PP_Q2_LAUNCH_DATE:
+            wk_since_launch = (d - PP_Q2_LAUNCH_DATE).days // 7
+            if store["chain"] == "Target" and wk_since_launch < 4:
+                promo_flag, promo_type, promo_depth = "Yes", "Endcap", 0  # display only
+            elif store["chain"] == "Amazon" and random.random() < 0.75:
+                promo_flag, promo_type, promo_depth = "Yes", "Price Off", 8
+            elif store["chain"] in ("Whole Foods","Sprouts") and random.random() < 0.55:
+                promo_flag, promo_type, promo_depth = "Yes", "Price Off", random.choice([5,7])
+
         base_facings = {"S":4, "M":6, "L":8}[store["size"]]
         facings = base_facings
         if (sku["id"] in ("CR002","CR004","CR005","CR006")
@@ -509,6 +590,14 @@ def gen_perfect_store(n_rows=50000):
             facings = max(2, base_facings - cut)
         if sku["brand"] != "Crunchwell" and random.random() < 0.3:
             facings = max(1, base_facings - random.randint(0,3))
+        # ProteinPeak Q2 launch facings (full launch shelf at Target endcap; pilot at Walmart)
+        if sku["id"] in PP_Q2_NEW_SKUS and d >= PP_Q2_LAUNCH_DATE:
+            if store["chain"] == "Target":
+                facings = max(facings, 4)  # endcap-supported
+            elif store["chain"] == "Walmart":
+                facings = max(1, min(base_facings - 2, 3))  # pilot shelf
+            elif store["chain"] in ("Whole Foods","Sprouts","Kroger"):
+                facings = max(facings, 3)
 
         osa = random.uniform(95.0, 99.9)
         if sku["id"] in ("CR002","CR004","CR005") and store["dma"] == "LA-DMA":
@@ -516,10 +605,38 @@ def gen_perfect_store(n_rows=50000):
                 osa = random.uniform(48.0, 78.0)
             elif d >= date(2025,9,15):
                 osa = random.uniform(85.0, 96.0)
+        # ProteinPeak Q2 launch — small OSA dip Week 1 due to allocation supply-pull at Target
+        if sku["id"] in PP_Q2_NEW_SKUS and d >= PP_Q2_LAUNCH_DATE:
+            if store["chain"] == "Target" and (d - PP_Q2_LAUNCH_DATE).days <= 9:
+                osa = random.uniform(82.0, 94.0)  # allocation tightness early
+            else:
+                osa = random.uniform(91.0, 99.0)
 
         opening = random.randint(0, 300)
         received = random.choices([0,12,24,36,48,72,144], weights=[60,5,8,8,7,7,5])[0]
-        sales_units = max(0, min(opening + received, int(random.gauss(8 + facings*1.5, 4))))
+        # Trial signal: PP005/PP006 in Target sell at 113% of plan velocity;
+        # in Walmart-pilot at 78% of plan
+        velocity_mu = 8 + facings * 1.5
+        if sku["id"] in PP_Q2_NEW_SKUS and d >= PP_Q2_LAUNCH_DATE:
+            if store["chain"] == "Target":
+                velocity_mu *= PP_Q2_TARGET_TRIAL_INDEX
+            elif store["chain"] == "Walmart":
+                velocity_mu *= PP_Q2_MASS_TRIAL_INDEX
+            elif store["chain"] == "Amazon":
+                velocity_mu *= 1.04
+            elif store["chain"] in ("Whole Foods","Sprouts"):
+                velocity_mu *= 1.08
+
+        # Cannibalization: PP001 velocity dips 11% W1 then ~6% steady-state when
+        # PP005/PP006 are on launch endcap at the same retailer
+        if sku["id"] == PP_Q2_CANNIBALIZED and d >= PP_Q2_LAUNCH_DATE:
+            wk_since_launch = (d - PP_Q2_LAUNCH_DATE).days // 7
+            if store["chain"] in ("Target","Amazon","Whole Foods","Sprouts","Kroger"):
+                if wk_since_launch == 0:
+                    velocity_mu *= 0.89  # -11% W1
+                elif wk_since_launch <= 4:
+                    velocity_mu *= 0.94  # -6% steady-state
+        sales_units = max(0, min(opening + received, int(random.gauss(velocity_mu, 4))))
         closing = max(0, opening + received - sales_units)
 
         rows.append({
@@ -541,6 +658,77 @@ def gen_perfect_store(n_rows=50000):
             "OSA_Pct":round(osa, 2), "Planogram_Compliance_Pct":round(random.uniform(91.0,100.0),1),
             "Facings":facings,
         })
+
+    # ProteinPeak Q2 launch — dedicated oversample of perfect_store rows so the
+    # Week-4 trial-vs-plan story is statistically visible (~1200 rows).
+    pp_skus = [s for s in sku_pool if s["id"] in PP_Q2_NEW_SKUS]
+    pp_stores = [s for s in stores if s["chain"] in
+                 ("Target","Walmart","Amazon","Whole Foods","Sprouts","Kroger","Target.com","Walmart.com")]
+    pp_launch_days = (DATA_END_DATE - PP_Q2_LAUNCH_DATE).days
+    if pp_stores and pp_skus and pp_launch_days > 0:
+        for _ in range(1200):
+            d = PP_Q2_LAUNCH_DATE + timedelta(days=random.randint(0, pp_launch_days))
+            store = random.choice(pp_stores)
+            sku = random.choice(pp_skus)
+            unit_price = round(sku["price"] * random.uniform(0.95, 1.02), 2)
+            base_facings = {"S":4, "M":6, "L":8}[store["size"]]
+            facings = base_facings
+            wk_since_launch = (d - PP_Q2_LAUNCH_DATE).days // 7
+            promo_flag, promo_type, promo_depth = "No", "None", 0
+            if store["chain"] == "Target":
+                facings = max(facings, 4)
+                if wk_since_launch < 4:
+                    promo_flag, promo_type = "Yes", "Endcap"
+            elif store["chain"] == "Walmart":
+                facings = max(1, min(base_facings - 2, 3))
+                if random.random() < 0.18:
+                    promo_flag, promo_type, promo_depth = "Yes", "Price Off", 3
+            elif store["chain"] == "Amazon":
+                promo_flag, promo_type, promo_depth = "Yes", "Price Off", 8
+            elif store["chain"] in ("Whole Foods","Sprouts"):
+                facings = max(facings, 3)
+                if random.random() < 0.55:
+                    promo_flag, promo_type, promo_depth = "Yes", "Price Off", random.choice([5,7])
+            elif store["chain"] == "Kroger":
+                facings = max(facings, 3)
+                if random.random() < 0.30:
+                    promo_flag, promo_type, promo_depth = "Yes", "Price Off", 5
+            osa = random.uniform(82.0, 94.0) if (store["chain"] == "Target" and wk_since_launch <= 1) \
+                  else random.uniform(91.0, 99.0)
+            velocity_mu = 8 + facings * 1.5
+            if store["chain"] == "Target":
+                velocity_mu *= PP_Q2_TARGET_TRIAL_INDEX
+            elif store["chain"] == "Walmart":
+                velocity_mu *= PP_Q2_MASS_TRIAL_INDEX
+            elif store["chain"] == "Amazon":
+                velocity_mu *= 1.04
+            elif store["chain"] in ("Whole Foods","Sprouts"):
+                velocity_mu *= 1.08
+            opening = random.randint(0, 300)
+            received = random.choices([0,12,24,36,48,72,144], weights=[60,5,8,8,7,7,5])[0]
+            sales_units = max(0, min(opening + received, int(random.gauss(velocity_mu, 4))))
+            closing = max(0, opening + received - sales_units)
+            rows.append({
+                "Date":d.strftime("%Y-%m-%d"), "Store_ID":store["id"],
+                "Country":"United States", "Country_Code":"USA",
+                "State":store["state"], "DMA":store["dma"], "City":store["city"],
+                "Cluster":store["channel"], "Banner":store["chain"],
+                "Banner_Division":store["banner_division"], "Banner_Region":store["banner_region"],
+                "Size_Tier":store["size"],
+                "SKU":sku["id"], "Product_Description":sku["name"],
+                "Brand":sku["brand"], "Manufacturer":sku["mfr"], "Category":sku["cat"],
+                "Unit_Price_Local_Proxy":unit_price,
+                "Promotion_Flag":promo_flag, "Promotion_Type":promo_type,
+                "Promotion_Depth_Pct":promo_depth,
+                "Opening_Inventory_Units":opening, "Received_Units":received,
+                "Sales_Units":sales_units,
+                "Sales_Value":round(sales_units * (unit_price * (1 - promo_depth/100.0)), 2),
+                "Closing_Inventory_Units":closing,
+                "OSA_Pct":round(osa, 2),
+                "Planogram_Compliance_Pct":round(random.uniform(94.0,100.0),1),
+                "Facings":facings,
+            })
+
     return pd.DataFrame(rows)
 
 
@@ -552,11 +740,15 @@ def gen_syndicated_weekly():
     categories = ["RTE Cereal", "Hot Cereal", "Granola", "Plant-Based Milk", "Bar"]
     channels = ["Mass", "Grocery", "Club", "E-commerce", "Drug & Conv"]
     weeks = []
+    week_to_date = {}
     d = date(2024,1,1)
-    while d <= date(2026,5,4):
+    while d <= DATA_END_DATE:
         wk = d.strftime("%G-W%V")
-        if wk not in weeks: weeks.append(wk)
+        if wk not in weeks:
+            weeks.append(wk)
+            week_to_date[wk] = d
         d += timedelta(days=7)
+    pp_launch_week_num = PP_Q2_LAUNCH_DATE.isocalendar()[1]
     rows = []
     for dma in DMAS:
         for cat in categories:
@@ -574,9 +766,20 @@ def gen_syndicated_weekly():
                             crunch_share -= 0.020
                     if cat != "RTE Cereal":
                         crunch_share = 0.0
+                    # ProteinPeak Q2 launch — bump the Wellness Protein subcategory
+                    # signal in syndicated. Encoded as an Acme_Value_Share lift
+                    # for RTE Cereal in the launch weeks.
+                    pp_lift = 0.0
+                    wk_year = int(wk.split("-")[0]); wk_num = int(wk.split("W")[1])
+                    if cat == "RTE Cereal" and wk_year == 2026 and wk_num >= pp_launch_week_num:
+                        # Larger lift in Mass/Grocery/E-commerce (the launch channels);
+                        # extra boost in Target-skew Mass+E-comm DMAs (national signal)
+                        if ch in ("Mass","Grocery","E-commerce"):
+                            pp_lift = random.uniform(0.004, 0.010)
                     acme_share = (crunch_share +
                                   (random.uniform(0.012,0.025) if cat=="RTE Cereal"
-                                   else random.uniform(0.04,0.10)))
+                                   else random.uniform(0.04,0.10))
+                                  + pp_lift)
                     avg_p = round(random.uniform(3.50, 7.20), 2)
                     rows.append({
                         "Country":"United States", "DMA":dma[0], "Region":dma[2],
@@ -603,14 +806,18 @@ def gen_syndicated_weekly():
 # -----------------------------------------------------------------------------
 
 def gen_brand_health(n_rows=15000):
-    waves = ["2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1"]
+    waves = ["2024Q1","2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1","2026Q2"]
     primary_cats = ["RTE Cereal","Hot Cereal","Granola","Plant-Based Milk","Bar","Snacks"]
     competitors = ["Cheerios","Field & Honey","Frosted Flakes","Quaker","Great Value PL","Magic Spoon","Kashi"]
     rows = []
     for i in range(1, n_rows+1):
         wave = random.choice(waves)
         yr, q = int(wave[:4]), int(wave[5])
-        month = (q-1)*3 + random.randint(1,3)
+        # Bound month sampling — 2026Q2 should fall in April/May (not June, since data ends May 31)
+        if wave == "2026Q2":
+            month = random.choice([4, 5])
+        else:
+            month = (q-1)*3 + random.randint(1,3)
         day = random.randint(1,28)
         dma = random.choices(DMAS, weights=[d[5] for d in DMAS], k=1)[0]
         unaided = random.choices([0,1], weights=[68,32])[0]
@@ -662,7 +869,11 @@ def gen_brand_health(n_rows=15000):
             "price_paid_usd":round(random.uniform(2.49,7.99), 2),
             "respondent_weight":round(random.uniform(0.4,1.6), 4),
             "aided_aw_honeynest":random.choices([0,1], weights=[40,60])[0],
-            "aided_aw_proteinpeak":random.choices([0,1], weights=[55,45])[0],
+            # ProteinPeak awareness bumps in 2026Q2 wave (launch driven by Sage Park media)
+            "aided_aw_proteinpeak":(
+                random.choices([0,1], weights=[35,65])[0] if wave == "2026Q2"
+                else random.choices([0,1], weights=[55,45])[0]
+            ),
             "aided_aw_morningoats":random.choices([0,1], weights=[35,65])[0],
             "aided_aw_trailgrove":random.choices([0,1], weights=[45,55])[0],
             "aided_aw_rootday":random.choices([0,1], weights=[58,42])[0],
@@ -726,7 +937,7 @@ def gen_hh_transactions(hh_df, n_rows=30000):
 
     weeks = []
     d = date(2024, 1, 1)
-    while d <= date(2026, 3, 31):
+    while d <= DATA_END_DATE:
         weeks.append(d); d += timedelta(days=7)
 
     hh_records = hh_df.to_dict("records")
@@ -736,6 +947,10 @@ def gen_hh_transactions(hh_df, n_rows=30000):
         wk = random.choice(weeks)
         retailer = random.choice(RETAILERS)
         sku = random.choice(pool)
+
+        # PP005/PP006 only exist on/after launch
+        if sku["id"] in PP_Q2_NEW_SKUS and wk < PP_Q2_LAUNCH_DATE:
+            sku = random.choice([s for s in pool if s["id"] not in PP_Q2_NEW_SKUS])
 
         disc, promo = 0.0, "None"
         if random.random() < 0.18:
@@ -747,6 +962,28 @@ def gen_hh_transactions(hh_df, n_rows=30000):
                 and wk >= date(2025,11,1) and random.random() < 0.14):
             sku = next(s for s in pool if s["brand"]=="Field & Honey")
             switching_flag = "Yes"
+
+        # ProteinPeak Q2 launch — source-of-volume: ~53% new-to-ProteinPeak,
+        # ~32% switching from PP001 (cannibalization), ~15% from competitors.
+        # Encoded by upgrading a small share of HH buys to PP005/PP006 in
+        # the launch retailers, with a Switching_Flag value of "Cannibalization"
+        # or "New_To_Brand" or "Competitor_Switch".
+        if (wk >= PP_Q2_LAUNCH_DATE and retailer[0] in
+                ("Target","Whole Foods","Sprouts","Amazon","Kroger","Walmart")
+                and random.random() < 0.06):
+            new_sku_id = random.choices(PP_Q2_NEW_SKUS, weights=[0.58, 0.42])[0]
+            new_sku = next(s for s in pool if s["id"] == new_sku_id)
+            # Source-of-volume distribution
+            sov_roll = random.random()
+            if sov_roll < 0.53:
+                switching_flag = "New_To_Brand"
+            elif sov_roll < 0.85:
+                # Cannibalization: was buying PP001, now buying PP005/PP006
+                switching_flag = "Cannibalization"
+            else:
+                # Competitor switching from Magic Spoon / Three Wishes / Catalina
+                switching_flag = "Competitor_Switch"
+            sku = new_sku
 
         units = random.choices([1,2,3,4], weights=[55,28,12,5])[0]
         unit_price = round(sku["price"] * (1 - disc), 2)
@@ -772,6 +1009,52 @@ def gen_hh_transactions(hh_df, n_rows=30000):
             "Adopter_Type":hh["Adopter_Type"],
             "Switching_Flag":switching_flag,
         })
+
+    # ProteinPeak Q2 launch — dedicated oversample (~800 HH transactions for
+    # PP005/PP006) so source-of-volume waterfall has enough mass to chart.
+    pp_pool = [s for s in pool if s["id"] in PP_Q2_NEW_SKUS]
+    pp_retailers = [r for r in RETAILERS if r[0] in
+                    ("Target","Whole Foods","Sprouts","Amazon","Kroger","Walmart","Target.com")]
+    pp_weeks = [w for w in weeks if w >= PP_Q2_LAUNCH_DATE]
+    if pp_pool and pp_retailers and pp_weeks:
+        for _ in range(800):
+            hh = random.choice(hh_records)
+            wk = random.choice(pp_weeks)
+            retailer = random.choice(pp_retailers)
+            sku = random.choices(pp_pool, weights=[0.58, 0.42])[0]
+            disc = 0.06 if random.random() < 0.55 else 0.0
+            unit_price = round(sku["price"] * (1 - disc), 2)
+            sov_roll = random.random()
+            if sov_roll < 0.53:
+                switching_flag = "New_To_Brand"
+            elif sov_roll < 0.85:
+                switching_flag = "Cannibalization"
+            else:
+                switching_flag = "Competitor_Switch"
+            units = random.choices([1,2], weights=[80,20])[0]
+            promo = "Price Off" if disc > 0 else "None"
+            rows.append({
+                "Household_ID":hh["Household_ID"], "Week_Start":wk.strftime("%Y-%m-%d"),
+                "Country":"United States", "Country_Code":"USA",
+                "State":hh["State"], "DMA":hh["DMA"], "City":hh["City"],
+                "Urbanicity":hh["Urbanicity"], "Currency":"USD",
+                "Retailer":retailer[0], "Retailer_Type":retailer[2], "Channel":retailer[1],
+                "Banner_Division":assign_banner(retailer[0], hh["DMA"])[0],
+                "Banner_Region":assign_banner(retailer[0], hh["DMA"])[1],
+                "Category":sku["cat"], "Brand":sku["brand"], "Manufacturer":sku["mfr"],
+                "Product_SKU":sku["id"], "Product_Description":sku["name"],
+                "Pack_Weight_oz":sku["oz"], "Units":units,
+                "Unit_Price":unit_price, "Discount_Percent":disc,
+                "Total_Price_Paid":round(unit_price*units, 2),
+                "Promotion_Type":promo,
+                "Children_Flag":hh["Children_Flag"], "Income_Bracket":hh["Income_Bracket"],
+                "Ethnicity":hh["Ethnicity"],
+                "Price_Sensitivity_Segment":hh["Price_Sensitivity_Segment"],
+                "Brand_Loyalty_Segment":hh["Brand_Loyalty_Segment"],
+                "Adopter_Type":hh["Adopter_Type"],
+                "Switching_Flag":switching_flag,
+            })
+
     return pd.DataFrame(rows)
 
 
@@ -842,7 +1125,7 @@ def gen_plan_vs_actual(epos_df: pd.DataFrame) -> pd.DataFrame:
     months = []
     for y in (2024, 2025, 2026):
         for m in range(1, 13):
-            if y == 2026 and m > 3:
+            if y == 2026 and m > 5:
                 continue
             months.append(f"{y}-{m:02d}")
 
@@ -850,6 +1133,7 @@ def gen_plan_vs_actual(epos_df: pd.DataFrame) -> pd.DataFrame:
     annual_company = 812.0  # $812M FY25
     for period in months:
         yr = int(period.split("-")[0])
+        mo = int(period.split("-")[1])
         month_factor = 1.0 / 12.0
         for brand in acme_brands:
             for ret in retailers:
@@ -871,10 +1155,23 @@ def gen_plan_vs_actual(epos_df: pd.DataFrame) -> pd.DataFrame:
                         plan = base * (1.0 + fy26_plan_yoy[brand])
                         if brand == "Crunchwell" and dma == "LA-DMA":
                             actual = base * (1.0 + random.uniform(-0.50, -0.40))
+                        elif brand == "ProteinPeak" and mo >= 4:
+                            # ProteinPeak Q2 launch (PP005 + PP006). The +67%
+                            # FY26 plan loads heavily into April-May. Channel
+                            # split: Target over-delivers (~+13%), Walmart
+                            # under-delivers (~-22%), Amazon ~flat, rest ~flat.
+                            if ret == "Target":
+                                actual = plan * (1.0 + random.uniform(0.08, 0.18))
+                            elif ret == "Walmart":
+                                actual = plan * (1.0 + random.uniform(-0.27, -0.17))
+                            elif ret == "Amazon":
+                                actual = plan * (1.0 + random.uniform(-0.05, 0.06))
+                            else:
+                                actual = plan * (1.0 + random.uniform(-0.08, 0.04))
                         else:
                             actual = base * (1.0 + fy26_actual_yoy[brand]
                                              + random.uniform(-0.04, 0.04))
-                        plan_source = "FCST_REV" if int(period.split("-")[1]) >= 3 else "AOP"
+                        plan_source = "FCST_REV" if mo >= 3 else "AOP"
                     plan = round(plan, 2)
                     actual = round(actual, 2)
                     var = (actual - plan) / plan if plan > 0 else 0.0
@@ -924,7 +1221,9 @@ def gen_sku_authorization(perfect_store_df: pd.DataFrame) -> pd.DataFrame:
         "CR006": 0.41,  # Cinnamon Twist underperformer
         "CR007": 0.49,
         "HN001": 0.74, "HN003": 0.66, "HN007": 0.44,
-        "PP001": 0.55, "PP002": 0.43,
+        "PP001": 0.55, "PP002": 0.43, "PP003": 0.30,
+        # PP005/PP006 only authorized starting 2026-04 snapshot (launched 2026-04-20)
+        "PP005": 0.38, "PP006": 0.28,
         "MO001": 0.71, "MO004": 0.58, "MO007": 0.32,
         "TG001": 0.66, "TG002": 0.61, "TG007": 0.55,
         "RD001": 0.51, "RD002": 0.34,
@@ -938,10 +1237,22 @@ def gen_sku_authorization(perfect_store_df: pd.DataFrame) -> pd.DataFrame:
         ("Whole Foods","RD001"): 0.94, ("Whole Foods","RD002"): 0.81,
         ("Sprouts","TG001"): 0.92, ("Sprouts","RD001"): 0.88,
         ("Costco","MO004"): 0.91,
+        # ProteinPeak Q2 launch — Target hero, Whole Foods/Sprouts strong,
+        # Walmart-pilot light authorization, Amazon strong, H-E-B/Albertsons/Publix none
+        ("Target","PP005"): 0.86,    ("Target","PP006"): 0.78,
+        ("Whole Foods","PP005"): 0.74, ("Whole Foods","PP006"): 0.66,
+        ("Sprouts","PP005"): 0.72,    ("Sprouts","PP006"): 0.64,
+        ("Amazon","PP005"): 0.92,     ("Amazon","PP006"): 0.84,
+        ("Walmart","PP005"): 0.18,    ("Walmart","PP006"): 0.04,  # pilot only PP005
+        ("Kroger","PP005"): 0.32,     ("Kroger","PP006"): 0.28,
+        ("Costco","PP005"): 0.0,      ("Costco","PP006"): 0.0,
+        ("H-E-B","PP005"): 0.0,       ("H-E-B","PP006"): 0.0,
+        ("Albertsons","PP005"): 0.0,  ("Albertsons","PP006"): 0.0,
+        ("Publix","PP005"): 0.0,      ("Publix","PP006"): 0.0,
     }
     why_not = ["OOS","store_choice","supply_chain","new_listing_pending","discontinued"]
 
-    snapshots = ["2025-11-30","2025-12-31","2026-01-31","2026-02-28","2026-03-31"]
+    snapshots = ["2025-11-30","2025-12-31","2026-01-31","2026-02-28","2026-03-31","2026-04-30","2026-05-31"]
     rows = []
     for snap in snapshots:
         for store in store_keys:
@@ -952,6 +1263,10 @@ def gen_sku_authorization(perfect_store_df: pd.DataFrame) -> pd.DataFrame:
                 # Wallmart Sept 2025 reset: Cinnamon Twist authorized -> not authorized in some Walmart stores
                 if store["Banner"] == "Walmart" and sid == "CR006" and snap >= "2025-12-31":
                     base = max(0.0, base - 0.06)
+                # ProteinPeak Q2 launch — PP005/PP006 only authorized starting
+                # 2026-04 snapshot; earlier snapshots show Not_Authorized
+                if sid in PP_Q2_NEW_SKUS and snap < "2026-04-30":
+                    base = 0.0
 
                 authorized = random.random() < base
                 if authorized:
@@ -977,6 +1292,11 @@ def gen_sku_authorization(perfect_store_df: pd.DataFrame) -> pd.DataFrame:
                 ranged_year = random.choice([2018, 2020, 2022, 2023, 2024, 2025])
                 if sid == "CR006":  # launched 2025
                     ranged_year = 2025
+                if sid in PP_Q2_NEW_SKUS:  # launched 2026-04-20
+                    ranged_year = 2026
+                ranged_since = f"{ranged_year}-01-15"
+                if sid in PP_Q2_NEW_SKUS:
+                    ranged_since = PP_Q2_LAUNCH_DATE.strftime("%Y-%m-%d")
                 rows.append({
                     "Snapshot_Date": snap,
                     "Store_ID": store["Store_ID"],
@@ -990,7 +1310,7 @@ def gen_sku_authorization(perfect_store_df: pd.DataFrame) -> pd.DataFrame:
                     "Brand": sku[2],
                     "Auth_Status": "Authorized" if authorized else "Not_Authorized",
                     "Distribution_Status": dist_status,
-                    "Ranged_Since": f"{ranged_year}-01-15",
+                    "Ranged_Since": ranged_since,
                     "ACV_Weight_Pct": round(random.uniform(0.005, 0.12), 4),
                     "Why_Not_Distributed": wn,
                 })
@@ -1048,7 +1368,7 @@ def gen_shipments() -> pd.DataFrame:
 
     weeks = []
     d = date(2024, 1, 1)
-    while d <= date(2026, 3, 31):
+    while d <= DATA_END_DATE:
         weeks.append(d); d += timedelta(days=7)
 
     rows = []
@@ -1061,9 +1381,24 @@ def gen_shipments() -> pd.DataFrame:
                 # Sparsify — only material combos
                 if random.random() < 0.55:
                     continue
+                # PP005/PP006 don't ship before launch date
+                first_ship_wk = (
+                    PP_Q2_LAUNCH_DATE - timedelta(days=14) if sid in PP_Q2_NEW_SKUS else None
+                )
                 for wk in weeks:
+                    if first_ship_wk is not None and wk < first_ship_wk:
+                        continue
                     sk_id += 1
                     ordered = random.randint(80, 1800)
+                    # Launch SKUs ship larger initial loads, with allocation pinch W0-W1
+                    if sid in PP_Q2_NEW_SKUS:
+                        wk_since_launch = (wk - PP_Q2_LAUNCH_DATE).days // 7
+                        if wk_since_launch < 0:
+                            ordered = random.randint(400, 2400)  # initial sell-in
+                        elif wk_since_launch <= 4 and retailer == "Target":
+                            ordered = random.randint(600, 2200)  # heavy reorder
+                        else:
+                            ordered = random.randint(120, 900)
                     fill = random.uniform(0.94, 0.99)
                     cut = "None"
                     on_time = 1 if random.random() < 0.93 else 0
@@ -1081,6 +1416,12 @@ def gen_shipments() -> pd.DataFrame:
                     # Crunchwell Mega 4-week Lancaster cycle — occasional tail OOS
                     if sid in ("CR002","CR004") and random.random() < 0.04:
                         fill = random.uniform(0.82, 0.92); cut = "Production_Lag"
+                    # PP005/PP006 launch allocation pinch W0-W1 (Battle Creek pull)
+                    if sid in PP_Q2_NEW_SKUS:
+                        wk_since_launch = (wk - PP_Q2_LAUNCH_DATE).days // 7
+                        if 0 <= wk_since_launch <= 1:
+                            fill = random.uniform(0.78, 0.92)
+                            cut = "Launch_Allocation"
 
                     shipped = int(ordered * min(1.0, fill + random.uniform(-0.02, 0.02)))
                     delivered = int(shipped * random.uniform(0.97, 1.0))
@@ -1150,11 +1491,11 @@ def gen_promo_events() -> pd.DataFrame:
     retailers = list(mechanics_by_retailer.keys())
     sku_pool = SKUS + [(c[0],c[1],c[2],c[4],c[5],c[6],c[7]) for c in COMP_SKUS]
 
-    start, end = date(2024, 9, 1), date(2026, 3, 31)
+    start, end = date(2024, 9, 1), DATA_END_DATE
     days = (end - start).days
     rows = []
     eid = 0
-    for _ in range(720):
+    for _ in range(820):
         eid += 1
         ret = random.choice(retailers)
         mech = weighted_choice(mechanics_by_retailer[ret])
@@ -1165,6 +1506,9 @@ def gen_promo_events() -> pd.DataFrame:
         )
         d_offset = random.randint(0, days)
         sd = start + timedelta(days=d_offset)
+        # PP005/PP006 promos only on/after launch
+        if sid in PP_Q2_NEW_SKUS and sd < PP_Q2_LAUNCH_DATE:
+            sd = PP_Q2_LAUNCH_DATE + timedelta(days=random.randint(0, 35))
         ed = sd + timedelta(days=random.choice([21, 28, 35, 42]))
         depth = random.choices([8,10,12,15,18,20,22,25,28,30,35,40], weights=[10,12,12,14,12,10,8,8,6,4,2,2])[0]
         # Costco bundle deals tend to be deeper effective discounts
@@ -1211,6 +1555,49 @@ def gen_promo_events() -> pd.DataFrame:
             "True_Incremental_Units": true_inc,
             "ROI": roi,
         })
+
+    # Curated ProteinPeak Q2 launch promo events (canonical, from
+    # seeds/proteinpeak_q2_launch.csv — added here so they appear in
+    # `promo_events.parquet` alongside the seed file).
+    pp_launch_seed = os.path.join(SEEDS_DIR, "proteinpeak_q2_launch.csv")
+    if os.path.exists(pp_launch_seed):
+        try:
+            seed_df = pd.read_csv(pp_launch_seed)
+            for _, srow in seed_df.iterrows():
+                if str(srow.get("sku","")).startswith("PP") is False:
+                    continue
+                eid += 1
+                # Map seed event into the promo_events schema
+                bd, br = assign_banner(srow["retailer"], "DAL")
+                rows.append({
+                    "Event_ID": f"PE{eid:05d}",
+                    "Start_Date": srow["start_date"],
+                    "End_Date": srow["end_date"],
+                    "Brand": srow["brand"],
+                    "Manufacturer": srow["manufacturer"],
+                    "SKU": srow["sku"],
+                    "Product_Description": srow["sku_name"],
+                    "Retailer": srow["retailer"],
+                    "Banner_Division": bd,
+                    "Banner_Region": br,
+                    "DMA": "ALL",
+                    "Mechanic": "Endcap" if "Endcap" in str(srow["event_type"]) else (
+                        "Launch" if "Launch" in str(srow["event_type"]) else
+                        "TPR" if "TPR" in str(srow["event_type"]) else "Display"),
+                    "Promo_Depth_Pct": int(srow["promo_depth_pct_off"]) if str(srow["promo_depth_pct_off"]).isdigit() else 0,
+                    "Display_Type": "Endcap" if str(srow["display"]).strip().upper() == "Y" else "None",
+                    "Feature_Type": "Digital_Coupon" if str(srow["feature"]).strip().upper() == "Y" else "None",
+                    "Trade_Spend_USD": 1200000.0 if srow["retailer"] == "Target" else 250000.0,
+                    "Pre_Promo_Baseline_Units": 0,    # new SKU baseline = 0
+                    "Promo_Units": 0,                 # populated downstream
+                    "Lift_Pct": 0.0,
+                    "Incremental_Units": 0,
+                    "Forward_Buy_Pct": 0.0,
+                    "True_Incremental_Units": 0,
+                    "ROI": 0.0,
+                })
+        except Exception as e:
+            print(f"  ! Could not merge ProteinPeak Q2 launch seed events: {e}")
     return pd.DataFrame(rows)
 
 
@@ -1239,6 +1626,52 @@ def gen_competitor_launches() -> pd.DataFrame:
 # -----------------------------------------------------------------------------
 # 12. Social mentions (Brandwatch-shape)  (T2.1)
 # -----------------------------------------------------------------------------
+
+def _make_proteinpeak_launch_mention(idx: int) -> dict:
+    """Helper — narrative-anchored ProteinPeak Q2 launch mention."""
+    platform = random.choices(["TikTok","Instagram","Twitter","Reddit","YouTube"],
+                               weights=[42,28,10,8,12])[0]
+    author = random.choices(["Consumer","Creator","Press","Brand"], weights=[58,32,6,4])[0]
+    d_offset = random.randint(0, (DATA_END_DATE - PP_Q2_LAUNCH_DATE).days)
+    d = PP_Q2_LAUNCH_DATE + timedelta(days=d_offset)
+    topics = ["new-launch","protein","athlete-fuel"]
+    flavor = random.choice(["cinnamon","cocoa-chocolate"])
+    topics.append(flavor)
+    if random.random() < 0.40:
+        topics.append("creator-drop")
+    if random.random() < 0.35:
+        topics.append("target-endcap")
+    if random.random() < 0.25:
+        topics.append("taste")
+    sentiment = random.gauss(0.46, 0.28)
+    sentiment = max(-1.0, min(1.0, sentiment))
+    if platform == "TikTok":
+        reach = random.randint(8000, 3_800_000)
+    elif platform == "Instagram":
+        reach = random.randint(2000, 1_400_000)
+    elif platform == "YouTube":
+        reach = random.randint(3000, 1_200_000)
+    else:
+        reach = random.randint(80, 220_000)
+    engagement = int(reach * random.uniform(0.012, 0.092))
+    return {
+        "Mention_ID": f"SM_PP_{idx:06d}",
+        "Date": d.strftime("%Y-%m-%d"),
+        "Platform": platform,
+        "Brand_Mentioned": "ProteinPeak",
+        "Manufacturer": "Acme Corp",
+        "Author_Type": author,
+        "Reach": reach,
+        "Engagement": engagement,
+        "Sentiment_-1to1": round(sentiment, 3),
+        "Sentiment_Bucket": ("Positive" if sentiment > 0.18
+                              else "Negative" if sentiment < -0.18 else "Neutral"),
+        "Topic_Tags": ";".join(sorted(set(topics))),
+        "Has_Video": 1 if platform in ("TikTok","Instagram","YouTube") and random.random() < 0.65 else 0,
+        "DMA_Region": random.choice(["UNKNOWN","NYC","LAX","CHI","ATL","DAL","BOS","SFO"]),
+        "Source": "Brandwatch",
+    }
+
 
 def _make_la_crunchwell_mention(idx: int) -> dict:
     """Helper — narrative-anchored LA Crunchwell mention with explicit topic gating."""
@@ -1300,9 +1733,11 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
         "athlete-fuel","oat-milk","recipes","viral","nostalgic","negative-experience",
         "sweetened","grain-free","family-occasion","late-night","convenience",
         "supply-issue","promo",
+        # ProteinPeak Q2 launch topics
+        "new-launch","cinnamon","cocoa-chocolate","target-endcap","creator-drop",
     ]
 
-    start, end = date(2024, 1, 1), date(2026, 3, 31)
+    start, end = date(2024, 1, 1), DATA_END_DATE
     days = (end - start).days
     dma_weights = [(d[0], d[5]) for d in DMAS]
 
@@ -1329,6 +1764,17 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
         if brand == "ProteinPeak" and d >= date(2026,1,1) and random.random() < 0.34:
             sentiment += 0.30
             chosen_topics = list(set(chosen_topics + ["protein","athlete-fuel"]))
+        # ProteinPeak Q2 launch — strong positive lift; new-launch / cinnamon /
+        # cocoa-chocolate / target-endcap / creator-drop topics
+        if brand == "ProteinPeak" and d >= PP_Q2_LAUNCH_DATE:
+            sentiment = abs(sentiment) + 0.22
+            chosen_topics = list(set(chosen_topics + ["new-launch","protein"]))
+            if random.random() < 0.5:
+                chosen_topics.append(random.choice(["cinnamon","cocoa-chocolate"]))
+            if random.random() < 0.30:
+                chosen_topics.append("creator-drop")
+            if random.random() < 0.25:
+                chosen_topics.append("target-endcap")
         sentiment = max(-1.0, min(1.0, sentiment))
         if platform == "TikTok":
             reach = random.randint(2000, 4_500_000)
@@ -1362,6 +1808,12 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
     for j in range(1, 251):
         rows.append(_make_la_crunchwell_mention(j))
 
+    # Narrative oversample 2: ProteinPeak Q2 launch buzz (~320 dedicated
+    # mentions across April 20 - May 31 2026) — the "viral / endcap / creator
+    # drop" pattern that powers the Week-4 read.
+    for j in range(1, 321):
+        rows.append(_make_proteinpeak_launch_mention(j))
+
     return pd.DataFrame(rows)
 
 
@@ -1369,13 +1821,17 @@ def gen_social_mentions(n_rows=18000) -> pd.DataFrame:
 # 13. Creator posts (Tribe Dynamics-shape)  (T2.2)
 # -----------------------------------------------------------------------------
 
-def gen_creator_posts(n_rows=3200) -> pd.DataFrame:
-    """Reads creators.csv seed, generates ~3200 posts with attribution lift."""
+def gen_creator_posts(n_rows=3500) -> pd.DataFrame:
+    """Reads creators.csv seed, generates ~3500 posts with attribution lift."""
     seed_path = os.path.join(SEEDS_DIR, "creators.csv")
     creators = pd.read_csv(seed_path, keep_default_na=False).to_dict("records")
 
-    start, end = date(2024, 6, 1), date(2026, 3, 31)
+    start, end = date(2024, 6, 1), DATA_END_DATE
     days = (end - start).days
+    # Sage Park's Q2 2026 athlete cohort — these creators drive the launch
+    # signal. CR-0012 is the signature anchor; cohort 2 = 0007, 0021, 0040, 0042;
+    # plus newly-activated CR-0013.
+    sage_q2_cohort = {"CR-0012","CR-0007","CR-0021","CR-0040","CR-0042","CR-0013","CR-0027"}
     rows = []
     for i in range(1, n_rows+1):
         c = random.choice(creators)
@@ -1388,8 +1844,13 @@ def gen_creator_posts(n_rows=3200) -> pd.DataFrame:
             brand = random.choice(["Crunchwell","ProteinPeak","HoneyNest","MorningOats",
                                    "TrailGrove","RootDay","Field & Honey",
                                    "Cheerios","Magic Spoon"])
+        # Sage Park cohort heavily skews ProteinPeak on/after launch
+        if c.get("creator_id") in sage_q2_cohort and d >= PP_Q2_LAUNCH_DATE - timedelta(days=14):
+            brand = "ProteinPeak"
         # Disclosed partnership likelihood
         disclosed = "Yes" if random.random() < 0.42 else "No"
+        if c.get("creator_id") in sage_q2_cohort and brand == "ProteinPeak":
+            disclosed = "Yes"
         # Reach varies by tier — use creator's followers as anchor
         followers = int(c.get("followers", 100000))
         reach = int(followers * random.uniform(0.18, 0.85))
@@ -1400,6 +1861,10 @@ def gen_creator_posts(n_rows=3200) -> pd.DataFrame:
             base_lift = random.uniform(800, 64000)
             if c.get("acme_partnership_status","").startswith("Active") and brand in ("Crunchwell","ProteinPeak","HoneyNest","MorningOats","TrailGrove","RootDay"):
                 base_lift *= random.uniform(1.1, 1.6)
+            # ProteinPeak Q2 launch — Sage Park cohort gets boosted lift
+            if (c.get("creator_id") in sage_q2_cohort and brand == "ProteinPeak"
+                    and d >= PP_Q2_LAUNCH_DATE):
+                base_lift *= random.uniform(1.4, 2.2)
             attributed = round(base_lift, 2)
         else:
             attributed = 0.0
@@ -1438,6 +1903,9 @@ def gen_search_trends() -> pd.DataFrame:
         ("crunchwell review", "RTE Cereal", -0.04, 22),
         ("crunchwell coupon", "RTE Cereal", 0.02, 14),
         ("proteinpeak", "RTE Cereal", 0.22, 38),
+        ("proteinpeak cinnamon crunch", "RTE Cereal", 0.36, 22),
+        ("proteinpeak cocoa almond", "RTE Cereal", 0.34, 16),
+        ("proteinpeak target", "RTE Cereal", 0.24, 12),
         ("rootday oat milk", "Plant-Based Milk", 0.14, 26),
         ("field & honey", "RTE Cereal", 0.08, 54),
         ("cheerios oat crunch", "RTE Cereal", 0.34, 64),
@@ -1463,7 +1931,7 @@ def gen_search_trends() -> pd.DataFrame:
 
     months = []
     d = date(2024, 1, 1)
-    while d <= date(2026, 3, 31):
+    while d <= DATA_END_DATE:
         months.append(d)
         # next month
         d = date(d.year + (1 if d.month == 12 else 0), 1 if d.month == 12 else d.month+1, 1)
@@ -1487,6 +1955,16 @@ def gen_search_trends() -> pd.DataFrame:
                 # ProteinPeak grows with brand momentum
                 if "proteinpeak" in kw and m >= date(2025,9,1):
                     volume *= 1.3
+                # ProteinPeak Cinnamon Crunch / Cocoa Almond peak at launch (April 2026)
+                if "proteinpeak cinnamon" in kw and m >= date(2026,4,1):
+                    volume *= 2.8
+                if "proteinpeak cocoa" in kw and m >= date(2026,4,1):
+                    volume *= 2.2
+                if "proteinpeak target" in kw and m >= date(2026,4,1):
+                    volume *= 1.9
+                # PP005/PP006 keywords don't exist before launch month
+                if ("proteinpeak cinnamon" in kw or "proteinpeak cocoa" in kw) and m < date(2026,4,1):
+                    volume *= 0.05
                 rows.append({
                     "Date": m.strftime("%Y-%m-01"),
                     "Platform": p,
@@ -1495,6 +1973,8 @@ def gen_search_trends() -> pd.DataFrame:
                     "Volume_Index_0to100": round(min(100, volume), 1),
                     "Brand_Relevance": (
                         "Crunchwell" if "crunchwell" in kw else
+                        "ProteinPeak-PP005" if "proteinpeak cinnamon" in kw else
+                        "ProteinPeak-PP006" if "proteinpeak cocoa" in kw else
                         "ProteinPeak" if "proteinpeak" in kw else
                         "RootDay" if "rootday" in kw else
                         "TrailGrove" if "trailgrove" in kw else
@@ -1528,7 +2008,7 @@ def gen_product_reviews(n_rows=24000) -> pd.DataFrame:
     topic_options_neg = ["stale","pack-damage","too-sweet","too-bland","price-too-high",
                          "out-of-stock","oos","supply-issue","texture-issue","ingredient-concern"]
 
-    start, end = date(2024, 1, 1), date(2026, 3, 31)
+    start, end = date(2024, 1, 1), DATA_END_DATE
     days = (end - start).days
     rows = []
     for i in range(1, n_rows+1):
@@ -1536,6 +2016,10 @@ def gen_product_reviews(n_rows=24000) -> pd.DataFrame:
         sid, sname, brand, cat = sku[0], sku[1], sku[2], sku[3]
         ret = weighted_choice(review_retailers)
         d = start + timedelta(days=random.randint(0, days))
+        # PP005/PP006 only exist post-launch
+        if sid in PP_Q2_NEW_SKUS and d < PP_Q2_LAUNCH_DATE:
+            sku = random.choice([s for s in sku_pool if s[0] not in PP_Q2_NEW_SKUS])
+            sid, sname, brand, cat = sku[0], sku[1], sku[2], sku[3]
         # Base rating
         rating = max(1, min(5, int(round(random.gauss(4.3, 0.85)))))
         # Anchor — Cinnamon Twist underperforms, lower ratings
@@ -1544,6 +2028,9 @@ def gen_product_reviews(n_rows=24000) -> pd.DataFrame:
         # Higher-priced premium SKUs get higher ratings on average
         if brand in ("ProteinPeak","TrailGrove","RootDay"):
             rating = max(1, min(5, int(round(random.gauss(4.4, 0.78)))))
+        # PP005/PP006 launch — early reviews very positive (athlete cohort skew)
+        if sid in PP_Q2_NEW_SKUS:
+            rating = max(1, min(5, int(round(random.gauss(4.6, 0.62)))))
         # OOS / supply issue period
         if brand == "Crunchwell" and d >= date(2025,11,8) and d <= date(2026,1,15):
             if random.random() < 0.18:
@@ -1608,7 +2095,7 @@ def gen_data_freshness_log() -> pd.DataFrame:
     ]
     weeks = []
     d = date(2026, 1, 5)
-    while d <= date(2026, 5, 4):
+    while d <= DATA_END_DATE:
         weeks.append(d); d += timedelta(days=7)
     rows = []
     rid = 0
@@ -1681,11 +2168,84 @@ def assert_consistency(tables: dict[str, pd.DataFrame]):
     hero_rev = rev[rev["SKU"].isin(["CR001","CR002","CR003"])]["Rating_1to5"].mean()
     assert cinn_rev < hero_rev - 0.5, "Cinnamon Twist not rated worse than hero SKUs"
 
+    # -------------------------------------------------------------------------
+    # ProteinPeak Q2 2026 launch (Scenario 2) assertions
+    # -------------------------------------------------------------------------
+    ps = tables["perfect_store"]
+    pp_launch_window = ps[(ps["SKU"].isin(["PP005","PP006"]))
+                          & (ps["Date"] >= "2026-04-20")]
+    pp_target = pp_launch_window[pp_launch_window["Banner"] == "Target"]
+    pp_walmart = pp_launch_window[pp_launch_window["Banner"] == "Walmart"]
+    if len(pp_target) > 30 and len(pp_walmart) > 30:
+        tgt_vel = pp_target["Sales_Units"].mean()
+        wal_vel = pp_walmart["Sales_Units"].mean()
+        assert tgt_vel > wal_vel, (
+            f"ProteinPeak Q2 launch Target velocity {tgt_vel:.2f} should exceed "
+            f"Walmart velocity {wal_vel:.2f}"
+        )
+
+    # Cannibalization check: PP001 launch-window velocity slightly under FY26 base.
+    pp001_pre  = ps[(ps["SKU"]=="PP001") & (ps["Date"] >= "2026-01-01")
+                    & (ps["Date"] <  "2026-04-20")]["Sales_Units"].mean()
+    pp001_post = ps[(ps["SKU"]=="PP001") & (ps["Date"] >= "2026-04-20")]["Sales_Units"].mean()
+    if not pd.isna(pp001_pre) and not pd.isna(pp001_post):
+        assert pp001_post < pp001_pre * 1.02, (
+            f"PP001 post-launch velocity {pp001_post:.2f} should reflect "
+            f"cannibalization vs pre-launch {pp001_pre:.2f}"
+        )
+
+    # Authorization: PP005/PP006 should be ~0% authorized before 2026-04
+    auth_pre = tables["sku_authorization"]
+    pp_pre = auth_pre[(auth_pre["SKU"].isin(["PP005","PP006"]))
+                       & (auth_pre["Snapshot_Date"] < "2026-04-30")
+                       & (auth_pre["Auth_Status"] == "Authorized")]
+    assert len(pp_pre) == 0, "PP005/PP006 should not be authorized pre-2026-04-30"
+
+    # Plan vs Actual: April 2026 ProteinPeak Target should be over plan
+    pva = tables["plan_vs_actual"]
+    pp_apr_tgt = pva[(pva["Brand"]=="ProteinPeak") & (pva["Retailer"]=="Target")
+                     & (pva["Period"].isin(["2026-04","2026-05"]))]
+    pp_apr_wal = pva[(pva["Brand"]=="ProteinPeak") & (pva["Retailer"]=="Walmart")
+                     & (pva["Period"].isin(["2026-04","2026-05"]))]
+    if not pp_apr_tgt.empty and not pp_apr_wal.empty:
+        tgt_var = pp_apr_tgt["Variance_Pct"].mean()
+        wal_var = pp_apr_wal["Variance_Pct"].mean()
+        assert tgt_var > wal_var, (
+            f"ProteinPeak Q2 launch: Target variance {tgt_var:+.1%} should "
+            f"exceed Walmart variance {wal_var:+.1%}"
+        )
+
+    # Social mentions: ProteinPeak Q2 launch period sentiment is positive
+    pp_soc = tables["social_mentions"][
+        (tables["social_mentions"]["Brand_Mentioned"]=="ProteinPeak")
+        & (tables["social_mentions"]["Date"] >= "2026-04-20")
+    ]
+    if len(pp_soc) > 50:
+        pp_avg = pp_soc["Sentiment_-1to1"].mean()
+        assert pp_avg > 0.10, (
+            f"ProteinPeak Q2 launch social sentiment {pp_avg:+.2f} should be positive"
+        )
+
+    # Household-level new SKU buys with launch-period Switching_Flag
+    hh_tx = tables["household_transactions"]
+    pp_hh = hh_tx[hh_tx["Product_SKU"].isin(["PP005","PP006"])]
+    assert len(pp_hh) > 0, "Expected PP005/PP006 buys in household_transactions"
+    canniba = pp_hh[pp_hh["Switching_Flag"] == "Cannibalization"]
+    new_to  = pp_hh[pp_hh["Switching_Flag"] == "New_To_Brand"]
+    assert len(new_to) > len(canniba), "New-to-brand should exceed cannibalization"
+
     print(f"  ✓ LA Crunchwell Q1 plan-vs-actual variance: {avg_var:.1%} (Red)")
     print(f"  ✓ Hurricane Tonya storm-DC fill rate avg:    {storm['Fill_Rate_Pct'].mean():.1%}")
     print(f"  ✓ Cinnamon Twist (CR006) authorization rate: {cinn_ratio:.0%}")
     print(f"  ✓ LA Crunchwell social sentiment Q4'25-Q1'26: {avg_sent:+.2f} on n={len(la_cw)} mentions")
     print(f"  ✓ Cinnamon Twist (CR006) avg review rating:  {cinn_rev:.2f} vs hero SKUs {hero_rev:.2f}")
+    if len(pp_target) > 30 and len(pp_walmart) > 30:
+        print(f"  ✓ PP Q2 launch Target velocity:              {tgt_vel:.2f} vs Walmart {wal_vel:.2f}")
+    if not pp_apr_tgt.empty and not pp_apr_wal.empty:
+        print(f"  ✓ PP Q2 plan-vs-actual variance (Tgt/Wal):   {tgt_var:+.1%} / {wal_var:+.1%}")
+    if len(pp_soc) > 50:
+        print(f"  ✓ PP Q2 launch social sentiment:             {pp_avg:+.2f} on n={len(pp_soc)} mentions")
+    print(f"  ✓ PP Q2 household source-of-volume:          new-to-brand={len(new_to)}, cannibalization={len(canniba)}")
 
 
 # -----------------------------------------------------------------------------
@@ -1738,17 +2298,17 @@ def build_artifacts(tables: dict[str, pd.DataFrame]):
 
 def main():
     print("[ 1/16] EPOS")
-    epos = gen_epos(30000)
+    epos = gen_epos(34000)
     print("[ 2/16] Perfect Store")
-    perfect_store = gen_perfect_store(50000)
+    perfect_store = gen_perfect_store(56000)
     print("[ 3/16] Syndicated weekly (NielsenIQ-style)")
     syndicated = gen_syndicated_weekly()
     print("[ 4/16] Brand Health")
-    brand_health = gen_brand_health(15000)
+    brand_health = gen_brand_health(16500)
     print("[ 5/16] Households")
     hh = gen_households(5000)
     print("[ 6/16] Household transactions")
-    hh_tx = gen_hh_transactions(hh, 30000)
+    hh_tx = gen_hh_transactions(hh, 34000)
     print("[ 7/16] Plan vs Actual")
     pva = gen_plan_vs_actual(epos)
     print("[ 8/16] SKU Authorization")
@@ -1760,13 +2320,13 @@ def main():
     print("[11/16] Competitor Launches (from seed)")
     launches = gen_competitor_launches()
     print("[12/16] Social Mentions (Brandwatch-shape)")
-    social = gen_social_mentions(18000)
+    social = gen_social_mentions(20000)
     print("[13/16] Creator Posts (Tribe Dynamics-shape)")
-    cposts = gen_creator_posts(3200)
+    cposts = gen_creator_posts(3500)
     print("[14/16] Search Trends (Spate / Helium 10-shape)")
     search = gen_search_trends()
     print("[15/16] Product Reviews (Bazaarvoice-shape)")
-    reviews = gen_product_reviews(24000)
+    reviews = gen_product_reviews(26500)
     print("[16/16] Data Freshness Log")
     freshness = gen_data_freshness_log()
 

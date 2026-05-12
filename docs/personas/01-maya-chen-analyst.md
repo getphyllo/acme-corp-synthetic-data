@@ -158,4 +158,24 @@ Tastewise, Brandwatch (if integrated social/creator coverage exists), Suzy (if a
 
 ---
 
+## What's on her desk right now (May 12, 2026)
+
+Two scenarios are sitting on her desk simultaneously:
+
+**Scenario 1 — Louisiana Decline** (defensive, Q1 2026 root-cause):
+- Final draft of the LA root-cause report submitted May 12 (today).
+- Board update May 28.
+- Maya is the named author. See `docs/louisiana-decline.md`.
+
+**Scenario 2 — ProteinPeak Q2 Launch Read** (offensive, Week-4 read window):
+- Sage Park will email Thursday May 14 at 4:47 PM asking for a Week-4 read by EOD Friday.
+- Whitfield meeting Tuesday May 26.
+- Maya is the named pulling analyst. See `docs/proteinpeak-q2-launch/`.
+
+The political tension on Scenario 2 is sharper than on Scenario 1: Sage is Whitfield's golden child, the launch has a $4.2M retail-media budget riding on the read, and three of the four questions (trial-vs-plan, cannibalization, channel split) cross brand-team / sales-team / finance-team boundaries Maya does not own.
+
+This is the **"two big things at once" pattern** every Insights analyst at a mid-cap CPG faces in any given month. The dataset is calibrated so both scenarios are queryable from the same parquet files — query one or the other (or both, for the rare prompt that asks Maya to compare them).
+
+---
+
 *Next: [`persona-02-sales-director-marcus-boudreaux.md`](./persona-02-sales-director-marcus-boudreaux.md)*

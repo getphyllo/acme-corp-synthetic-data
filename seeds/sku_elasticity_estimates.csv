@@ -18,11 +18,18 @@ CR008,Crunchwell Single-Serve Cup,Crunchwell,Convenience,-1.28,0.68,5.99,Log-log
 HN001,HoneyNest Original 12oz,HoneyNest,Walmart,-1.54,0.80,4.29,Log-log MMM,2026-04-15,156,Kid cereal — caregiver buys; mid elastic
 HN003,HoneyNest Chocolate 12oz,HoneyNest,Walmart,-1.72,0.78,4.39,Log-log MMM,2026-04-15,156,
 HN007,HoneyNest Frosted Flakes 14oz,HoneyNest,Walmart,-1.66,0.76,4.59,Log-log MMM,2026-04-15,156,
-PP001,ProteinPeak Original 12oz,ProteinPeak,Target,-1.04,0.74,7.49,Log-log MMM,2026-04-15,156,Premium — less elastic
-PP001,ProteinPeak Original 12oz,ProteinPeak,Whole Foods,-0.92,0.66,7.49,Log-log MMM,2026-04-15,156,Even less elastic in WFM
-PP001,ProteinPeak Original 12oz,ProteinPeak,Amazon,-1.18,0.72,7.49,Log-log MMM,2026-04-15,156,
+PP001,ProteinPeak Vanilla Almond Original 12oz,ProteinPeak,Target,-1.04,0.74,7.49,Log-log MMM,2026-04-15,156,Premium — less elastic
+PP001,ProteinPeak Vanilla Almond Original 12oz,ProteinPeak,Whole Foods,-0.92,0.66,7.49,Log-log MMM,2026-04-15,156,Even less elastic in WFM
+PP001,ProteinPeak Vanilla Almond Original 12oz,ProteinPeak,Amazon,-1.18,0.72,7.49,Log-log MMM,2026-04-15,156,
 PP002,ProteinPeak Chocolate Hazelnut 12oz,ProteinPeak,Target,-1.12,0.62,7.49,Log-log MMM,2026-04-15,98,
 PP004,ProteinPeak Single-Serve Cups,ProteinPeak,Amazon,-1.42,0.58,9.99,Log-log MMM,2026-04-15,52,
+PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Target,-1.18,0.32,7.49,Log-log MMM (provisional),2026-05-04,4,Week-4 read; provisional from launch slope
+PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Amazon,-1.28,0.30,7.49,Log-log MMM (provisional),2026-05-04,4,Provisional
+PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Walmart,-1.48,0.24,7.49,Log-log MMM (provisional),2026-05-04,4,Walmart-pilot; mass channel under-trial
+PP005,ProteinPeak Cinnamon Crunch 12oz,ProteinPeak,Whole Foods,-1.02,0.28,7.49,Log-log MMM (provisional),2026-05-04,4,Premium channel; less elastic
+PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Target,-1.22,0.30,7.49,Log-log MMM (provisional),2026-05-04,4,Co-launch with PP005; provisional
+PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Amazon,-1.32,0.28,7.49,Log-log MMM (provisional),2026-05-04,4,Provisional
+PP006,ProteinPeak Cocoa Almond 12oz,ProteinPeak,Whole Foods,-1.08,0.26,7.49,Log-log MMM (provisional),2026-05-04,4,Premium channel; less elastic
 MO001,MorningOats Instant Original 8ct,MorningOats,Walmart,-1.36,0.78,4.99,Log-log MMM,2026-04-15,156,
 MO004,MorningOats Cup Maple,MorningOats,Costco,-0.98,0.72,2.49,Log-log MMM,2026-04-15,156,Club channel — less elastic
 MO004,MorningOats Cup Maple,MorningOats,Walmart,-1.48,0.74,2.49,Log-log MMM,2026-04-15,156,

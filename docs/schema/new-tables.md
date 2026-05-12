@@ -140,7 +140,7 @@ Hand-curated competitor + Acme launch event log. Sourced from `seeds/competitor_
 | `intel_source` | str | NielsenIQ Innovation Tracker / Mintel GNPD / Walmart Luminate / etc. |
 | `notes` | str | |
 
-**Narrative encoded:** ~30 launches anchored on real CPG launch tempo, including Larksfield "Field & Honey Almond" Sept 2025 (LA stealth threat), GM "Cheerios Oat Crunch" Jan 2026, Walmart Great Value Honey Toasted Oats expansion (took Crunchwell's facings — LA H5), Acme's own Crunchwell Cinnamon Twist (the underperformer), ProteinPeak Cinnamon Crunch (planned Q2 2026).
+**Narrative encoded:** ~31 launches anchored on real CPG launch tempo, including Larksfield "Field & Honey Almond" Sept 2025 (LA stealth threat), GM "Cheerios Oat Crunch" Jan 2026, Walmart Great Value Honey Toasted Oats expansion (took Crunchwell's facings — LA H5), Acme's own Crunchwell Cinnamon Twist (the underperformer), and ProteinPeak's Q2 2026 Cinnamon Crunch (LCH00021 — PP005) + Cocoa Almond (LCH00031 — PP006) co-launch on April 20, 2026 (Scenario 2 anchor).
 
 **Headline prompts unblocked:** "Did any competitors launch new products in the last 7 days?" "Which new items launched in our category in the last 6 months are gaining traction?" "Generate a competitive response brief: [Competitor] just launched 4 new SKUs at Walmart..."
 
