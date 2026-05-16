@@ -1,0 +1,21 @@
+study_id,period,segment,kroger_division,from_brand,from_sku_group,to_brand,to_sku_group,from_hh_count,to_hh_count,switch_rate_pct,share_pt_shift,confidence_0to1,model_method,notes
+KST-001,2026-Q1,Protein,Kroger-Atlanta,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",420,52,12.4,0.31,0.82,Numerator HH panel,Crunchwell lapsed buyers switching to Kroger PL
+KST-002,2026-Q1,Protein,Kroger-Cincinnati,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",380,58,15.3,0.38,0.84,Numerator HH panel,
+KST-003,2026-Q1,Protein,Kroger-Dallas,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",350,52,14.9,0.36,0.81,Numerator HH panel,
+KST-004,2026-Q1,Protein,Kroger-Houston,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",290,42,14.5,0.34,0.80,Numerator HH panel,LA-DMA overlap; some hurricane-disrupted HHs
+KST-005,2026-Q1,Protein,Kroger-Mid-Atlantic,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",310,40,12.9,0.32,0.81,Numerator HH panel,
+KST-006,2026-Q1,Protein,Kroger-Columbus,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",260,38,14.6,0.36,0.80,Numerator HH panel,
+KST-007,2026-Q1,Protein,Kroger-Nashville,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",240,36,15.0,0.37,0.79,Numerator HH panel,
+KST-008,2026-Q1,Protein,Kroger-Michigan,Crunchwell,"CR001,CR002,CR003",Simple Truth,"Simple Truth Protein Granola, Simple Truth Almond Crunch",230,32,13.9,0.34,0.79,Numerator HH panel,
+KST-009,2026-Q1,Family Sweet,Kroger-National,Crunchwell,"CR003,CR004",Larksfield Field & Honey,"FH001, FH002",680,98,14.4,0.42,0.83,Numerator HH panel,Cross-validation with LA decline switching
+KST-010,2026-Q1,Wholegrain,Kroger-National,Crunchwell,CR005,Simple Truth,"Simple Truth Whole Grain Honey Oats",420,68,16.2,0.38,0.80,Numerator HH panel,Wholegrain attribute halo for PL
+KST-011,2026-Q1,Single-Serve,Kroger-National,Crunchwell,CR008,Simple Truth,Simple Truth Single Serve Granola,140,28,20.0,0.18,0.71,Numerator HH panel,Small base; high churn
+KST-012,2026-Q1,Sugar-Reduced,Kroger-National,Crunchwell,CR007,Simple Truth,"Simple Truth Berry Reduced Sugar",180,32,17.8,0.22,0.75,Numerator HH panel,Sugar-reduced segment pulling share
+KST-NATIONAL,2026-Q1,All,Kroger-National,Crunchwell,All Crunchwell,Simple Truth,All Simple Truth cereal,3210,460,14.3,0.80,0.92,Aggregated,**National Kroger 14% switching rate — anchor for Priya Q3 JBR pre-read**
+KST-LARK-NATIONAL,2026-Q1,All,Kroger-National,Crunchwell+other,All Crunchwell+,Larksfield Field & Honey,All Field & Honey,4800,820,17.1,1.40,0.93,Aggregated,**Larksfield gained 1.4 pts at Kroger nationally — anchor**
+KST-LARK-SOUTH,2026-Q1,All,Kroger-South,Crunchwell+other,All Crunchwell+,Larksfield Field & Honey,All Field & Honey,2200,420,19.1,2.10,0.92,Aggregated,**Larksfield gained 2.1 pts at Kroger-South — anchor**
+KST-CW-FLAT,2026-Q1,All,Kroger-National,(none),(baseline),Crunchwell,All Crunchwell,N/A,N/A,N/A,0.00,0.95,Aggregated,**Crunchwell flat at Kroger nationally — anchor**
+KST-ST-PROTEIN,2026-Q1,Protein segment,Kroger-National,(category),(baseline),Simple Truth,All Simple Truth protein,N/A,N/A,N/A,0.80,0.91,Aggregated,**Simple Truth gained 0.8 pts in protein segment — anchor**
+KST-SEGMENT-PF,2026-Q1,Protein-Forward,Kroger-National,Traditional family cereal,(baseline),(segment shift),(protein-forward),N/A,N/A,N/A,2.30,0.89,Aggregated,**Protein-forward pulling 2.3% per quarter from traditional family cereal — anchor**
+KST-SEGMENT-SR,2026-Q1,Sugar-Reduced,Kroger-National,Traditional family cereal,(baseline),(segment shift),(sugar-reduced),N/A,N/A,N/A,2.30,0.88,Aggregated,**Sugar-reduced pulling 2.3% per quarter from traditional family cereal — anchor**
+KST-SEGMENT-AG,2026-Q1,Ancient-Grain,Kroger-National,Traditional family cereal,(baseline),(segment shift),(ancient-grain),N/A,N/A,N/A,2.30,0.86,Aggregated,**Ancient-grain pulling 2.3% per quarter from traditional family cereal — anchor**

@@ -1,0 +1,44 @@
+event_id,start_date,end_date,brand,retailer,banner_division,dma_focus,event_type,mechanic,depth_pct,spend_kusd,modeled_lift_pct,modeled_incrementality_index,incremental_revenue_kusd,owner,outcome,notes
+TPE-Q1-001,2026-01-05,2026-01-31,Crunchwell,Walmart,Walmart-South,Multi-DMA,TPR,2.99 14oz,30,1800,28.0,0.62,1620,Marian Holt,On plan,Largest Q1 trade line item
+TPE-Q1-002,2026-01-12,2026-02-08,Crunchwell,Kroger,Kroger-Atlanta,Multi-DMA,Endcap+TPR,2.99 14oz,30,860,32.0,0.60,1010,Marian Holt,On plan,Captaincy support
+TPE-Q1-003,2026-01-19,2026-02-15,Crunchwell,Target,Target-National,National,Bundled price,Buy 2 save $1,18,540,18.0,0.58,580,Marian Holt,On plan,
+TPE-Q1-004,2026-02-02,2026-02-28,Crunchwell,Albertsons,Albertsons-West,West,TPR,2.99 14oz,27,420,24.0,0.55,440,Marian Holt,On plan,
+TPE-Q1-005,2026-02-02,2026-02-28,Crunchwell,Publix,Publix-Southeast,Southeast,TPR,2.99 14oz,24,290,21.0,0.52,280,Marian Holt,On plan,
+TPE-Q1-006,2026-02-09,2026-03-08,Crunchwell,H-E-B,H-E-B Total,Texas,Endcap+TPR,2.99 14oz,26,310,22.0,0.54,310,Marian Holt,On plan,
+TPE-Q1-007,2026-02-16,2026-03-15,ProteinPeak,Target,Target-National,National,Endcap,Display only,0,360,11.0,0.71,440,Marian Holt,On plan,Pre-launch awareness
+TPE-Q1-008,2026-02-23,2026-03-22,Crunchwell,Costco,Costco-National,National,Roadshow,Bundle 4-pack,12,280,18.0,0.71,310,Marian Holt,On plan,Variety pack
+TPE-Q1-009,2026-03-02,2026-03-29,Crunchwell,Rouses,Rouses-LA,LA-DMA,TPR Recovery,Multigrain 12% off,12,140,9.0,0.41,98,Marcus Boudreaux,Under plan,Limited response to recovery promo
+TPE-Q1-010,2026-03-09,2026-03-31,Crunchwell,Brookshire's,Brookshire's-East TX,LA-DMA/TX-DMA,TPR Recovery,Honey Nut Mega 14%,14,82,11.0,0.45,82,Marcus Boudreaux,Under plan,
+TPE-Q1-011,2026-03-22,2026-03-29,Crunchwell,Multi-retailer-LA,Walmart+Rouses+Brookshires-LA,LA-DMA,Tactical Injection,$0.55 off 14oz,15,280,12.0,1.10,612,Marcus Boudreaux,**1.1 pts share recovery vs 1.2 model — anchor**,Marcus pushed; Marian skeptical; landed close to plan
+TPE-Q1-012,2026-02-02,2026-02-28,HoneyNest,Walmart,Walmart-National,National,TPR,$0.40 off,12,290,15.0,0.52,280,Marian Holt,On plan,
+TPE-Q1-013,2026-02-09,2026-03-08,MorningOats,Kroger,Kroger-National,National,TPR,$0.50 off,14,340,17.0,0.55,360,Marian Holt,On plan,
+TPE-Q1-014,2026-02-16,2026-03-15,MorningOats,Target,Target-National,National,Endcap,Display + price,16,210,16.0,0.58,220,Marian Holt,On plan,
+TPE-Q1-015,2026-03-02,2026-03-29,TrailGrove,Whole Foods,WFM-National,National,Endcap,Display + price,15,140,12.0,0.62,160,Marian Holt,On plan,
+TPE-Q1-016,2026-01-12,2026-02-15,Crunchwell,Sams Club,Sams-National,National,Bundled,Buy 1 get 1 25%,25,310,19.0,0.59,340,Marian Holt,On plan,
+TPE-Q1-017,2026-01-19,2026-02-08,Crunchwell,BJ's Wholesale,BJs-Northeast,Northeast,Roadshow,Bundle 3-pack,10,90,9.0,0.65,98,Marian Holt,On plan,
+TPE-Q1-018,2026-02-23,2026-03-29,Crunchwell,Mountain-West-Multi,Multi-region,Mountain West,Multi-store TPR,$0.50 off,18,540,14.0,-0.21,-220,Marian Holt,**Value-destroying** — Tasha flagged in May read,Three Mountain West events that destroyed value (Tasha's H2 insight cluster)
+TPE-Q1-019,2026-03-02,2026-03-29,HoneyNest,Mountain-West-Multi,Multi-region,Mountain West,TPR,$0.40 off,12,180,10.0,-0.18,-72,Marian Holt,**Value-destroying** — pattern,Cluster member; defund H2
+TPE-Q1-020,2026-03-09,2026-03-31,MorningOats,Mountain-West-Multi,Multi-region,Mountain West,Endcap+TPR,$0.50 off + display,14,210,11.0,-0.15,-92,Marian Holt,**Value-destroying** — pattern,Cluster member; defund H2
+TPE-Q1-021,2026-01-26,2026-02-22,Crunchwell,Amazon,Amazon-Direct,National,SubFee waiver,Subscribe-and-save first,0,260,7.0,0.18,180,Marian Holt,Above plan,Promo line item dual-counted with retail-media Amazon
+TPE-Q1-022,2026-02-09,2026-03-08,ProteinPeak,Whole Foods,WFM-National,National,Endcap,Display + sample,0,280,12.0,0.78,390,Marian Holt,On plan,
+TPE-Q1-023,2026-03-02,2026-03-29,RootDay,Sprouts,Sprouts-National,National,Endcap,Display + price,20,140,14.0,0.55,170,Marian Holt,On plan,
+TPE-Q1-024,2026-01-19,2026-02-08,Crunchwell,Hy-Vee,Hy-Vee-Midwest,Midwest,TPR,$0.40 off,16,120,12.0,0.52,140,Marian Holt,On plan,
+TPE-Q1-025,2026-02-16,2026-03-15,Crunchwell,Wegmans,Wegmans-Northeast,Northeast,Endcap+TPR,$0.50 off,18,180,15.0,0.58,220,Marian Holt,On plan,
+TPE-Q1-026,2026-02-02,2026-02-28,Crunchwell,Meijer,Meijer-Midwest,Midwest,TPR,$0.45 off,16,140,13.0,0.54,160,Marian Holt,On plan,
+TPE-Q1-027,2026-03-09,2026-03-31,HoneyNest,Target,Target-National,National,Endcap,Display only,0,210,9.0,0.62,170,Marian Holt,On plan,
+TPE-Q1-028,2026-01-12,2026-02-08,TrailGrove,Sprouts,Sprouts-National,National,Endcap,Display + price,12,90,11.0,0.65,98,Marian Holt,On plan,
+TPE-Q1-029,2026-02-02,2026-02-28,RootDay,Whole Foods,WFM-National,National,Endcap,Display + sample,0,140,10.0,0.65,150,Marian Holt,On plan,
+TPE-Q1-030,2026-03-09,2026-03-31,Crunchwell,Family Dollar,FD-National,National-skew South,TPR,2.49 single pack,12,90,9.0,0.51,82,Marian Holt,On plan,
+TPE-Q1-031,2026-02-16,2026-03-15,Crunchwell,Dollar General,DG-National,National-skew South,TPR,2.49 single pack,13,120,10.0,0.55,98,Marian Holt,On plan,
+TPE-Q1-032,2026-03-02,2026-03-29,MorningOats,Albertsons,Albertsons-West,West,TPR,$0.50 off,14,180,13.0,0.55,170,Marian Holt,On plan,
+TPE-Q1-033,2026-01-19,2026-02-15,Crunchwell,Stater Bros,Stater-CA,CA-DMA,TPR,$0.45 off,15,68,12.0,0.52,72,Marian Holt,On plan,
+TPE-Q1-034,2026-02-09,2026-03-08,ProteinPeak,Sprouts,Sprouts-National,National,Endcap,Display + sample,0,180,14.0,0.74,260,Marian Holt,On plan,Pre-launch buzz
+TPE-Q1-035,2026-02-23,2026-03-22,Crunchwell,Ahold Delhaize,AD-Northeast,Northeast,TPR,$0.45 off,15,180,13.0,0.55,180,Marian Holt,On plan,
+TPE-Q1-036,2026-03-09,2026-03-29,HoneyNest,Albertsons,Albertsons-West,West,TPR,$0.40 off,12,180,11.0,0.52,180,Marian Holt,On plan,
+TPE-Q1-037,2026-03-02,2026-03-22,Crunchwell,Save Mart,SaveMart-CA,CA-DMA,TPR,$0.45 off,15,68,12.0,0.52,72,Marian Holt,On plan,
+TPE-Q1-038,2026-01-26,2026-02-22,Crunchwell,Winn-Dixie,WinnDixie-Southeast,Southeast,TPR,$0.45 off,15,170,13.0,0.54,180,Marian Holt,On plan,
+TPE-Q1-039,2026-02-16,2026-03-15,Crunchwell,Giant Eagle,GE-Midwest,Midwest,TPR,$0.45 off,15,140,12.0,0.54,140,Marian Holt,On plan,
+TPE-Q1-040,2026-03-09,2026-03-29,Crunchwell,Aldi,Aldi-National,National,TPR,$0.40 off,12,120,11.0,0.51,98,Marian Holt,On plan,
+TPE-Q1-041,2026-01-12,2026-02-08,Crunchwell,Walmart,Walmart-Central,Multi-DMA,TPR Wave 2,3.49 18oz Mega,18,420,22.0,0.58,440,Marian Holt,On plan,
+TPE-Q1-042,2026-02-23,2026-03-22,Crunchwell,Kroger,Kroger-Mid-Atlantic,Multi-DMA,TPR,$0.50 off,16,260,18.0,0.56,260,Marian Holt,On plan,
+TPE-Q1-043,2026-01-19,2026-02-15,Crunchwell,Albertsons,Albertsons-Mountain,Mountain,Endcap+TPR,$0.50 off + display,17,190,15.0,0.55,180,Marian Holt,On plan,Not in the value-destroying cluster

@@ -1,0 +1,25 @@
+event_id,period,month,platform,brand,sku_focus,spend_kusd,impressions_mln,clicks_k,platform_reported_roas,modeled_incrementality_ratio,incremental_revenue_kusd,cannibalized_base_kusd,undetermined_kusd,confidence,owner,notes
+RM-Q1-001,2026-Q1,2026-01,Walmart Connect,Crunchwell,"CR001,CR002,CR003,CR004",240,30,420,2.08,1.21,290,12,7,High,Tasha Brooks,Sponsored search + display defense
+RM-Q1-002,2026-Q1,2026-02,Walmart Connect,Crunchwell,"CR001,CR002,CR003,CR004",230,28,400,2.04,1.21,278,11,7,High,Tasha Brooks,Endcap-defense tied to Larksfield activity
+RM-Q1-003,2026-Q1,2026-03,Walmart Connect,Crunchwell,"CR001,CR002,CR003,CR004",230,28,400,2.15,1.21,278,11,7,High,Tasha Brooks,LA tactical keyword defense layer ($40K LA-specific)
+RM-Q1-004,2026-Q1,2026-Q1,Walmart Connect,ProteinPeak,"PP001,PP003",150,15,180,2.31,1.30,195,5,4,Med,Tasha Brooks,Pre-launch keyword squat for Q2 PP005/PP006
+RM-Q1-005,2026-Q1,2026-Q1,Walmart Connect,MorningOats,MO001,90,10,110,1.92,1.14,103,7,3,Med,Tasha Brooks,Steady
+RM-Q1-006,2026-Q1,2026-Q1,Walmart Connect,HoneyNest,HN001,60,7,70,1.88,1.10,66,4,2,Med,Tasha Brooks,Steady
+RM-Q1-007,2026-Q1,2026-01,Amazon Ads,Crunchwell,"CR001,CR002,CR003,CR004,CR008",400,100,840,1.10,0.41,164,200,36,High,Tasha Brooks,Subscribe-and-save base double-counted by Amazon ROAS
+RM-Q1-008,2026-Q1,2026-02,Amazon Ads,Crunchwell,"CR001,CR002,CR003,CR004,CR008",400,100,840,1.06,0.40,160,200,40,High,Tasha Brooks,Cannibalization heavy at base-loyal SKUs
+RM-Q1-009,2026-Q1,2026-03,Amazon Ads,Crunchwell,"CR001,CR002,CR003,CR004,CR008",400,100,840,1.08,0.41,164,200,36,High,Tasha Brooks,Recommendation: pull $700K out in H2 per Tasha
+RM-Q1-010,2026-Q1,2026-Q1,Amazon Ads,ProteinPeak,"PP001,PP002,PP003,PP004",680,170,1480,1.42,0.44,300,80,80,High,Tasha Brooks,ProteinPeak outperforms Crunchwell at SKU-level (PP003 vs CR002 ~2.3x)
+RM-Q1-011,2026-Q1,2026-Q1,Amazon Ads,MorningOats,"MO001,MO002",260,68,560,1.04,0.38,100,80,40,Med,Tasha Brooks,Mostly cannibalization
+RM-Q1-012,2026-Q1,2026-Q1,Amazon Ads,TrailGrove,"TG001",260,64,520,1.00,0.37,96,40,48,Med,Tasha Brooks,Largely cannibalized; defund candidate
+RM-Q1-013,2026-Q1,2026-01,Kroger Precision Marketing,Crunchwell,"CR001,CR002,CR003,CR005",62,8,72,1.48,0.81,50,7,5,High,Tasha Brooks,Captaincy-aligned defense
+RM-Q1-014,2026-Q1,2026-02,Kroger Precision Marketing,Crunchwell,"CR001,CR002,CR003,CR005",58,7,68,1.41,0.78,45,7,4,High,Tasha Brooks,
+RM-Q1-015,2026-Q1,2026-03,Kroger Precision Marketing,Crunchwell,"CR001,CR002,CR003,CR005",60,8,72,1.45,0.80,48,7,5,High,Tasha Brooks,
+RM-Q1-016,2026-Q1,2026-Q1,Kroger Precision Marketing,ProteinPeak,"PP001,PP003",110,14,128,1.62,0.92,101,5,4,Med,Tasha Brooks,Captaincy halo
+RM-Q1-017,2026-Q1,2026-Q1,Kroger Precision Marketing,MorningOats,"MO001",60,8,68,1.32,0.73,44,9,7,Med,Tasha Brooks,
+RM-Q1-018,2026-Q1,2026-Q1,Kroger Precision Marketing,HoneyNest,"HN001",50,6,58,1.28,0.56,28,15,7,Med,Tasha Brooks,
+RM-Q1-019,2026-Q1,2026-01,Target Roundel,Crunchwell,"CR001,CR002,CR003",20,3,38,1.18,0.60,12,7,1,High,Tasha Brooks,Steady
+RM-Q1-020,2026-Q1,2026-02,Target Roundel,Crunchwell,"CR001,CR002,CR003",20,3,38,1.12,0.55,11,8,1,High,Tasha Brooks,
+RM-Q1-021,2026-Q1,2026-03,Target Roundel,Crunchwell,"CR001,CR002,CR003",20,3,38,1.16,0.55,11,8,1,High,Tasha Brooks,
+RM-Q1-022,2026-Q1,2026-Q1,Target Roundel,ProteinPeak,"PP001,PP002,PP003,PP004",260,38,310,1.34,0.61,158,87,15,High,Tasha Brooks,Hero account; pre-launch endcap support
+RM-Q1-023,2026-Q1,2026-Q1,Target Roundel,RootDay,"RD001",40,5,46,1.04,0.35,14,24,2,Low,Tasha Brooks,
+RM-Q1-024,2026-Q1,2026-Q1,Target Roundel,TrailGrove,"TG001",40,5,42,1.10,0.35,14,26,0,Low,Tasha Brooks,

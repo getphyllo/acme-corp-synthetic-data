@@ -1,0 +1,10 @@
+indicator_id,as_of_date,store_count,heb_region,sku,sku_name,acv_authorization_pct,velocity_units_per_store_per_week,velocity_rank_in_category,review_avg_rating,oos_rate_q1_pct,promo_response_lift_pct,delist_risk_score_0to1,delist_risk_band,next_review_date,notes
+HCT-001,2026-05-15,38,H-E-B Central Texas,CR006,Crunchwell Cinnamon Twist,72,12.4,42 of 48,3.4,8.2,18.0,0.78,High,2026-09-15,Below velocity threshold for category; review at Sept reset
+HCT-002,2026-05-15,42,H-E-B South Texas,CR006,Crunchwell Cinnamon Twist,68,11.8,44 of 48,3.3,9.1,16.0,0.82,High,2026-09-15,
+HCT-003,2026-05-15,34,H-E-B Houston Metro,CR006,Crunchwell Cinnamon Twist,65,10.9,46 of 48,3.5,10.4,15.0,0.85,Very High,2026-09-15,Tom Reilly flagged delisting risk in May 2026 weekly call
+HCT-004,2026-05-15,28,H-E-B Northeast Texas,CR006,Crunchwell Cinnamon Twist,71,12.0,43 of 48,3.4,7.8,17.0,0.76,High,2026-09-15,
+HCT-005,2026-05-15,22,H-E-B Border,CR006,Crunchwell Cinnamon Twist,64,9.8,47 of 48,3.2,11.2,14.0,0.88,Very High,2026-09-15,Worst-performing region for CR006
+HCT-006,2026-05-15,18,H-E-B West Texas,CR006,Crunchwell Cinnamon Twist,74,12.8,40 of 48,3.5,7.1,19.0,0.71,High,2026-09-15,
+HCT-007,2026-05-15,16,H-E-B Coastal Bend,CR006,Crunchwell Cinnamon Twist,69,11.4,45 of 48,3.4,8.6,17.0,0.79,High,2026-09-15,
+HCT-AGG,2026-05-15,198,H-E-B Total,CR006,Crunchwell Cinnamon Twist,69,11.7,44 of 48,3.4,8.9,17.0,0.80,High,2026-09-15,**Aggregate H-E-B Cinnamon Twist delisting risk — anchor for Marcus Walmart-prep cross-flag**
+HCT-CONTRAST,2026-05-15,198,H-E-B Total,CR001,Crunchwell Original Family (comparison),93,28.4,12 of 48,4.3,3.2,32.0,0.05,Low,2026-09-15,Contrast SKU showing Cinnamon Twist is an outlier

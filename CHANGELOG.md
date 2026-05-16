@@ -2,7 +2,72 @@
 
 All notable changes to this dataset are tracked here. The repo follows [Semantic Versioning](https://semver.org/) — major bumps are breaking schema changes, minor bumps add tables/columns, patch bumps fix data without changing schema.
 
-> **Current canonical version: `v0.5.0`** — Adds the **ProteinPeak Q2 2026 Launch Read** as Scenario 2 alongside the existing Louisiana decline (Scenario 1). Extends the data window to 2026-05-31. Adds SKUs PP005 (Cinnamon Crunch) + PP006 (Cocoa Almond). Renames PP001 to "ProteinPeak Vanilla Almond Original". Adds 6 new audit assertions; 13 seed files (was 11); 7-snapshot `sku_authorization` (was 5). All v0.4.1 row queries continue to work; row counts are larger but distributions are preserved.
+> **Current canonical version: `v0.6.0`** — Adds **three commercial-persona scenarios** (Marcus's Walmart August line-review prep, Priya's Kroger Q3 JBR pre-read, Tasha's Q1 retail-media & trade-promo effectiveness CFO read) on top of the existing Louisiana decline (S1) and ProteinPeak Q2 launch (S2). Adds 5 new seed files (18 total, was 13). Adds 11 new cross-table assertions (22 total, was 11). All v0.5.0 row queries continue to work — no parquet-table schema change in v0.6.0; everything new lives in seeds.
+
+## [v0.6.0] — 2026-05-16
+
+### Added — Three commercial-persona scenarios (S3, S4, S5)
+
+Three new scenarios ride alongside the existing Louisiana decline (S1) and ProteinPeak Q2 launch (S2), anchored to the **V2 commercial-personas brief** (`/clayface-workspace/00-inbox/30-personas-research/2026-05-16-commercial-personas-v2/`):
+
+**Scenario 3 — Walmart August 2026 Line-Review Prep** (Marcus Boudreaux, Director Sales South)
+
+- Trigger: Monday 2026-05-18; line review 12 weeks out (~Aug 10, 2026)
+- Marcus's ask: recover **2 facings on Crunchwell Mega + Honey Nut Mega** at Walmart South Division
+- Anchor: velocity-per-facing **+4%** since Sept 2025 cut despite **25% facing reduction** → category contribution down 22%; Larksfield 3-endcap pattern across **23 of 41** LA Walmart Supercenters
+- Net expected impact (Q3 tactical): **1.2 share points** of recovery, **$612K** incremental revenue, against **$340K** trade investment
+- Related cross-flags surfaced in narrative: Cinnamon Twist (CR006) H-E-B delisting risk; Rouses Mega OOS at 8 doors
+
+**Scenario 4 — Kroger Q3 2026 JBR Pre-Read** (Priya Raman, Category Manager — Kroger Category Captain)
+
+- Trigger: Tuesday 2026-05-19; JBR Tuesday 2026-07-08; pre-read due 2026-06-24 (shipped 2026-06-20 in the with-Clayface arc)
+- Priya's ask: deliver an aisle-level pre-read with consumer-demand and rebalance recommendation
+- Anchors: Larksfield Field & Honey **+1.4 pts** at Kroger nationally / **+2.1 pts** in the South; Simple Truth **+0.8 pts** across the protein segment; Crunchwell flat at Kroger; three segment shifts (protein-forward, sugar-reduced, ancient-grain) each pulling **2.3% per quarter** from traditional family cereal
+- Switching insight surfaced: **14% of Crunchwell lapsed Kroger buyers** went to Simple Truth in Q1 2026
+
+**Scenario 5 — Q1 2026 Retail-Media & Trade-Promo Effectiveness Read** (Tasha Brooks, Director eCommerce & Retail Media)
+
+- Trigger: Thursday 2026-05-21; CFO half-day session Thursday 2026-06-04 (called by Helen Park-Choi)
+- Tasha's ask: defend the retail-media envelope; deliver true incrementality (not platform-reported ROAS) by channel × retailer × SKU
+- Anchors: **$4.2M** Q1 retail-media envelope; **$11.6M** Q1 trade-promo spend; decomposition = **$2.7M incremental / $1.1M cannibalization / $0.4M undetermined**; blended ratio **$0.64**; per-platform ratios **WMT Connect $1.20 / Amazon $0.41 / Kroger Precision $0.79 / Target Roundel $0.55**
+- LA tactical injection (Marcus, late March): **$280K** spend → **1.1 share points** vs 1.2 model expectation → **$612K** incremental revenue → **2.2× incremental ROI**
+- H2 reallocation recommendation: **pull $700K from Amazon Ads** → push into Walmart Connect + Kroger Precision
+- Surfaced insight: **3 value-destroying trade-promo events** in Mountain West Q1 (negative incrementality)
+- ProteinPeak/Crunchwell retail-media SKU-level outperformance: **2.3×** on Amazon (PP003 Berry Crunch vs CR002 Original Mega)
+
+**New seed files (5):**
+
+| File | Rows | Purpose |
+|---|---:|---|
+| `seeds/retail_media_spend_q1_2026.csv` | 24 | Q1 2026 retail-media spend by platform × brand × month with platform-reported ROAS, modeled incrementality ratio, incremental revenue, cannibalization, undetermined. Sums to $4.2M spend / $2.7M incremental. |
+| `seeds/trade_promo_events_q1_2026.csv` | 43 | Q1 2026 trade-promo event log across all retailers ($11.6M total). Anchors Marcus's LA tactical injection (TPE-Q1-011) and Tasha's Mountain West value-destroying cluster (TPE-Q1-018/019/020). |
+| `seeds/walmart_endcap_audit_la.csv` | 62 | Walmart Supercenter endcap snapshot for Louisiana, Sept 2025 → May 2026. Anchors the 23-of-41 Larksfield 3-endcap pattern. |
+| `seeds/kroger_simple_truth_switching.csv` | 21 | Crunchwell-lapsed → Simple Truth (Kroger PL) switching study by Kroger division. Anchors 14% national switch rate and three segment-level 2.3%/qtr shifts. |
+| `seeds/heb_cinnamon_twist_delist_risk.csv` | 9 | H-E-B Cinnamon Twist (CR006) authorization risk by region. Anchors Marcus's cross-flag for the Walmart pre-read. |
+| `seeds/rouses_oos_by_door.csv` | 15 | Rouses Mega (CR002) OOS audit door-by-door as of 2026-05-12. Anchors the "8 doors OOS" reference in Marcus's pre-read. |
+
+(That's 6 net new seeds, taking the total from 13 → 18.)
+
+**New cross-table assertions (11 — bringing total from 11 → 22):**
+
+12. Walmart endcap audit has ≥23 LA Supercenters with `larksfield_endcap_count >= 3` on 2026-05-11.
+13. Walmart endcap audit has 0 LA stores with `acme_endcap_count >= 1` on 2026-05-11.
+14. Kroger Simple Truth switching national rate ≈ 14% (±0.5pp).
+15. Kroger Larksfield gain = +1.40 pts national, +2.10 pts South.
+16. Three Kroger segment shifts (protein-forward / sugar-reduced / ancient-grain) each at +2.30 pts/quarter.
+17. Q1 retail-media total spend = $4.2M (±1%).
+18. Q1 retail-media total incremental revenue = $2.70M (±$50K).
+19. Per-platform incrementality ratios: WMT Connect 1.20 / Amazon 0.41 / Kroger Precision 0.79 / Target Roundel 0.55 (±0.02).
+20. Q1 trade-promo total spend = $11.6M (±1%).
+21. LA tactical injection (TPE-Q1-011) spend=$280K, incr=$612K.
+22. Exactly 3 Mountain West trade-promo events with negative incrementality.
+
+**Notes for prototype maintainers:**
+
+- v0.6.0 is **seeds-only** — no parquet-table schema changes. All v0.5.0 queries continue to work unchanged.
+- The new scenarios cross-reference existing parquet tables: `perfect_store` (facings, OSA), `syndicated_weekly` (Crunchwell_Value_Share by Kroger DMA), `sku_elasticity_estimates` (LA injection model), `data_freshness_log` (model refresh dates).
+- Marian's elasticity model `last_recalibrated` field is the gate Tasha leans on in the CFO read. Don't change `2026-04-15` without updating the scenario narrative.
+- Marcus's LA tactical injection economics (2.2× incremental ROI) flow from the existing `sku_elasticity_estimates.csv` Rouses CR002 row (elasticity -2.12, confidence 0.66) — that's the model that produced the 1.2 prediction; the 1.1 landed result is the synthetic outcome.
 
 ## [v0.5.0] — 2026-05-12
 

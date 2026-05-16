@@ -1,0 +1,16 @@
+audit_id,audit_date,store_id,store_city,store_state,store_dma,sku,sku_name,osa_pct,oos_days_q1_2026,oos_flag_may_2026,larksfield_endcap_flag,promo_response_lift_pct,notes
+ROOS-001,2026-05-12,RM-101,Thibodaux,LA,LA-DMA,CR002,Crunchwell Original Mega,62,18,Y,Y,12.0,Marcus visited; buyer flagged
+ROOS-002,2026-05-12,RM-102,Baton Rouge,LA,LA-DMA,CR002,Crunchwell Original Mega,58,21,Y,Y,10.0,
+ROOS-003,2026-05-12,RM-103,Baton Rouge,LA,LA-DMA,CR002,Crunchwell Original Mega,64,16,Y,Y,11.0,
+ROOS-004,2026-05-12,RM-104,Lafayette,LA,LA-DMA,CR002,Crunchwell Original Mega,69,12,Y,Y,14.0,
+ROOS-005,2026-05-12,RM-105,New Orleans,LA,LA-DMA,CR002,Crunchwell Original Mega,71,11,Y,Y,15.0,
+ROOS-006,2026-05-12,RM-106,Metairie,LA,LA-DMA,CR002,Crunchwell Original Mega,66,15,Y,Y,13.0,
+ROOS-007,2026-05-12,RM-107,Houma,LA,LA-DMA,CR002,Crunchwell Original Mega,60,19,Y,Y,11.0,
+ROOS-008,2026-05-12,RM-108,Slidell,LA,LA-DMA,CR002,Crunchwell Original Mega,67,14,Y,Y,13.0,
+ROOS-009,2026-05-12,RM-109,Hammond,LA,LA-DMA,CR002,Crunchwell Original Mega,82,5,N,Y,18.0,Within healthy range
+ROOS-010,2026-05-12,RM-110,Covington,LA,LA-DMA,CR002,Crunchwell Original Mega,85,4,N,Y,19.0,
+ROOS-011,2026-05-12,RM-111,Lake Charles,LA,LA-DMA,CR002,Crunchwell Original Mega,84,4,N,Y,17.0,
+ROOS-012,2026-05-12,RM-112,Alexandria,LA,LA-DMA,CR002,Crunchwell Original Mega,86,3,N,Y,20.0,
+ROOS-013,2026-05-12,RM-113,Monroe,LA,LA-DMA,CR002,Crunchwell Original Mega,89,2,N,Y,21.0,
+ROOS-014,2026-05-12,RM-114,Shreveport,LA,LA-DMA,CR002,Crunchwell Original Mega,88,2,N,Y,21.0,
+ROOS-AGG,2026-05-12,All,Rouses-LA-Total,LA,LA-DMA,CR002,Crunchwell Original Mega,73,11,Y(8 of 14 doors),Y,15.0,**8 doors with OOS flag May 2026 — anchor for Marcus Walmart-prep cross-flag (Rouses-Mega-OOS situation at 8 doors)**

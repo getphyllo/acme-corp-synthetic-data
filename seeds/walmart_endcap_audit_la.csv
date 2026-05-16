@@ -1,0 +1,63 @@
+audit_id,audit_date,store_id,store_city,store_state,store_dma,supercenter_format,larksfield_endcap_count,acme_endcap_count,private_label_endcap_count,larksfield_endcap_skus,acme_endcap_skus,facing_count_crunchwell_mega,facing_count_crunchwell_honey_nut_mega,facing_count_field_and_honey,oos_flag_crunchwell_mega,notes
+ECA-001,2025-09-15,1234,Burbank,LA,LA-DMA,Supercenter,1,1,0,Field & Honey 14oz,Crunchwell Mega 18oz,6,6,4,N,Post-reset baseline; Walmart cut from 8 to 6 facings
+ECA-002,2025-09-15,1812,Baton Rouge,LA,LA-DMA,Supercenter,1,1,0,Field & Honey 14oz,Crunchwell Honey Nut Mega,6,6,4,N,Post-reset baseline
+ECA-003,2025-09-15,2156,Baton Rouge,LA,LA-DMA,Supercenter,1,0,0,Field & Honey 14oz,(none),6,6,4,N,Acme lost endcap to Larksfield in this reset
+ECA-004,2025-10-20,1234,Burbank,LA,LA-DMA,Supercenter,2,1,0,"Field & Honey 14oz, Field & Honey Almond",Crunchwell Mega,6,6,5,N,Larksfield added second endcap
+ECA-005,2025-10-20,1812,Baton Rouge,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Harvest Hearth",(none),6,6,5,N,Acme lost endcap; PL Great Value picked up secondary
+ECA-006,2025-10-20,2156,Baton Rouge,LA,LA-DMA,Supercenter,3,0,0,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),6,6,6,Y,Larksfield three-endcap takeover; Crunchwell Mega OOS Day 1
+ECA-007,2025-11-15,1234,Burbank,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,5,6,Y,Post-hurricane; supply outage; Crunchwell Mega 6 to 4 effective
+ECA-008,2025-11-15,1812,Baton Rouge,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,Y,Hurricane Tonya disruption persistent
+ECA-009,2025-11-15,2156,Baton Rouge,LA,LA-DMA,Supercenter,3,0,2,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,Y,PL filling void; manager grabbed Great Value box
+ECA-010,2026-01-10,1234,Burbank,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,5,6,Y,Q4 close confirmed endcap pattern
+ECA-011,2026-01-10,1812,Baton Rouge,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,Crunchwell back in stock but no shelf gain
+ECA-012,2026-01-10,2156,Baton Rouge,LA,LA-DMA,Supercenter,3,0,2,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-013,2026-03-22,1234,Burbank,LA,LA-DMA,Supercenter,3,1,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",Crunchwell Multigrain recovery,4,5,6,N,Marcus pushed recovery endcap on tactical injection
+ECA-014,2026-03-22,1812,Baton Rouge,LA,LA-DMA,Supercenter,3,1,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",Crunchwell Multigrain recovery,4,4,6,N,
+ECA-015,2026-03-22,2156,Baton Rouge,LA,LA-DMA,Supercenter,3,0,2,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,Y,Recovery promo did not extend to this door
+ECA-016,2026-05-11,1234,Burbank,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,5,6,N,Marcus field walk May 11 confirmed pattern
+ECA-017,2026-05-11,1812,Baton Rouge,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-018,2026-05-11,2156,Baton Rouge,LA,LA-DMA,Supercenter,3,0,2,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-019,2026-05-11,3401,Lafayette,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-020,2026-05-11,3402,Lafayette,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-021,2026-05-11,4501,New Orleans,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-022,2026-05-11,4502,New Orleans,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-023,2026-05-11,4503,Metairie,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-024,2026-05-11,5101,Shreveport,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-025,2026-05-11,5102,Shreveport,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-026,2026-05-11,5103,Bossier City,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-027,2026-05-11,5601,Monroe,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-028,2026-05-11,6101,Alexandria,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-029,2026-05-11,6201,Houma,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-030,2026-05-11,6202,Thibodaux,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-031,2026-05-11,6301,Slidell,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-032,2026-05-11,6302,Hammond,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-033,2026-05-11,6303,Covington,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-034,2026-05-11,7101,Lake Charles,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-035,2026-05-11,7401,Burbank,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-036,2026-05-11,7501,Burbank,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,Larksfield only at 2 endcaps here (smaller format)
+ECA-037,2026-05-11,7502,Lake Charles,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-038,2026-05-11,7503,Baton Rouge,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-039,2026-05-11,7504,Lafayette,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-040,2026-05-11,8101,Houma,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-041,2026-05-11,8201,Hammond,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-042,2026-05-11,8301,Alexandria,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,Smaller-format; only one endcap fits
+ECA-043,2026-05-11,8401,Lafayette,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,
+ECA-044,2026-05-11,8501,Metairie,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,
+ECA-045,2026-05-11,8601,Slidell,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,
+ECA-046,2026-05-11,8701,Shreveport,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,
+ECA-047,2026-05-11,8801,Monroe,LA,LA-DMA,Neighborhood,1,0,1,Field & Honey 14oz,(none),4,4,6,N,
+ECA-048,2026-05-11,8901,Lake Charles,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-049,2026-05-11,9001,Lafayette,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-050,2026-05-11,9101,Baton Rouge,LA,LA-DMA,Supercenter,3,0,1,"Field & Honey 14oz, Field & Honey Almond, Harvest Hearth",(none),4,4,6,N,
+ECA-051,2026-05-11,9201,Shreveport,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-052,2026-05-11,9301,Monroe,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-053,2026-05-11,9401,Bossier City,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-054,2026-05-11,9501,Alexandria,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-055,2026-05-11,9601,Houma,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-056,2026-05-11,9701,Hammond,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-057,2026-05-11,9801,Slidell,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-058,2026-05-11,9901,Covington,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-059,2026-05-11,10001,Slidell,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-060,2026-05-11,10101,Metairie,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-061,2026-05-11,10201,Kenner,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
+ECA-062,2026-05-11,10301,Gretna,LA,LA-DMA,Supercenter,2,0,1,"Field & Honey 14oz, Field & Honey Almond",(none),4,4,6,N,
