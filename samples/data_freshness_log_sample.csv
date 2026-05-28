@@ -1,101 +1,101 @@
 Week_Start,Feed_Name,Cadence,Last_Refreshed,Lag_Hours,Status,Owner_Team
-2026-01-05,NielsenIQ syndicated,Daily,2026-01-05 00:00:00,2,On-Track,Insights
+2026-01-05,NielsenIQ syndicated,Daily,2026-01-05 00:00:00,12,On-Track,Insights
 2026-01-05,IRI Circana syndicated,Daily,2026-01-05 00:00:00,0,On-Track,Insights
-2026-01-05,Numerator panel,Daily,2026-01-05 00:00:00,6,On-Track,Insights
+2026-01-05,Numerator panel,Daily,2026-01-05 00:00:00,12,On-Track,Insights
 2026-01-05,Walmart Luminate,Daily,2026-01-05 00:00:00,0,On-Track,External
 2026-01-05,Kroger 84.51,Daily,2026-01-05 00:00:00,0,Lagging,External
 2026-01-05,Target Roundel,Daily,2026-01-05 00:00:00,0,On-Track,External
-2026-01-05,Amazon Brand Analytics,Daily,2026-01-05 00:00:00,0,On-Track,E-Comm
-2026-01-05,Profitero digital shelf,Daily,2026-01-03 00:00:00,48,Stale,E-Comm
-2026-01-05,SAP shipments,Hourly,2026-01-05 00:00:00,0,On-Track,IT
-2026-01-05,SAP plan,Daily,2026-01-05 00:00:00,0,On-Track,IT
-2026-01-05,Brandwatch social,Hourly,2026-01-04 00:00:00,24,Lagging,Marketing
+2026-01-05,Amazon Brand Analytics,Daily,2026-01-05 00:00:00,12,On-Track,E-Comm
+2026-01-05,Profitero digital shelf,Daily,2026-01-05 00:00:00,0,On-Track,E-Comm
+2026-01-05,SAP shipments,Hourly,2026-01-05 00:00:00,2,On-Track,IT
+2026-01-05,SAP plan,Daily,2026-01-04 00:00:00,24,Lagging,IT
+2026-01-05,Brandwatch social,Hourly,2026-01-05 00:00:00,0,On-Track,Marketing
 2026-01-05,Sprout Social owned,Hourly,2026-01-05 00:00:00,0,On-Track,Marketing
 2026-01-05,Tribe Dynamics creators,Daily,2026-01-05 00:00:00,0,On-Track,Marketing
 2026-01-05,Spate search Google,Daily,2026-01-05 00:00:00,0,On-Track,Marketing
-2026-01-05,Helium 10 Amazon search,Daily,2026-01-05 00:00:00,0,Lagging,E-Comm
+2026-01-05,Helium 10 Amazon search,Daily,2026-01-05 00:00:00,12,Lagging,E-Comm
 2026-01-05,Bazaarvoice reviews,Daily,2026-01-05 00:00:00,6,On-Track,External
-2026-01-05,PowerReviews reviews,Daily,2026-01-05 00:00:00,6,On-Track,External
-2026-01-05,Mintel GNPD,Weekly,2026-01-04 00:00:00,24,Lagging,Innovation
-2026-01-05,Kantar brand health,Bi-monthly,2026-01-05 00:00:00,12,On-Track,External
-2026-01-05,Suzy quick survey,On-Demand,2026-01-05 00:00:00,6,On-Track,Innovation
+2026-01-05,PowerReviews reviews,Daily,2026-01-05 00:00:00,2,On-Track,External
+2026-01-05,Mintel GNPD,Weekly,2026-01-05 00:00:00,0,On-Track,Innovation
+2026-01-05,Kantar brand health,Bi-monthly,2026-01-05 00:00:00,0,On-Track,External
+2026-01-05,Suzy quick survey,On-Demand,2026-01-05 00:00:00,0,On-Track,Innovation
 2026-01-05,US Census ACS,Annual,2026-01-05 00:00:00,0,On-Track,External
-2026-01-05,USDA ERS,Quarterly,2026-01-05 00:00:00,0,On-Track,External
-2026-01-05,SymphonyAI Retail,Daily,2026-01-05 00:00:00,0,On-Track,Insights
-2026-01-05,Datassential Foodservice,Quarterly,2026-01-04 00:00:00,24,Lagging,Innovation
-2026-01-05,Google Trends (free),Real-time,2026-01-05 00:00:00,2,On-Track,External
-2026-01-12,NielsenIQ syndicated,Daily,2026-01-12 00:00:00,6,On-Track,Insights
-2026-01-12,IRI Circana syndicated,Daily,2026-01-12 00:00:00,0,On-Track,Insights
-2026-01-12,Numerator panel,Daily,2026-01-12 00:00:00,2,On-Track,Insights
-2026-01-12,Walmart Luminate,Daily,2026-01-12 00:00:00,2,On-Track,External
-2026-01-12,Kroger 84.51,Daily,2026-01-12 00:00:00,12,Lagging,External
+2026-01-05,USDA ERS,Quarterly,2026-01-05 00:00:00,6,On-Track,External
+2026-01-05,SymphonyAI Retail,Daily,2026-01-03 00:00:00,48,Stale,Insights
+2026-01-05,Datassential Foodservice,Quarterly,2026-01-05 00:00:00,2,On-Track,Innovation
+2026-01-05,Google Trends (free),Real-time,2026-01-05 00:00:00,0,On-Track,External
+2026-01-12,NielsenIQ syndicated,Daily,2026-01-12 00:00:00,0,On-Track,Insights
+2026-01-12,IRI Circana syndicated,Daily,2026-01-12 00:00:00,6,On-Track,Insights
+2026-01-12,Numerator panel,Daily,2026-01-12 00:00:00,6,On-Track,Insights
+2026-01-12,Walmart Luminate,Daily,2026-01-12 00:00:00,0,On-Track,External
+2026-01-12,Kroger 84.51,Daily,2026-01-12 00:00:00,0,Lagging,External
 2026-01-12,Target Roundel,Daily,2026-01-12 00:00:00,0,On-Track,External
 2026-01-12,Amazon Brand Analytics,Daily,2026-01-12 00:00:00,2,On-Track,E-Comm
 2026-01-12,Profitero digital shelf,Daily,2026-01-12 00:00:00,0,On-Track,E-Comm
-2026-01-12,SAP shipments,Hourly,2026-01-12 00:00:00,0,On-Track,IT
+2026-01-12,SAP shipments,Hourly,2026-01-12 00:00:00,2,On-Track,IT
 2026-01-12,SAP plan,Daily,2026-01-12 00:00:00,0,On-Track,IT
-2026-01-12,Brandwatch social,Hourly,2026-01-12 00:00:00,12,On-Track,Marketing
+2026-01-12,Brandwatch social,Hourly,2026-01-12 00:00:00,0,On-Track,Marketing
 2026-01-12,Sprout Social owned,Hourly,2026-01-12 00:00:00,0,On-Track,Marketing
 2026-01-12,Tribe Dynamics creators,Daily,2026-01-12 00:00:00,0,On-Track,Marketing
 2026-01-12,Spate search Google,Daily,2026-01-12 00:00:00,6,On-Track,Marketing
-2026-01-12,Helium 10 Amazon search,Daily,2026-01-12 00:00:00,2,Lagging,E-Comm
-2026-01-12,Bazaarvoice reviews,Daily,2026-01-12 00:00:00,0,On-Track,External
-2026-01-12,PowerReviews reviews,Daily,2026-01-12 00:00:00,6,On-Track,External
-2026-01-12,Mintel GNPD,Weekly,2026-01-12 00:00:00,12,On-Track,Innovation
-2026-01-12,Kantar brand health,Bi-monthly,2026-01-12 00:00:00,0,On-Track,External
+2026-01-12,Helium 10 Amazon search,Daily,2026-01-12 00:00:00,0,Lagging,E-Comm
+2026-01-12,Bazaarvoice reviews,Daily,2026-01-12 00:00:00,2,On-Track,External
+2026-01-12,PowerReviews reviews,Daily,2026-01-12 00:00:00,0,On-Track,External
+2026-01-12,Mintel GNPD,Weekly,2026-01-10 00:00:00,48,Stale,Innovation
+2026-01-12,Kantar brand health,Bi-monthly,2026-01-12 00:00:00,2,On-Track,External
 2026-01-12,Suzy quick survey,On-Demand,2026-01-12 00:00:00,0,On-Track,Innovation
-2026-01-12,US Census ACS,Annual,2026-01-12 00:00:00,6,On-Track,External
-2026-01-12,USDA ERS,Quarterly,2026-01-12 00:00:00,0,On-Track,External
-2026-01-12,SymphonyAI Retail,Daily,2026-01-11 00:00:00,24,Lagging,Insights
-2026-01-12,Datassential Foodservice,Quarterly,2026-01-12 00:00:00,0,On-Track,Innovation
-2026-01-12,Google Trends (free),Real-time,2026-01-12 00:00:00,0,On-Track,External
+2026-01-12,US Census ACS,Annual,2026-01-12 00:00:00,12,On-Track,External
+2026-01-12,USDA ERS,Quarterly,2026-01-12 00:00:00,2,On-Track,External
+2026-01-12,SymphonyAI Retail,Daily,2026-01-12 00:00:00,0,On-Track,Insights
+2026-01-12,Datassential Foodservice,Quarterly,2026-01-12 00:00:00,2,On-Track,Innovation
+2026-01-12,Google Trends (free),Real-time,2026-01-10 00:00:00,48,Stale,External
 2026-01-19,NielsenIQ syndicated,Daily,2026-01-19 00:00:00,0,On-Track,Insights
-2026-01-19,IRI Circana syndicated,Daily,2026-01-19 00:00:00,6,On-Track,Insights
+2026-01-19,IRI Circana syndicated,Daily,2026-01-19 00:00:00,0,On-Track,Insights
 2026-01-19,Numerator panel,Daily,2026-01-19 00:00:00,0,On-Track,Insights
 2026-01-19,Walmart Luminate,Daily,2026-01-19 00:00:00,0,On-Track,External
-2026-01-19,Kroger 84.51,Daily,2026-01-19 00:00:00,0,Lagging,External
+2026-01-19,Kroger 84.51,Daily,2026-01-19 00:00:00,2,Lagging,External
 2026-01-19,Target Roundel,Daily,2026-01-19 00:00:00,0,On-Track,External
 2026-01-19,Amazon Brand Analytics,Daily,2026-01-19 00:00:00,0,On-Track,E-Comm
-2026-01-19,Profitero digital shelf,Daily,2026-01-19 00:00:00,0,On-Track,E-Comm
-2026-01-19,SAP shipments,Hourly,2026-01-18 00:00:00,24,Lagging,IT
-2026-01-19,SAP plan,Daily,2026-01-19 00:00:00,0,On-Track,IT
-2026-01-19,Brandwatch social,Hourly,2026-01-19 00:00:00,6,On-Track,Marketing
-2026-01-19,Sprout Social owned,Hourly,2026-01-19 00:00:00,2,On-Track,Marketing
+2026-01-19,Profitero digital shelf,Daily,2026-01-19 00:00:00,6,On-Track,E-Comm
+2026-01-19,SAP shipments,Hourly,2026-01-19 00:00:00,0,On-Track,IT
+2026-01-19,SAP plan,Daily,2026-01-17 00:00:00,48,Stale,IT
+2026-01-19,Brandwatch social,Hourly,2026-01-18 00:00:00,24,Lagging,Marketing
+2026-01-19,Sprout Social owned,Hourly,2026-01-19 00:00:00,0,On-Track,Marketing
 2026-01-19,Tribe Dynamics creators,Daily,2026-01-19 00:00:00,0,On-Track,Marketing
-2026-01-19,Spate search Google,Daily,2026-01-19 00:00:00,6,On-Track,Marketing
-2026-01-19,Helium 10 Amazon search,Daily,2026-01-19 00:00:00,6,Lagging,E-Comm
-2026-01-19,Bazaarvoice reviews,Daily,2026-01-19 00:00:00,0,On-Track,External
-2026-01-19,PowerReviews reviews,Daily,2026-01-17 00:00:00,48,Stale,External
+2026-01-19,Spate search Google,Daily,2026-01-18 00:00:00,24,Lagging,Marketing
+2026-01-19,Helium 10 Amazon search,Daily,2026-01-19 00:00:00,0,Lagging,E-Comm
+2026-01-19,Bazaarvoice reviews,Daily,2026-01-19 00:00:00,2,On-Track,External
+2026-01-19,PowerReviews reviews,Daily,2026-01-18 00:00:00,24,Lagging,External
 2026-01-19,Mintel GNPD,Weekly,2026-01-19 00:00:00,0,On-Track,Innovation
-2026-01-19,Kantar brand health,Bi-monthly,2026-01-19 00:00:00,0,On-Track,External
-2026-01-19,Suzy quick survey,On-Demand,2026-01-19 00:00:00,6,On-Track,Innovation
+2026-01-19,Kantar brand health,Bi-monthly,2026-01-19 00:00:00,6,On-Track,External
+2026-01-19,Suzy quick survey,On-Demand,2026-01-19 00:00:00,0,On-Track,Innovation
 2026-01-19,US Census ACS,Annual,2026-01-19 00:00:00,0,On-Track,External
 2026-01-19,USDA ERS,Quarterly,2026-01-19 00:00:00,0,On-Track,External
-2026-01-19,SymphonyAI Retail,Daily,2026-01-19 00:00:00,2,On-Track,Insights
+2026-01-19,SymphonyAI Retail,Daily,2026-01-19 00:00:00,0,On-Track,Insights
 2026-01-19,Datassential Foodservice,Quarterly,2026-01-19 00:00:00,0,On-Track,Innovation
-2026-01-19,Google Trends (free),Real-time,2026-01-17 00:00:00,48,Stale,External
+2026-01-19,Google Trends (free),Real-time,2026-01-19 00:00:00,0,On-Track,External
 2026-01-26,NielsenIQ syndicated,Daily,2026-01-26 00:00:00,0,On-Track,Insights
 2026-01-26,IRI Circana syndicated,Daily,2026-01-26 00:00:00,0,On-Track,Insights
-2026-01-26,Numerator panel,Daily,2026-01-26 00:00:00,0,On-Track,Insights
+2026-01-26,Numerator panel,Daily,2026-01-26 00:00:00,2,On-Track,Insights
 2026-01-26,Walmart Luminate,Daily,2026-01-26 00:00:00,0,On-Track,External
 2026-01-26,Kroger 84.51,Daily,2026-01-26 00:00:00,0,Lagging,External
-2026-01-26,Target Roundel,Daily,2026-01-26 00:00:00,6,On-Track,External
-2026-01-26,Amazon Brand Analytics,Daily,2026-01-26 00:00:00,0,On-Track,E-Comm
-2026-01-26,Profitero digital shelf,Daily,2026-01-26 00:00:00,0,On-Track,E-Comm
-2026-01-26,SAP shipments,Hourly,2026-01-26 00:00:00,0,On-Track,IT
+2026-01-26,Target Roundel,Daily,2026-01-26 00:00:00,0,On-Track,External
+2026-01-26,Amazon Brand Analytics,Daily,2026-01-26 00:00:00,12,On-Track,E-Comm
+2026-01-26,Profitero digital shelf,Daily,2026-01-26 00:00:00,6,On-Track,E-Comm
+2026-01-26,SAP shipments,Hourly,2026-01-26 00:00:00,12,On-Track,IT
 2026-01-26,SAP plan,Daily,2026-01-26 00:00:00,12,On-Track,IT
 2026-01-26,Brandwatch social,Hourly,2026-01-26 00:00:00,0,On-Track,Marketing
-2026-01-26,Sprout Social owned,Hourly,2026-01-26 00:00:00,6,On-Track,Marketing
+2026-01-26,Sprout Social owned,Hourly,2026-01-22 00:00:00,96,Stale,Marketing
 2026-01-26,Tribe Dynamics creators,Daily,2026-01-26 00:00:00,0,On-Track,Marketing
 2026-01-26,Spate search Google,Daily,2026-01-26 00:00:00,0,On-Track,Marketing
-2026-01-26,Helium 10 Amazon search,Daily,2026-01-26 00:00:00,6,Lagging,E-Comm
+2026-01-26,Helium 10 Amazon search,Daily,2026-01-26 00:00:00,0,Lagging,E-Comm
 2026-01-26,Bazaarvoice reviews,Daily,2026-01-26 00:00:00,0,On-Track,External
-2026-01-26,PowerReviews reviews,Daily,2026-01-26 00:00:00,6,On-Track,External
+2026-01-26,PowerReviews reviews,Daily,2026-01-26 00:00:00,12,On-Track,External
 2026-01-26,Mintel GNPD,Weekly,2026-01-26 00:00:00,0,On-Track,Innovation
 2026-01-26,Kantar brand health,Bi-monthly,2026-01-26 00:00:00,0,On-Track,External
-2026-01-26,Suzy quick survey,On-Demand,2026-01-25 00:00:00,24,Lagging,Innovation
+2026-01-26,Suzy quick survey,On-Demand,2026-01-26 00:00:00,0,On-Track,Innovation
 2026-01-26,US Census ACS,Annual,2026-01-26 00:00:00,2,On-Track,External
-2026-01-26,USDA ERS,Quarterly,2026-01-25 00:00:00,24,Lagging,External
-2026-01-26,SymphonyAI Retail,Daily,2026-01-26 00:00:00,2,On-Track,Insights
+2026-01-26,USDA ERS,Quarterly,2026-01-26 00:00:00,2,On-Track,External
+2026-01-26,SymphonyAI Retail,Daily,2026-01-26 00:00:00,12,On-Track,Insights
 2026-01-26,Datassential Foodservice,Quarterly,2026-01-26 00:00:00,0,On-Track,Innovation
 2026-01-26,Google Trends (free),Real-time,2026-01-26 00:00:00,0,On-Track,External

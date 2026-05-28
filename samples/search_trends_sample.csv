@@ -1,101 +1,101 @@
 Date,Platform,Keyword,Category,Volume_Index_0to100,Brand_Relevance,MoM_Growth_Pct,Source
-2024-01-01,Google,high-protein cereal,RTE Cereal,69.9,category,18.0,Spate
-2024-02-01,Google,high-protein cereal,RTE Cereal,72.2,category,18.0,Spate
-2024-03-01,Google,high-protein cereal,RTE Cereal,89.4,category,18.0,Spate
-2024-04-01,Google,high-protein cereal,RTE Cereal,81.4,category,18.0,Spate
-2024-05-01,Google,high-protein cereal,RTE Cereal,88.6,category,18.0,Spate
-2024-06-01,Google,high-protein cereal,RTE Cereal,84.0,category,18.0,Spate
-2024-07-01,Google,high-protein cereal,RTE Cereal,93.3,category,18.0,Spate
-2024-08-01,Google,high-protein cereal,RTE Cereal,83.5,category,18.0,Spate
-2024-09-01,Google,high-protein cereal,RTE Cereal,85.2,category,18.0,Spate
-2024-10-01,Google,high-protein cereal,RTE Cereal,88.0,category,18.0,Spate
-2024-11-01,Google,high-protein cereal,RTE Cereal,82.1,category,18.0,Spate
-2024-12-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2025-01-01,Google,high-protein cereal,RTE Cereal,81.5,category,18.0,Spate
-2025-02-01,Google,high-protein cereal,RTE Cereal,88.5,category,18.0,Spate
-2025-03-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2025-04-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2025-05-01,Google,high-protein cereal,RTE Cereal,94.5,category,18.0,Spate
-2025-06-01,Google,high-protein cereal,RTE Cereal,98.3,category,18.0,Spate
-2025-07-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
+2024-01-01,Google,high-protein cereal,RTE Cereal,69.1,category,18.0,Spate
+2024-02-01,Google,high-protein cereal,RTE Cereal,87.3,category,18.0,Spate
+2024-03-01,Google,high-protein cereal,RTE Cereal,72.1,category,18.0,Spate
+2024-04-01,Google,high-protein cereal,RTE Cereal,85.4,category,18.0,Spate
+2024-05-01,Google,high-protein cereal,RTE Cereal,76.9,category,18.0,Spate
+2024-06-01,Google,high-protein cereal,RTE Cereal,81.6,category,18.0,Spate
+2024-07-01,Google,high-protein cereal,RTE Cereal,79.3,category,18.0,Spate
+2024-08-01,Google,high-protein cereal,RTE Cereal,94.1,category,18.0,Spate
+2024-09-01,Google,high-protein cereal,RTE Cereal,92.0,category,18.0,Spate
+2024-10-01,Google,high-protein cereal,RTE Cereal,91.6,category,18.0,Spate
+2024-11-01,Google,high-protein cereal,RTE Cereal,94.8,category,18.0,Spate
+2024-12-01,Google,high-protein cereal,RTE Cereal,92.3,category,18.0,Spate
+2025-01-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
+2025-02-01,Google,high-protein cereal,RTE Cereal,97.4,category,18.0,Spate
+2025-03-01,Google,high-protein cereal,RTE Cereal,84.8,category,18.0,Spate
+2025-04-01,Google,high-protein cereal,RTE Cereal,86.2,category,18.0,Spate
+2025-05-01,Google,high-protein cereal,RTE Cereal,89.5,category,18.0,Spate
+2025-06-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
+2025-07-01,Google,high-protein cereal,RTE Cereal,96.2,category,18.0,Spate
 2025-08-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2025-09-01,Google,high-protein cereal,RTE Cereal,93.7,category,18.0,Spate
+2025-09-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2025-10-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2025-11-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2025-12-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2026-01-01,Google,high-protein cereal,RTE Cereal,99.1,category,18.0,Spate
+2026-01-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2026-02-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2026-03-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2026-04-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
 2026-05-01,Google,high-protein cereal,RTE Cereal,100.0,category,18.0,Spate
-2024-01-01,Amazon,high-protein cereal,RTE Cereal,59.2,category,18.0,Helium 10
-2024-02-01,Amazon,high-protein cereal,RTE Cereal,58.8,category,18.0,Helium 10
-2024-03-01,Amazon,high-protein cereal,RTE Cereal,64.0,category,18.0,Helium 10
-2024-04-01,Amazon,high-protein cereal,RTE Cereal,74.3,category,18.0,Helium 10
-2024-05-01,Amazon,high-protein cereal,RTE Cereal,78.7,category,18.0,Helium 10
-2024-06-01,Amazon,high-protein cereal,RTE Cereal,76.7,category,18.0,Helium 10
-2024-07-01,Amazon,high-protein cereal,RTE Cereal,80.9,category,18.0,Helium 10
-2024-08-01,Amazon,high-protein cereal,RTE Cereal,65.6,category,18.0,Helium 10
-2024-09-01,Amazon,high-protein cereal,RTE Cereal,76.3,category,18.0,Helium 10
-2024-10-01,Amazon,high-protein cereal,RTE Cereal,74.3,category,18.0,Helium 10
-2024-11-01,Amazon,high-protein cereal,RTE Cereal,83.3,category,18.0,Helium 10
-2024-12-01,Amazon,high-protein cereal,RTE Cereal,82.9,category,18.0,Helium 10
-2025-01-01,Amazon,high-protein cereal,RTE Cereal,77.2,category,18.0,Helium 10
-2025-02-01,Amazon,high-protein cereal,RTE Cereal,76.6,category,18.0,Helium 10
-2025-03-01,Amazon,high-protein cereal,RTE Cereal,77.8,category,18.0,Helium 10
-2025-04-01,Amazon,high-protein cereal,RTE Cereal,87.1,category,18.0,Helium 10
-2025-05-01,Amazon,high-protein cereal,RTE Cereal,73.5,category,18.0,Helium 10
-2025-06-01,Amazon,high-protein cereal,RTE Cereal,84.5,category,18.0,Helium 10
-2025-07-01,Amazon,high-protein cereal,RTE Cereal,75.5,category,18.0,Helium 10
-2025-08-01,Amazon,high-protein cereal,RTE Cereal,92.6,category,18.0,Helium 10
-2025-09-01,Amazon,high-protein cereal,RTE Cereal,90.3,category,18.0,Helium 10
-2025-10-01,Amazon,high-protein cereal,RTE Cereal,93.1,category,18.0,Helium 10
-2025-11-01,Amazon,high-protein cereal,RTE Cereal,88.8,category,18.0,Helium 10
-2025-12-01,Amazon,high-protein cereal,RTE Cereal,96.1,category,18.0,Helium 10
-2026-01-01,Amazon,high-protein cereal,RTE Cereal,86.0,category,18.0,Helium 10
+2024-01-01,Amazon,high-protein cereal,RTE Cereal,72.2,category,18.0,Helium 10
+2024-02-01,Amazon,high-protein cereal,RTE Cereal,67.1,category,18.0,Helium 10
+2024-03-01,Amazon,high-protein cereal,RTE Cereal,75.5,category,18.0,Helium 10
+2024-04-01,Amazon,high-protein cereal,RTE Cereal,70.8,category,18.0,Helium 10
+2024-05-01,Amazon,high-protein cereal,RTE Cereal,70.5,category,18.0,Helium 10
+2024-06-01,Amazon,high-protein cereal,RTE Cereal,77.3,category,18.0,Helium 10
+2024-07-01,Amazon,high-protein cereal,RTE Cereal,75.9,category,18.0,Helium 10
+2024-08-01,Amazon,high-protein cereal,RTE Cereal,69.1,category,18.0,Helium 10
+2024-09-01,Amazon,high-protein cereal,RTE Cereal,77.0,category,18.0,Helium 10
+2024-10-01,Amazon,high-protein cereal,RTE Cereal,77.8,category,18.0,Helium 10
+2024-11-01,Amazon,high-protein cereal,RTE Cereal,78.0,category,18.0,Helium 10
+2024-12-01,Amazon,high-protein cereal,RTE Cereal,77.9,category,18.0,Helium 10
+2025-01-01,Amazon,high-protein cereal,RTE Cereal,83.3,category,18.0,Helium 10
+2025-02-01,Amazon,high-protein cereal,RTE Cereal,79.4,category,18.0,Helium 10
+2025-03-01,Amazon,high-protein cereal,RTE Cereal,78.5,category,18.0,Helium 10
+2025-04-01,Amazon,high-protein cereal,RTE Cereal,75.6,category,18.0,Helium 10
+2025-05-01,Amazon,high-protein cereal,RTE Cereal,78.3,category,18.0,Helium 10
+2025-06-01,Amazon,high-protein cereal,RTE Cereal,79.5,category,18.0,Helium 10
+2025-07-01,Amazon,high-protein cereal,RTE Cereal,75.0,category,18.0,Helium 10
+2025-08-01,Amazon,high-protein cereal,RTE Cereal,90.9,category,18.0,Helium 10
+2025-09-01,Amazon,high-protein cereal,RTE Cereal,88.6,category,18.0,Helium 10
+2025-10-01,Amazon,high-protein cereal,RTE Cereal,97.5,category,18.0,Helium 10
+2025-11-01,Amazon,high-protein cereal,RTE Cereal,85.3,category,18.0,Helium 10
+2025-12-01,Amazon,high-protein cereal,RTE Cereal,84.7,category,18.0,Helium 10
+2026-01-01,Amazon,high-protein cereal,RTE Cereal,100.0,category,18.0,Helium 10
 2026-02-01,Amazon,high-protein cereal,RTE Cereal,100.0,category,18.0,Helium 10
-2026-03-01,Amazon,high-protein cereal,RTE Cereal,96.5,category,18.0,Helium 10
+2026-03-01,Amazon,high-protein cereal,RTE Cereal,100.0,category,18.0,Helium 10
 2026-04-01,Amazon,high-protein cereal,RTE Cereal,100.0,category,18.0,Helium 10
-2026-05-01,Amazon,high-protein cereal,RTE Cereal,98.5,category,18.0,Helium 10
-2024-01-01,TikTok,high-protein cereal,RTE Cereal,47.6,category,18.0,Spate
-2024-02-01,TikTok,high-protein cereal,RTE Cereal,49.6,category,18.0,Spate
-2024-03-01,TikTok,high-protein cereal,RTE Cereal,45.1,category,18.0,Spate
-2024-04-01,TikTok,high-protein cereal,RTE Cereal,49.5,category,18.0,Spate
-2024-05-01,TikTok,high-protein cereal,RTE Cereal,47.9,category,18.0,Spate
-2024-06-01,TikTok,high-protein cereal,RTE Cereal,48.1,category,18.0,Spate
-2024-07-01,TikTok,high-protein cereal,RTE Cereal,50.6,category,18.0,Spate
-2024-08-01,TikTok,high-protein cereal,RTE Cereal,58.5,category,18.0,Spate
-2024-09-01,TikTok,high-protein cereal,RTE Cereal,52.5,category,18.0,Spate
-2024-10-01,TikTok,high-protein cereal,RTE Cereal,53.1,category,18.0,Spate
-2024-11-01,TikTok,high-protein cereal,RTE Cereal,49.3,category,18.0,Spate
-2024-12-01,TikTok,high-protein cereal,RTE Cereal,54.2,category,18.0,Spate
-2025-01-01,TikTok,high-protein cereal,RTE Cereal,60.6,category,18.0,Spate
-2025-02-01,TikTok,high-protein cereal,RTE Cereal,59.6,category,18.0,Spate
-2025-03-01,TikTok,high-protein cereal,RTE Cereal,55.4,category,18.0,Spate
-2025-04-01,TikTok,high-protein cereal,RTE Cereal,58.9,category,18.0,Spate
-2025-05-01,TikTok,high-protein cereal,RTE Cereal,66.7,category,18.0,Spate
-2025-06-01,TikTok,high-protein cereal,RTE Cereal,60.7,category,18.0,Spate
-2025-07-01,TikTok,high-protein cereal,RTE Cereal,60.2,category,18.0,Spate
-2025-08-01,TikTok,high-protein cereal,RTE Cereal,67.8,category,18.0,Spate
-2025-09-01,TikTok,high-protein cereal,RTE Cereal,66.1,category,18.0,Spate
-2025-10-01,TikTok,high-protein cereal,RTE Cereal,71.3,category,18.0,Spate
-2025-11-01,TikTok,high-protein cereal,RTE Cereal,65.7,category,18.0,Spate
-2025-12-01,TikTok,high-protein cereal,RTE Cereal,64.6,category,18.0,Spate
-2026-01-01,TikTok,high-protein cereal,RTE Cereal,71.9,category,18.0,Spate
-2026-02-01,TikTok,high-protein cereal,RTE Cereal,60.7,category,18.0,Spate
-2026-03-01,TikTok,high-protein cereal,RTE Cereal,67.2,category,18.0,Spate
-2026-04-01,TikTok,high-protein cereal,RTE Cereal,65.5,category,18.0,Spate
-2026-05-01,TikTok,high-protein cereal,RTE Cereal,67.4,category,18.0,Spate
-2024-01-01,Google,oat milk barista,Plant-Based Milk,99.1,category,16.0,Spate
-2024-02-01,Google,oat milk barista,Plant-Based Milk,78.6,category,16.0,Spate
-2024-03-01,Google,oat milk barista,Plant-Based Milk,91.8,category,16.0,Spate
-2024-04-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
-2024-05-01,Google,oat milk barista,Plant-Based Milk,94.3,category,16.0,Spate
-2024-06-01,Google,oat milk barista,Plant-Based Milk,94.2,category,16.0,Spate
-2024-07-01,Google,oat milk barista,Plant-Based Milk,85.2,category,16.0,Spate
-2024-08-01,Google,oat milk barista,Plant-Based Milk,89.7,category,16.0,Spate
-2024-09-01,Google,oat milk barista,Plant-Based Milk,98.6,category,16.0,Spate
-2024-10-01,Google,oat milk barista,Plant-Based Milk,97.6,category,16.0,Spate
-2024-11-01,Google,oat milk barista,Plant-Based Milk,99.6,category,16.0,Spate
-2024-12-01,Google,oat milk barista,Plant-Based Milk,89.4,category,16.0,Spate
-2025-01-01,Google,oat milk barista,Plant-Based Milk,90.4,category,16.0,Spate
+2026-05-01,Amazon,high-protein cereal,RTE Cereal,100.0,category,18.0,Helium 10
+2024-01-01,TikTok,high-protein cereal,RTE Cereal,45.5,category,18.0,Spate
+2024-02-01,TikTok,high-protein cereal,RTE Cereal,49.9,category,18.0,Spate
+2024-03-01,TikTok,high-protein cereal,RTE Cereal,50.4,category,18.0,Spate
+2024-04-01,TikTok,high-protein cereal,RTE Cereal,51.5,category,18.0,Spate
+2024-05-01,TikTok,high-protein cereal,RTE Cereal,46.2,category,18.0,Spate
+2024-06-01,TikTok,high-protein cereal,RTE Cereal,56.2,category,18.0,Spate
+2024-07-01,TikTok,high-protein cereal,RTE Cereal,56.0,category,18.0,Spate
+2024-08-01,TikTok,high-protein cereal,RTE Cereal,54.3,category,18.0,Spate
+2024-09-01,TikTok,high-protein cereal,RTE Cereal,51.6,category,18.0,Spate
+2024-10-01,TikTok,high-protein cereal,RTE Cereal,53.8,category,18.0,Spate
+2024-11-01,TikTok,high-protein cereal,RTE Cereal,57.0,category,18.0,Spate
+2024-12-01,TikTok,high-protein cereal,RTE Cereal,54.1,category,18.0,Spate
+2025-01-01,TikTok,high-protein cereal,RTE Cereal,56.2,category,18.0,Spate
+2025-02-01,TikTok,high-protein cereal,RTE Cereal,65.0,category,18.0,Spate
+2025-03-01,TikTok,high-protein cereal,RTE Cereal,62.7,category,18.0,Spate
+2025-04-01,TikTok,high-protein cereal,RTE Cereal,54.4,category,18.0,Spate
+2025-05-01,TikTok,high-protein cereal,RTE Cereal,61.5,category,18.0,Spate
+2025-06-01,TikTok,high-protein cereal,RTE Cereal,64.7,category,18.0,Spate
+2025-07-01,TikTok,high-protein cereal,RTE Cereal,59.1,category,18.0,Spate
+2025-08-01,TikTok,high-protein cereal,RTE Cereal,56.3,category,18.0,Spate
+2025-09-01,TikTok,high-protein cereal,RTE Cereal,67.0,category,18.0,Spate
+2025-10-01,TikTok,high-protein cereal,RTE Cereal,61.8,category,18.0,Spate
+2025-11-01,TikTok,high-protein cereal,RTE Cereal,67.2,category,18.0,Spate
+2025-12-01,TikTok,high-protein cereal,RTE Cereal,65.8,category,18.0,Spate
+2026-01-01,TikTok,high-protein cereal,RTE Cereal,74.2,category,18.0,Spate
+2026-02-01,TikTok,high-protein cereal,RTE Cereal,60.1,category,18.0,Spate
+2026-03-01,TikTok,high-protein cereal,RTE Cereal,69.8,category,18.0,Spate
+2026-04-01,TikTok,high-protein cereal,RTE Cereal,75.2,category,18.0,Spate
+2026-05-01,TikTok,high-protein cereal,RTE Cereal,74.1,category,18.0,Spate
+2024-01-01,Google,oat milk barista,Plant-Based Milk,90.0,category,16.0,Spate
+2024-02-01,Google,oat milk barista,Plant-Based Milk,80.0,category,16.0,Spate
+2024-03-01,Google,oat milk barista,Plant-Based Milk,92.6,category,16.0,Spate
+2024-04-01,Google,oat milk barista,Plant-Based Milk,85.4,category,16.0,Spate
+2024-05-01,Google,oat milk barista,Plant-Based Milk,92.6,category,16.0,Spate
+2024-06-01,Google,oat milk barista,Plant-Based Milk,96.5,category,16.0,Spate
+2024-07-01,Google,oat milk barista,Plant-Based Milk,91.0,category,16.0,Spate
+2024-08-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
+2024-09-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
+2024-10-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
+2024-11-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
+2024-12-01,Google,oat milk barista,Plant-Based Milk,100.0,category,16.0,Spate
+2025-01-01,Google,oat milk barista,Plant-Based Milk,98.7,category,16.0,Spate

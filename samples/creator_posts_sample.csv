@@ -1,101 +1,101 @@
 Post_ID,Creator_ID,Handle,Platform,Date,Brand_Mentioned,Disclosed_Partnership,Followers_Snapshot,Reach,Engagement,Engagement_Rate,Attributed_Sales_Lift_72hr_USD,Niche,Tier,Source
-CP_00000001,CR-0037,@papaprotein,YouTube,2025-11-17,ProteinPeak,No,580000,115872,9707,0.0838,0.0,Athletics / Family,Mid,Tribe Dynamics
-CP_00000002,CR-0018,@oatmilkdaily,Instagram,2024-12-18,Califia,No,180000,102961,8745,0.0849,0.0,Plant-Based / Coffee,Micro,Tribe Dynamics
-CP_00000003,CR-0025,@momofkindergartners,Instagram,2025-05-31,HoneyNest,Yes,225000,171455,6185,0.0361,91099.57,Family / Mom,Mid,Tribe Dynamics
-CP_00000004,CR-0017,@littlechefava,YouTube,2025-12-14,Frosted Flakes,No,680000,446008,8476,0.019,0.0,Kids / Cooking,Mid,Tribe Dynamics
-CP_00000005,CR-0017,@littlechefava,YouTube,2025-09-03,Frosted Flakes,No,680000,424749,34899,0.0822,0.0,Kids / Cooking,Mid,Tribe Dynamics
-CP_00000006,CR-0030,@grocerytagger,TikTok,2024-08-21,Trader Joes,Yes,2800000,987086,32521,0.0329,5312.38,Food / Grocery,Macro,Tribe Dynamics
-CP_00000007,CR-0035,@morningroutineanalyst,YouTube,2024-06-05,TrailGrove,Yes,420000,305961,7379,0.0241,63389.9,Lifestyle / Productivity,Mid,Tribe Dynamics
-CP_00000008,CR-0005,@fuelwithpriya,Instagram,2025-10-30,Catalina Crunch,No,310000,207887,8145,0.0392,0.0,Wellness / Athletics,Mid,Tribe Dynamics
-CP_00000009,CR-0028,@cereal_renaissance,Instagram,2025-09-11,Three Wishes,Yes,98000,35349,1403,0.0397,43131.84,Cereal / Reviews,Micro,Tribe Dynamics
-CP_00000010,CR-0020,@bakedbybritt,TikTok,2025-12-03,Frosted Flakes,No,560000,371383,16967,0.0457,0.0,Baking / Cereal Recipes,Mid,Tribe Dynamics
-CP_00000011,CR-0029,@papasoats,TikTok,2026-03-19,MorningOats,No,840000,696678,47535,0.0682,0.0,Hot Cereal / Recipes,Mid,Tribe Dynamics
-CP_00000012,CR-0009,@plantbasedwithjune,TikTok,2024-08-21,Oatly,No,1280000,759698,14175,0.0187,0.0,Plant-Based / Wellness,Macro,Tribe Dynamics
-CP_00000013,CR-0002,@thehealthyhustle,Instagram,2025-06-19,Magic Spoon,No,920000,430129,10634,0.0247,0.0,Wellness / Fitness,Macro,Tribe Dynamics
-CP_00000014,CR-0013,@nick_wellbeing,TikTok,2025-03-02,Magic Spoon,Yes,720000,217857,4241,0.0195,34650.87,Wellness / Mens,Mid,Tribe Dynamics
-CP_00000015,CR-0032,@carbcoach,Instagram,2025-05-30,TrailGrove,No,720000,494847,30888,0.0624,0.0,Athletics / Carbs,Mid,Tribe Dynamics
-CP_00000016,CR-0001,@morningmaven,Instagram,2026-02-12,Larksfield Foods,No,1820000,901448,20417,0.0226,0.0,Lifestyle / Mom,Macro,Tribe Dynamics
-CP_00000017,CR-0037,@papaprotein,YouTube,2024-07-08,Cheerios,Yes,580000,108556,3159,0.0291,61014.23,Athletics / Family,Mid,Tribe Dynamics
-CP_00000018,CR-0045,@thrivewithtara,Instagram,2025-08-14,ProteinPeak,No,1080000,553603,43710,0.079,0.0,Wellness / Productivity,Macro,Tribe Dynamics
-CP_00000019,CR-0025,@momofkindergartners,Instagram,2026-03-12,Cheerios,No,225000,147745,3611,0.0244,0.0,Family / Mom,Mid,Tribe Dynamics
-CP_00000020,CR-0008,@mom_of_three_madison,Instagram,2025-03-17,Field & Honey,No,485000,351021,21966,0.0626,0.0,Family / Mom,Mid,Tribe Dynamics
-CP_00000021,CR-0046,@granolaworkshop,Instagram,2025-12-31,TrailGrove,Yes,260000,198776,12169,0.0612,34654.15,Granola / DIY,Mid,Tribe Dynamics
-CP_00000022,CR-0049,@plantfit_jordan,Instagram,2025-09-02,Three Wishes,Yes,820000,386220,34115,0.0883,24548.27,Plant-Based / Fitness,Mid,Tribe Dynamics
-CP_00000023,CR-0050,@nolafoodieblog,TikTok,2025-10-27,Rouses Markets,Yes,128000,56407,2053,0.0364,7741.99,Food / Local,Micro,Tribe Dynamics
-CP_00000024,CR-0022,@vegancyc,TikTok,2024-11-10,Oatly,Yes,340000,203126,16464,0.0811,45557.88,Cycling / Plant-Based,Mid,Tribe Dynamics
-CP_00000025,CR-0011,@trailmixxx,Instagram,2024-08-21,Cliff Bar,Yes,540000,390257,29055,0.0745,54990.46,Outdoor / Adventure,Mid,Tribe Dynamics
-CP_00000026,CR-0014,@homecookhilda,Instagram,2026-03-24,Quaker,No,210000,76065,4863,0.0639,0.0,Cooking / Mom,Mid,Tribe Dynamics
-CP_00000027,CR-0031,@cheaperfamily,Instagram,2024-11-20,HoneyNest,Yes,560000,201224,10414,0.0518,8305.36,Family / Budget,Mid,Tribe Dynamics
-CP_00000028,CR-0033,@drmom_dietitian,Instagram,2025-01-19,Cheerios (heart health),No,1240000,424328,13655,0.0322,0.0,Wellness / Health,Macro,Tribe Dynamics
-CP_00000029,CR-0033,@drmom_dietitian,Instagram,2024-09-12,ProteinPeak,Yes,1240000,304531,20472,0.0672,10450.61,Wellness / Health,Macro,Tribe Dynamics
-CP_00000030,CR-0003,@cerealboiii,TikTok,2025-04-12,Magic Spoon,No,2400000,1810929,104350,0.0576,0.0,Food / Reviews,Macro,Tribe Dynamics
-CP_00000031,CR-0002,@thehealthyhustle,Instagram,2024-10-31,Magic Spoon,No,920000,325035,27307,0.084,0.0,Wellness / Fitness,Macro,Tribe Dynamics
-CP_00000032,CR-0015,@tasty_nola,TikTok,2024-07-24,Field & Honey,Yes,98000,46424,4046,0.0872,26817.75,Food / Local,Micro,Tribe Dynamics
-CP_00000033,CR-0043,@nourishedwithally,Instagram,2024-08-29,Catalina,Yes,920000,330590,12877,0.039,41260.53,Wellness / Nutrition,Macro,Tribe Dynamics
-CP_00000034,CR-0013,@nick_wellbeing,TikTok,2024-10-14,ProteinPeak,Yes,720000,609764,48998,0.0804,50552.31,Wellness / Mens,Mid,Tribe Dynamics
-CP_00000035,CR-0015,@tasty_nola,TikTok,2025-01-07,Field & Honey,Yes,98000,61025,1672,0.0274,36378.75,Food / Local,Micro,Tribe Dynamics
-CP_00000036,CR-0021,@runnerwithprotein,Instagram,2024-12-26,RXBAR,No,920000,172507,4267,0.0247,0.0,Running / Athletics,Macro,Tribe Dynamics
-CP_00000037,CR-0012,@sage_park_athlete,Instagram,2025-09-21,ProteinPeak,Yes,1850000,686948,45854,0.0668,31419.98,Track / Athletics,Macro,Tribe Dynamics
-CP_00000038,CR-0001,@morningmaven,Instagram,2024-06-25,General Mills,No,1820000,998996,41508,0.0416,0.0,Lifestyle / Mom,Macro,Tribe Dynamics
-CP_00000039,CR-0015,@tasty_nola,TikTok,2026-05-08,Field & Honey,No,98000,49289,3738,0.0759,0.0,Food / Local,Micro,Tribe Dynamics
-CP_00000040,CR-0001,@morningmaven,Instagram,2025-01-14,Larksfield Foods,No,1820000,1280881,31703,0.0248,0.0,Lifestyle / Mom,Macro,Tribe Dynamics
-CP_00000041,CR-0030,@grocerytagger,TikTok,2025-10-12,Field & Honey,No,2800000,1195656,22819,0.0191,0.0,Food / Grocery,Macro,Tribe Dynamics
-CP_00000042,CR-0030,@grocerytagger,TikTok,2025-08-11,Field & Honey,Yes,2800000,778835,17699,0.0227,15709.42,Food / Grocery,Macro,Tribe Dynamics
-CP_00000043,CR-0050,@nolafoodieblog,TikTok,2025-02-19,Field & Honey,Yes,128000,84999,3773,0.0444,30435.88,Food / Local,Micro,Tribe Dynamics
-CP_00000044,CR-0038,@kidcerealcritic,YouTube,2026-03-10,Frosted Flakes,No,1450000,808363,39961,0.0494,0.0,Kids / Reviews,Macro,Tribe Dynamics
-CP_00000045,CR-0047,@familyfoodfinds,Pinterest,2025-06-03,Quaker,Yes,310000,62202,3566,0.0573,11785.99,Family / Recipes,Mid,Tribe Dynamics
-CP_00000046,CR-0018,@oatmilkdaily,Instagram,2024-09-19,Califia,Yes,180000,117114,7376,0.063,18428.33,Plant-Based / Coffee,Micro,Tribe Dynamics
-CP_00000047,CR-0039,@oat.dairy.swap,TikTok,2024-06-21,RootDay,No,420000,310164,15719,0.0507,0.0,Plant-Based / Swap,Mid,Tribe Dynamics
-CP_00000048,CR-0030,@grocerytagger,TikTok,2026-04-08,Walmart,Yes,2800000,1698061,61071,0.036,54639.06,Food / Grocery,Macro,Tribe Dynamics
-CP_00000049,CR-0014,@homecookhilda,Instagram,2025-08-30,General Mills,No,210000,42847,1516,0.0354,0.0,Cooking / Mom,Mid,Tribe Dynamics
-CP_00000050,CR-0005,@fuelwithpriya,Instagram,2025-08-13,Catalina Crunch,No,310000,152755,8481,0.0555,0.0,Wellness / Athletics,Mid,Tribe Dynamics
-CP_00000051,CR-0024,@katz_kitchen,TikTok,2024-11-15,Field & Honey,No,1100000,261323,6916,0.0265,0.0,Cooking / Quick,Macro,Tribe Dynamics
-CP_00000052,CR-0044,@thelazycook,TikTok,2025-08-02,MorningOats,No,640000,525058,15683,0.0299,0.0,Cooking / Lazy,Mid,Tribe Dynamics
-CP_00000053,CR-0023,@chefroche,Instagram,2025-08-26,Quaker,No,1620000,646116,50777,0.0786,0.0,Cooking / Premium,Macro,Tribe Dynamics
-CP_00000054,CR-0020,@bakedbybritt,TikTok,2024-11-01,Cheerios,Yes,560000,430963,9280,0.0215,25559.75,Baking / Cereal Recipes,Mid,Tribe Dynamics
-CP_00000055,CR-0030,@grocerytagger,TikTok,2025-05-14,Walmart,Yes,2800000,1430815,84839,0.0593,18414.58,Food / Grocery,Macro,Tribe Dynamics
-CP_00000056,CR-0004,@tinyplates,TikTok,2024-08-24,Cheerios,Yes,640000,415304,12710,0.0306,53198.99,Food / Mom,Mid,Tribe Dynamics
-CP_00000057,CR-0007,@gymrat.miles,Instagram,2025-01-09,RXBAR,No,2100000,787800,72276,0.0917,0.0,Fitness / Athletics,Macro,Tribe Dynamics
-CP_00000058,CR-0041,@momof2teenboys,Instagram,2025-03-15,HoneyNest,No,180000,34038,2741,0.0805,0.0,Family / Teens,Micro,Tribe Dynamics
-CP_00000059,CR-0027,@wellpath.jen,Instagram,2025-11-09,Catalina,No,820000,589527,38870,0.0659,0.0,Wellness / Athleisure,Mid,Tribe Dynamics
-CP_00000060,CR-0010,@quickbreakfasts,TikTok,2025-01-30,MorningOats,No,820000,506759,28059,0.0554,0.0,Food / Quick Recipes,Mid,Tribe Dynamics
-CP_00000061,CR-0044,@thelazycook,TikTok,2025-05-12,Cheerios,Yes,640000,226781,11362,0.0501,12801.14,Cooking / Lazy,Mid,Tribe Dynamics
-CP_00000062,CR-0006,@dadcooks_,YouTube,2025-07-09,Crunchwell,Yes,1450000,339120,26078,0.0769,75930.94,Family / Cooking,Macro,Tribe Dynamics
-CP_00000063,CR-0008,@mom_of_three_madison,Instagram,2024-08-14,Field & Honey,No,485000,274101,14324,0.0523,0.0,Family / Mom,Mid,Tribe Dynamics
-CP_00000064,CR-0024,@katz_kitchen,TikTok,2024-06-11,Cheerios,Yes,1100000,350978,17148,0.0489,35216.48,Cooking / Quick,Macro,Tribe Dynamics
-CP_00000065,CR-0003,@cerealboiii,TikTok,2025-03-04,Cheerios,Yes,2400000,1544532,31256,0.0202,58098.81,Food / Reviews,Macro,Tribe Dynamics
-CP_00000066,CR-0039,@oat.dairy.swap,TikTok,2026-03-19,Oatly,No,420000,328742,17535,0.0533,0.0,Plant-Based / Swap,Mid,Tribe Dynamics
-CP_00000067,CR-0011,@trailmixxx,Instagram,2026-02-22,TrailGrove,Yes,540000,449247,12147,0.027,56295.57,Outdoor / Adventure,Mid,Tribe Dynamics
-CP_00000068,CR-0030,@grocerytagger,TikTok,2026-02-10,Field & Honey,No,2800000,1335550,111949,0.0838,0.0,Food / Grocery,Macro,Tribe Dynamics
-CP_00000069,CR-0029,@papasoats,TikTok,2024-09-30,Quaker,No,840000,377116,8392,0.0223,0.0,Hot Cereal / Recipes,Mid,Tribe Dynamics
-CP_00000070,CR-0006,@dadcooks_,YouTube,2025-01-04,Quaker,Yes,1450000,513684,11912,0.0232,49965.77,Family / Cooking,Macro,Tribe Dynamics
-CP_00000071,CR-0011,@trailmixxx,Instagram,2026-04-27,KIND,No,540000,130204,4672,0.0359,0.0,Outdoor / Adventure,Mid,Tribe Dynamics
-CP_00000072,CR-0045,@thrivewithtara,Instagram,2024-09-01,Three Wishes,Yes,1080000,518201,32607,0.0629,46509.17,Wellness / Productivity,Macro,Tribe Dynamics
-CP_00000073,CR-0004,@tinyplates,TikTok,2025-06-30,Cheerios,Yes,640000,329421,12480,0.0379,10282.88,Food / Mom,Mid,Tribe Dynamics
-CP_00000074,CR-0030,@grocerytagger,TikTok,2025-08-09,Walmart,Yes,2800000,758814,58528,0.0771,27839.0,Food / Grocery,Macro,Tribe Dynamics
-CP_00000075,CR-0047,@familyfoodfinds,Pinterest,2024-09-17,Cheerios,Yes,310000,70945,4806,0.0678,2039.89,Family / Recipes,Mid,Tribe Dynamics
-CP_00000076,CR-0009,@plantbasedwithjune,TikTok,2025-10-29,Oatly,No,1280000,281460,23505,0.0835,0.0,Plant-Based / Wellness,Macro,Tribe Dynamics
-CP_00000077,CR-0048,@reactorhitchhiker,YouTube,2026-04-18,Magic Spoon,No,1800000,844419,37820,0.0448,0.0,Reviews / Reactions,Macro,Tribe Dynamics
-CP_00000078,CR-0028,@cereal_renaissance,Instagram,2025-06-27,Crunchwell,No,98000,54478,1468,0.027,0.0,Cereal / Reviews,Micro,Tribe Dynamics
-CP_00000079,CR-0031,@cheaperfamily,Instagram,2025-01-04,HoneyNest,Yes,560000,162289,6826,0.0421,63001.49,Family / Budget,Mid,Tribe Dynamics
-CP_00000080,CR-0016,@jacksupplements,Instagram,2025-04-03,Magic Spoon,No,420000,153131,10111,0.066,0.0,Fitness / Supplements,Mid,Tribe Dynamics
-CP_00000081,CR-0036,@granolagirls.club,Instagram,2024-08-18,KIND,No,180000,147379,12396,0.0841,0.0,Granola / Snack,Micro,Tribe Dynamics
-CP_00000082,CR-0035,@morningroutineanalyst,YouTube,2026-05-20,Magic Spoon,Yes,420000,312582,28409,0.0909,18409.7,Lifestyle / Productivity,Mid,Tribe Dynamics
-CP_00000083,CR-0014,@homecookhilda,Instagram,2025-09-20,General Mills,Yes,210000,57312,1681,0.0293,47896.65,Cooking / Mom,Mid,Tribe Dynamics
-CP_00000084,CR-0003,@cerealboiii,TikTok,2025-02-21,Magic Spoon,Yes,2400000,1324798,114002,0.0861,63628.34,Food / Reviews,Macro,Tribe Dynamics
-CP_00000085,CR-0047,@familyfoodfinds,Pinterest,2025-05-15,Quaker,Yes,310000,250614,10671,0.0426,35422.36,Family / Recipes,Mid,Tribe Dynamics
-CP_00000086,CR-0009,@plantbasedwithjune,TikTok,2026-02-24,Oatly,No,1280000,452634,30052,0.0664,0.0,Plant-Based / Wellness,Macro,Tribe Dynamics
-CP_00000087,CR-0012,@sage_park_athlete,Instagram,2025-06-07,ProteinPeak,Yes,1850000,955842,86576,0.0906,41886.21,Track / Athletics,Macro,Tribe Dynamics
-CP_00000088,CR-0024,@katz_kitchen,TikTok,2024-08-05,Magic Spoon,Yes,1100000,719310,50630,0.0704,29972.66,Cooking / Quick,Macro,Tribe Dynamics
-CP_00000089,CR-0005,@fuelwithpriya,Instagram,2026-01-22,Catalina Crunch,No,310000,263041,4858,0.0185,0.0,Wellness / Athletics,Mid,Tribe Dynamics
-CP_00000090,CR-0022,@vegancyc,TikTok,2025-01-31,Oatly,Yes,340000,63607,1323,0.0208,28750.68,Cycling / Plant-Based,Mid,Tribe Dynamics
-CP_00000091,CR-0001,@morningmaven,Instagram,2024-07-06,Larksfield Foods,No,1820000,1334899,121188,0.0908,0.0,Lifestyle / Mom,Macro,Tribe Dynamics
-CP_00000092,CR-0014,@homecookhilda,Instagram,2026-01-14,Quaker,Yes,210000,105289,2003,0.019,58841.97,Cooking / Mom,Mid,Tribe Dynamics
-CP_00000093,CR-0024,@katz_kitchen,TikTok,2024-11-25,Magic Spoon,No,1100000,460669,33710,0.0732,0.0,Cooking / Quick,Macro,Tribe Dynamics
-CP_00000094,CR-0007,@gymrat.miles,Instagram,2024-10-28,RXBAR,No,2100000,1289668,51503,0.0399,0.0,Fitness / Athletics,Macro,Tribe Dynamics
-CP_00000095,CR-0032,@carbcoach,Instagram,2026-01-29,TrailGrove,Yes,720000,253145,7674,0.0303,50010.98,Athletics / Carbs,Mid,Tribe Dynamics
-CP_00000096,CR-0026,@morningprep,TikTok,2025-03-21,Quaker,No,460000,182462,8496,0.0466,0.0,Quick Breakfast,Mid,Tribe Dynamics
-CP_00000097,CR-0047,@familyfoodfinds,Pinterest,2025-01-03,Quaker,No,310000,256295,7469,0.0291,0.0,Family / Recipes,Mid,Tribe Dynamics
-CP_00000098,CR-0003,@cerealboiii,TikTok,2024-08-07,Frosted Flakes,No,2400000,1761676,62950,0.0357,0.0,Food / Reviews,Macro,Tribe Dynamics
-CP_00000099,CR-0029,@papasoats,TikTok,2024-07-24,Quaker,No,840000,509080,23083,0.0453,0.0,Hot Cereal / Recipes,Mid,Tribe Dynamics
-CP_00000100,CR-0002,@thehealthyhustle,Instagram,2025-03-28,Magic Spoon,Yes,920000,518298,14294,0.0276,13592.95,Wellness / Fitness,Macro,Tribe Dynamics
+CP_00000001,CR-0037,@papaprotein,YouTube,2025-07-30,Cheerios,No,580000,467774,36944,0.079,0.0,Athletics / Family,Mid,Tribe Dynamics
+CP_00000002,CR-0034,@gulfcoasteats,TikTok,2025-09-15,Rouses Markets,Yes,310000,227028,6454,0.0284,44084.73,Food / Local Southeast,Mid,Tribe Dynamics
+CP_00000003,CR-0033,@drmom_dietitian,Instagram,2026-03-26,Cheerios (heart health),No,1240000,801719,43720,0.0545,0.0,Wellness / Health,Macro,Tribe Dynamics
+CP_00000004,CR-0012,@sage_park_athlete,Instagram,2025-06-06,ProteinPeak,Yes,1850000,383417,28111,0.0733,18434.17,Track / Athletics,Macro,Tribe Dynamics
+CP_00000005,CR-0045,@thrivewithtara,Instagram,2024-11-04,ProteinPeak,No,1080000,604690,14267,0.0236,0.0,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000006,CR-0031,@cheaperfamily,Instagram,2024-10-17,HoneyNest,No,560000,225355,4362,0.0194,0.0,Family / Budget,Mid,Tribe Dynamics
+CP_00000007,CR-0003,@cerealboiii,TikTok,2025-11-12,Cheerios,No,2400000,802973,59396,0.074,0.0,Food / Reviews,Macro,Tribe Dynamics
+CP_00000008,CR-0042,@quickprotein,TikTok,2025-10-22,ProteinPeak,Yes,1820000,1325508,67594,0.051,53207.58,Athletics / Convenience,Macro,Tribe Dynamics
+CP_00000009,CR-0004,@tinyplates,TikTok,2026-02-15,Cheerios,No,640000,388635,9570,0.0246,0.0,Food / Mom,Mid,Tribe Dynamics
+CP_00000010,CR-0018,@oatmilkdaily,Instagram,2025-05-17,Califia,No,180000,106456,5341,0.0502,0.0,Plant-Based / Coffee,Micro,Tribe Dynamics
+CP_00000011,CR-0020,@bakedbybritt,TikTok,2024-07-28,Cheerios,Yes,560000,329432,20785,0.0631,40518.96,Baking / Cereal Recipes,Mid,Tribe Dynamics
+CP_00000012,CR-0044,@thelazycook,TikTok,2025-04-25,Quaker,Yes,640000,385243,9750,0.0253,38460.85,Cooking / Lazy,Mid,Tribe Dynamics
+CP_00000013,CR-0042,@quickprotein,TikTok,2025-05-04,Quest,Yes,1820000,1238424,49660,0.0401,11633.61,Athletics / Convenience,Macro,Tribe Dynamics
+CP_00000014,CR-0037,@papaprotein,YouTube,2024-10-10,ProteinPeak,Yes,580000,380350,14456,0.038,56309.63,Athletics / Family,Mid,Tribe Dynamics
+CP_00000015,CR-0014,@homecookhilda,Instagram,2026-03-13,Field & Honey,Yes,210000,65938,2688,0.0408,23151.09,Cooking / Mom,Mid,Tribe Dynamics
+CP_00000016,CR-0006,@dadcooks_,YouTube,2025-01-26,Crunchwell,Yes,1450000,473017,15949,0.0337,47761.8,Family / Cooking,Macro,Tribe Dynamics
+CP_00000017,CR-0001,@morningmaven,Instagram,2024-12-03,Honey Nut Cheerios,No,1820000,1100741,30812,0.028,0.0,Lifestyle / Mom,Macro,Tribe Dynamics
+CP_00000018,CR-0045,@thrivewithtara,Instagram,2025-02-28,Three Wishes,No,1080000,835968,55012,0.0658,0.0,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000019,CR-0047,@familyfoodfinds,Pinterest,2025-04-12,HoneyNest,No,310000,147561,3957,0.0268,0.0,Family / Recipes,Mid,Tribe Dynamics
+CP_00000020,CR-0045,@thrivewithtara,Instagram,2025-03-08,Magic Spoon,Yes,1080000,272804,13236,0.0485,34983.54,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000021,CR-0021,@runnerwithprotein,Instagram,2025-05-18,ProteinPeak,Yes,920000,423873,38349,0.0905,11376.83,Running / Athletics,Macro,Tribe Dynamics
+CP_00000022,CR-0017,@littlechefava,YouTube,2024-06-18,HoneyNest,Yes,680000,504976,24777,0.0491,41366.64,Kids / Cooking,Mid,Tribe Dynamics
+CP_00000023,CR-0003,@cerealboiii,TikTok,2025-03-08,Magic Spoon,No,2400000,769505,48288,0.0628,0.0,Food / Reviews,Macro,Tribe Dynamics
+CP_00000024,CR-0042,@quickprotein,TikTok,2024-08-08,ProteinPeak,Yes,1820000,1498140,117754,0.0786,34955.52,Athletics / Convenience,Macro,Tribe Dynamics
+CP_00000025,CR-0006,@dadcooks_,YouTube,2025-06-08,Cheerios,No,1450000,1078340,80795,0.0749,0.0,Family / Cooking,Macro,Tribe Dynamics
+CP_00000026,CR-0012,@sage_park_athlete,Instagram,2025-07-12,ProteinPeak,Yes,1850000,877935,30766,0.035,43305.13,Track / Athletics,Macro,Tribe Dynamics
+CP_00000027,CR-0030,@grocerytagger,TikTok,2025-08-19,Walmart,No,2800000,864918,18486,0.0214,0.0,Food / Grocery,Macro,Tribe Dynamics
+CP_00000028,CR-0036,@granolagirls.club,Instagram,2025-03-09,KIND,No,180000,74256,5143,0.0693,0.0,Granola / Snack,Micro,Tribe Dynamics
+CP_00000029,CR-0045,@thrivewithtara,Instagram,2025-11-29,Magic Spoon,No,1080000,561253,35344,0.063,0.0,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000030,CR-0033,@drmom_dietitian,Instagram,2025-12-20,ProteinPeak,Yes,1240000,537006,46148,0.0859,62005.99,Wellness / Health,Macro,Tribe Dynamics
+CP_00000031,CR-0004,@tinyplates,TikTok,2024-11-10,Cheerios,No,640000,441755,34409,0.0779,0.0,Food / Mom,Mid,Tribe Dynamics
+CP_00000032,CR-0020,@bakedbybritt,TikTok,2024-09-26,HoneyNest,No,560000,217528,5116,0.0235,0.0,Baking / Cereal Recipes,Mid,Tribe Dynamics
+CP_00000033,CR-0007,@gymrat.miles,Instagram,2026-02-27,ProteinPeak,Yes,2100000,616192,26777,0.0435,72996.18,Fitness / Athletics,Macro,Tribe Dynamics
+CP_00000034,CR-0045,@thrivewithtara,Instagram,2025-07-03,ProteinPeak,Yes,1080000,590483,39201,0.0664,77688.74,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000035,CR-0048,@reactorhitchhiker,YouTube,2025-02-04,Magic Spoon,Yes,1800000,868299,22652,0.0261,52947.76,Reviews / Reactions,Macro,Tribe Dynamics
+CP_00000036,CR-0008,@mom_of_three_madison,Instagram,2024-12-11,Field & Honey,Yes,485000,202689,16827,0.083,63859.31,Family / Mom,Mid,Tribe Dynamics
+CP_00000037,CR-0045,@thrivewithtara,Instagram,2025-03-02,Magic Spoon,No,1080000,518151,15869,0.0306,0.0,Wellness / Productivity,Macro,Tribe Dynamics
+CP_00000038,CR-0003,@cerealboiii,TikTok,2026-01-16,Magic Spoon,Yes,2400000,668992,48741,0.0729,57212.42,Food / Reviews,Macro,Tribe Dynamics
+CP_00000039,CR-0023,@chefroche,Instagram,2026-03-01,TrailGrove,Yes,1620000,1094574,43794,0.04,36713.84,Cooking / Premium,Macro,Tribe Dynamics
+CP_00000040,CR-0019,@cerealdadventures,YouTube,2024-08-13,Field & Honey,No,1200000,375552,9982,0.0266,0.0,Food / Travel,Macro,Tribe Dynamics
+CP_00000041,CR-0016,@jacksupplements,Instagram,2024-08-08,ProteinPeak,Yes,420000,225641,13018,0.0577,33344.23,Fitness / Supplements,Mid,Tribe Dynamics
+CP_00000042,CR-0028,@cereal_renaissance,Instagram,2026-04-06,Magic Spoon,Yes,98000,29983,1583,0.0528,32896.9,Cereal / Reviews,Micro,Tribe Dynamics
+CP_00000043,CR-0031,@cheaperfamily,Instagram,2026-04-30,Great Value PL,No,560000,398245,7839,0.0197,0.0,Family / Budget,Mid,Tribe Dynamics
+CP_00000044,CR-0028,@cereal_renaissance,Instagram,2024-06-28,Three Wishes,No,98000,64759,2395,0.037,0.0,Cereal / Reviews,Micro,Tribe Dynamics
+CP_00000045,CR-0016,@jacksupplements,Instagram,2025-11-09,Magic Spoon,Yes,420000,87907,6663,0.0758,15598.8,Fitness / Supplements,Mid,Tribe Dynamics
+CP_00000046,CR-0011,@trailmixxx,Instagram,2024-07-25,KIND,No,540000,297954,16503,0.0554,0.0,Outdoor / Adventure,Mid,Tribe Dynamics
+CP_00000047,CR-0003,@cerealboiii,TikTok,2025-09-16,Frosted Flakes,No,2400000,1044499,50946,0.0488,0.0,Food / Reviews,Macro,Tribe Dynamics
+CP_00000048,CR-0022,@vegancyc,TikTok,2025-05-01,Oatly,No,340000,102276,6324,0.0618,0.0,Cycling / Plant-Based,Mid,Tribe Dynamics
+CP_00000049,CR-0025,@momofkindergartners,Instagram,2026-04-09,Frosted Flakes,No,225000,167836,9487,0.0565,0.0,Family / Mom,Mid,Tribe Dynamics
+CP_00000050,CR-0023,@chefroche,Instagram,2026-01-29,Quaker,No,1620000,1198912,86487,0.0721,0.0,Cooking / Premium,Macro,Tribe Dynamics
+CP_00000051,CR-0033,@drmom_dietitian,Instagram,2025-12-26,Cheerios (heart health),Yes,1240000,858487,51832,0.0604,56160.06,Wellness / Health,Macro,Tribe Dynamics
+CP_00000052,CR-0021,@runnerwithprotein,Instagram,2024-12-30,RXBAR,No,920000,503647,27748,0.0551,0.0,Running / Athletics,Macro,Tribe Dynamics
+CP_00000053,CR-0008,@mom_of_three_madison,Instagram,2025-12-27,HoneyNest,No,485000,236062,4366,0.0185,0.0,Family / Mom,Mid,Tribe Dynamics
+CP_00000054,CR-0019,@cerealdadventures,YouTube,2025-12-24,Frosted Flakes,No,1200000,325366,13588,0.0418,0.0,Food / Travel,Macro,Tribe Dynamics
+CP_00000055,CR-0021,@runnerwithprotein,Instagram,2025-08-25,Quest,Yes,920000,756019,34781,0.046,11304.66,Running / Athletics,Macro,Tribe Dynamics
+CP_00000056,CR-0014,@homecookhilda,Instagram,2026-02-21,Quaker,Yes,210000,94917,3264,0.0344,44047.91,Cooking / Mom,Mid,Tribe Dynamics
+CP_00000057,CR-0038,@kidcerealcritic,YouTube,2025-08-17,Cheerios,No,1450000,1009340,22970,0.0228,0.0,Kids / Reviews,Macro,Tribe Dynamics
+CP_00000058,CR-0026,@morningprep,TikTok,2024-11-28,MorningOats,No,460000,142911,12755,0.0893,0.0,Quick Breakfast,Mid,Tribe Dynamics
+CP_00000059,CR-0016,@jacksupplements,Instagram,2026-01-27,Quest,Yes,420000,155381,5696,0.0367,56562.3,Fitness / Supplements,Mid,Tribe Dynamics
+CP_00000060,CR-0007,@gymrat.miles,Instagram,2025-12-03,RXBAR,No,2100000,1109811,59490,0.0536,0.0,Fitness / Athletics,Macro,Tribe Dynamics
+CP_00000061,CR-0019,@cerealdadventures,YouTube,2025-07-15,Cheerios,Yes,1200000,437510,16017,0.0366,21378.22,Food / Travel,Macro,Tribe Dynamics
+CP_00000062,CR-0050,@nolafoodieblog,TikTok,2025-05-24,Rouses Markets,No,128000,84435,6543,0.0775,0.0,Food / Local,Micro,Tribe Dynamics
+CP_00000063,CR-0011,@trailmixxx,Instagram,2025-02-24,KIND,Yes,540000,312808,13708,0.0438,28120.16,Outdoor / Adventure,Mid,Tribe Dynamics
+CP_00000064,CR-0016,@jacksupplements,Instagram,2024-07-04,ProteinPeak,No,420000,128582,6614,0.0514,0.0,Fitness / Supplements,Mid,Tribe Dynamics
+CP_00000065,CR-0007,@gymrat.miles,Instagram,2025-12-31,RXBAR,Yes,2100000,1198942,31774,0.0265,62547.33,Fitness / Athletics,Macro,Tribe Dynamics
+CP_00000066,CR-0036,@granolagirls.club,Instagram,2026-04-23,TrailGrove,Yes,180000,110152,4452,0.0404,66736.19,Granola / Snack,Micro,Tribe Dynamics
+CP_00000067,CR-0005,@fuelwithpriya,Instagram,2024-06-21,Catalina Crunch,No,310000,180755,10448,0.0578,0.0,Wellness / Athletics,Mid,Tribe Dynamics
+CP_00000068,CR-0019,@cerealdadventures,YouTube,2025-08-14,Frosted Flakes,Yes,1200000,829426,38343,0.0462,21184.0,Food / Travel,Macro,Tribe Dynamics
+CP_00000069,CR-0016,@jacksupplements,Instagram,2025-01-28,Quest,Yes,420000,339922,6813,0.02,29102.25,Fitness / Supplements,Mid,Tribe Dynamics
+CP_00000070,CR-0049,@plantfit_jordan,Instagram,2025-10-16,Oatly,No,820000,211637,17957,0.0849,0.0,Plant-Based / Fitness,Mid,Tribe Dynamics
+CP_00000071,CR-0050,@nolafoodieblog,TikTok,2026-02-06,Field & Honey,Yes,128000,55765,5004,0.0897,28833.13,Food / Local,Micro,Tribe Dynamics
+CP_00000072,CR-0018,@oatmilkdaily,Instagram,2024-11-12,RootDay,No,180000,114829,3925,0.0342,0.0,Plant-Based / Coffee,Micro,Tribe Dynamics
+CP_00000073,CR-0017,@littlechefava,YouTube,2026-05-16,Cheerios,No,680000,372076,9602,0.0258,0.0,Kids / Cooking,Mid,Tribe Dynamics
+CP_00000074,CR-0037,@papaprotein,YouTube,2025-01-12,ProteinPeak,No,580000,426420,8233,0.0193,0.0,Athletics / Family,Mid,Tribe Dynamics
+CP_00000075,CR-0047,@familyfoodfinds,Pinterest,2025-11-01,HoneyNest,No,310000,102486,7418,0.0724,0.0,Family / Recipes,Mid,Tribe Dynamics
+CP_00000076,CR-0033,@drmom_dietitian,Instagram,2026-04-27,ProteinPeak,Yes,1240000,607581,34804,0.0573,31248.08,Wellness / Health,Macro,Tribe Dynamics
+CP_00000077,CR-0028,@cereal_renaissance,Instagram,2025-07-23,Magic Spoon,Yes,98000,78847,2664,0.0338,42696.53,Cereal / Reviews,Micro,Tribe Dynamics
+CP_00000078,CR-0009,@plantbasedwithjune,TikTok,2025-08-21,Oatly,No,1280000,328853,27607,0.084,0.0,Plant-Based / Wellness,Macro,Tribe Dynamics
+CP_00000079,CR-0002,@thehealthyhustle,Instagram,2024-06-24,ProteinPeak,No,920000,301760,26283,0.0871,0.0,Wellness / Fitness,Macro,Tribe Dynamics
+CP_00000080,CR-0036,@granolagirls.club,Instagram,2025-10-16,Bear Naked,Yes,180000,142871,3143,0.022,27564.18,Granola / Snack,Micro,Tribe Dynamics
+CP_00000081,CR-0022,@vegancyc,TikTok,2026-02-18,Oatly,Yes,340000,197109,4025,0.0204,46139.8,Cycling / Plant-Based,Mid,Tribe Dynamics
+CP_00000082,CR-0004,@tinyplates,TikTok,2024-07-13,Cheerios,Yes,640000,118378,4730,0.04,4132.45,Food / Mom,Mid,Tribe Dynamics
+CP_00000083,CR-0030,@grocerytagger,TikTok,2024-11-07,Walmart,No,2800000,1354677,61146,0.0451,0.0,Food / Grocery,Macro,Tribe Dynamics
+CP_00000084,CR-0026,@morningprep,TikTok,2025-05-18,MorningOats,Yes,460000,352486,28866,0.0819,55320.22,Quick Breakfast,Mid,Tribe Dynamics
+CP_00000085,CR-0008,@mom_of_three_madison,Instagram,2025-06-12,HoneyNest,Yes,485000,117933,7220,0.0612,45727.77,Family / Mom,Mid,Tribe Dynamics
+CP_00000086,CR-0032,@carbcoach,Instagram,2025-06-03,Quaker,Yes,720000,331925,15546,0.0468,39560.56,Athletics / Carbs,Mid,Tribe Dynamics
+CP_00000087,CR-0014,@homecookhilda,Instagram,2024-12-28,Field & Honey,Yes,210000,74416,3254,0.0437,40213.91,Cooking / Mom,Mid,Tribe Dynamics
+CP_00000088,CR-0048,@reactorhitchhiker,YouTube,2025-07-16,Magic Spoon,No,1800000,518877,45818,0.0883,0.0,Reviews / Reactions,Macro,Tribe Dynamics
+CP_00000089,CR-0014,@homecookhilda,Instagram,2024-09-23,General Mills,No,210000,154327,8274,0.0536,0.0,Cooking / Mom,Mid,Tribe Dynamics
+CP_00000090,CR-0025,@momofkindergartners,Instagram,2025-11-05,HoneyNest,No,225000,101112,4038,0.0399,0.0,Family / Mom,Mid,Tribe Dynamics
+CP_00000091,CR-0008,@mom_of_three_madison,Instagram,2024-12-05,Field & Honey,No,485000,344703,25716,0.0746,0.0,Family / Mom,Mid,Tribe Dynamics
+CP_00000092,CR-0009,@plantbasedwithjune,TikTok,2025-07-18,Oatly,No,1280000,351288,12762,0.0363,0.0,Plant-Based / Wellness,Macro,Tribe Dynamics
+CP_00000093,CR-0042,@quickprotein,TikTok,2025-02-28,Quest,No,1820000,1398379,121805,0.0871,0.0,Athletics / Convenience,Macro,Tribe Dynamics
+CP_00000094,CR-0050,@nolafoodieblog,TikTok,2024-06-13,Crunchwell,No,128000,25728,2120,0.0824,0.0,Food / Local,Micro,Tribe Dynamics
+CP_00000095,CR-0033,@drmom_dietitian,Instagram,2025-01-13,Cheerios (heart health),No,1240000,346008,28683,0.0829,0.0,Wellness / Health,Macro,Tribe Dynamics
+CP_00000096,CR-0029,@papasoats,TikTok,2026-01-17,MorningOats,Yes,840000,551744,12854,0.0233,28316.29,Hot Cereal / Recipes,Mid,Tribe Dynamics
+CP_00000097,CR-0007,@gymrat.miles,Instagram,2024-06-17,ProteinPeak,Yes,2100000,713542,31793,0.0446,48596.51,Fitness / Athletics,Macro,Tribe Dynamics
+CP_00000098,CR-0018,@oatmilkdaily,Instagram,2024-09-05,Califia,Yes,180000,60243,2996,0.0497,16818.14,Plant-Based / Coffee,Micro,Tribe Dynamics
+CP_00000099,CR-0044,@thelazycook,TikTok,2025-08-15,Cheerios,Yes,640000,122920,10238,0.0833,8302.04,Cooking / Lazy,Mid,Tribe Dynamics
+CP_00000100,CR-0019,@cerealdadventures,YouTube,2025-12-24,Frosted Flakes,No,1200000,463698,10155,0.0219,0.0,Food / Travel,Macro,Tribe Dynamics

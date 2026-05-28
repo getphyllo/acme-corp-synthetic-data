@@ -1,101 +1,101 @@
 Mention_ID,Date,Platform,Brand_Mentioned,Manufacturer,Author_Type,Reach,Engagement,Sentiment_-1to1,Sentiment_Bucket,Topic_Tags,Has_Video,DMA_Region,Source
-SM_00000001,2025-09-21,Twitter,Bear Naked,Kellanova,Consumer,7347,461,0.473,Positive,convenience;target-endcap,0,MIA,Brandwatch
-SM_00000002,2024-02-24,TikTok,Catalina Crunch,Catalina,Consumer,1782086,61239,0.183,Positive,packaging,0,DAL,Brandwatch
-SM_00000003,2025-06-10,Instagram,HoneyNest,Acme Corp,Consumer,928927,14263,0.025,Neutral,cocoa-chocolate;promo,0,OK-DMA,Brandwatch
-SM_00000004,2025-02-13,TikTok,Great Value,Walmart PL,Consumer,2479146,151584,-0.765,Negative,sustainability;convenience,1,UNKNOWN,Brandwatch
-SM_00000005,2024-08-15,Twitter,Three Wishes,Three Wishes,Consumer,158907,6142,-0.285,Negative,sweetened,0,UNKNOWN,Brandwatch
-SM_00000006,2025-02-07,Reddit,Crunchwell,Acme Corp,Consumer,264384,21428,0.803,Positive,health,0,UNKNOWN,Brandwatch
-SM_00000007,2024-10-07,Instagram,Cheerios,General Mills,Consumer,1919830,10347,-0.805,Negative,supply-issue;taste;grain-free,1,ATL,Brandwatch
-SM_00000008,2025-09-08,Reddit,Oatly,Oatly,Consumer,39906,580,-0.124,Neutral,cinnamon;promo,0,UNKNOWN,Brandwatch
-SM_00000009,2024-07-20,TikTok,Crunchwell,Acme Corp,Consumer,1781505,56423,0.433,Positive,nostalgic;supply-issue,1,UNKNOWN,Brandwatch
-SM_00000010,2025-05-15,TikTok,Cheerios,General Mills,Consumer,1175501,29743,0.45,Positive,protein;negative-experience,0,AL-DMA,Brandwatch
-SM_00000011,2025-02-20,TikTok,KIND,Mars,Consumer,2383529,186261,-0.222,Negative,protein;creator-drop,0,OK-DMA,Brandwatch
-SM_00000012,2024-07-12,Reddit,ProteinPeak,Acme Corp,Consumer,206173,1963,0.368,Positive,negative-experience;taste,0,BAL,Brandwatch
-SM_00000013,2025-12-15,TikTok,Frosted Flakes,Kellanova,Consumer,4041301,199462,0.365,Positive,packaging;sustainability,0,NYC,Brandwatch
-SM_00000014,2024-02-15,TikTok,Crunchwell,Acme Corp,Consumer,2082410,167093,-0.424,Negative,target-endcap;new-launch,1,UNKNOWN,Brandwatch
-SM_00000015,2026-03-29,YouTube,Three Wishes,Three Wishes,Consumer,722714,56496,-0.269,Negative,grain-free;sweetened,0,PHL,Brandwatch
-SM_00000016,2024-08-19,Twitter,Bear Naked,Kellanova,Creator,135072,9608,0.265,Positive,cinnamon;recipes,0,PHX,Brandwatch
-SM_00000017,2025-12-16,TikTok,KIND,Mars,Creator,1201949,54722,0.51,Positive,kids-friendly;new-launch,0,UNKNOWN,Brandwatch
-SM_00000018,2025-06-23,Instagram,KIND,Mars,Creator,1901603,43577,0.213,Positive,promo,0,ATL,Brandwatch
-SM_00000019,2025-09-02,Instagram,ProteinPeak,Acme Corp,Consumer,507363,33108,0.425,Positive,price,1,UNKNOWN,Brandwatch
-SM_00000020,2025-03-31,Twitter,Quaker,PepsiCo,Consumer,52260,2624,-0.123,Neutral,packaging;recipes,0,HOU,Brandwatch
-SM_00000021,2024-05-29,YouTube,Oatly,Oatly,Consumer,1556940,82982,0.438,Positive,supply-issue,1,UNKNOWN,Brandwatch
-SM_00000022,2024-08-31,Facebook,RXBAR,Kellanova,Consumer,64851,3502,-0.035,Neutral,health;packaging;taste,0,UNKNOWN,Brandwatch
-SM_00000023,2025-10-13,Instagram,Field & Honey,Larksfield Foods,Creator,844823,48277,0.892,Positive,grain-free;late-night,1,PHL,Brandwatch
-SM_00000024,2025-05-09,TikTok,Oatly,Oatly,Press,1681586,111966,0.341,Positive,cinnamon;creator-drop,0,STL,Brandwatch
-SM_00000025,2025-06-29,YouTube,HoneyNest,Acme Corp,Consumer,1105656,86979,0.584,Positive,protein;new-launch,0,UNKNOWN,Brandwatch
-SM_00000026,2024-04-30,Instagram,Kashi,Kellanova,Consumer,1338475,81483,0.841,Positive,health;target-endcap,1,BAL,Brandwatch
-SM_00000027,2025-07-26,TikTok,Califia,Califia,Consumer,2011680,154439,0.75,Positive,convenience;supply-issue,1,UNKNOWN,Brandwatch
-SM_00000028,2026-01-04,Instagram,Catalina Crunch,Catalina,Consumer,1098195,60661,0.489,Positive,promo;viral;new-launch;grain-free,0,HOU,Brandwatch
-SM_00000029,2025-09-13,TikTok,MorningOats,Acme Corp,Consumer,1197807,94645,-0.437,Negative,taste;cinnamon,1,UNKNOWN,Brandwatch
-SM_00000030,2025-09-23,Instagram,RootDay,Acme Corp,Consumer,196256,4302,0.043,Neutral,nostalgic;protein,1,NYC,Brandwatch
-SM_00000031,2025-07-03,TikTok,Frosted Flakes,Kellanova,Consumer,2755812,100878,0.849,Positive,taste;new-launch,0,UNKNOWN,Brandwatch
-SM_00000032,2024-06-07,TikTok,TrailGrove,Acme Corp,Consumer,1041604,27419,-0.157,Neutral,sweetened,1,BAL,Brandwatch
-SM_00000033,2025-10-05,TikTok,ProteinPeak,Acme Corp,Consumer,3398214,201261,0.006,Neutral,nostalgic;kids-friendly,1,NYC,Brandwatch
-SM_00000034,2026-03-19,Instagram,Three Wishes,Three Wishes,Consumer,278993,21991,-0.136,Neutral,taste;nostalgic,1,PHL,Brandwatch
-SM_00000035,2025-02-23,Instagram,RXBAR,Kellanova,Consumer,1997945,100031,-0.259,Negative,taste,0,UNKNOWN,Brandwatch
-SM_00000036,2024-03-15,TikTok,Oatly,Oatly,Creator,1167249,16027,0.136,Neutral,kids-friendly,0,UNKNOWN,Brandwatch
-SM_00000037,2026-03-20,TikTok,Catalina Crunch,Catalina,Consumer,1786974,123767,1.0,Positive,target-endcap,1,UNKNOWN,Brandwatch
-SM_00000038,2024-04-17,Twitter,Oatly,Oatly,Press,147314,6466,-0.001,Neutral,negative-experience,0,NYC,Brandwatch
-SM_00000039,2024-06-21,Reddit,Kashi,Kellanova,Consumer,268419,17114,0.36,Positive,negative-experience;recipes,0,UNKNOWN,Brandwatch
-SM_00000040,2026-01-26,Twitter,Califia,Califia,Creator,127004,9763,0.344,Positive,grain-free;health;late-night,0,UNKNOWN,Brandwatch
-SM_00000041,2026-04-08,TikTok,ProteinPeak,Acme Corp,Consumer,1325427,63541,0.385,Positive,cinnamon;new-launch;creator-drop,1,UNKNOWN,Brandwatch
-SM_00000042,2026-03-28,YouTube,Oatly,Oatly,Press,1154586,49798,-0.153,Neutral,negative-experience,0,UNKNOWN,Brandwatch
-SM_00000043,2026-04-10,Instagram,Califia,Califia,Creator,1491920,122598,-0.144,Neutral,supply-issue;price;negative-experience,1,SFO,Brandwatch
-SM_00000044,2024-11-17,Facebook,Califia,Califia,Consumer,22931,688,0.175,Neutral,cocoa-chocolate,0,BOS,Brandwatch
-SM_00000045,2024-12-22,TikTok,Quaker,PepsiCo,Consumer,2883998,192596,-0.281,Negative,sustainability,0,UNKNOWN,Brandwatch
-SM_00000046,2026-04-03,TikTok,Kashi,Kellanova,Creator,1883980,85390,-0.118,Neutral,cocoa-chocolate;supply-issue,0,CHI,Brandwatch
-SM_00000047,2025-12-24,Instagram,Great Value,Walmart PL,Consumer,956568,17122,-1.0,Negative,convenience;late-night,1,IND,Brandwatch
-SM_00000048,2025-08-11,Instagram,Oatly,Oatly,Consumer,1146917,61829,-1.0,Negative,convenience,1,CLE,Brandwatch
-SM_00000049,2025-01-07,Instagram,Three Wishes,Three Wishes,Consumer,1149213,51036,0.294,Positive,new-launch;cinnamon,1,UNKNOWN,Brandwatch
-SM_00000050,2026-04-26,TikTok,Bear Naked,Kellanova,Consumer,1268503,49057,0.433,Positive,family-occasion;sustainability;nostalgic;cocoa-chocolate,0,AL-DMA,Brandwatch
-SM_00000051,2025-07-30,Instagram,Califia,Califia,Consumer,532824,43932,-0.129,Neutral,oat-milk,0,UNKNOWN,Brandwatch
-SM_00000052,2025-09-20,TikTok,Bear Naked,Kellanova,Creator,3896967,46378,1.0,Positive,family-occasion;supply-issue,0,UNKNOWN,Brandwatch
-SM_00000053,2024-10-11,Instagram,Oatly,Oatly,Consumer,662708,47400,1.0,Positive,creator-drop,1,AR-DMA,Brandwatch
-SM_00000054,2025-03-17,Twitter,RootDay,Acme Corp,Consumer,79140,802,1.0,Positive,viral,0,NYC,Brandwatch
-SM_00000055,2024-07-30,TikTok,Three Wishes,Three Wishes,Consumer,2226704,47935,-0.017,Neutral,cocoa-chocolate;packaging,0,UNKNOWN,Brandwatch
-SM_00000056,2025-06-07,TikTok,RootDay,Acme Corp,Creator,2745508,145601,0.027,Neutral,oat-milk;target-endcap;recipes;price,1,UNKNOWN,Brandwatch
-SM_00000057,2024-08-21,TikTok,Quaker,PepsiCo,Consumer,1816788,93180,-0.631,Negative,packaging;oat-milk,0,UNKNOWN,Brandwatch
-SM_00000058,2026-04-16,TikTok,RootDay,Acme Corp,Creator,1426899,94112,0.001,Neutral,new-launch;recipes,0,LAX,Brandwatch
-SM_00000059,2024-03-04,Twitter,RXBAR,Kellanova,Consumer,64257,853,-0.598,Negative,new-launch;negative-experience,0,HOU,Brandwatch
-SM_00000060,2025-01-08,Twitter,Quaker,PepsiCo,Consumer,254476,14136,-0.34,Negative,packaging,0,UNKNOWN,Brandwatch
-SM_00000061,2025-01-22,Instagram,HoneyNest,Acme Corp,Consumer,1936481,120467,-0.67,Negative,target-endcap,0,LAX,Brandwatch
-SM_00000062,2025-05-01,Reddit,HoneyNest,Acme Corp,Consumer,237946,15322,0.653,Positive,creator-drop;protein,0,CHI,Brandwatch
-SM_00000063,2026-05-11,TikTok,Crunchwell,Acme Corp,Consumer,2471062,23179,-0.37,Negative,negative-experience;kids-friendly,1,UNKNOWN,Brandwatch
-SM_00000064,2025-07-13,Twitter,Cheerios,General Mills,Consumer,27329,1524,1.0,Positive,promo;oat-milk,0,UNKNOWN,Brandwatch
-SM_00000065,2025-07-31,TikTok,MorningOats,Acme Corp,Consumer,610938,34445,-0.404,Negative,family-occasion,0,CHI,Brandwatch
-SM_00000066,2025-01-20,TikTok,KIND,Mars,Consumer,1567219,87232,-0.059,Neutral,cocoa-chocolate;recipes;taste;target-endcap,0,NYC,Brandwatch
-SM_00000067,2024-12-16,Twitter,MorningOats,Acme Corp,Consumer,105652,5808,-0.592,Negative,target-endcap,0,MS-DMA,Brandwatch
-SM_00000068,2026-03-07,YouTube,Great Value,Walmart PL,Consumer,1004489,51112,-0.436,Negative,athlete-fuel;cinnamon,1,UNKNOWN,Brandwatch
-SM_00000069,2024-02-19,TikTok,Cheerios,General Mills,Consumer,2652454,47931,1.0,Positive,oat-milk;negative-experience,1,LAX,Brandwatch
-SM_00000070,2026-02-05,YouTube,TrailGrove,Acme Corp,Consumer,83470,1463,0.121,Neutral,protein;creator-drop;packaging,1,PHL,Brandwatch
-SM_00000071,2024-06-01,TikTok,RootDay,Acme Corp,Creator,4427073,45016,0.489,Positive,health;sustainability;oat-milk,0,PHL,Brandwatch
-SM_00000072,2025-05-11,Instagram,Quaker,PepsiCo,Consumer,393398,12133,0.096,Neutral,cocoa-chocolate;supply-issue,0,MIA,Brandwatch
-SM_00000073,2026-01-05,Instagram,Catalina Crunch,Catalina,Consumer,1182599,66916,0.978,Positive,taste;cocoa-chocolate;sustainability,0,KAN,Brandwatch
-SM_00000074,2026-05-31,TikTok,Field & Honey,Larksfield Foods,Consumer,1539873,45441,0.073,Neutral,sustainability,0,PDX,Brandwatch
-SM_00000075,2024-08-27,Instagram,TrailGrove,Acme Corp,Consumer,518225,40697,0.345,Positive,recipes,0,SFO,Brandwatch
-SM_00000076,2026-05-14,Instagram,Great Value,Walmart PL,Consumer,1520477,26462,1.0,Positive,supply-issue;cocoa-chocolate;taste,0,UNKNOWN,Brandwatch
-SM_00000077,2025-06-30,YouTube,Frosted Flakes,Kellanova,Consumer,65100,3298,-0.313,Negative,kids-friendly;sustainability,0,UNKNOWN,Brandwatch
-SM_00000078,2025-10-29,Twitter,Great Value,Walmart PL,Consumer,153081,10459,0.75,Positive,grain-free,0,UNKNOWN,Brandwatch
-SM_00000079,2026-01-08,TikTok,Califia,Califia,Creator,4491586,31765,-0.007,Neutral,health;new-launch,0,UNKNOWN,Brandwatch
-SM_00000080,2024-01-04,TikTok,Oatly,Oatly,Consumer,1478484,9195,0.834,Positive,health,1,DEN,Brandwatch
-SM_00000081,2025-08-12,Facebook,HoneyNest,Acme Corp,Consumer,235504,7654,0.323,Positive,cocoa-chocolate;supply-issue,0,SEA,Brandwatch
-SM_00000082,2026-04-18,Reddit,RXBAR,Kellanova,Consumer,221191,11267,0.547,Positive,cinnamon;late-night,0,PHX,Brandwatch
-SM_00000083,2025-07-16,Twitter,TrailGrove,Acme Corp,Consumer,253191,16526,0.318,Positive,convenience;viral;supply-issue,0,CIN,Brandwatch
-SM_00000084,2025-12-11,Instagram,Frosted Flakes,Kellanova,Consumer,1739048,71920,0.232,Positive,late-night;supply-issue;cocoa-chocolate,0,SEA,Brandwatch
-SM_00000085,2026-05-08,Facebook,RXBAR,Kellanova,Consumer,272769,17389,-0.907,Negative,family-occasion,0,UNKNOWN,Brandwatch
-SM_00000086,2024-12-10,TikTok,Cheerios,General Mills,Consumer,3879948,306412,0.238,Positive,protein;cinnamon,1,STL,Brandwatch
-SM_00000087,2024-07-03,Instagram,Catalina Crunch,Catalina,Consumer,1262853,12998,0.48,Positive,convenience;promo;oat-milk;protein,0,UNKNOWN,Brandwatch
-SM_00000088,2025-10-16,Twitter,TrailGrove,Acme Corp,Consumer,264933,19186,0.096,Neutral,convenience,0,SEA,Brandwatch
-SM_00000089,2026-01-24,Reddit,Catalina Crunch,Catalina,Consumer,29651,1855,-0.472,Negative,supply-issue,0,UNKNOWN,Brandwatch
-SM_00000090,2024-06-30,TikTok,MorningOats,Acme Corp,Creator,2528818,66642,0.172,Neutral,sweetened,0,NYC,Brandwatch
-SM_00000091,2024-08-26,Instagram,Crunchwell,Acme Corp,Consumer,551020,3288,0.713,Positive,recipes,1,UNKNOWN,Brandwatch
-SM_00000092,2025-12-09,Instagram,Magic Spoon,Magic Spoon,Creator,348583,19933,-0.408,Negative,new-launch,1,IND,Brandwatch
-SM_00000093,2025-11-19,Reddit,ProteinPeak,Acme Corp,Consumer,125423,760,1.0,Positive,grain-free,0,ORL,Brandwatch
-SM_00000094,2024-08-30,Instagram,KIND,Mars,Consumer,1252520,24897,0.17,Neutral,family-occasion,0,UNKNOWN,Brandwatch
-SM_00000095,2025-09-26,TikTok,Frosted Flakes,Kellanova,Consumer,3394651,108921,-0.616,Negative,athlete-fuel;creator-drop;grain-free,1,SFO,Brandwatch
-SM_00000096,2026-05-20,TikTok,Crunchwell,Acme Corp,Creator,3306712,193342,-1.0,Negative,sustainability;viral,0,PDX,Brandwatch
-SM_00000097,2025-01-09,Twitter,Califia,Califia,Creator,226101,7096,-0.355,Negative,oat-milk,0,UNKNOWN,Brandwatch
-SM_00000098,2024-01-10,TikTok,Great Value,Walmart PL,Creator,1557048,49521,-0.59,Negative,nostalgic,0,UNKNOWN,Brandwatch
-SM_00000099,2024-01-04,TikTok,RootDay,Acme Corp,Consumer,2361789,190458,0.542,Positive,supply-issue;convenience,0,UNKNOWN,Brandwatch
-SM_00000100,2024-07-01,TikTok,Great Value,Walmart PL,Consumer,1787160,125530,-0.229,Negative,supply-issue,1,NYC,Brandwatch
+SM_00000001,2024-06-01,TikTok,Great Value,Walmart PL,Creator,1359602,25051,-0.963,Negative,health;grain-free,0,BOS,Brandwatch
+SM_00000002,2024-05-14,Instagram,Quaker,PepsiCo,Consumer,452925,19567,0.941,Positive,cinnamon;sustainability,1,UNKNOWN,Brandwatch
+SM_00000003,2025-05-26,Reddit,RXBAR,Kellanova,Consumer,109912,3265,0.479,Positive,cinnamon;target-endcap;price,0,MIN,Brandwatch
+SM_00000004,2025-04-06,Twitter,KIND,Mars,Consumer,173004,5822,-0.397,Negative,creator-drop;grain-free,0,UNKNOWN,Brandwatch
+SM_00000005,2026-01-12,TikTok,RootDay,Acme Corp,Creator,324983,4162,0.243,Positive,taste,1,PHL,Brandwatch
+SM_00000006,2025-02-27,TikTok,Quaker,PepsiCo,Consumer,3055277,231888,0.704,Positive,athlete-fuel;new-launch,0,PHX,Brandwatch
+SM_00000007,2024-06-20,Instagram,Oatly,Oatly,Consumer,1830901,134781,0.738,Positive,health,0,UNKNOWN,Brandwatch
+SM_00000008,2025-02-01,YouTube,Catalina Crunch,Catalina,Creator,1718464,62043,0.564,Positive,family-occasion;health,1,BOS,Brandwatch
+SM_00000009,2026-02-17,Instagram,RootDay,Acme Corp,Consumer,674273,30288,-0.068,Neutral,protein,0,UNKNOWN,Brandwatch
+SM_00000010,2025-02-08,Instagram,Field & Honey,Larksfield Foods,Consumer,315629,7846,0.144,Neutral,family-occasion,0,SFO,Brandwatch
+SM_00000011,2024-09-14,TikTok,Three Wishes,Three Wishes,Consumer,140450,8158,0.307,Positive,convenience,0,UNKNOWN,Brandwatch
+SM_00000012,2026-01-26,TikTok,Great Value,Walmart PL,Consumer,1735920,67419,-0.053,Neutral,kids-friendly;cocoa-chocolate,0,UNKNOWN,Brandwatch
+SM_00000013,2024-08-13,TikTok,Field & Honey,Larksfield Foods,Consumer,4295383,65227,-0.218,Negative,grain-free,0,UNKNOWN,Brandwatch
+SM_00000014,2025-04-24,TikTok,Cheerios,General Mills,Creator,2506290,132359,0.103,Neutral,negative-experience;athlete-fuel,1,NYC,Brandwatch
+SM_00000015,2025-07-02,Instagram,Kashi,Kellanova,Consumer,984332,71984,-0.323,Negative,supply-issue;cinnamon,1,UNKNOWN,Brandwatch
+SM_00000016,2025-05-28,Twitter,Kashi,Kellanova,Consumer,12686,909,0.189,Positive,health,0,UNKNOWN,Brandwatch
+SM_00000017,2025-08-15,TikTok,Field & Honey,Larksfield Foods,Consumer,1102588,38119,0.45,Positive,negative-experience;nostalgic,1,DEN,Brandwatch
+SM_00000018,2025-08-28,TikTok,RootDay,Acme Corp,Creator,650880,17214,0.011,Neutral,oat-milk,1,UNKNOWN,Brandwatch
+SM_00000019,2025-06-27,Twitter,Great Value,Walmart PL,Consumer,163616,4586,0.502,Positive,sweetened,0,MS-DMA,Brandwatch
+SM_00000020,2025-08-04,TikTok,TrailGrove,Acme Corp,Consumer,170297,12179,0.473,Positive,oat-milk;creator-drop,1,PDX,Brandwatch
+SM_00000021,2025-03-23,Instagram,HoneyNest,Acme Corp,Creator,993755,54257,0.892,Positive,athlete-fuel;viral,1,STL,Brandwatch
+SM_00000022,2024-12-06,Instagram,Cheerios,General Mills,Creator,1595450,106288,0.586,Positive,athlete-fuel;target-endcap,1,UNKNOWN,Brandwatch
+SM_00000023,2026-01-19,Instagram,Califia,Califia,Consumer,448308,16412,0.005,Neutral,negative-experience,0,UNKNOWN,Brandwatch
+SM_00000024,2024-10-16,Reddit,Three Wishes,Three Wishes,Consumer,189917,5124,0.047,Neutral,athlete-fuel,0,STL,Brandwatch
+SM_00000025,2024-10-16,TikTok,KIND,Mars,Consumer,3025404,81666,0.253,Positive,oat-milk;late-night,1,ORL,Brandwatch
+SM_00000026,2024-07-17,TikTok,Great Value,Walmart PL,Consumer,3222971,270734,0.214,Positive,cinnamon,1,MIA,Brandwatch
+SM_00000027,2024-09-21,Instagram,Magic Spoon,Magic Spoon,Consumer,1213795,56133,-0.264,Negative,sustainability,1,UNKNOWN,Brandwatch
+SM_00000028,2024-02-07,Twitter,Field & Honey,Larksfield Foods,Consumer,255439,3388,0.36,Positive,promo;grain-free,0,STL,Brandwatch
+SM_00000029,2025-01-23,TikTok,Oatly,Oatly,Consumer,2681174,36966,0.425,Positive,convenience;nostalgic,1,SFO,Brandwatch
+SM_00000030,2025-01-04,Reddit,Three Wishes,Three Wishes,Consumer,240752,16695,0.188,Positive,sweetened,0,MIA,Brandwatch
+SM_00000031,2024-08-10,TikTok,ProteinPeak,Acme Corp,Consumer,767519,39067,-0.379,Negative,price;target-endcap,1,CHI,Brandwatch
+SM_00000032,2024-06-04,YouTube,KIND,Mars,Press,1202327,34061,0.044,Neutral,new-launch;viral,0,UNKNOWN,Brandwatch
+SM_00000033,2025-09-09,YouTube,Oatly,Oatly,Creator,281570,7898,0.717,Positive,kids-friendly;family-occasion,1,MEM-DMA,Brandwatch
+SM_00000034,2024-03-02,Twitter,Catalina Crunch,Catalina,Consumer,25213,1219,-0.271,Negative,creator-drop;kids-friendly,0,PHL,Brandwatch
+SM_00000035,2026-03-18,Twitter,Magic Spoon,Magic Spoon,Consumer,97655,3850,0.422,Positive,sustainability,0,UNKNOWN,Brandwatch
+SM_00000036,2024-03-05,Twitter,Frosted Flakes,Kellanova,Consumer,124752,9919,0.838,Positive,athlete-fuel;family-occasion;recipes,0,PHL,Brandwatch
+SM_00000037,2024-12-26,Facebook,Great Value,Walmart PL,Consumer,188699,4300,0.679,Positive,negative-experience,0,UNKNOWN,Brandwatch
+SM_00000038,2024-07-12,TikTok,Kashi,Kellanova,Consumer,1332654,110178,0.487,Positive,family-occasion;oat-milk;target-endcap,1,UNKNOWN,Brandwatch
+SM_00000039,2025-10-05,Instagram,HoneyNest,Acme Corp,Consumer,1530349,11903,0.388,Positive,health;promo,0,UNKNOWN,Brandwatch
+SM_00000040,2025-06-12,Twitter,Three Wishes,Three Wishes,Consumer,179442,13603,0.058,Neutral,grain-free,0,LAX,Brandwatch
+SM_00000041,2024-04-14,Reddit,MorningOats,Acme Corp,Consumer,192674,9806,0.257,Positive,protein,0,UNKNOWN,Brandwatch
+SM_00000042,2025-11-16,Instagram,Crunchwell,Acme Corp,Consumer,1049538,35602,0.155,Neutral,negative-experience;viral;recipes,1,UNKNOWN,Brandwatch
+SM_00000043,2026-05-08,Instagram,Bear Naked,Kellanova,Creator,1414535,106057,0.358,Positive,price;late-night,0,AR-DMA,Brandwatch
+SM_00000044,2024-02-04,Twitter,MorningOats,Acme Corp,Consumer,157711,10093,-0.311,Negative,packaging;late-night,0,PHL,Brandwatch
+SM_00000045,2026-03-12,Reddit,Cheerios,General Mills,Consumer,251715,13400,0.701,Positive,price;grain-free,0,BOS,Brandwatch
+SM_00000046,2025-06-12,Twitter,Oatly,Oatly,Creator,85092,5909,-0.059,Neutral,negative-experience;viral,0,ATL,Brandwatch
+SM_00000047,2024-07-28,Instagram,ProteinPeak,Acme Corp,Consumer,654084,10087,0.479,Positive,new-launch,0,PHL,Brandwatch
+SM_00000048,2026-03-31,TikTok,MorningOats,Acme Corp,Consumer,1326500,14101,-0.179,Neutral,cinnamon;promo;negative-experience;family-occasion,0,HOU,Brandwatch
+SM_00000049,2025-02-28,TikTok,RXBAR,Kellanova,Consumer,4173295,223686,-0.995,Negative,family-occasion;sweetened;price,1,UNKNOWN,Brandwatch
+SM_00000050,2026-01-08,Reddit,ProteinPeak,Acme Corp,Consumer,272381,19563,0.244,Positive,oat-milk;athlete-fuel;cocoa-chocolate;protein,0,UNKNOWN,Brandwatch
+SM_00000051,2025-10-03,Twitter,Frosted Flakes,Kellanova,Consumer,223358,14189,-0.458,Negative,supply-issue,0,UNKNOWN,Brandwatch
+SM_00000052,2024-11-10,Instagram,ProteinPeak,Acme Corp,Consumer,1450253,12762,-0.993,Negative,late-night;negative-experience;convenience,0,PDX,Brandwatch
+SM_00000053,2025-07-21,TikTok,Oatly,Oatly,Brand,3200670,177114,0.304,Positive,grain-free;family-occasion,0,UNKNOWN,Brandwatch
+SM_00000054,2024-02-18,TikTok,Califia,Califia,Consumer,3034880,212926,0.357,Positive,supply-issue;nostalgic,1,UNKNOWN,Brandwatch
+SM_00000055,2024-07-04,Instagram,KIND,Mars,Consumer,869557,5773,-0.563,Negative,supply-issue;creator-drop,0,UNKNOWN,Brandwatch
+SM_00000056,2025-07-07,Instagram,Cheerios,General Mills,Consumer,330919,11357,0.84,Positive,family-occasion;price;negative-experience,1,CHI,Brandwatch
+SM_00000057,2024-08-05,Facebook,HoneyNest,Acme Corp,Consumer,25881,1712,-0.195,Negative,viral,0,UNKNOWN,Brandwatch
+SM_00000058,2025-08-25,Twitter,Kashi,Kellanova,Consumer,250865,11688,0.198,Positive,grain-free;oat-milk,0,UNKNOWN,Brandwatch
+SM_00000059,2026-03-10,YouTube,Frosted Flakes,Kellanova,Consumer,1466449,17240,-0.377,Negative,cocoa-chocolate;supply-issue;convenience,1,UNKNOWN,Brandwatch
+SM_00000060,2024-08-22,TikTok,Magic Spoon,Magic Spoon,Consumer,115333,1287,-0.226,Negative,cocoa-chocolate;oat-milk;health;nostalgic,1,UNKNOWN,Brandwatch
+SM_00000061,2025-10-02,TikTok,MorningOats,Acme Corp,Press,3090920,192133,0.187,Positive,recipes,1,UNKNOWN,Brandwatch
+SM_00000062,2025-05-27,YouTube,Field & Honey,Larksfield Foods,Consumer,395284,5575,0.395,Positive,health,0,UNKNOWN,Brandwatch
+SM_00000063,2025-06-18,Instagram,MorningOats,Acme Corp,Consumer,559360,32012,-0.336,Negative,negative-experience;convenience;sustainability,1,UNKNOWN,Brandwatch
+SM_00000064,2025-06-25,TikTok,Field & Honey,Larksfield Foods,Consumer,2532073,37545,-0.235,Negative,price;family-occasion,0,UNKNOWN,Brandwatch
+SM_00000065,2025-04-29,Reddit,Field & Honey,Larksfield Foods,Creator,241583,2184,0.23,Positive,convenience;promo;oat-milk,0,UNKNOWN,Brandwatch
+SM_00000066,2024-12-25,TikTok,MorningOats,Acme Corp,Consumer,66966,5171,-0.04,Neutral,athlete-fuel;late-night,0,CHI,Brandwatch
+SM_00000067,2025-01-03,Reddit,TrailGrove,Acme Corp,Consumer,157765,1181,0.375,Positive,athlete-fuel;promo,0,HOU,Brandwatch
+SM_00000068,2026-03-13,Instagram,MorningOats,Acme Corp,Consumer,1014163,12080,0.102,Neutral,oat-milk;price,1,DET,Brandwatch
+SM_00000069,2025-12-12,Twitter,Califia,Califia,Consumer,108027,7736,-0.07,Neutral,sustainability;kids-friendly;negative-experience,0,UNKNOWN,Brandwatch
+SM_00000070,2025-10-13,YouTube,Field & Honey,Larksfield Foods,Consumer,720096,60354,0.191,Positive,cinnamon,1,BIR-DMA,Brandwatch
+SM_00000071,2025-10-29,Twitter,Oatly,Oatly,Press,16012,572,0.476,Positive,taste,0,PIT,Brandwatch
+SM_00000072,2025-08-20,Twitter,RootDay,Acme Corp,Consumer,241530,6271,0.35,Positive,late-night;kids-friendly,0,PHX,Brandwatch
+SM_00000073,2025-12-15,Reddit,ProteinPeak,Acme Corp,Consumer,15614,265,0.838,Positive,nostalgic,0,MS-DMA,Brandwatch
+SM_00000074,2025-12-07,TikTok,ProteinPeak,Acme Corp,Consumer,2394945,133217,0.467,Positive,health;packaging,1,UNKNOWN,Brandwatch
+SM_00000075,2025-04-05,TikTok,Oatly,Oatly,Consumer,3905879,314615,-0.778,Negative,convenience;health,1,PHX,Brandwatch
+SM_00000076,2025-04-04,TikTok,Califia,Califia,Creator,3113865,123723,0.142,Neutral,new-launch,0,PDX,Brandwatch
+SM_00000077,2025-03-01,Twitter,Magic Spoon,Magic Spoon,Press,89467,1877,0.701,Positive,new-launch,0,SEA,Brandwatch
+SM_00000078,2024-07-04,Instagram,KIND,Mars,Consumer,437417,29217,-0.775,Negative,negative-experience;promo;health;price,0,UNKNOWN,Brandwatch
+SM_00000079,2024-07-28,Facebook,Crunchwell,Acme Corp,Consumer,35915,367,1.0,Positive,sustainability;protein;oat-milk;family-occasion,0,DAL,Brandwatch
+SM_00000080,2025-04-11,TikTok,Kashi,Kellanova,Creator,2063284,65473,0.503,Positive,supply-issue;taste;convenience,1,PIT,Brandwatch
+SM_00000081,2025-11-20,TikTok,Oatly,Oatly,Consumer,1648381,102484,-0.573,Negative,grain-free;nostalgic,0,AL-DMA,Brandwatch
+SM_00000082,2024-09-11,YouTube,Great Value,Walmart PL,Consumer,357674,26913,0.174,Neutral,negative-experience;convenience;creator-drop;nostalgic,1,NYC,Brandwatch
+SM_00000083,2024-07-30,YouTube,Field & Honey,Larksfield Foods,Press,1100488,40420,1.0,Positive,cocoa-chocolate;late-night;convenience,0,UNKNOWN,Brandwatch
+SM_00000084,2024-09-27,TikTok,Crunchwell,Acme Corp,Consumer,4001576,220318,-1.0,Negative,late-night;recipes;new-launch;taste,0,UNKNOWN,Brandwatch
+SM_00000085,2025-07-28,TikTok,Crunchwell,Acme Corp,Consumer,760411,5162,0.62,Positive,packaging;negative-experience,0,DET,Brandwatch
+SM_00000086,2026-02-16,Instagram,HoneyNest,Acme Corp,Consumer,579886,8415,-0.203,Negative,oat-milk,1,UNKNOWN,Brandwatch
+SM_00000087,2024-09-27,Reddit,Frosted Flakes,Kellanova,Consumer,110120,6514,0.327,Positive,negative-experience;convenience,0,UNKNOWN,Brandwatch
+SM_00000088,2025-08-16,TikTok,KIND,Mars,Creator,3569924,23555,0.122,Neutral,recipes;sweetened;creator-drop,1,UNKNOWN,Brandwatch
+SM_00000089,2024-10-01,TikTok,Catalina Crunch,Catalina,Consumer,4308031,236702,-0.165,Neutral,grain-free;cocoa-chocolate,1,BOS,Brandwatch
+SM_00000090,2024-10-05,Instagram,Three Wishes,Three Wishes,Creator,848915,62872,-0.802,Negative,health;creator-drop,0,SFO,Brandwatch
+SM_00000091,2025-11-22,TikTok,Great Value,Walmart PL,Creator,3070141,104485,-0.22,Negative,convenience,1,AR-DMA,Brandwatch
+SM_00000092,2024-09-29,YouTube,Field & Honey,Larksfield Foods,Consumer,993121,30996,-0.095,Neutral,packaging,0,SFO,Brandwatch
+SM_00000093,2024-08-28,TikTok,Magic Spoon,Magic Spoon,Consumer,282706,13310,-0.643,Negative,recipes,1,OK-DMA,Brandwatch
+SM_00000094,2025-11-13,TikTok,HoneyNest,Acme Corp,Creator,65533,4439,-0.104,Neutral,grain-free;kids-friendly,1,NYC,Brandwatch
+SM_00000095,2024-09-20,Instagram,HoneyNest,Acme Corp,Creator,1157193,97676,-0.349,Negative,health;convenience,0,LAX,Brandwatch
+SM_00000096,2025-10-08,TikTok,HoneyNest,Acme Corp,Consumer,3717430,45757,-0.2,Negative,recipes,1,NYC,Brandwatch
+SM_00000097,2025-02-15,YouTube,Kashi,Kellanova,Creator,1327732,62676,0.688,Positive,taste;athlete-fuel;protein,1,UNKNOWN,Brandwatch
+SM_00000098,2025-09-11,Reddit,HoneyNest,Acme Corp,Consumer,23908,1135,0.19,Positive,target-endcap;kids-friendly,0,UNKNOWN,Brandwatch
+SM_00000099,2024-03-01,Instagram,Magic Spoon,Magic Spoon,Consumer,1040641,25776,0.042,Neutral,grain-free;supply-issue,0,AR-DMA,Brandwatch
+SM_00000100,2025-07-17,Twitter,Bear Naked,Kellanova,Creator,250415,19424,0.808,Positive,nostalgic;promo,0,BAL,Brandwatch

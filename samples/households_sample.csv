@@ -1,101 +1,101 @@
 Household_ID,Country,Country_Code,State,DMA,City,Urbanicity,Currency,HH_Size,Income_Bracket,HOH_Age,HOH_Gender,Education_Level,Marital_Status,Ethnicity,Children_Flag,Children_Age_Band,Number_Of_Children,Loyalty_Score,Brand_Loyalty_Segment,Price_Sensitivity_Segment,Adopter_Type,Cereal_Buyer_Flag,Plant_Based_Buyer_Flag,Panel_Tenure_Months,Weight
-HH200000,United States,USA,TX,DAL,Plano,Urban,USD,6,50-75K,42,Female,High School,Single,Non-Hispanic White,No,None,0,0.566,Multi-Brand Switcher,Medium,Late Mainstream,Yes,Yes,39,0.8402
-HH200001,United States,USA,DC,WAS,Arlington VA,Urban,USD,2,50-75K,52,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.55,Acme Loyal,Low,Laggard,No,Yes,5,0.5629
-HH200002,United States,USA,WA,SEA,Seattle,Suburban,USD,3,<30K,45,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.85,Light Buyer,Medium,Mainstream,Yes,No,13,1.3867
-HH200003,United States,USA,LA,LA-DMA,Baton Rouge,Rural,USD,3,30-50K,68,Male,Bachelors,Married,Non-Hispanic White,Yes,0-5,3,0.24,Acme Loyal,Medium,Early Adopter,No,No,4,1.3714
-HH200004,United States,USA,WA,SEA,Tacoma,Suburban,USD,2,50-75K,37,Male,Some College,Married,Hispanic,No,None,0,0.375,Multi-Brand Switcher,Medium,Late Mainstream,Yes,No,72,0.8201
-HH200005,United States,USA,WA,SEA,Seattle,Rural,USD,4,150K+,23,Female,High School,Married,Asian,No,None,0,0.204,Acme Loyal,Medium,Innovator,Yes,No,24,1.5983
-HH200006,United States,USA,NY,NYC,New York,Urban,USD,2,30-50K,28,Female,Some College,Married,Non-Hispanic White,No,None,0,0.123,Multi-Brand Switcher,Medium,Mainstream,Yes,No,16,0.6285
-HH200007,United States,USA,AZ,PHX,Tempe,Urban,USD,2,75-100K,53,Female,High School,Married,Non-Hispanic Black,No,None,0,0.127,Multi-Brand Switcher,Medium,Mainstream,Yes,No,60,0.9208
-HH200008,United States,USA,MA,BOS,Worcester,Suburban,USD,3,75-100K,59,Female,Bachelors,Married,Hispanic,Yes,Mixed,1,0.854,Acme Loyal,Low,Early Adopter,Yes,Yes,41,0.8232
-HH200009,United States,USA,OH,CLE,Cleveland,Urban,USD,3,<30K,37,Male,Some College,Married,Non-Hispanic White,Yes,6-11,1,0.118,Acme Loyal,Medium,Mainstream,Yes,No,56,1.0352
-HH200010,United States,USA,CO,DEN,Aurora,Suburban,USD,2,75-100K,78,Male,Bachelors,Married,Non-Hispanic White,No,None,0,0.324,Acme Loyal,Low,Innovator,Yes,No,25,1.5053
-HH200011,United States,USA,TX,HOU,Pasadena,Suburban,USD,3,50-75K,69,Male,Graduate,Married,Hispanic,Yes,0-5,1,0.461,Multi-Brand Switcher,Medium,Late Mainstream,Yes,No,83,0.9948
-HH200012,United States,USA,AR,AR-DMA,Fayetteville,Suburban,USD,3,30-50K,41,Male,High School,Married,Hispanic,Yes,12-17,2,0.734,Acme Loyal,High,Mainstream,Yes,No,19,1.2078
-HH200013,United States,USA,OH,CLE,Akron,Suburban,USD,4,<30K,56,Male,Graduate,Married,Non-Hispanic White,Yes,Mixed,3,0.61,Multi-Brand Switcher,Medium,Mainstream,No,No,94,0.6347
-HH200014,United States,USA,CA,SFO,San Jose,Suburban,USD,1,100-150K,34,Male,Graduate,Married,Non-Hispanic White,No,None,0,0.907,Acme Loyal,Low,Mainstream,Yes,Yes,69,0.6573
-HH200015,United States,USA,OH,CLE,Akron,Suburban,USD,2,50-75K,57,Male,Some College,Divorced,Non-Hispanic White,No,None,0,0.456,Multi-Brand Switcher,Medium,Mainstream,Yes,No,30,0.9577
-HH200016,United States,USA,FL,MIA,Fort Lauderdale,Urban,USD,5,100-150K,59,Female,Graduate,Single,Asian,Yes,6-11,1,0.335,Multi-Brand Switcher,High,Mainstream,Yes,No,17,0.5087
-HH200017,United States,USA,OK,OK-DMA,Norman,Suburban,USD,3,150K+,44,Male,High School,Married,Non-Hispanic White,Yes,12-17,2,0.382,Light Buyer,Medium,Late Mainstream,Yes,No,85,0.7555
-HH200018,United States,USA,MO,KAN,Kansas City,Urban,USD,4,50-75K,67,Female,Bachelors,Married,Hispanic,No,None,0,0.219,Competitor Loyal,High,Mainstream,Yes,Yes,3,1.3138
-HH200019,United States,USA,CO,DEN,Denver,Urban,USD,1,<30K,28,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.65,Acme Loyal,Low,Innovator,Yes,No,73,0.9261
-HH200020,United States,USA,OK,OK-DMA,Oklahoma City,Suburban,USD,3,30-50K,30,Male,Bachelors,Single,Non-Hispanic White,Yes,12-17,1,0.056,Light Buyer,High,Laggard,Yes,No,76,0.9858
-HH200021,United States,USA,OR,PDX,Portland,Urban,USD,5,30-50K,26,Male,Graduate,Divorced,Asian,No,None,0,0.469,Multi-Brand Switcher,Low,Laggard,No,No,18,0.6932
-HH200022,United States,USA,OH,CIN,Dayton,Urban,USD,2,75-100K,47,Female,Some College,Divorced,Other,No,None,0,0.442,Multi-Brand Switcher,Low,Mainstream,Yes,No,51,0.8367
-HH200023,United States,USA,GA,ATL,Atlanta,Rural,USD,2,50-75K,26,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.796,Multi-Brand Switcher,Low,Late Mainstream,Yes,Yes,40,1.1989
-HH200024,United States,USA,AZ,PHX,Phoenix,Urban,USD,3,75-100K,47,Female,High School,Single,Non-Hispanic Black,No,None,0,0.476,Acme Loyal,Low,Early Adopter,Yes,Yes,75,1.4867
-HH200025,United States,USA,CA,LAX,Anaheim,Suburban,USD,1,150K+,73,Male,Some College,Married,Hispanic,No,None,0,0.511,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,25,0.657
-HH200026,United States,USA,OR,PDX,Beaverton,Rural,USD,3,50-75K,30,Female,Some College,Single,Non-Hispanic White,Yes,6-11,2,0.384,Multi-Brand Switcher,Medium,Mainstream,Yes,No,88,0.6975
-HH200027,United States,USA,MO,STL,St Charles,Urban,USD,4,50-75K,32,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.779,Multi-Brand Switcher,High,Late Mainstream,Yes,No,51,1.1406
-HH200028,United States,USA,TX,DAL,Dallas,Suburban,USD,2,30-50K,48,Female,Graduate,Divorced,Non-Hispanic Black,No,None,0,0.821,Competitor Loyal,Medium,Mainstream,Yes,No,77,1.2283
-HH200029,United States,USA,TX,HOU,The Woodlands,Urban,USD,2,150K+,31,Male,Bachelors,Married,Asian,No,None,0,0.128,Competitor Loyal,Medium,Late Mainstream,Yes,No,25,1.4116
-HH200030,United States,USA,CA,LAX,Anaheim,Suburban,USD,4,150K+,24,Female,Some College,Married,Asian,Yes,0-5,1,0.235,Acme Loyal,Low,Mainstream,Yes,No,55,0.8383
-HH200031,United States,USA,AL,AL-DMA,Mobile,Urban,USD,2,100-150K,69,Male,Bachelors,Married,Hispanic,No,None,0,0.453,Multi-Brand Switcher,Medium,Mainstream,Yes,No,91,0.8576
-HH200032,United States,USA,NY,NYC,Newark,Urban,USD,2,75-100K,63,Female,High School,Married,Non-Hispanic White,No,None,0,0.274,Acme Loyal,Medium,Mainstream,Yes,No,55,0.6307
-HH200033,United States,USA,TX,DAL,Dallas,Rural,USD,5,50-75K,22,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.195,Multi-Brand Switcher,Low,Mainstream,Yes,No,42,1.02
-HH200034,United States,USA,OK,OK-DMA,Norman,Suburban,USD,2,75-100K,73,Female,Bachelors,Divorced,Non-Hispanic White,No,None,0,0.209,Competitor Loyal,Medium,Late Mainstream,Yes,No,31,1.3417
-HH200035,United States,USA,MN,MIN,St Paul,Urban,USD,1,100-150K,52,Male,High School,Married,Hispanic,No,None,0,0.211,Acme Loyal,Medium,Late Mainstream,No,No,84,1.4703
-HH200036,United States,USA,WA,SEA,Seattle,Urban,USD,2,50-75K,38,Male,High School,Married,Hispanic,No,None,0,0.884,Light Buyer,Medium,Late Mainstream,Yes,Yes,11,1.5138
-HH200037,United States,USA,CA,SFO,Oakland,Urban,USD,4,150K+,72,Female,Bachelors,Single,Non-Hispanic White,Yes,Mixed,3,0.916,Acme Loyal,Medium,Mainstream,Yes,Yes,54,0.5746
-HH200038,United States,USA,PA,PHL,Camden,Suburban,USD,4,100-150K,25,Male,Some College,Married,Hispanic,Yes,0-5,1,0.088,Acme Loyal,Medium,Laggard,Yes,No,7,0.7159
-HH200039,United States,USA,FL,ORL,Lakeland,Suburban,USD,2,50-75K,60,Female,Some College,Single,Non-Hispanic White,No,None,0,0.415,Multi-Brand Switcher,Medium,Early Adopter,Yes,No,42,1.279
-HH200040,United States,USA,FL,ORL,Lakeland,Urban,USD,2,150K+,59,Female,High School,Single,Hispanic,No,None,0,0.659,Acme Loyal,Medium,Early Adopter,Yes,Yes,91,0.8375
-HH200041,United States,USA,MI,DET,Ann Arbor,Suburban,USD,2,100-150K,77,Female,Bachelors,Single,Non-Hispanic White,No,None,0,0.298,Acme Loyal,Medium,Mainstream,Yes,Yes,86,1.4881
-HH200042,United States,USA,CA,LAX,Anaheim,Rural,USD,5,100-150K,67,Male,Some College,Married,Asian,No,None,0,0.854,Multi-Brand Switcher,Medium,Mainstream,Yes,No,20,1.4075
-HH200043,United States,USA,DC,WAS,Alexandria,Suburban,USD,1,100-150K,56,Female,Bachelors,Single,Non-Hispanic Black,No,None,0,0.709,Multi-Brand Switcher,Low,Late Mainstream,Yes,Yes,89,0.5593
-HH200044,United States,USA,PA,PHL,Camden,Rural,USD,2,75-100K,51,Female,Some College,Married,Non-Hispanic White,No,None,0,0.33,Acme Loyal,High,Mainstream,Yes,Yes,55,0.6138
-HH200045,United States,USA,PA,PHL,Philadelphia,Urban,USD,1,100-150K,39,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.147,Competitor Loyal,High,Mainstream,Yes,No,30,0.7035
-HH200046,United States,USA,MA,BOS,Worcester,Urban,USD,6,<30K,24,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.834,Multi-Brand Switcher,Medium,Mainstream,Yes,No,84,0.6742
-HH200047,United States,USA,CO,DEN,Aurora,Suburban,USD,4,100-150K,36,Female,Graduate,Married,Hispanic,No,None,0,0.401,Competitor Loyal,Medium,Mainstream,No,No,76,0.9955
-HH200048,United States,USA,MI,DET,Detroit,Urban,USD,4,30-50K,42,Male,High School,Married,Non-Hispanic Black,No,None,0,0.174,Acme Loyal,High,Late Mainstream,Yes,Yes,44,1.4317
-HH200049,United States,USA,MD,BAL,Baltimore,Rural,USD,4,150K+,60,Male,High School,Married,Non-Hispanic White,No,None,0,0.949,Light Buyer,Low,Laggard,Yes,No,81,0.9886
-HH200050,United States,USA,NY,NYC,Jersey City,Suburban,USD,3,30-50K,67,Male,Bachelors,Single,Non-Hispanic White,Yes,6-11,2,0.877,Acme Loyal,High,Laggard,Yes,No,89,0.5494
-HH200051,United States,USA,PA,PHL,Wilmington,Urban,USD,3,<30K,64,Male,Graduate,Married,Non-Hispanic White,No,None,0,0.885,Multi-Brand Switcher,Medium,Mainstream,Yes,No,29,1.1684
-HH200052,United States,USA,PA,PIT,Monroeville,Suburban,USD,3,150K+,49,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.839,Acme Loyal,High,Mainstream,Yes,No,81,0.6714
-HH200053,United States,USA,CA,LAX,Los Angeles,Urban,USD,1,<30K,41,Male,Bachelors,Single,Non-Hispanic Black,No,None,0,0.757,Multi-Brand Switcher,Low,Mainstream,Yes,No,42,1.3457
-HH200054,United States,USA,OR,PDX,Hillsboro,Urban,USD,2,100-150K,59,Female,High School,Married,Non-Hispanic Black,No,None,0,0.475,Light Buyer,Low,Mainstream,Yes,No,68,1.0573
-HH200055,United States,USA,TX,HOU,Houston,Urban,USD,2,75-100K,78,Female,Some College,Single,Non-Hispanic Black,No,None,0,0.545,Acme Loyal,Medium,Mainstream,Yes,No,31,0.5641
-HH200056,United States,USA,TX,HOU,Pasadena,Suburban,USD,3,75-100K,70,Female,Some College,Married,Non-Hispanic White,Yes,Mixed,3,0.429,Competitor Loyal,Medium,Laggard,Yes,No,96,1.2677
-HH200057,United States,USA,TX,DAL,Plano,Suburban,USD,2,100-150K,26,Female,Graduate,Single,Asian,No,None,0,0.41,Competitor Loyal,Medium,Mainstream,Yes,No,89,0.9892
-HH200058,United States,USA,MD,BAL,Annapolis,Suburban,USD,4,75-100K,57,Female,Bachelors,Single,Non-Hispanic White,No,None,0,0.144,Acme Loyal,Medium,Late Mainstream,No,No,53,0.7239
-HH200059,United States,USA,CA,LAX,Long Beach,Rural,USD,4,150K+,48,Male,Bachelors,Married,Non-Hispanic Black,No,None,0,0.924,Multi-Brand Switcher,High,Laggard,Yes,Yes,91,1.2109
-HH200060,United States,USA,DC,WAS,Arlington VA,Urban,USD,3,50-75K,72,Female,High School,Single,Non-Hispanic White,Yes,6-11,1,0.213,Multi-Brand Switcher,Medium,Mainstream,Yes,No,56,1.0295
-HH200061,United States,USA,TX,DAL,Dallas,Suburban,USD,4,100-150K,50,Female,Graduate,Single,Non-Hispanic White,Yes,Mixed,2,0.371,Light Buyer,Low,Mainstream,Yes,No,56,0.5096
-HH200062,United States,USA,MI,DET,Detroit,Suburban,USD,2,150K+,67,Female,Graduate,Divorced,Non-Hispanic White,No,None,0,0.883,Competitor Loyal,High,Mainstream,Yes,Yes,55,1.5842
-HH200063,United States,USA,AL,AL-DMA,Mobile,Suburban,USD,1,50-75K,57,Male,Graduate,Married,Non-Hispanic Black,No,None,0,0.368,Light Buyer,High,Innovator,Yes,No,35,1.549
-HH200064,United States,USA,MN,MIN,Bloomington,Urban,USD,3,100-150K,55,Female,High School,Married,Asian,No,None,0,0.095,Acme Loyal,Low,Laggard,Yes,No,35,0.7599
-HH200065,United States,USA,CA,SFO,San Jose,Urban,USD,3,50-75K,67,Female,Bachelors,Married,Hispanic,Yes,0-5,2,0.371,Multi-Brand Switcher,Medium,Early Adopter,Yes,No,78,0.6332
-HH200066,United States,USA,CA,LAX,Los Angeles,Urban,USD,1,30-50K,72,Male,Bachelors,Married,Non-Hispanic White,No,None,0,0.523,Multi-Brand Switcher,Medium,Mainstream,No,No,65,1.1939
-HH200067,United States,USA,TX,HOU,Sugar Land,Urban,USD,5,<30K,42,Female,Graduate,Married,Non-Hispanic White,Yes,6-11,3,0.139,Multi-Brand Switcher,Medium,Early Adopter,Yes,Yes,50,0.9766
-HH200068,United States,USA,GA,ATL,Decatur,Urban,USD,1,<30K,58,Female,Some College,Divorced,Hispanic,No,None,0,0.246,Light Buyer,Medium,Innovator,Yes,Yes,38,0.9508
-HH200069,United States,USA,GA,ATL,Decatur,Suburban,USD,1,50-75K,30,Male,Some College,Married,Hispanic,No,None,0,0.319,Light Buyer,Low,Early Adopter,Yes,No,53,1.4729
-HH200070,United States,USA,NY,NYC,New York,Suburban,USD,3,100-150K,76,Female,Bachelors,Single,Non-Hispanic White,Yes,12-17,2,0.692,Multi-Brand Switcher,Medium,Innovator,Yes,No,76,0.9421
-HH200071,United States,USA,WA,SEA,Seattle,Rural,USD,1,<30K,44,Female,High School,Divorced,Hispanic,No,None,0,0.888,Multi-Brand Switcher,Medium,Mainstream,Yes,No,43,1.2175
-HH200072,United States,USA,OK,OK-DMA,Oklahoma City,Urban,USD,2,<30K,22,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.627,Competitor Loyal,Medium,Late Mainstream,Yes,No,56,0.8312
-HH200073,United States,USA,GA,ATL,Decatur,Urban,USD,2,75-100K,55,Female,High School,Single,Non-Hispanic White,No,None,0,0.082,Acme Loyal,Medium,Early Adopter,Yes,No,95,0.7074
-HH200074,United States,USA,IL,CHI,Naperville,Urban,USD,3,75-100K,41,Female,Graduate,Widowed,Hispanic,Yes,0-5,2,0.443,Multi-Brand Switcher,Low,Mainstream,Yes,No,61,1.3473
-HH200075,United States,USA,MA,BOS,Worcester,Urban,USD,2,75-100K,66,Female,Bachelors,Single,Non-Hispanic White,No,None,0,0.419,Multi-Brand Switcher,Low,Mainstream,Yes,Yes,51,0.537
-HH200076,United States,USA,AZ,PHX,Tempe,Suburban,USD,4,<30K,68,Female,Some College,Divorced,Hispanic,Yes,12-17,1,0.943,Multi-Brand Switcher,Low,Mainstream,Yes,Yes,29,1.4336
-HH200077,United States,USA,MN,MIN,Minneapolis,Suburban,USD,2,75-100K,48,Female,Bachelors,Married,Non-Hispanic Black,No,None,0,0.938,Competitor Loyal,High,Mainstream,Yes,No,23,0.5968
-HH200078,United States,USA,CA,SFO,San Francisco,Suburban,USD,4,50-75K,56,Male,High School,Married,Hispanic,No,None,0,0.389,Multi-Brand Switcher,Medium,Laggard,Yes,Yes,55,1.1248
-HH200079,United States,USA,PA,PHL,Philadelphia,Urban,USD,3,75-100K,36,Female,Some College,Single,Hispanic,Yes,0-5,1,0.096,Competitor Loyal,Medium,Mainstream,No,Yes,75,0.9219
-HH200080,United States,USA,TX,DAL,Arlington,Urban,USD,3,30-50K,67,Female,Some College,Married,Hispanic,Yes,12-17,3,0.159,Multi-Brand Switcher,Medium,Late Mainstream,Yes,Yes,83,1.0188
-HH200081,United States,USA,CA,LAX,Los Angeles,Rural,USD,2,<30K,54,Female,Some College,Married,Asian,No,None,0,0.053,Multi-Brand Switcher,Low,Late Mainstream,Yes,No,40,1.1089
-HH200082,United States,USA,CA,LAX,Anaheim,Rural,USD,1,50-75K,38,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.716,Competitor Loyal,High,Innovator,No,Yes,81,1.1159
-HH200083,United States,USA,FL,ORL,Lakeland,Urban,USD,6,100-150K,56,Male,Graduate,Married,Non-Hispanic White,Yes,0-5,1,0.824,Competitor Loyal,Medium,Mainstream,Yes,No,94,0.9858
-HH200084,United States,USA,MO,KAN,Kansas City,Urban,USD,2,75-100K,51,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.061,Multi-Brand Switcher,Medium,Mainstream,Yes,No,32,0.8995
-HH200085,United States,USA,AZ,PHX,Mesa,Suburban,USD,5,<30K,74,Male,Bachelors,Married,Non-Hispanic White,No,None,0,0.644,Multi-Brand Switcher,Low,Early Adopter,Yes,No,21,1.299
-HH200086,United States,USA,AR,AR-DMA,Fayetteville,Urban,USD,4,100-150K,23,Female,Graduate,Married,Non-Hispanic Black,Yes,12-17,2,0.762,Acme Loyal,Medium,Early Adopter,Yes,No,29,1.5592
-HH200087,United States,USA,NY,NYC,Newark,Urban,USD,2,50-75K,36,Male,Graduate,Single,Other,No,None,0,0.527,Acme Loyal,Medium,Mainstream,No,No,79,1.2054
-HH200088,United States,USA,TX,DAL,Fort Worth,Suburban,USD,3,100-150K,70,Male,Graduate,Married,Other,No,None,0,0.808,Acme Loyal,Low,Mainstream,Yes,No,87,0.9355
-HH200089,United States,USA,CA,LAX,Anaheim,Rural,USD,5,150K+,24,Male,High School,Widowed,Non-Hispanic White,Yes,12-17,1,0.691,Competitor Loyal,High,Early Adopter,Yes,No,64,1.4731
-HH200090,United States,USA,MN,MIN,Minneapolis,Urban,USD,5,100-150K,35,Female,High School,Married,Non-Hispanic White,Yes,6-11,1,0.592,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,22,1.1703
-HH200091,United States,USA,AR,AR-DMA,Little Rock,Suburban,USD,4,150K+,34,Male,Bachelors,Married,Hispanic,Yes,0-5,1,0.635,Acme Loyal,Low,Mainstream,Yes,No,70,0.5892
-HH200092,United States,USA,WA,SEA,Seattle,Urban,USD,2,100-150K,46,Female,Some College,Married,Non-Hispanic White,No,None,0,0.807,Acme Loyal,Low,Late Mainstream,Yes,Yes,95,0.787
-HH200093,United States,USA,FL,MIA,Miami,Urban,USD,3,50-75K,38,Female,High School,Married,Asian,Yes,6-11,2,0.109,Competitor Loyal,Low,Innovator,Yes,Yes,21,0.9971
-HH200094,United States,USA,MO,STL,St Charles,Urban,USD,5,75-100K,70,Female,Bachelors,Married,Non-Hispanic White,Yes,0-5,1,0.327,Acme Loyal,Medium,Mainstream,Yes,No,29,1.229
-HH200095,United States,USA,PA,PHL,Wilmington,Suburban,USD,1,100-150K,53,Female,High School,Married,Non-Hispanic White,No,None,0,0.674,Competitor Loyal,High,Mainstream,Yes,Yes,13,1.0534
-HH200096,United States,USA,MD,BAL,Annapolis,Urban,USD,2,50-75K,77,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.77,Light Buyer,High,Late Mainstream,Yes,No,77,1.5956
-HH200097,United States,USA,OR,PDX,Hillsboro,Suburban,USD,2,<30K,57,Male,Some College,Married,Non-Hispanic Black,No,None,0,0.674,Acme Loyal,Medium,Mainstream,Yes,No,66,1.1944
-HH200098,United States,USA,NY,NYC,Jersey City,Suburban,USD,4,<30K,68,Female,Some College,Married,Non-Hispanic Black,No,None,0,0.635,Multi-Brand Switcher,Medium,Innovator,Yes,No,86,0.9212
-HH200099,United States,USA,OH,CLE,Akron,Suburban,USD,3,75-100K,47,Female,High School,Married,Non-Hispanic White,No,None,0,0.309,Acme Loyal,Low,Late Mainstream,Yes,Yes,73,1.541
+HH200000,United States,USA,CA,SFO,San Francisco,Suburban,USD,4,150K+,45,Male,Graduate,Single,Hispanic,Yes,0-5,2,0.787,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,9,1.2099
+HH200001,United States,USA,AL,BIR-DMA,Anniston,Urban,USD,2,50-75K,40,Male,Some College,Married,Non-Hispanic White,No,None,0,0.932,Competitor Loyal,Medium,Mainstream,Yes,No,38,0.6436
+HH200002,United States,USA,MI,DET,Warren,Rural,USD,4,75-100K,54,Female,High School,Married,Non-Hispanic White,Yes,Mixed,3,0.774,Light Buyer,High,Mainstream,Yes,No,59,1.4124
+HH200003,United States,USA,NY,NYC,Jersey City,Urban,USD,3,75-100K,34,Male,Graduate,Single,Other,No,None,0,0.652,Acme Loyal,Low,Mainstream,Yes,No,61,1.0492
+HH200004,United States,USA,IL,CHI,Naperville,Urban,USD,1,150K+,50,Female,Some College,Single,Non-Hispanic White,No,None,0,0.652,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,34,1.1512
+HH200005,United States,USA,CO,DEN,Denver,Urban,USD,3,30-50K,38,Female,Graduate,Married,Non-Hispanic Black,Yes,6-11,1,0.335,Acme Loyal,Medium,Late Mainstream,Yes,No,7,0.9837
+HH200006,United States,USA,NY,NYC,Brooklyn,Urban,USD,3,100-150K,56,Male,High School,Married,Hispanic,No,None,0,0.843,Multi-Brand Switcher,Medium,Late Mainstream,Yes,No,60,0.9906
+HH200007,United States,USA,IL,CHI,Schaumburg,Suburban,USD,5,100-150K,63,Male,Graduate,Married,Hispanic,Yes,6-11,1,0.904,Multi-Brand Switcher,Medium,Late Mainstream,Yes,Yes,41,0.6497
+HH200008,United States,USA,OH,CIN,Cincinnati,Suburban,USD,6,150K+,69,Male,High School,Single,Non-Hispanic White,Yes,6-11,3,0.212,Acme Loyal,Medium,Laggard,Yes,No,44,1.3176
+HH200009,United States,USA,AZ,PHX,Mesa,Rural,USD,3,100-150K,48,Female,Some College,Single,Non-Hispanic Black,No,None,0,0.572,Acme Loyal,Low,Mainstream,Yes,No,74,0.6305
+HH200010,United States,USA,AR,AR-DMA,Fayetteville,Suburban,USD,5,<30K,69,Female,Bachelors,Married,Other,Yes,Mixed,1,0.42,Competitor Loyal,High,Early Adopter,Yes,Yes,61,0.929
+HH200011,United States,USA,IN,IND,Carmel,Urban,USD,2,<30K,72,Male,High School,Married,Non-Hispanic White,No,None,0,0.132,Acme Loyal,Low,Mainstream,Yes,No,74,1.4944
+HH200012,United States,USA,NY,NYC,Jersey City,Suburban,USD,3,150K+,55,Female,High School,Married,Non-Hispanic White,Yes,6-11,1,0.096,Competitor Loyal,Medium,Early Adopter,Yes,No,71,1.5837
+HH200013,United States,USA,WA,SEA,Tacoma,Suburban,USD,3,100-150K,69,Male,Graduate,Single,Non-Hispanic Black,No,None,0,0.936,Competitor Loyal,Medium,Late Mainstream,Yes,No,43,1.5119
+HH200014,United States,USA,NY,NYC,Jersey City,Urban,USD,4,30-50K,34,Male,Some College,Married,Hispanic,Yes,12-17,1,0.476,Multi-Brand Switcher,Low,Early Adopter,Yes,Yes,53,0.7289
+HH200015,United States,USA,LA,LA-DMA,Lafayette,Urban,USD,3,100-150K,66,Male,High School,Married,Non-Hispanic White,No,None,0,0.796,Multi-Brand Switcher,Medium,Late Mainstream,Yes,Yes,74,0.9435
+HH200016,United States,USA,CA,LAX,Anaheim,Suburban,USD,3,75-100K,72,Female,Graduate,Divorced,Non-Hispanic White,Yes,6-11,3,0.452,Multi-Brand Switcher,High,Mainstream,Yes,No,96,0.5663
+HH200017,United States,USA,MI,DET,Ann Arbor,Suburban,USD,1,30-50K,53,Male,Graduate,Single,Non-Hispanic Black,No,None,0,0.947,Multi-Brand Switcher,High,Early Adopter,Yes,No,9,1.3342
+HH200018,United States,USA,OH,CIN,Hamilton,Suburban,USD,1,<30K,69,Male,Bachelors,Divorced,Non-Hispanic White,No,None,0,0.1,Acme Loyal,Low,Early Adopter,Yes,No,83,1.0552
+HH200019,United States,USA,IL,CHI,Schaumburg,Urban,USD,6,150K+,70,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.838,Acme Loyal,Medium,Mainstream,Yes,No,86,0.5699
+HH200020,United States,USA,MO,STL,St Charles,Suburban,USD,3,100-150K,71,Female,Graduate,Divorced,Asian,Yes,Mixed,2,0.109,Competitor Loyal,Low,Mainstream,Yes,No,73,1.4169
+HH200021,United States,USA,AL,AL-DMA,Mobile,Suburban,USD,2,75-100K,74,Female,High School,Single,Non-Hispanic White,No,None,0,0.629,Acme Loyal,Medium,Late Mainstream,Yes,No,18,1.2238
+HH200022,United States,USA,MI,DET,Ann Arbor,Rural,USD,5,50-75K,67,Female,High School,Married,Hispanic,Yes,Mixed,2,0.173,Multi-Brand Switcher,Low,Late Mainstream,No,No,70,0.6039
+HH200023,United States,USA,IL,CHI,Naperville,Rural,USD,2,30-50K,36,Female,Bachelors,Divorced,Non-Hispanic White,No,None,0,0.24,Multi-Brand Switcher,Medium,Late Mainstream,Yes,No,9,1.4739
+HH200024,United States,USA,OR,PDX,Hillsboro,Suburban,USD,1,30-50K,64,Female,Some College,Married,Non-Hispanic White,No,None,0,0.513,Acme Loyal,High,Early Adopter,Yes,Yes,45,1.4806
+HH200025,United States,USA,MA,BOS,Cambridge,Urban,USD,3,75-100K,33,Female,Graduate,Married,Hispanic,No,None,0,0.5,Competitor Loyal,Low,Late Mainstream,Yes,Yes,14,1.1783
+HH200026,United States,USA,CA,SFO,San Jose,Suburban,USD,1,30-50K,39,Female,Bachelors,Single,Non-Hispanic White,No,None,0,0.285,Acme Loyal,Low,Mainstream,Yes,No,65,0.5376
+HH200027,United States,USA,OK,OK-DMA,Norman,Urban,USD,4,100-150K,38,Female,Some College,Single,Non-Hispanic White,No,None,0,0.884,Multi-Brand Switcher,Low,Mainstream,Yes,Yes,71,1.5037
+HH200028,United States,USA,DC,WAS,Alexandria,Urban,USD,4,100-150K,66,Female,Some College,Single,Non-Hispanic White,No,None,0,0.37,Competitor Loyal,Medium,Early Adopter,Yes,No,85,1.5608
+HH200029,United States,USA,NY,NYC,New York,Suburban,USD,1,75-100K,64,Female,High School,Single,Non-Hispanic White,No,None,0,0.069,Multi-Brand Switcher,High,Mainstream,Yes,No,91,1.5974
+HH200030,United States,USA,CA,LAX,Anaheim,Urban,USD,4,30-50K,72,Female,High School,Married,Non-Hispanic White,No,None,0,0.662,Light Buyer,Medium,Laggard,Yes,No,83,0.9925
+HH200031,United States,USA,MI,DET,Detroit,Urban,USD,2,50-75K,67,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.609,Competitor Loyal,Medium,Laggard,Yes,No,15,0.706
+HH200032,United States,USA,IN,IND,Carmel,Urban,USD,2,75-100K,70,Female,Some College,Single,Hispanic,No,None,0,0.635,Light Buyer,Medium,Late Mainstream,Yes,Yes,93,0.9323
+HH200033,United States,USA,OK,OK-DMA,Norman,Urban,USD,2,100-150K,42,Female,High School,Married,Non-Hispanic White,No,None,0,0.925,Light Buyer,Medium,Mainstream,Yes,No,61,1.0281
+HH200034,United States,USA,NY,NYC,Jersey City,Suburban,USD,5,150K+,29,Male,High School,Married,Non-Hispanic White,No,None,0,0.414,Multi-Brand Switcher,High,Mainstream,Yes,Yes,93,0.997
+HH200035,United States,USA,MO,KAN,Kansas City,Urban,USD,3,100-150K,27,Female,High School,Widowed,Non-Hispanic White,No,None,0,0.262,Acme Loyal,Medium,Laggard,Yes,No,74,1.1008
+HH200036,United States,USA,MA,BOS,Cambridge,Rural,USD,5,<30K,59,Male,Bachelors,Single,Non-Hispanic White,Yes,12-17,1,0.292,Light Buyer,High,Mainstream,Yes,No,64,1.3487
+HH200037,United States,USA,MO,KAN,Overland Park,Suburban,USD,4,50-75K,49,Male,Bachelors,Divorced,Non-Hispanic Black,Yes,6-11,1,0.921,Competitor Loyal,Medium,Late Mainstream,Yes,No,26,1.5301
+HH200038,United States,USA,CA,SFO,San Francisco,Suburban,USD,3,100-150K,68,Other,High School,Married,Non-Hispanic White,Yes,12-17,1,0.123,Multi-Brand Switcher,Medium,Mainstream,Yes,No,91,0.6744
+HH200039,United States,USA,CA,LAX,Anaheim,Urban,USD,4,100-150K,69,Female,Bachelors,Single,Non-Hispanic White,No,None,0,0.072,Acme Loyal,Low,Late Mainstream,Yes,No,56,1.3174
+HH200040,United States,USA,TX,DAL,Dallas,Suburban,USD,2,75-100K,34,Male,Bachelors,Married,Non-Hispanic White,No,None,0,0.932,Acme Loyal,Low,Mainstream,Yes,No,43,0.7633
+HH200041,United States,USA,PA,PIT,Monroeville,Urban,USD,1,<30K,73,Male,High School,Married,Non-Hispanic White,No,None,0,0.919,Multi-Brand Switcher,Medium,Laggard,Yes,No,12,0.5425
+HH200042,United States,USA,MI,DET,Ann Arbor,Suburban,USD,1,100-150K,36,Female,High School,Married,Hispanic,No,None,0,0.434,Multi-Brand Switcher,Medium,Late Mainstream,Yes,No,95,0.6221
+HH200043,United States,USA,AL,AL-DMA,Birmingham,Urban,USD,1,<30K,41,Female,High School,Single,Non-Hispanic White,No,None,0,0.493,Multi-Brand Switcher,Low,Mainstream,Yes,No,72,1.423
+HH200044,United States,USA,GA,ATL,Alpharetta,Suburban,USD,4,150K+,40,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.378,Light Buyer,High,Mainstream,Yes,No,5,1.0122
+HH200045,United States,USA,CA,LAX,Anaheim,Urban,USD,2,150K+,45,Male,Some College,Divorced,Non-Hispanic Black,No,None,0,0.371,Multi-Brand Switcher,Medium,Mainstream,Yes,No,79,0.9923
+HH200046,United States,USA,LA,LA-DMA,Lake Charles,Urban,USD,2,30-50K,77,Female,High School,Married,Non-Hispanic White,No,None,0,0.88,Acme Loyal,Low,Laggard,Yes,No,33,0.6013
+HH200047,United States,USA,GA,ATL,Decatur,Suburban,USD,4,75-100K,61,Female,Bachelors,Married,Non-Hispanic White,Yes,6-11,3,0.597,Acme Loyal,High,Mainstream,No,Yes,65,0.7763
+HH200048,United States,USA,FL,ORL,Lakeland,Suburban,USD,1,100-150K,62,Female,Graduate,Divorced,Hispanic,No,None,0,0.361,Competitor Loyal,Medium,Late Mainstream,Yes,No,67,1.0631
+HH200049,United States,USA,DC,WAS,Arlington VA,Rural,USD,3,150K+,23,Male,Graduate,Single,Hispanic,Yes,Mixed,1,0.923,Multi-Brand Switcher,High,Laggard,Yes,No,54,0.8487
+HH200050,United States,USA,NY,NYC,Newark,Urban,USD,1,<30K,47,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.736,Competitor Loyal,Medium,Mainstream,Yes,No,47,1.2842
+HH200051,United States,USA,DC,WAS,Arlington VA,Urban,USD,3,50-75K,30,Female,Graduate,Widowed,Non-Hispanic White,Yes,12-17,1,0.055,Multi-Brand Switcher,Medium,Late Mainstream,No,No,37,1.5054
+HH200052,United States,USA,TX,HOU,The Woodlands,Urban,USD,4,30-50K,31,Male,Graduate,Single,Non-Hispanic White,Yes,12-17,2,0.132,Acme Loyal,Medium,Late Mainstream,Yes,No,56,0.9222
+HH200053,United States,USA,CA,SFO,Oakland,Suburban,USD,1,75-100K,71,Female,Bachelors,Divorced,Non-Hispanic White,No,None,0,0.781,Acme Loyal,High,Late Mainstream,Yes,No,30,1.1421
+HH200054,United States,USA,LA,LA-DMA,Lake Charles,Urban,USD,2,50-75K,44,Female,Bachelors,Married,Hispanic,No,None,0,0.114,Acme Loyal,Low,Early Adopter,Yes,Yes,92,1.3295
+HH200055,United States,USA,TX,HOU,The Woodlands,Suburban,USD,2,50-75K,36,Female,Some College,Single,Non-Hispanic Black,No,None,0,0.589,Competitor Loyal,High,Mainstream,Yes,No,42,0.9766
+HH200056,United States,USA,OR,PDX,Hillsboro,Urban,USD,4,<30K,25,Male,High School,Married,Non-Hispanic White,Yes,12-17,2,0.795,Multi-Brand Switcher,Low,Early Adopter,Yes,Yes,67,1.4617
+HH200057,United States,USA,CA,LAX,Long Beach,Urban,USD,4,50-75K,35,Female,High School,Married,Non-Hispanic Black,No,None,0,0.112,Multi-Brand Switcher,Low,Early Adopter,Yes,No,67,0.7315
+HH200058,United States,USA,OK,OK-DMA,Oklahoma City,Rural,USD,2,150K+,66,Male,Some College,Married,Non-Hispanic White,No,None,0,0.425,Light Buyer,Low,Late Mainstream,Yes,Yes,23,1.5407
+HH200059,United States,USA,OR,PDX,Portland,Urban,USD,2,75-100K,38,Female,Bachelors,Single,Hispanic,No,None,0,0.235,Acme Loyal,Low,Mainstream,No,No,16,0.9685
+HH200060,United States,USA,DC,WAS,Arlington VA,Suburban,USD,1,75-100K,47,Female,Some College,Married,Non-Hispanic White,No,None,0,0.097,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,49,0.6358
+HH200061,United States,USA,CA,LAX,Pasadena CA,Suburban,USD,1,75-100K,67,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.742,Multi-Brand Switcher,Medium,Innovator,Yes,Yes,29,1.5467
+HH200062,United States,USA,IL,CHI,Schaumburg,Urban,USD,6,100-150K,40,Male,Bachelors,Widowed,Non-Hispanic White,Yes,6-11,1,0.506,Multi-Brand Switcher,Low,Mainstream,Yes,No,23,0.5442
+HH200063,United States,USA,IN,IND,Indianapolis,Rural,USD,1,75-100K,53,Male,Bachelors,Single,Non-Hispanic White,No,None,0,0.585,Competitor Loyal,Medium,Mainstream,Yes,No,65,0.7736
+HH200064,United States,USA,CA,LAX,Anaheim,Rural,USD,4,30-50K,72,Male,Bachelors,Single,Non-Hispanic White,No,None,0,0.2,Competitor Loyal,Low,Innovator,Yes,No,57,1.3837
+HH200065,United States,USA,NY,NYC,Queens,Suburban,USD,2,100-150K,71,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.208,Acme Loyal,High,Early Adopter,Yes,No,48,0.7951
+HH200066,United States,USA,AL,AL-DMA,Huntsville,Suburban,USD,1,100-150K,29,Female,Bachelors,Married,Asian,No,None,0,0.797,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,5,1.1866
+HH200067,United States,USA,MI,DET,Detroit,Rural,USD,4,30-50K,64,Female,Graduate,Single,Non-Hispanic White,Yes,Mixed,1,0.255,Multi-Brand Switcher,Low,Late Mainstream,No,Yes,35,0.9494
+HH200068,United States,USA,CA,SFO,Oakland,Urban,USD,3,75-100K,72,Female,Graduate,Married,Non-Hispanic Black,Yes,Mixed,1,0.811,Acme Loyal,Medium,Mainstream,Yes,No,80,0.5301
+HH200069,United States,USA,CA,LAX,Los Angeles,Suburban,USD,1,50-75K,53,Female,Bachelors,Divorced,Other,No,None,0,0.406,Multi-Brand Switcher,High,Mainstream,Yes,No,73,0.9951
+HH200070,United States,USA,MA,BOS,Boston,Urban,USD,4,30-50K,60,Other,Graduate,Married,Non-Hispanic White,Yes,12-17,2,0.13,Multi-Brand Switcher,Low,Innovator,Yes,Yes,72,0.8399
+HH200071,United States,USA,FL,ORL,Lakeland,Urban,USD,4,<30K,39,Male,High School,Single,Hispanic,Yes,12-17,1,0.067,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,25,0.6533
+HH200072,United States,USA,GA,ATL,Marietta,Suburban,USD,3,75-100K,70,Female,Bachelors,Widowed,Non-Hispanic White,Yes,12-17,1,0.22,Multi-Brand Switcher,Medium,Mainstream,Yes,No,67,0.5758
+HH200073,United States,USA,CA,LAX,Los Angeles,Suburban,USD,5,50-75K,30,Female,High School,Single,Non-Hispanic White,No,None,0,0.516,Multi-Brand Switcher,Medium,Late Mainstream,Yes,Yes,39,1.394
+HH200074,United States,USA,DC,WAS,Arlington VA,Urban,USD,5,150K+,63,Female,Some College,Single,Non-Hispanic White,Yes,6-11,2,0.4,Multi-Brand Switcher,Medium,Mainstream,Yes,No,47,0.8177
+HH200075,United States,USA,IL,CHI,Naperville,Rural,USD,4,75-100K,40,Female,Bachelors,Married,Non-Hispanic White,Yes,Mixed,1,0.445,Acme Loyal,Medium,Mainstream,Yes,No,7,0.7544
+HH200076,United States,USA,FL,MIA,Fort Lauderdale,Suburban,USD,4,75-100K,65,Female,Bachelors,Married,Hispanic,No,None,0,0.584,Multi-Brand Switcher,High,Mainstream,Yes,Yes,90,1.2687
+HH200077,United States,USA,PA,PHL,Wilmington,Urban,USD,4,100-150K,65,Female,High School,Single,Non-Hispanic White,Yes,Mixed,1,0.124,Acme Loyal,Medium,Mainstream,Yes,Yes,42,1.0357
+HH200078,United States,USA,NY,NYC,Brooklyn,Rural,USD,2,100-150K,34,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.596,Acme Loyal,Medium,Laggard,Yes,No,50,0.855
+HH200079,United States,USA,CA,LAX,Long Beach,Suburban,USD,2,150K+,64,Male,Bachelors,Single,Non-Hispanic White,No,None,0,0.746,Acme Loyal,Low,Laggard,Yes,No,78,0.7979
+HH200080,United States,USA,MI,DET,Detroit,Urban,USD,3,150K+,44,Female,Bachelors,Single,Non-Hispanic Black,Yes,Mixed,1,0.583,Acme Loyal,Medium,Mainstream,Yes,Yes,14,1.4627
+HH200081,United States,USA,CA,LAX,Los Angeles,Suburban,USD,3,100-150K,63,Male,Some College,Divorced,Other,Yes,0-5,2,0.193,Acme Loyal,Medium,Mainstream,Yes,No,15,0.7243
+HH200082,United States,USA,CO,DEN,Denver,Urban,USD,2,30-50K,49,Female,Graduate,Married,Non-Hispanic White,No,None,0,0.304,Acme Loyal,High,Innovator,Yes,No,6,1.4859
+HH200083,United States,USA,PA,PHL,Camden,Rural,USD,2,<30K,52,Male,High School,Married,Non-Hispanic Black,No,None,0,0.625,Light Buyer,Medium,Innovator,Yes,Yes,38,1.5368
+HH200084,United States,USA,IL,CHI,Naperville,Urban,USD,3,100-150K,31,Female,High School,Divorced,Non-Hispanic White,No,None,0,0.246,Competitor Loyal,Low,Mainstream,No,No,16,1.0907
+HH200085,United States,USA,MD,BAL,Baltimore,Suburban,USD,4,150K+,48,Female,Graduate,Married,Hispanic,Yes,Mixed,1,0.919,Multi-Brand Switcher,Medium,Laggard,Yes,Yes,24,1.1444
+HH200086,United States,USA,PA,PHL,Wilmington,Rural,USD,2,30-50K,77,Male,Bachelors,Married,Hispanic,No,None,0,0.61,Acme Loyal,Medium,Mainstream,Yes,No,60,1.1903
+HH200087,United States,USA,TX,DAL,Arlington,Suburban,USD,4,75-100K,54,Female,High School,Married,Non-Hispanic White,Yes,6-11,1,0.589,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,21,1.2629
+HH200088,United States,USA,CA,SFO,San Jose,Rural,USD,2,<30K,25,Female,Some College,Married,Non-Hispanic White,No,None,0,0.851,Light Buyer,High,Mainstream,Yes,No,30,1.4978
+HH200089,United States,USA,WA,SEA,Seattle,Rural,USD,4,100-150K,61,Male,Bachelors,Married,Non-Hispanic Black,Yes,0-5,2,0.537,Multi-Brand Switcher,Medium,Mainstream,Yes,No,4,1.5749
+HH200090,United States,USA,MA,BOS,Cambridge,Suburban,USD,5,30-50K,76,Male,Graduate,Married,Other,Yes,6-11,1,0.662,Acme Loyal,Medium,Late Mainstream,Yes,No,48,1.4004
+HH200091,United States,USA,PA,PHL,Camden,Suburban,USD,2,50-75K,49,Female,Bachelors,Married,Non-Hispanic White,No,None,0,0.315,Multi-Brand Switcher,Low,Mainstream,Yes,No,23,0.7244
+HH200092,United States,USA,IL,CHI,Evanston,Rural,USD,3,30-50K,47,Male,Graduate,Married,Hispanic,No,None,0,0.107,Acme Loyal,High,Late Mainstream,Yes,Yes,37,1.0879
+HH200093,United States,USA,CA,LAX,Anaheim,Urban,USD,4,<30K,35,Male,Bachelors,Married,Non-Hispanic White,Yes,6-11,1,0.534,Multi-Brand Switcher,Medium,Mainstream,Yes,Yes,70,1.5261
+HH200094,United States,USA,TX,HOU,Houston,Urban,USD,1,75-100K,29,Male,High School,Married,Non-Hispanic White,No,None,0,0.282,Competitor Loyal,High,Mainstream,Yes,Yes,36,1.124
+HH200095,United States,USA,TX,DAL,Arlington,Suburban,USD,5,150K+,52,Male,Graduate,Married,Non-Hispanic White,No,None,0,0.776,Competitor Loyal,Low,Late Mainstream,Yes,No,50,0.6302
+HH200096,United States,USA,IL,CHI,Naperville,Rural,USD,1,150K+,28,Female,High School,Married,Non-Hispanic White,No,None,0,0.754,Multi-Brand Switcher,Medium,Innovator,Yes,Yes,72,1.2883
+HH200097,United States,USA,WA,SEA,Seattle,Suburban,USD,1,50-75K,65,Female,Some College,Married,Non-Hispanic White,No,None,0,0.504,Multi-Brand Switcher,Low,Late Mainstream,Yes,Yes,33,1.4972
+HH200098,United States,USA,MO,STL,St Charles,Urban,USD,1,100-150K,74,Female,Graduate,Single,Non-Hispanic White,No,None,0,0.06,Light Buyer,Medium,Late Mainstream,Yes,No,63,0.6347
+HH200099,United States,USA,WA,SEA,Tacoma,Suburban,USD,3,30-50K,75,Male,Bachelors,Married,Non-Hispanic White,Yes,6-11,1,0.896,Multi-Brand Switcher,Low,Late Mainstream,Yes,No,80,0.6427
