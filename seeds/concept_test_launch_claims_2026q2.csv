@@ -1,0 +1,36 @@
+claim_id,metric,value,unit,cohort,notes
+meta,field_period_start,2026-04-08,date,,Kantar field open
+meta,field_period_close,2026-04-21,date,,Kantar field close
+meta,n_total,1200,n,,Full study n
+meta,action_standard_pct,55,pct,,Acme cereal innovation standard
+meta,ipsos_vendor,Kantar (n.b. v2 source file refers to Kantar; Acme historically uses both),,,
+CL1,top_two_box_pct,78,pct,protein-curious,"20g protein per bowl, less sugar than your morni"
+CL1,n_in_cell,380,n,protein-curious,
+CL1,top_two_box_pct,71,pct,GLP-1-adjacent,"20g protein per bowl, less sugar than your morni"
+CL1,n_in_cell,220,n,GLP-1-adjacent,
+CL1,top_two_box_pct,58,pct,lapsed-cereal,"20g protein per bowl, less sugar than your morni"
+CL1,n_in_cell,320,n,lapsed-cereal,
+CL1,top_two_box_pct,54,pct,current-Crunchwell,"20g protein per bowl, less sugar than your morni"
+CL1,n_in_cell,280,n,current-Crunchwell,
+CL2,top_two_box_pct,63,pct,protein-curious,"Clean fuel, real grains, no fillers"
+CL2,n_in_cell,380,n,protein-curious,
+CL2,top_two_box_pct,58,pct,GLP-1-adjacent,"Clean fuel, real grains, no fillers"
+CL2,n_in_cell,220,n,GLP-1-adjacent,
+CL2,top_two_box_pct,72,pct,lapsed-cereal,"Clean fuel, real grains, no fillers"
+CL2,n_in_cell,320,n,lapsed-cereal,
+CL2,top_two_box_pct,49,pct,current-Crunchwell,"Clean fuel, real grains, no fillers"
+CL2,n_in_cell,280,n,current-Crunchwell,
+CL3,top_two_box_pct,58,pct,protein-curious,Eat like you mean it
+CL3,n_in_cell,380,n,protein-curious,
+CL3,top_two_box_pct,54,pct,GLP-1-adjacent,Eat like you mean it
+CL3,n_in_cell,220,n,GLP-1-adjacent,
+CL3,top_two_box_pct,56,pct,lapsed-cereal,Eat like you mean it
+CL3,n_in_cell,320,n,lapsed-cereal,
+CL3,top_two_box_pct,47,pct,current-Crunchwell,Eat like you mean it
+CL3,n_in_cell,280,n,current-Crunchwell,
+competitive,ff_14g_protein_delta_vs_pp_oz_pre_launch,11,g,CL1,11g delta pre-Field & Honey 14g launch
+competitive,ff_14g_protein_delta_vs_pp_oz_post_launch,6,g,CL1,6g delta post-Field & Honey 14g launch
+competitive,cl1_sugar_leg_wins,1,bool,CL1,CL1 wins on sugar-leg even after F&H 14g
+CL1,clears_action_standard,1,bool,all_cells,All three claims clear 55% threshold in lead cohort
+CL2,clears_action_standard,1,bool,all_cells,All three claims clear 55% threshold in lead cohort
+CL3,clears_action_standard,1,bool,all_cells,All three claims clear 55% threshold in lead cohort

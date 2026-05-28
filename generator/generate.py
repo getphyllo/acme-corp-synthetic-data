@@ -174,6 +174,11 @@ DMAS = [
     ("IND",     "Indianapolis",        "Midwest",   2.11, 124, 0.018),
     ("BAL",     "Baltimore",           "Northeast", 2.85,  82, 0.022),
     ("WAS",     "Washington DC",       "Northeast", 6.39,  85, 0.045),
+    # v0.7.0 — leading-indicator DMAs (early-stage LA pattern: Larksfield
+    # endcap activation up, Crunchwell Mega velocity softening). Lower volume
+    # weights — they are watch-list, not full-volume DMAs yet.
+    ("BIR-DMA", "Birmingham-Tuscaloosa-Anniston DMA", "Southeast", 2.21, 88, 0.012),
+    ("MEM-DMA", "Memphis DMA",         "Southeast", 1.81, 85, 0.010),
 ]
 
 DMA_CITIES = {
@@ -207,6 +212,9 @@ DMA_CITIES = {
     "IND":     ["Indianapolis", "Carmel"],
     "BAL":     ["Baltimore", "Annapolis"],
     "WAS":     ["Washington", "Arlington VA", "Alexandria"],
+    # v0.7.0 — leading-indicator DMAs
+    "BIR-DMA": ["Birmingham", "Tuscaloosa", "Anniston"],
+    "MEM-DMA": ["Memphis", "Germantown", "Collierville"],
 }
 
 DMA_STATE = {
@@ -215,6 +223,8 @@ DMA_STATE = {
     "MIA":"FL","MS-DMA":"MS","AL-DMA":"AL","AR-DMA":"AR","OK-DMA":"OK","ORL":"FL",
     "CIN":"OH","STL":"MO","KAN":"MO","PIT":"PA","PDX":"OR","SFO":"CA","CLE":"OH",
     "IND":"IN","BAL":"MD","WAS":"DC",
+    # v0.7.0
+    "BIR-DMA":"AL","MEM-DMA":"TN",
 }
 
 # -----------------------------------------------------------------------------
@@ -2132,6 +2142,251 @@ def gen_data_freshness_log() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+# =============================================================================
+# v0.7.0 — Marketing & Insights tables (Scenarios S6–S11)
+# =============================================================================
+# Six new tables anchored to the v2 Marketing & Insights persona pack
+# (workspace: 03-research/acme/11-scenarios/v2/). All six are loaded from
+# hand-curated seeds; one (ua_study_responses) is expanded from the cohort
+# reference grain into per-respondent rows.
+
+# -----------------------------------------------------------------------------
+# 17. Brand Equity Tracker — Kantar-shape quarterly tracker with Relevance +
+#     Modernity attributes added on top of the v0.1.0 brand_health 5pt battery.
+#     Anchors Cory Whitman's FY27 brand plan diagnosis (Relevance -6 over 6 quarters).
+# -----------------------------------------------------------------------------
+
+def gen_brand_equity_quarterly() -> pd.DataFrame:
+    seed_path = os.path.join(SEEDS_DIR, "brand_equity_tracker_quarterly.csv")
+    df = pd.read_csv(seed_path)
+    # Normalize column names to repo convention (TitleCase)
+    df = df.rename(columns={
+        "brand":             "Brand",
+        "dma":               "DMA",
+        "wave":              "Wave",
+        "wave_close_date":   "Wave_Close_Date",
+        "attribute":         "Attribute",
+        "top_two_box_pct":   "Top_Two_Box_Pct",
+        "n_respondents":     "N_Respondents",
+    })
+    df["Source"] = "Kantar Brand Equity Tracker"
+    df["Methodology_Note"] = df["Attribute"].map({
+        "Trust":     "5pt top-two-box; long-running attribute since 2019",
+        "Relevance": "5pt top-two-box; added FY24 — Cory's lead-indicator attribute",
+        "Quality":   "5pt top-two-box; long-running attribute since 2019",
+        "Taste":     "5pt top-two-box; long-running attribute since 2019",
+        "Modernity": "5pt top-two-box; added FY24 — paired with Relevance",
+    }).fillna("5pt top-two-box")
+    return df
+
+
+# -----------------------------------------------------------------------------
+# 18. U&A Study Responses — April 2026 Ipsos U&A behavioral study, expanded from
+#     the cohort × occasion reference grain into per-respondent rows (n=2,400).
+#     Anchors Nina Ortega's Q3 SOTB and Maya's Chocolate Almond concept test.
+# -----------------------------------------------------------------------------
+
+def gen_ua_study_responses(n_total: int = 2400) -> pd.DataFrame:
+    """Expand the cohort reference grain into n=2,400 per-respondent rows.
+
+    Anchors:
+      - 28% of households skip cereal 3+ mornings/week
+      - 64% of skippers cite protein as the swap driver
+      - cereal-skipper cohort n=672 (large enough for segment-level, not regional)
+      - intent to add protein to the morning +9 pts YoY
+    """
+    cohort_sizes = {
+        "cereal-skipper":   672,
+        "protein-returner": 540,
+        "loyal-family":     768,
+        "price-shopper":    420,
+    }
+    assert sum(cohort_sizes.values()) == n_total, "U&A cohort sizes must sum to 2400"
+
+    # Occasion priors (sums to ~100% per cohort)
+    occasion_priors = {
+        "cereal-skipper":   {"weekday-am": 0.15, "weekend-am": 0.30,
+                             "post-workout": 0.18, "afternoon-snack": 0.22, "evening": 0.15},
+        "protein-returner": {"weekday-am": 0.48, "weekend-am": 0.22,
+                             "post-workout": 0.18, "afternoon-snack": 0.08, "evening": 0.04},
+        "loyal-family":     {"weekday-am": 0.62, "weekend-am": 0.24,
+                             "post-workout": 0.04, "afternoon-snack": 0.06, "evening": 0.04},
+        "price-shopper":    {"weekday-am": 0.51, "weekend-am": 0.26,
+                             "post-workout": 0.07, "afternoon-snack": 0.10, "evening": 0.06},
+    }
+    # Cite-protein-as-swap rate by cohort
+    cite_protein = {"cereal-skipper": 0.64, "protein-returner": 0.78,
+                    "loyal-family": 0.18, "price-shopper": 0.22}
+    # Intent to add protein to morning (10pt scale; +9pp YoY for cereal-skipper + protein-returner)
+    intent_add_protein = {"cereal-skipper": 7.4, "protein-returner": 8.6,
+                          "loyal-family": 4.2, "price-shopper": 5.1}
+    # Skip frequency (mornings/week)
+    skip_freq = {"cereal-skipper": 4.2, "protein-returner": 1.8,
+                 "loyal-family": 0.4, "price-shopper": 1.2}
+
+    rows = []
+    rid = 1
+    for cohort, n in cohort_sizes.items():
+        occ_keys = list(occasion_priors[cohort].keys())
+        occ_weights = [occasion_priors[cohort][k] for k in occ_keys]
+        for _ in range(n):
+            dma_pick = random.choices(DMAS, weights=[d[5] for d in DMAS], k=1)[0]
+            dma = dma_pick[0]
+            primary_occ = random.choices(occ_keys, weights=occ_weights, k=1)[0]
+            # Skip-cereal-3plus flag — cereal-skipper is the cohort defined by
+            # this behavior (672/2400 = 28% exact, per v2 canon). Other cohorts
+            # do not flag, by construction — protein-returners *swap back* to
+            # cereal via protein offers, loyal-family stay, price-shoppers buy
+            # whichever is cheapest.
+            skip_3plus = 1 if cohort == "cereal-skipper" else 0
+            cite_p = 1 if random.random() < cite_protein[cohort] else 0
+            intent = max(0.0, min(10.0,
+                       random.gauss(intent_add_protein[cohort], 1.6)))
+            sf = max(0.0, min(7.0,
+                       random.gauss(skip_freq[cohort], 1.1)))
+            chocolate_pref = 1 if (cohort == "protein-returner" and random.random() < 0.30) or \
+                                  (cohort == "cereal-skipper" and random.random() < 0.18) else 0
+            glp1_adjacent = 1 if random.random() < (
+                0.22 if cohort == "cereal-skipper" else
+                0.18 if cohort == "protein-returner" else
+                0.06 if cohort == "loyal-family" else 0.08) else 0
+            rows.append({
+                "Response_ID":           f"UA_{rid:06d}",
+                "Field_Date":            "2026-04-08",
+                "Wave":                  "2026Q2",
+                "Cohort":                cohort,
+                "DMA":                   dma,
+                "State":                 DMA_STATE[dma],
+                "Primary_Occasion":      primary_occ,
+                "Skip_Cereal_3plus_Mornings": skip_3plus,
+                "Cite_Protein_As_Swap_Driver": cite_p,
+                "Intent_Add_Protein_Morning_0to10": round(intent, 1),
+                "Skip_Frequency_Mornings_Per_Wk": round(sf, 1),
+                "Chocolate_Breakfast_Pref":     chocolate_pref,
+                "GLP1_Adjacent":         glp1_adjacent,
+                "HOH_Age_Band":          random.choice(["18-24","25-34","35-44","45-54","55-64","65+"]),
+                "Income_Band":           random.choice(INCOME_BANDS),
+                "Presence_Of_Kids_5_14": random.choices([0, 1], weights=[60, 40])[0],
+                "Vendor":                "Ipsos",
+                "Respondent_Weight":     round(random.uniform(0.6, 1.4), 4),
+            })
+            rid += 1
+    return pd.DataFrame(rows)
+
+
+# -----------------------------------------------------------------------------
+# 19. U&A Qual Pointers — 36 in-home interview index, loaded from seed.
+# -----------------------------------------------------------------------------
+
+def gen_ua_qual_pointers() -> pd.DataFrame:
+    seed_path = os.path.join(SEEDS_DIR, "ua_qual_pointers_2026q2.csv")
+    df = pd.read_csv(seed_path)
+    df = df.rename(columns={
+        "interview_id":            "Interview_ID",
+        "cohort":                  "Cohort",
+        "dma":                     "DMA",
+        "hoh_age_band":            "HOH_Age_Band",
+        "n_kids":                  "N_Kids",
+        "income_band":             "Income_Band",
+        "themes":                  "Themes",
+        "chocolate_mention_flag":  "Chocolate_Mention_Flag",
+        "chocolate_unprompted_flag": "Chocolate_Unprompted_Flag",
+        "duration_min":            "Duration_Min",
+        "transcript_path":         "Transcript_Path",
+        "notes":                   "Notes",
+    })
+    df["Wave"] = "2026Q2"
+    df["Field_Date"] = "2026-04-08"
+    df["Vendor"] = "Ipsos qual partner"
+    return df
+
+
+# -----------------------------------------------------------------------------
+# 20. Kantar Worldpanel Cohort Frame — household penetration + frequency by
+#     cohort × DMA × quarter. Anchors Nina's SOTB and Jordan's LA diagnostic.
+# -----------------------------------------------------------------------------
+
+def gen_kantar_worldpanel_cohort() -> pd.DataFrame:
+    seed_path = os.path.join(SEEDS_DIR, "kantar_worldpanel_cohort_frame.csv")
+    df = pd.read_csv(seed_path)
+    df = df.rename(columns={
+        "cohort":                       "Cohort",
+        "dma":                          "DMA",
+        "quarter":                      "Quarter",
+        "wave_close_date":              "Wave_Close_Date",
+        "hh_penetration_pct":           "HH_Penetration_Pct",
+        "purchases_per_buyer_per_qtr":  "Purchases_Per_Buyer_Per_Qtr",
+        "n_panel_hh":                   "N_Panel_HH",
+    })
+    df["Source"] = "Kantar Worldpanel"
+    return df
+
+
+# -----------------------------------------------------------------------------
+# 21. Numerator BTS Occasion — back-to-school occasion benchmark from the 2025
+#     Target program. Anchors Wes Okafor's Target BTS 2026 scenario.
+# -----------------------------------------------------------------------------
+
+def gen_numerator_bts_occasion() -> pd.DataFrame:
+    seed_path = os.path.join(SEEDS_DIR, "numerator_bts_occasion_2025.csv")
+    df = pd.read_csv(seed_path)
+    df = df.rename(columns={
+        "retailer":                                  "Retailer",
+        "iso_week":                                  "ISO_Week",
+        "week_start_date":                           "Week_Start_Date",
+        "hh_kids_5_14_buying_cereal_share":          "HH_Kids_5_14_Buying_Cereal_Share",
+        "protein_curious_cohort_overlap":            "Protein_Curious_Cohort_Overlap",
+        "target_circle_membership_overlap":          "Target_Circle_Membership_Overlap",
+        "incremental_category_dollars_kusd":         "Incremental_Category_Dollars_KUSD",
+        "definition":                                "Definition",
+    })
+    df["Program_Year"] = 2025
+    df["Source"] = "Numerator household panel + Target Circle membership overlay"
+    return df
+
+
+# -----------------------------------------------------------------------------
+# 22. Concept Tests — combines Chocolate Almond + April launch-claims tests
+#     into one parquet table. Anchors Maya Chen's concept-test workspace and
+#     Renee Alvarez's launch comms plan.
+# -----------------------------------------------------------------------------
+
+def gen_concept_tests() -> pd.DataFrame:
+    ca_path = os.path.join(SEEDS_DIR, "concept_test_chocolate_almond.csv")
+    lc_path = os.path.join(SEEDS_DIR, "concept_test_launch_claims_2026q2.csv")
+    ca = pd.read_csv(ca_path)
+    lc = pd.read_csv(lc_path)
+
+    # Normalize Chocolate Almond to canonical columns
+    ca = ca.rename(columns={
+        "section": "Section", "metric": "Metric", "value": "Value",
+        "unit": "Unit", "scope": "Scope", "notes": "Notes",
+    })
+    ca["Test_ID"] = "CT_CHOC_ALMOND_2026Q3"
+    ca["Test_Name"] = "ProteinPeak Chocolate Almond Extension"
+    ca["Vendor"] = "Ipsos"
+    ca["Acme_Segmentation_Used"] = 1
+    ca["Cannibalization_Threshold_Pp"] = 12
+
+    # Normalize launch-claims
+    lc = lc.rename(columns={
+        "claim_id": "Section", "metric": "Metric", "value": "Value",
+        "unit": "Unit", "cohort": "Scope", "notes": "Notes",
+    })
+    lc["Test_ID"] = "CT_LAUNCH_CLAIMS_2026Q2"
+    lc["Test_Name"] = "ProteinPeak Launch Claims Test"
+    lc["Vendor"] = "Kantar"
+    lc["Acme_Segmentation_Used"] = 1
+    lc["Cannibalization_Threshold_Pp"] = None
+
+    df = pd.concat([ca, lc], ignore_index=True)
+    # Standard column order
+    df = df[["Test_ID", "Test_Name", "Vendor", "Section", "Metric",
+             "Value", "Unit", "Scope", "Acme_Segmentation_Used",
+             "Cannibalization_Threshold_Pp", "Notes"]]
+    return df
+
+
 # -----------------------------------------------------------------------------
 # Cross-table assertions  (v0.2.0)
 # -----------------------------------------------------------------------------
@@ -2234,6 +2489,118 @@ def assert_consistency(tables: dict[str, pd.DataFrame]):
     new_to  = pp_hh[pp_hh["Switching_Flag"] == "New_To_Brand"]
     assert len(new_to) > len(canniba), "New-to-brand should exceed cannibalization"
 
+    # -------------------------------------------------------------------------
+    # v0.7.0 — Marketing & Insights v2 scenario assertions
+    # -------------------------------------------------------------------------
+
+    # Brand equity: Crunchwell Trust roughly flat over 6 quarters; Relevance
+    # falling. Compare FY25Q1 vs FY26Q2 at US-NAT level.
+    be = tables["brand_equity_quarterly"]
+    cw_nat = be[(be["Brand"] == "Crunchwell") & (be["DMA"] == "US-NAT")]
+    if not cw_nat.empty:
+        trust_q1 = cw_nat[(cw_nat["Wave"] == "FY25Q1") & (cw_nat["Attribute"] == "Trust")]["Top_Two_Box_Pct"]
+        trust_q2 = cw_nat[(cw_nat["Wave"] == "FY26Q2") & (cw_nat["Attribute"] == "Trust")]["Top_Two_Box_Pct"]
+        rel_q1   = cw_nat[(cw_nat["Wave"] == "FY25Q1") & (cw_nat["Attribute"] == "Relevance")]["Top_Two_Box_Pct"]
+        rel_q2   = cw_nat[(cw_nat["Wave"] == "FY26Q2") & (cw_nat["Attribute"] == "Relevance")]["Top_Two_Box_Pct"]
+        if len(trust_q1) and len(trust_q2) and len(rel_q1) and len(rel_q2):
+            trust_delta = float(trust_q2.iloc[0]) - float(trust_q1.iloc[0])
+            rel_delta   = float(rel_q2.iloc[0]) - float(rel_q1.iloc[0])
+            assert abs(trust_delta) < 3.0, (
+                f"Crunchwell Trust drift {trust_delta:+.1f}pp — should be roughly flat"
+            )
+            assert rel_delta <= -3.0, (
+                f"Crunchwell Relevance drift {rel_delta:+.1f}pp — should be down ≥3pp "
+                f"over six quarters (v2 canon: ~-6pp)"
+            )
+
+    # U&A: 28% of households skip cereal 3+ mornings/wk
+    ua = tables["ua_study_responses"]
+    skip_rate = ua["Skip_Cereal_3plus_Mornings"].mean()
+    assert 0.24 <= skip_rate <= 0.32, (
+        f"U&A skip-cereal-3plus rate {skip_rate:.1%} — v2 canon is 28%"
+    )
+
+    # U&A: cereal-skipper cohort n=672 (cell-size constraint)
+    skipper_n = (ua["Cohort"] == "cereal-skipper").sum()
+    assert skipper_n == 672, (
+        f"U&A cereal-skipper cell-size {skipper_n} — v2 canon is exactly 672"
+    )
+
+    # U&A: 64% of cereal-skippers cite protein as the swap driver
+    skipper = ua[ua["Cohort"] == "cereal-skipper"]
+    cite_rate = skipper["Cite_Protein_As_Swap_Driver"].mean()
+    assert 0.58 <= cite_rate <= 0.70, (
+        f"U&A cereal-skipper protein-cite rate {cite_rate:.1%} — v2 canon is 64%"
+    )
+
+    # Kantar: cereal-skipper penetration trending UP over six quarters
+    kw = tables["kantar_worldpanel_cohort"]
+    cs_q1 = kw[(kw["Cohort"] == "cereal-skipper") & (kw["DMA"] == "US-NAT") & (kw["Quarter"] == "FY25Q1")]["HH_Penetration_Pct"]
+    cs_q6 = kw[(kw["Cohort"] == "cereal-skipper") & (kw["DMA"] == "US-NAT") & (kw["Quarter"] == "FY26Q2")]["HH_Penetration_Pct"]
+    if len(cs_q1) and len(cs_q6):
+        assert float(cs_q6.iloc[0]) > float(cs_q1.iloc[0]), (
+            "Kantar: cereal-skipper cohort penetration should grow over 6 quarters"
+        )
+
+    # Numerator BTS: 2025 Target program incremental total ≈ $14.2M
+    # (sum across Target rows, in KUSD)
+    bts_tab = tables["numerator_bts_occasion"]
+    target_incremental_kusd = bts_tab[bts_tab["Retailer"] == "Target"]["Incremental_Category_Dollars_KUSD"].sum()
+    assert 13_000 <= target_incremental_kusd <= 15_400, (
+        f"Numerator BTS: Target 2025 incremental ${target_incremental_kusd:,.0f}K — "
+        f"v2 canon is $14.2M"
+    )
+
+    # Numerator BTS: Target shopper × ProteinPeak cohort overlap = 64% (highest)
+    target_overlap = bts_tab[bts_tab["Retailer"] == "Target"]["Protein_Curious_Cohort_Overlap"].mean()
+    wal_overlap = bts_tab[bts_tab["Retailer"] == "Walmart"]["Protein_Curious_Cohort_Overlap"].mean()
+    assert target_overlap > wal_overlap, (
+        "Numerator BTS: Target protein-curious overlap should exceed Walmart's"
+    )
+    assert 0.60 <= target_overlap <= 0.68, (
+        f"Numerator BTS: Target overlap {target_overlap:.1%} — v2 canon is 64%"
+    )
+
+    # Concept test: Chocolate Almond top-two-box = 64% (clears 55% standard)
+    ct = tables["concept_tests"]
+    ca_t2b = ct[(ct["Test_ID"] == "CT_CHOC_ALMOND_2026Q3") &
+                (ct["Section"] == "topline") &
+                (ct["Metric"] == "top_two_box_pct")]["Value"]
+    assert not ca_t2b.empty, "Chocolate Almond top-two-box missing"
+    assert float(ca_t2b.iloc[0]) >= 55, (
+        f"Chocolate Almond top-two-box {ca_t2b.iloc[0]} must clear 55% action standard"
+    )
+
+    # Concept test: cannibalization gate — substitutional < 12pp threshold
+    sub_pp = ct[(ct["Test_ID"] == "CT_CHOC_ALMOND_2026Q3") &
+                (ct["Metric"] == "substitutional_overlap_pp") &
+                (ct["Scope"] == "launch_sku")]["Value"]
+    assert not sub_pp.empty, "Chocolate Almond substitutional cannibalization missing"
+    assert float(sub_pp.iloc[0]) < 12, (
+        f"Chocolate Almond substitutional cannibalization {sub_pp.iloc[0]}pp "
+        f"must clear 12pp steerco threshold"
+    )
+
+    # Competitor launches: Field & Honey 14g protein extension present
+    launches_tab = tables["competitor_launches"]
+    ff14 = launches_tab[launches_tab["Sku_New"] == "LF-FH-14P"] if "Sku_New" in launches_tab.columns else \
+           launches_tab[launches_tab["sku_new"] == "LF-FH-14P"] if "sku_new" in launches_tab.columns else \
+           pd.DataFrame()
+    if not ff14.empty:
+        # F&H 14g launched 2026-05-12
+        launch_date_col = "Launch_Date" if "Launch_Date" in ff14.columns else "launch_date"
+        assert "2026-05-12" in str(ff14[launch_date_col].iloc[0]), \
+            "Field & Honey 14g launch_date must be 2026-05-12"
+
+    # Geographies: BIR-DMA + MEM-DMA present as leading-indicator watch list
+    # (Verifies the DMAs list has been extended.)
+    syn = tables["syndicated_weekly"]
+    dma_col = "DMA" if "DMA" in syn.columns else "dma"
+    dmas_present = set(syn[dma_col].unique())
+    assert "BIR-DMA" in dmas_present and "MEM-DMA" in dmas_present, (
+        f"v0.7.0 leading-indicator DMAs missing — got {sorted(dmas_present)}"
+    )
+
     print(f"  ✓ LA Crunchwell Q1 plan-vs-actual variance: {avg_var:.1%} (Red)")
     print(f"  ✓ Hurricane Tonya storm-DC fill rate avg:    {storm['Fill_Rate_Pct'].mean():.1%}")
     print(f"  ✓ Cinnamon Twist (CR006) authorization rate: {cinn_ratio:.0%}")
@@ -2246,6 +2613,17 @@ def assert_consistency(tables: dict[str, pd.DataFrame]):
     if len(pp_soc) > 50:
         print(f"  ✓ PP Q2 launch social sentiment:             {pp_avg:+.2f} on n={len(pp_soc)} mentions")
     print(f"  ✓ PP Q2 household source-of-volume:          new-to-brand={len(new_to)}, cannibalization={len(canniba)}")
+    # v0.7.0 prints
+    if not cw_nat.empty and len(rel_q1) and len(rel_q2):
+        print(f"  ✓ Crunchwell Trust drift (FY25Q1→FY26Q2):    {trust_delta:+.1f}pp (flat)")
+        print(f"  ✓ Crunchwell Relevance drift (FY25Q1→FY26Q2): {rel_delta:+.1f}pp (declining)")
+    print(f"  ✓ U&A skip-cereal-3plus mornings rate:       {skip_rate:.1%} (canon 28%)")
+    print(f"  ✓ U&A cereal-skipper cohort n:               {skipper_n} (canon 672)")
+    print(f"  ✓ U&A protein-as-swap-driver (skippers):     {cite_rate:.1%} (canon 64%)")
+    print(f"  ✓ Numerator BTS Target 2025 incremental:     ${target_incremental_kusd/1000:.1f}M (canon $14.2M)")
+    print(f"  ✓ Numerator BTS Target × protein-curious:    {target_overlap:.1%} (canon 64%)")
+    print(f"  ✓ Concept test Chocolate Almond top-two-box: {float(ca_t2b.iloc[0]):.0f}% (clears 55% standard)")
+    print(f"  ✓ Concept test substitutional cannibalization: {float(sub_pp.iloc[0]):.0f}pp (clears 12pp gate)")
 
 
 # -----------------------------------------------------------------------------
@@ -2297,38 +2675,51 @@ def build_artifacts(tables: dict[str, pd.DataFrame]):
 
 
 def main():
-    print("[ 1/16] EPOS")
+    print("[ 1/22] EPOS")
     epos = gen_epos(34000)
-    print("[ 2/16] Perfect Store")
+    print("[ 2/22] Perfect Store")
     perfect_store = gen_perfect_store(56000)
-    print("[ 3/16] Syndicated weekly (NielsenIQ-style)")
+    print("[ 3/22] Syndicated weekly (NielsenIQ-style)")
     syndicated = gen_syndicated_weekly()
-    print("[ 4/16] Brand Health")
+    print("[ 4/22] Brand Health")
     brand_health = gen_brand_health(16500)
-    print("[ 5/16] Households")
+    print("[ 5/22] Households")
     hh = gen_households(5000)
-    print("[ 6/16] Household transactions")
+    print("[ 6/22] Household transactions")
     hh_tx = gen_hh_transactions(hh, 34000)
-    print("[ 7/16] Plan vs Actual")
+    print("[ 7/22] Plan vs Actual")
     pva = gen_plan_vs_actual(epos)
-    print("[ 8/16] SKU Authorization")
+    print("[ 8/22] SKU Authorization")
     sku_auth = gen_sku_authorization(perfect_store)
-    print("[ 9/16] Shipments / Fill Rate")
+    print("[ 9/22] Shipments / Fill Rate")
     shipments = gen_shipments()
-    print("[10/16] Promo Events (all retailers)")
+    print("[10/22] Promo Events (all retailers)")
     promo = gen_promo_events()
-    print("[11/16] Competitor Launches (from seed)")
+    print("[11/22] Competitor Launches (from seed)")
     launches = gen_competitor_launches()
-    print("[12/16] Social Mentions (Brandwatch-shape)")
+    print("[12/22] Social Mentions (Brandwatch-shape)")
     social = gen_social_mentions(20000)
-    print("[13/16] Creator Posts (Tribe Dynamics-shape)")
+    print("[13/22] Creator Posts (Tribe Dynamics-shape)")
     cposts = gen_creator_posts(3500)
-    print("[14/16] Search Trends (Spate / Helium 10-shape)")
+    print("[14/22] Search Trends (Spate / Helium 10-shape)")
     search = gen_search_trends()
-    print("[15/16] Product Reviews (Bazaarvoice-shape)")
+    print("[15/22] Product Reviews (Bazaarvoice-shape)")
     reviews = gen_product_reviews(26500)
-    print("[16/16] Data Freshness Log")
+    print("[16/22] Data Freshness Log")
     freshness = gen_data_freshness_log()
+    # v0.7.0 — Marketing & Insights tables
+    print("[17/22] Brand Equity Quarterly (Kantar Relevance + Modernity)")
+    brand_equity = gen_brand_equity_quarterly()
+    print("[18/22] U&A Study Responses (Ipsos Apr 2026, n=2400)")
+    ua_resp = gen_ua_study_responses(2400)
+    print("[19/22] U&A Qual Pointers (36 in-homes)")
+    ua_qual = gen_ua_qual_pointers()
+    print("[20/22] Kantar Worldpanel Cohort Frame")
+    kantar = gen_kantar_worldpanel_cohort()
+    print("[21/22] Numerator BTS Occasion (Target 2025 benchmark)")
+    bts = gen_numerator_bts_occasion()
+    print("[22/22] Concept Tests (Chocolate Almond + Launch Claims)")
+    concept = gen_concept_tests()
 
     tables = {
         # v0.1.0 core six
@@ -2351,6 +2742,13 @@ def main():
         "product_reviews":       reviews,
         # v0.4.0 polish
         "data_freshness_log":    freshness,
+        # v0.7.0 marketing & insights
+        "brand_equity_quarterly": brand_equity,
+        "ua_study_responses":     ua_resp,
+        "ua_qual_pointers":       ua_qual,
+        "kantar_worldpanel_cohort": kantar,
+        "numerator_bts_occasion": bts,
+        "concept_tests":          concept,
     }
     print("Cross-table consistency assertions …")
     try:

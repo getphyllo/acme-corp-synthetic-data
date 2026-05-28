@@ -1,13 +1,25 @@
 # Acme Corp — Synthetic Data
 
-A canonical, internally-consistent fictional CPG dataset for prototype building, design discussions, and demo storytelling. Built around **Acme Corp**, an $812M cereal-and-adjacencies company headquartered in Battle Creek, Michigan, currently navigating two layered scenarios:
+A canonical, internally-consistent fictional CPG dataset for prototype building, design discussions, and demo storytelling. Built around **Acme Corp**, an $812M cereal-and-adjacencies company headquartered in Battle Creek, Michigan, currently navigating **eleven layered scenarios** across Sales, Category, Insights, Brand, Innovation, and Shopper Marketing:
 
-1. **Q1 2026 Louisiana DMA share decline** — defensive analyst story (root-cause synthesis across 5 hypotheses)
-2. **Q2 2026 ProteinPeak Cinnamon Crunch + Cocoa Almond launch read** — offensive analyst story (Week-4 trial / repeat / cannibalization / channel split)
+**Sales / Category / Insights (v0.1 – v0.6):**
+1. **Q1 2026 Louisiana DMA share decline** — Maya's root-cause synthesis across 5 hypotheses
+2. **Q2 2026 ProteinPeak Cinnamon Crunch + Cocoa Almond launch read** — analyst Week-4 trial / repeat / cannibalization / channel split
+3. **Walmart August 2026 line-review prep** — Marcus's facing-recovery story
+4. **Kroger Q3 2026 JBR pre-read** — Priya's cat-captain narrative
+5. **Q1 2026 retail-media & trade-promo effectiveness read** — Tasha's CFO defense
 
-Both scenarios are encoded inside the same 16 parquet tables and 13 seed files. See `docs/narrative-anchors.md` for the shared constants list.
+**Marketing & Insights v2 (v0.7.0):**
+6. **Crunchwell FY27 annual brand plan** — Cory Whitman / Relevance-not-Trust diagnosis
+7. **ProteinPeak launch comms & creator plan** — Renee Alvarez / $6.4M envelope, Field & Honey 14g curveball
+8. **Target back-to-school 2026 program** — Wes Okafor / $14.4M 2025 benchmark
+9. **Q3 category state-of-the-business read** — Nina Ortega / NielsenIQ ↔ Kantar ↔ U&A reconciliation
+10. **ProteinPeak Q3 Chocolate Almond concept test** — Maya Chen / cannibalization gate
+11. **LA-DMA share decline diagnostic** — Jordan Hsu / leading-indicator flags (BIR-DMA, MEM-DMA)
 
-> Single source of truth. Use this version (`v0.5.0`) as the anchor for any prototype that needs CPG-shape data. If you need to evolve the schema, tag a new version — don't edit in place.
+All eleven scenarios are encoded inside the same **22 parquet tables and 31 seed files**. See `docs/narrative-anchors.md` for the shared constants list.
+
+> Single source of truth. Use this version (**`v0.7.0`**) as the anchor for any prototype that needs CPG-shape data. If you need to evolve the schema, tag a new version — don't edit in place.
 
 ## What's in here
 
@@ -29,7 +41,13 @@ acme-corp-synthetic-data/
 │   ├── creator_posts.parquet               3,500 rows · Tribe Dynamics-shape creator posts · v0.3 (Sage cohort v0.5)
 │   ├── search_trends.parquet              ~2,900 rows · Spate / Helium 10-shape keyword volume · v0.3 (PP keywords v0.5)
 │   ├── product_reviews.parquet           ~26,500 rows · Bazaarvoice / PowerReviews-shape reviews · v0.3 (PP launch reviews v0.5)
-│   └── data_freshness_log.parquet            525 rows · weekly feed status metadata · v0.4 (window ext. v0.5)
+│   ├── data_freshness_log.parquet            525 rows · weekly feed status metadata · v0.4 (window ext. v0.5)
+│   ├── brand_equity_quarterly.parquet        975 rows · Kantar tracker w/ Relevance + Modernity · v0.7
+│   ├── ua_study_responses.parquet          2,400 rows · April 2026 Ipsos U&A behavior (n=2,400) · v0.7
+│   ├── ua_qual_pointers.parquet               36 rows · in-home interview index · v0.7
+│   ├── kantar_worldpanel_cohort.parquet      120 rows · HH penetration + frequency by cohort × DMA × Q · v0.7
+│   ├── numerator_bts_occasion.parquet         35 rows · Target 2025 BTS benchmark + Circle overlay · v0.7
+│   └── concept_tests.parquet                  60 rows · Chocolate Almond + April launch claims · v0.7
 ├── samples/                           ← 100-row CSV slices for previewing in any tool
 ├── seeds/                             ← small, hand-curated reference CSVs
 │   ├── skus.csv · retailers.csv · geographies.csv (v0.1 masters)
@@ -40,8 +58,15 @@ acme-corp-synthetic-data/
 │   │   sku_elasticity_estimates.csv · macro_trends.csv · social_topics.csv (v0.4)
 │   ├── monthly_pos_fy25_q12026.csv · trade_spend_fy25.csv · marketing_spend.csv
 │   ├── promo_events_louisiana.csv (canonical LA event log)
-│   └── proteinpeak_q2_launch.csv (canonical PP Q2 launch event log — v0.5)
-├── acme.duckdb                        ← single-file SQL DB with all 16 tables + 18 seed tables loaded
+│   ├── proteinpeak_q2_launch.csv (canonical PP Q2 launch event log — v0.5)
+│   ├── retail_media_spend_q1_2026.csv · trade_promo_events_q1_2026.csv (v0.6 — Tasha)
+│   ├── walmart_endcap_audit_la.csv · kroger_simple_truth_switching.csv (v0.6 — Marcus + Priya)
+│   ├── heb_cinnamon_twist_delist_risk.csv · rouses_oos_by_door.csv (v0.6)
+│   └── brand_equity_tracker_quarterly.csv · ua_study_2026q2_reference.csv ·
+│       ua_qual_pointers_2026q2.csv · kantar_worldpanel_cohort_frame.csv ·
+│       numerator_bts_occasion_2025.csv · concept_test_chocolate_almond.csv ·
+│       concept_test_launch_claims_2026q2.csv (v0.7 — Marketing & Insights)
+├── acme.duckdb                        ← single-file SQL DB with all 22 tables + 31 seed tables loaded
 ├── generator/                         ← deterministic generator (seed=42)
 ├── docs/
 │   ├── louisiana-decline.md           ← Scenario 1 — canonical demo scenario
@@ -142,6 +167,10 @@ Acme's **ProteinPeak** (#3 in Wellness Protein at $48M) launched **Cinnamon Crun
 | $4.2M Q2 retail-media budget (Hugo Lin) | `seeds/marketing_spend.csv` 2026-Q2 ProteinPeak rows + `seeds/proteinpeak_q2_launch.csv` PP-E014 |
 
 Full launch playbook + Week-4 deck outline + hypothesis tree + audit checklist: [`docs/proteinpeak-q2-launch/`](./docs/proteinpeak-q2-launch/).
+
+### Coverage map vs. the CPG Fundamentals Masterclass
+
+A concept-by-concept cross-walk between Amit Singh's May 2026 CPG Masterclass and the five scenarios above — what the dataset covers, what is partial, what is missing, and the proposed v0.7.0–v0.9.0 scenario additions (innovation stage-gate, October JBP, MBR performance dip, forward supply scare, category growth scan): [`docs/cpg-masterclass-gap-analysis.md`](./docs/cpg-masterclass-gap-analysis.md).
 
 ## Who this dataset is for
 

@@ -1,0 +1,28 @@
+cohort,occasion,metric,value,unit,n_in_cell,report_section
+ALL,ALL-OCCASIONS,skip_cereal_3plus_mornings_weekly_pct,28.0,pct,2400,Section 2A
+ALL,ALL-OCCASIONS,cite_protein_as_swap_driver_pct,64.0,pct,672,Section 2A
+ALL,ALL-OCCASIONS,intent_add_protein_morning_yoy_change_pp,9.0,pp,2400,Section 3B
+cereal-skipper,ALL-OCCASIONS,n_in_study,672.0,n,672,Section 1 demo
+protein-returner,ALL-OCCASIONS,n_in_study,540.0,n,540,Section 1 demo
+loyal-family,ALL-OCCASIONS,n_in_study,768.0,n,768,Section 1 demo
+price-shopper,ALL-OCCASIONS,n_in_study,420.0,n,420,Section 1 demo
+cereal-skipper,weekday-am,occasion_share_pct,14.5,pct,97,Section 2B
+cereal-skipper,weekend-am,occasion_share_pct,29.2,pct,197,Section 2B
+cereal-skipper,post-workout,occasion_share_pct,17.3,pct,116,Section 2B
+cereal-skipper,afternoon-snack,occasion_share_pct,21.2,pct,143,Section 2B
+cereal-skipper,evening,occasion_share_pct,15.8,pct,106,Section 2B
+protein-returner,weekday-am,occasion_share_pct,49.4,pct,267,Section 2B
+protein-returner,weekend-am,occasion_share_pct,21.4,pct,116,Section 2B
+protein-returner,post-workout,occasion_share_pct,18.7,pct,101,Section 2B
+protein-returner,afternoon-snack,occasion_share_pct,6.5,pct,35,Section 2B
+protein-returner,evening,occasion_share_pct,4.5,pct,24,Section 2B
+loyal-family,weekday-am,occasion_share_pct,62.6,pct,481,Section 2B
+loyal-family,weekend-am,occasion_share_pct,22.7,pct,174,Section 2B
+loyal-family,post-workout,occasion_share_pct,2.9,pct,22,Section 2B
+loyal-family,afternoon-snack,occasion_share_pct,5.4,pct,42,Section 2B
+loyal-family,evening,occasion_share_pct,3.7,pct,29,Section 2B
+price-shopper,weekday-am,occasion_share_pct,51.0,pct,214,Section 2B
+price-shopper,weekend-am,occasion_share_pct,27.2,pct,114,Section 2B
+price-shopper,post-workout,occasion_share_pct,7.6,pct,32,Section 2B
+price-shopper,afternoon-snack,occasion_share_pct,9.4,pct,40,Section 2B
+price-shopper,evening,occasion_share_pct,4.9,pct,20,Section 2B

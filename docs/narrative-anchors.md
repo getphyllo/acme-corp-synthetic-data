@@ -1,6 +1,6 @@
 # Narrative anchors — shared constants
 
-The Acme synthetic data tells **five coherent CPG stories** — the **Louisiana Cereal Decline (Q1 2026)**, the **ProteinPeak Q2 2026 Launch Read**, the **Walmart August 2026 Line-Review prep** (Marcus-anchored), the **Kroger Q3 2026 JBR pre-read** (Priya-anchored, July 8 review), and the **Q1 2026 Retail-Media & Trade-Promo Effectiveness Read** (Tasha-anchored, June 4 CFO meeting) — across **16 parquet tables and 18 seed files**. A handful of constants per scenario are referenced in 5+ generators; if any of them changes, the others must change in lock-step or the narrative drifts.
+The Acme synthetic data tells **eleven coherent CPG stories** — five anchored to Sales / Category / Insights (Louisiana decline, ProteinPeak Q2 launch, Walmart Aug line review, Kroger JBR, Q1 retail-media effectiveness) and **six anchored to Marketing / Insights v2** (Crunchwell FY27 brand plan, ProteinPeak launch comms, Target back-to-school, Q3 SOTB, Chocolate Almond extension, LA-DMA diagnostic) — across **22 parquet tables and 31 seed files**. A handful of constants per scenario are referenced in 5+ generators; if any of them changes, the others must change in lock-step or the narrative drifts.
 
 If you're adding a new table, run `assert_consistency()` in `generator/generate.py` to confirm both scenarios still read correctly end-to-end.
 
@@ -154,3 +154,85 @@ The new tables encode the data provenance Acme would actually have if these were
 | `search_trends` | Spate (Google + TikTok) + Helium 10 (Amazon) + Google Trends free |
 | `product_reviews` | Bazaarvoice (retailer.com) + PowerReviews (Walmart/Target) + Amazon Brand Analytics |
 | `data_freshness_log` | Internal data ops monitoring |
+
+---
+
+## Scenarios 6–11 — Marketing & Insights v2 (added v0.7.0)
+
+Six new scenarios anchored to the **Marketing & Insights persona pack** (`clayface-workspace/03-research/acme/11-scenarios/v2/`). Each one runs on the v2 cohort frame plus the new Kantar / Ipsos / Numerator tables.
+
+### Shared v2 cohort frame (used across S6–S11)
+
+The four-cohort frame from the April 2026 U&A becomes the **canonical Insights-wide cohort definition** in v0.7.0:
+
+| Cohort | What it is | n in U&A | Headline |
+|---|---|---:|---|
+| `cereal-skipper` | Households skipping cereal 3+ mornings/wk; swap-out behavior | 672 | Out of the category; recoverable with protein offer |
+| `protein-returner` | Swap-out households who came back via protein cereal | 540 | Driving the +11.4% protein-segment growth |
+| `loyal-family` | The steady core; slightly declining frequency | 768 | Slight price sensitivity but steady |
+| `price-shopper` | Moving to private label; concentrated South + Mountain West | 420 | The Great Value / Simple Truth pickup |
+
+**Hard rule:** the cereal-skipper cell-size limit is n=672 — segment-level reads OK, regional DMA cuts NOT OK. Workspace tiles must expose this constraint.
+
+### Scenario 6 — Crunchwell FY27 annual brand plan (Cory Whitman)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **Crunchwell category share loss** | -2.1 points over six quarters (FY25Q1 → FY26Q2) | `brand_equity_quarterly` (Relevance and Modernity trends), `syndicated_weekly` (national share trend), `kantar_worldpanel_cohort` |
+| **Loss decomposition** | -1.3 Field & Honey / -0.6 private label / -0.2 other branded | `competitor_launches` (LF-FHA-14, PL-GVHA-14, etc.) |
+| **Trust ~flat over 6 quarters** | 72.3 → 72.9 at US-NAT for Crunchwell | `brand_equity_quarterly` |
+| **Relevance down 6pp** | 68.6 → 62.7 at US-NAT for Crunchwell | `brand_equity_quarterly` (the lead diagnostic for Cory's platform) |
+| **Crunchwell vs Field & Honey price gap** | 8% (FY24Q4) → 14% (FY26Q2) on a per-ounce basis at Walmart Mega | `epos`, `perfect_store` |
+
+### Scenario 7 — ProteinPeak launch comms & creator plan (Renee Alvarez)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **Launch envelope** | $6.4M across creator, paid social, retail media, sampling, PR | `seeds/proteinpeak_q2_launch.csv`, `creator_posts`, `marketing_spend` |
+| **Field & Honey 14g protein extension launch** | **LCH00032 / 2026-05-12** at 612 stores; narrows ProteinPeak protein delta from 11g → 6g | `competitor_launches` (new row), `concept_tests` (CL1 competitive flag) |
+| **Three claims tested** | "20g protein, less sugar" / "Clean fuel, real grains, no fillers" / "Eat like you mean it" | `concept_tests` (Test_ID=CT_LAUNCH_CLAIMS_2026Q2) |
+| **Sampling cohort** | 280K Numerator HHs — protein-segment buyers, never-Crunchwell | derivable from `households` × `household_transactions` |
+| **Retail media flight** | 58% to Walmart Connect + Amazon, 42% to Kroger Precision + Target Roundel | `marketing_spend`, `retail_media_spend_q1_2026` |
+
+### Scenario 8 — Target back-to-school 2026 (Wes Okafor)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **2025 Target BTS incremental** | **$14.2M category dollars** (table shows $14.4M, within ±1.5%) | `numerator_bts_occasion` |
+| **Mechanic decomposition** | Endcap 62% / Circular 21% / Roundel 12% / Cartwheel 5% | (qualitative anchor in CHANGELOG) |
+| **Velocity per door** | Crunchwell Mega 1.42× baseline through 2025 program window | `perfect_store` Target stores |
+| **Target × ProteinPeak cohort overlap** | **64.7% — highest of any major retailer** | `numerator_bts_occasion` (Protein_Curious_Cohort_Overlap) |
+| **Target Circle overlay** | ~70% of Target BTS shoppers are Target Circle members | `numerator_bts_occasion` (Target_Circle_Membership_Overlap) |
+| **2026 velocity-per-door commits** | ProteinPeak 1.38× baseline, Crunchwell Mega 1.45× baseline | Cross-referenced with `sku_elasticity_estimates` |
+| **Cinnamon Twist Cartwheel** | Destroyed value in 2025 — do not repeat in 2026 | Internal v0.7.0 narrative; surfaced as anti-pattern |
+
+### Scenario 9 — Q3 SOTB read (Nina Ortega)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **NielsenIQ — cereal category** | +2.1% dollars, units flat, price-mix +2.0%, protein segment +11.4%, family cereal -1.2% | `syndicated_weekly` |
+| **Kantar — household penetration** | -60bps overall; protein vs family-cereal buyer 38% overlap | `kantar_worldpanel_cohort` |
+| **U&A — breakfast fragmentation** | **28% of HHs skip cereal 3+ mornings/wk**; 64% cite protein as swap driver | `ua_study_responses`, `ua_qual_pointers` |
+| **Data-hierarchy ordering** | Behavior leads (U&A) → Panel follows (Kantar) → Till trails (Nielsen) | Workspace canvas enforces — not a table-level rule |
+
+### Scenario 10 — ProteinPeak Q3 Chocolate Almond concept test (Maya Chen)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **Field period** | 2026-06-22 to 2026-07-11; n=1,000 | `concept_tests` (Test_ID=CT_CHOC_ALMOND_2026Q3) |
+| **Top-two-box purchase intent** | **64%** (clears 55% action standard; +6pp over launch SKU pre-test) | `concept_tests` |
+| **Cohort breakouts** | protein-curious 71%, lapsed-cereal 66%, current-Crunchwell 52% | `concept_tests` |
+| **Cannibalization gate** | 22% overlap → 14pp additive + 8pp substitutional; **clears 12pp steerco threshold** | `concept_tests` |
+| **U&A overlay** | Chocolate-as-breakfast-flavor preference +14pp above category avg in protein-curious cohort | `ua_study_responses` (Chocolate_Breakfast_Pref by Cohort) |
+| **F&H competitive flag** | Field & Honey Chocolate Crunch trademark filed 2026-04-22 → likely Q4 launch | `competitor_launches` LCH00032 notes |
+
+### Scenario 11 — LA-DMA share decline diagnostic (Jordan Hsu)
+
+| Constant | Value | Tables that depend on it |
+|---|---|---|
+| **Share loss** | -3.1 points of cereal category share in LA-DMA over 8 weeks vs flat national | `syndicated_weekly` |
+| **Decomposition** | -1.4 velocity / -0.9 facings / -0.6 price gap / -0.2 mix | `perfect_store`, `epos`, `syndicated_weekly` |
+| **Cohort losses** | Baton Rouge families with kids 5–14 -19% frequency (71% went to Field & Honey); protein-curious -26% frequency (out of category) | `kantar_worldpanel_cohort`, `household_transactions` |
+| **Leading-indicator DMAs** | **BIR-DMA + MEM-DMA** — both showing early-stage LA pattern | `syndicated_weekly`, `geographies.csv` (new rows) |
+| **Response plan invest** | $740K total → 1.8 points of recovery over 12 weeks (modeled) | Cross-referenced with `sku_elasticity_estimates` |
+

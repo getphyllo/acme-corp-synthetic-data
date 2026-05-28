@@ -1,6 +1,6 @@
-# New tables — schema reference (v0.2.0 + v0.3.0 + v0.4.0)
+# New tables — schema reference (v0.2.0 + v0.3.0 + v0.4.0 + v0.7.0)
 
-These tables are additive on top of the v0.1.0 core six. They close the gaps identified in `00-inbox/synthetic-data-gap-analysis-vs-mvp.md` and unblock the Brand Manager / Category Manager / VP Sales prompt set in the persona playbook.
+These tables are additive on top of the v0.1.0 core six. They close the gaps identified in `00-inbox/synthetic-data-gap-analysis-vs-mvp.md` and unblock the Brand Manager / Category Manager / VP Sales prompt set in the persona playbook. The **v0.7.0 expansion** adds six Marketing & Insights tables anchored to the Marketing & Insights persona pack (`clayface-workspace/03-research/acme/11-scenarios/v2/`).
 
 > Every table joins back to one of the existing entity sets — SKUs (`seeds/skus.csv`), retailers (`seeds/retailers.csv`), DMAs (`seeds/geographies.csv`), or stores (`Store_ID` from `perfect_store`).
 
@@ -280,3 +280,158 @@ Per-week status of each data feed (NielsenIQ, Numerator, SAP, Brandwatch, etc.).
 | `seeds/sku_elasticity_estimates.csv` | 36 | Pre-computed elasticity per SKU × retailer |
 | `seeds/macro_trends.csv` | 30 | Macro consumer trend feed |
 | `seeds/social_topics.csv` | 20 | Social topic taxonomy |
+
+---
+
+## v0.7.0 — Marketing & Insights (six new tables)
+
+Anchored to the **Marketing & Insights persona pack** (`clayface-workspace/00-inbox/00-drop-zone/2026-05-28-marketing-insights-personas.md` → promoted to `11-scenarios/v2/`). Six personas, six scenarios, six new tables. The five scenarios this set unblocks:
+
+- **S6** — Cory Whitman / Crunchwell FY27 annual brand plan (`brand_equity_quarterly`)
+- **S7** — Renee Alvarez / ProteinPeak launch comms (`concept_tests` claims test + `competitor_launches` F&H 14g row)
+- **S8** — Wes Okafor / Target back-to-school 2026 (`numerator_bts_occasion`)
+- **S9** — Nina Ortega / Q3 SOTB (`ua_study_responses` + `ua_qual_pointers` + `kantar_worldpanel_cohort`)
+- **S10** — Maya Chen / ProteinPeak Q3 Chocolate Almond concept test (`concept_tests`)
+- **S11** — Jordan Hsu / LA-DMA share decline diagnostic (uses existing tables + new BIR-DMA / MEM-DMA leading-indicator DMAs)
+
+### `brand_equity_quarterly` — Kantar Brand Equity Tracker
+
+Brand × DMA × Quarter × Attribute. Adds **Relevance** and **Modernity** on top of the v0.1.0 brand-health 5pt battery (taste/quality/health/value/family_friendly/innovation/trust).
+
+| Column | Type | Notes |
+|---|---|---|
+| `Brand` | enum | Crunchwell / ProteinPeak / HoneyNest / MorningOats / Field & Honey / Cheerios / Simple Truth PL |
+| `DMA` | enum | US-NAT / LA-DMA / US-MW / US-SE / US-NE (5 geographies; coarser grain than `brand_health`) |
+| `Wave` | enum | FY25Q1 – FY26Q2 (six quarters) |
+| `Wave_Close_Date` | date | Quarter-close survey date |
+| `Attribute` | enum | Trust / Relevance / Quality / Taste / Modernity |
+| `Top_Two_Box_Pct` | float | 0–100 |
+| `N_Respondents` | int | Cell-level sample size (typically 180–320) |
+| `Source` | str | "Kantar Brand Equity Tracker" |
+| `Methodology_Note` | str | Per-attribute methodology footnote |
+
+**Narrative encoded:** Crunchwell **Trust ~flat over 6 quarters** (72.3 → 72.9 at US-NAT), **Relevance down 5.9pp** (68.6 → 62.7). LA-DMA Crunchwell softens more than national, especially Q1 2026 onwards. Field & Honey gaining on Relevance + Modernity. ProteinPeak only present FY25Q4+ (pre-launch concept-test era and Q2 launch).
+
+**Headline prompts unblocked:** "Which Crunchwell attribute has declined most over six quarters and against which competitor?" "Show me the Trust vs Relevance trajectory at LA-DMA."
+
+### `ua_study_responses` — April 2026 U&A Behavioral Study (n=2,400, Ipsos)
+
+Per-respondent U&A behavioral data — the **leading-indicator** layer in the Insights data hierarchy (behavior leads, panel follows, till trails).
+
+| Column | Type | Notes |
+|---|---|---|
+| `Response_ID` | str | UA_NNNNNN |
+| `Field_Date` | date | 2026-04-08 (single fielding) |
+| `Wave` | enum | 2026Q2 |
+| `Cohort` | enum | cereal-skipper / protein-returner / loyal-family / price-shopper (the canonical v2 four-cohort frame) |
+| `DMA` | enum | 32 DMAs weighted to volume |
+| `State` | str | Two-letter |
+| `Primary_Occasion` | enum | weekday-am / weekend-am / post-workout / afternoon-snack / evening |
+| `Skip_Cereal_3plus_Mornings` | bool | The defining behavior of the cereal-skipper cohort |
+| `Cite_Protein_As_Swap_Driver` | bool | "Why do you swap out of cereal?" |
+| `Intent_Add_Protein_Morning_0to10` | float | Stated-intent |
+| `Skip_Frequency_Mornings_Per_Wk` | float | 0–7 |
+| `Chocolate_Breakfast_Pref` | bool | Used by Maya's Chocolate Almond concept-test U&A overlay |
+| `GLP1_Adjacent` | bool | Self-reported GLP-1 use / adjacent |
+| `HOH_Age_Band`, `Income_Band`, `Presence_Of_Kids_5_14` | enum/bool | Standard demos |
+| `Vendor` | str | "Ipsos" |
+| `Respondent_Weight` | float | Projection weight (0.6–1.4) |
+
+**Narrative encoded:** **28% of households skip cereal 3+ mornings/week** (672/2,400, exactly the cell-size limit Nina enforces). **62% of skippers cite protein as the swap driver** (v2 canon: 64%). Cereal-skipper cell n=672 is large enough for segment-level reads but **not for regional DMA cuts** — workspace tiles should expose this constraint.
+
+**Headline prompts unblocked:** "What changed in consumer behavior YoY?" "Reconcile the Nielsen till read with the Kantar panel and our U&A — what's the consumer story?" "Does the Chocolate Almond extension have behavioral evidence?"
+
+### `ua_qual_pointers` — 36 In-Home Interview Index
+
+Pointer table for the qual leg of the April U&A. One row per in-home.
+
+| Column | Type | Notes |
+|---|---|---|
+| `Interview_ID` | str | UA-IH-NN |
+| `Cohort`, `DMA`, `HOH_Age_Band`, `N_Kids`, `Income_Band` | various | Household profile |
+| `Themes` | str | Semicolon-list (3 themes per interview) |
+| `Chocolate_Mention_Flag` | bool | Used by Maya's Chocolate Almond U&A overlay |
+| `Chocolate_Unprompted_Flag` | bool | Stronger signal — respondent mentioned chocolate without being asked |
+| `Duration_Min` | int | 48–92 min |
+| `Transcript_Path` | str | `_qual/2026-04-ua/in-home-NN-cohort-dma.txt` (synthetic path) |
+| `Notes` | str | Plain-English summary |
+| `Wave`, `Field_Date`, `Vendor` | various | Constant across all 36 |
+
+**Narrative encoded:** Among the 36 in-homes, ~3 protein-curious respondents mention chocolate as a breakfast flavor preference, with 1–2 unprompted. Maya cites these in the Chocolate Almond steerco brief.
+
+### `kantar_worldpanel_cohort` — Household-Cohort Frame
+
+Cohort × DMA × Quarter household penetration + frequency from the Kantar Worldpanel. The **panel** layer in the data hierarchy.
+
+| Column | Type | Notes |
+|---|---|---|
+| `Cohort` | enum | Four-cohort frame |
+| `DMA` | enum | US-NAT / LA-DMA / US-MW / US-SE / US-NE |
+| `Quarter` | enum | FY25Q1 – FY26Q2 |
+| `Wave_Close_Date` | date | |
+| `HH_Penetration_Pct` | float | % of households |
+| `Purchases_Per_Buyer_Per_Qtr` | float | Frequency among the remaining buyers |
+| `N_Panel_HH` | int | Sample size |
+| `Source` | str | "Kantar Worldpanel" |
+
+**Narrative encoded:** Cereal-skipper cohort **growing** (penetration up over six quarters). Loyal-family declining slowly. Frequency among loyal-family buyers grows (the "remaining buyers buy more" effect). LA-DMA loyal-family frequency drops sharply in 2026Q1–Q2 (the Crunchwell loss).
+
+### `numerator_bts_occasion` — Back-to-School Occasion (2025 benchmark)
+
+Retailer × ISO-week 2025 back-to-school occasion data, with the **Target Circle membership overlay** and the **protein-curious cohort overlap**.
+
+| Column | Type | Notes |
+|---|---|---|
+| `Retailer` | enum | Target / Walmart / Kroger / Albertsons / Costco |
+| `ISO_Week` | str | 2025-W28 through 2025-W34 (the BTS window) |
+| `Week_Start_Date` | date | |
+| `HH_Kids_5_14_Buying_Cereal_Share` | float | 0–1 |
+| `Protein_Curious_Cohort_Overlap` | float | Highest at Target (64%) |
+| `Target_Circle_Membership_Overlap` | float | Target only; ~70% |
+| `Incremental_Category_Dollars_KUSD` | float | The 2025 BTS benchmark — sums to **$14.2M at Target** |
+| `Program_Year`, `Source`, `Definition` | various | |
+
+**Narrative encoded:** **Target 2025 BTS = $14.4M incremental category dollars** (v2 canon $14.2M, within tolerance). Peaks weeks 2–3 of August (W32–W33). Target × protein-curious overlap = 64.7% (canon 64%, the highest of any major retailer).
+
+**Headline prompts unblocked:** "What did the 2025 Target BTS program deliver?" "Which retailer has the highest protein-curious cohort overlap for the ProteinPeak launch?"
+
+### `concept_tests` — Concept Test Results (long-form)
+
+Long-form (one-row-per-metric) concept-test results table combining Maya's Chocolate Almond test (n=1,000) and Renee's April launch claims test (n=1,200), both with cohort cuts using the **Acme four-cohort segmentation** (not Ipsos defaults).
+
+| Column | Type | Notes |
+|---|---|---|
+| `Test_ID` | str | CT_CHOC_ALMOND_2026Q3 / CT_LAUNCH_CLAIMS_2026Q2 |
+| `Test_Name` | str | Human-readable |
+| `Vendor` | str | Ipsos (Chocolate Almond) / Kantar (Launch Claims) |
+| `Section` | enum | topline / cohort / cannibalization / validation / overlay / competitive / meta / CL1 / CL2 / CL3 |
+| `Metric` | str | top_two_box_pct / n_in_cohort / substitutional_overlap_pp / etc. |
+| `Value` | mixed | float / int / date / bool |
+| `Unit` | enum | pct / pp / n / bool / score / date / g |
+| `Scope` | str | Cohort name or scope qualifier |
+| `Acme_Segmentation_Used` | bool | Always 1 — the v2 rule |
+| `Cannibalization_Threshold_Pp` | int | 12pp for Chocolate Almond steerco; null for launch-claims |
+| `Notes` | str | |
+
+**Narrative encoded:** Chocolate Almond clears at **64% top-two-box** (+6pp over launch SKU, +11pp over benchmark). Cannibalization: 22% overlap → 14pp additive, 8pp substitutional → **clears 12pp gate**. Launch claim CL1 ("20g protein, less sugar") strongest at 78% with protein-curious; competitive flag for Field & Honey 14g narrows protein delta 11g → 6g.
+
+**Headline prompts unblocked:** "Does Chocolate Almond clear the cannibalization gate?" "Which launch claim should lead with the protein-curious cohort?" "Did the Field & Honey 14g launch change our claim ranking?"
+
+---
+
+## v0.7.0 — Reference seeds (also new)
+
+| File | Rows | Purpose |
+|---|---:|---|
+| `seeds/brand_equity_tracker_quarterly.csv` | 975 | Source seed for `brand_equity_quarterly` parquet |
+| `seeds/ua_study_2026q2_reference.csv` | 28 | Cohort × occasion reference grain (expanded into 2,400 per-respondent rows) |
+| `seeds/ua_qual_pointers_2026q2.csv` | 36 | One row per in-home interview |
+| `seeds/kantar_worldpanel_cohort_frame.csv` | 120 | Source seed for `kantar_worldpanel_cohort` parquet |
+| `seeds/numerator_bts_occasion_2025.csv` | 35 | Source seed for `numerator_bts_occasion` parquet |
+| `seeds/concept_test_chocolate_almond.csv` | 25 | Chocolate Almond test (n=1,000) |
+| `seeds/concept_test_launch_claims_2026q2.csv` | 35 | April Kantar launch-claims test (n=1,200) |
+
+**Plus two merges:**
+
+- `seeds/competitor_launches.csv` — appended Field & Honey 14g protein extension (LCH00032, May 12 2026 launch) to support Renee's competitive-shift narrative in v2 Scenario 02.
+- `seeds/geographies.csv` — appended Birmingham-Tuscaloosa-Anniston DMA (BIR-DMA) + Memphis DMA (MEM-DMA) as the leading-indicator DMAs Jordan flags in v2 Scenario 06.

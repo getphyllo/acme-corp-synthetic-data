@@ -2,7 +2,105 @@
 
 All notable changes to this dataset are tracked here. The repo follows [Semantic Versioning](https://semver.org/) — major bumps are breaking schema changes, minor bumps add tables/columns, patch bumps fix data without changing schema.
 
-> **Current canonical version: `v0.6.0`** — Adds **three commercial-persona scenarios** (Marcus's Walmart August line-review prep, Priya's Kroger Q3 JBR pre-read, Tasha's Q1 retail-media & trade-promo effectiveness CFO read) on top of the existing Louisiana decline (S1) and ProteinPeak Q2 launch (S2). Adds 5 new seed files (18 total, was 13). Adds 11 new cross-table assertions (22 total, was 11). All v0.5.0 row queries continue to work — no parquet-table schema change in v0.6.0; everything new lives in seeds.
+> **Current canonical version: `v0.7.0`** — Adds **six Marketing & Insights v2 scenarios** (Cory's Crunchwell FY27 brand plan, Renee's ProteinPeak launch comms, Wes's Target back-to-school 2026, Nina's Q3 SOTB, Maya's Chocolate Almond concept test, Jordan's LA-DMA share decline diagnostic) on top of the existing S1–S5 stories. Adds **6 new parquet tables** (22 total, was 16), **7 new seed files** (31 total, was 24), **9 new cross-table assertions** (31 total, was 22), and **2 new leading-indicator DMAs** (BIR-DMA, MEM-DMA). Appends the **Field & Honey 14g protein extension** (LCH00032) to `competitor_launches`. v0.7.0 *does* add parquet schema (six new tables); all v0.6.0 queries on the previous 16 tables continue to work unchanged.
+
+## [v0.7.0] — 2026-05-28
+
+### Added — Six Marketing & Insights v2 scenarios (S6–S11)
+
+Six new scenarios anchored to the **v2 Marketing & Insights persona pack** (`clayface-workspace/00-inbox/00-drop-zone/2026-05-28-marketing-insights-personas.md` → promoted to `11-scenarios/v2/`):
+
+**Scenario 6 — Crunchwell FY27 Annual Brand Plan** (Cory Whitman, Brand Director Crunchwell)
+
+- Trigger: Wednesday 2026-06-03; FY27 plan due to Devon + Helen by 2026-07-15
+- Cory's ask: defensible **diagnosis + creative platform + media envelope** in six weeks
+- Anchors: Crunchwell -2.1 share points over 6 quarters (-1.3 F&H / -0.6 PL / -0.2 other); **Trust ~flat, Relevance -6pp** (the lead diagnostic); price gap to F&H widened 8% → 14%; protein-curious cohort first-purchase F&H 38% of the time
+- Decision: "Modern Relevance, Heritage Trust" platform; trade-to-media reallocation defended on incrementality
+
+**Scenario 7 — ProteinPeak Launch Comms & Creator Plan** (Renee Alvarez, Sr Brand Manager ProteinPeak)
+
+- Trigger: Monday 2026-05-18; launch ships 2026-07-01, on-shelf 2026-07-08; recommendation due 2026-06-06
+- Renee's ask: $6.4M envelope allocation across creator, paid social, retail media, sampling, PR; **claim ranking holds against Field & Honey 14g shift**
+- Anchors: Three claims clearing 55% action standard (CL1 "20g protein, less sugar" wins protein-curious + GLP-1-adjacent; CL2 "Clean fuel, real grains, no fillers" wins lapsed; CL3 "Eat like you mean it" = platform line); F&H 14g narrows protein delta 11g → 6g (sugar leg still wins); **280K-household Numerator sampling cohort** (never-Crunchwell); creator-overlap analysis flags 4 names with F&H paid posts in last 12 months; retail-media flight 58% Walmart Connect + Amazon, 42% Kroger Precision + Target Roundel
+
+**Scenario 8 — Target Back-to-School 2026 Program** (Wes Okafor, Sr Mgr Shopper Marketing)
+
+- Trigger: Tuesday 2026-05-26; Christina Reyes (Target buyer) needs proposal by 2026-06-12; window runs 2026-07-13 → 2026-08-23
+- Wes's ask: buyer-ready proposal covering Crunchwell Mega endcap (800 doors), ProteinPeak circular feature (4 weeks), Cinnamon Twist mechanic redesign
+- Anchors: **2025 BTS = $14.4M incremental category dollars** (mechanic decomp endcap 62% / circular 21% / Roundel 12% / Cartwheel 5%); 2025 velocity per door Crunchwell Mega 1.42× baseline; **Target × ProteinPeak cohort overlap 64.7%** (highest of any major retailer); 2026 velocity commits PP 1.38×, CR Mega 1.45×; **Cinnamon Twist Cartwheel destroyed value in 2025** → do not repeat
+- Net: $2.8M Acme investment / $1.2M Target Roundel co-invest
+
+**Scenario 9 — Q3 Category State-of-the-Business Read** (Nina Ortega, VP Consumer Insights)
+
+- Trigger: Monday 2026-06-01; read happens 2026-07-22 to Helen + Devon + exec committee
+- Nina's ask: **reconcile NielsenIQ + Kantar Worldpanel + April U&A** into a single consumer story
+- Anchors: NielsenIQ category +2.1% (protein segment +11.4%, family cereal -1.2%); Kantar HH penetration -60bps but frequency up; **U&A: 28% of HHs skip cereal 3+ mornings/wk; 64% cite protein as swap driver**; data hierarchy: behavior leads → panel follows → till trails; **cereal-skipper cell n=672** (segment-level OK, regional DMA cuts not OK); Numerator triangulates the U&A swap-out pattern
+
+**Scenario 10 — ProteinPeak Q3 Chocolate Almond Concept Test** (Maya Chen, Sr Insights Analyst, Innovation & Foresight)
+
+- Trigger: Wednesday 2026-06-10; field 2026-06-22 → 2026-07-11 (n=1,000); steerco brief due 2026-07-25
+- Maya's ask: decision-support brief with **topline + cohort breakouts (Acme segmentation, not Ipsos) + cannibalization gate on same screen**
+- Anchors: **Top-two-box 64%** (clears 55% standard, +6pp over launch SKU pre-test, +11pp over cereal innovation benchmark); cohort cuts protein-curious 71% / lapsed-cereal 66% / current-Crunchwell 52%; **cannibalization: 22% overlap → 14pp additive, 8pp substitutional → clears 12pp steerco threshold**; U&A overlay: chocolate-as-breakfast preference +14pp above category avg in protein-curious cohort; F&H Chocolate Crunch trademark filed 2026-04-22
+
+**Scenario 11 — LA-DMA Share Decline Diagnostic** (Jordan Hsu, Manager Category & Shopper Insights)
+
+- Trigger: Tuesday 2026-05-19; diagnostic due 2026-05-23 for Marcus (Walmart Aug prep) + Priya (Kroger JBR pre-read)
+- Jordan's ask: decompose 3.1-point share loss in LA-DMA over 8 weeks; identify lost cohort + destination + leading-indicator DMAs
+- Anchors: Decomposition -1.4 velocity / -0.9 facings / -0.6 price gap / -0.2 mix; Baton Rouge families with kids 5-14 down 19% frequency (71% → F&H); protein-curious cohort down 26% frequency (out of category); **leading-indicator DMAs: BIR-DMA + MEM-DMA** (early-stage LA pattern); response plan $740K → 1.8 share points recovery over 12 weeks
+
+**New parquet tables (6) — 22 total (was 16):**
+
+| Table | Rows | Purpose |
+|---|---:|---|
+| `brand_equity_quarterly` | 975 | Kantar tracker w/ Relevance + Modernity added on top of v0.1.0 brand-health 5pt battery. Anchors Cory's diagnosis. |
+| `ua_study_responses` | 2,400 | April 2026 Ipsos U&A behavioral study at per-respondent grain. Anchors Nina's SOTB and Maya's concept-test U&A overlay. |
+| `ua_qual_pointers` | 36 | In-home interview index with chocolate-mention flags. Used in Maya's steerco brief. |
+| `kantar_worldpanel_cohort` | 120 | HH penetration + frequency by cohort × DMA × quarter. The panel layer in the data hierarchy. |
+| `numerator_bts_occasion` | 35 | Target 2025 back-to-school benchmark with Target Circle + protein-curious overlays. Anchors Wes's 2026 program. |
+| `concept_tests` | 60 | Long-form (one-row-per-metric) results for Chocolate Almond + April launch claims. Acme-segmentation cuts. |
+
+**New seed files (7) — 31 total (was 24):**
+
+| File | Rows | Purpose |
+|---|---:|---|
+| `seeds/brand_equity_tracker_quarterly.csv` | 975 | Source seed for `brand_equity_quarterly` parquet |
+| `seeds/ua_study_2026q2_reference.csv` | 28 | Cohort × occasion reference grain (expanded into 2,400 per-respondent rows) |
+| `seeds/ua_qual_pointers_2026q2.csv` | 36 | One row per in-home interview |
+| `seeds/kantar_worldpanel_cohort_frame.csv` | 120 | Source seed for `kantar_worldpanel_cohort` parquet |
+| `seeds/numerator_bts_occasion_2025.csv` | 35 | Source seed for `numerator_bts_occasion` parquet |
+| `seeds/concept_test_chocolate_almond.csv` | 25 | Chocolate Almond test (n=1,000) |
+| `seeds/concept_test_launch_claims_2026q2.csv` | 35 | April Kantar launch-claims test (n=1,200) |
+
+**Seed merges (2):**
+
+- `seeds/competitor_launches.csv` — appended **Field & Honey 14g protein extension (LCH00032, 2026-05-12 launch, 612 stores)** to support Renee's competitive-shift narrative in S7.
+- `seeds/geographies.csv` — appended **Birmingham-Tuscaloosa-Anniston DMA (BIR-DMA) + Memphis DMA (MEM-DMA)** as Jordan's leading-indicator DMAs in S11.
+
+**Generator changes:**
+
+- Added 6 new `gen_*` functions: `gen_brand_equity_quarterly`, `gen_ua_study_responses`, `gen_ua_qual_pointers`, `gen_kantar_worldpanel_cohort`, `gen_numerator_bts_occasion`, `gen_concept_tests`.
+- Extended `DMAS`, `DMA_CITIES`, and `DMA_STATE` constants with BIR-DMA + MEM-DMA. Both new DMAs ripple through all transactional tables (`epos`, `perfect_store`, `syndicated_weekly`, `brand_health`, `household_transactions`, `plan_vs_actual`, `sku_authorization`) at low-weight volumes since they're watch-list, not full-volume.
+- Updated `main()` from 16-step to 22-step pipeline.
+
+**New cross-table assertions (9 — bringing total from 22 → 31):**
+
+23. Crunchwell US-NAT Trust drift FY25Q1 → FY26Q2 < 3pp absolute (roughly flat).
+24. Crunchwell US-NAT Relevance drift FY25Q1 → FY26Q2 ≤ -3pp (v2 canon ~-6pp).
+25. U&A `Skip_Cereal_3plus_Mornings` rate ∈ [24%, 32%] (v2 canon 28%).
+26. U&A cereal-skipper cohort n == exactly 672 (the cell-size constraint Nina enforces).
+27. U&A `Cite_Protein_As_Swap_Driver` rate among skippers ∈ [58%, 70%] (canon 64%).
+28. Kantar cereal-skipper cohort penetration grows FY25Q1 → FY26Q2 at US-NAT.
+29. Numerator BTS Target 2025 incremental total ∈ [$13M, $15.4M] (v2 canon $14.2M).
+30. Numerator BTS Target × protein-curious overlap > Walmart's, and ∈ [60%, 68%] (canon 64%).
+31. Concept test Chocolate Almond top-two-box ≥ 55% (clears action standard) AND substitutional cannibalization < 12pp (clears steerco gate). BIR-DMA + MEM-DMA both present in `syndicated_weekly`.
+
+**Notes for prototype maintainers:**
+
+- v0.7.0 *does* introduce parquet schema change (6 new tables). All v0.6.0 queries on the previous 16 tables continue to work unchanged.
+- The v2 four-cohort frame (cereal-skipper / protein-returner / loyal-family / price-shopper) is **canonical** going forward. Workspace tiles should use these cohort names; the 2024 Acme segmentation in older personas is being phased out over FY27.
+- `ua_study_responses.Cohort` is the canonical foreign key — `kantar_worldpanel_cohort.Cohort` uses the same values. Joining the two reconciles the behavior layer with the panel layer.
+- The U&A cereal-skipper n=672 limit is a hard rule. Any workspace tile that tries to filter the cohort to a single DMA must surface the cell-size constraint or the read goes wrong.
+- The 12pp substitutional cannibalization threshold on `concept_tests` is the Acme steerco standard. If a future scenario changes it (e.g., lowers to 10pp for line extensions vs full launches), the assertion must be updated.
 
 ## [v0.6.0] — 2026-05-16
 

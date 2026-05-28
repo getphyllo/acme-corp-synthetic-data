@@ -1,0 +1,26 @@
+section,metric,value,unit,scope,notes
+topline,n_total,1000,n,,All cells
+topline,top_two_box_pct,64,pct,,All cells
+topline,action_standard_threshold_pct,55,pct,,Acme cereal innovation standard
+topline,delta_vs_launch_sku_pretest_pp,6,pp,,vs ProteinPeak launch SKU Q1 2026 pretest
+topline,delta_vs_cereal_innovation_benchmark_pp,11,pp,,vs cereal-innovation 5yr benchmark
+topline,field_period_start,2026-06-22,date,,field opens
+topline,field_period_close,2026-07-11,date,,field closes
+protein-curious,n_in_cohort,380,n,,protein-curious cell size
+protein-curious,top_two_box_pct,71,pct,,protein-curious purchase intent
+protein-curious,mean_intent_5pt,3.06,score,,5pt scale mean
+lapsed-cereal,n_in_cohort,320,n,,lapsed-cereal cell size
+lapsed-cereal,top_two_box_pct,66,pct,,lapsed-cereal purchase intent
+lapsed-cereal,mean_intent_5pt,2.75,score,,5pt scale mean
+current-Crunchwell,n_in_cohort,300,n,,current-Crunchwell cell size
+current-Crunchwell,top_two_box_pct,52,pct,,current-Crunchwell purchase intent
+current-Crunchwell,mean_intent_5pt,2.2,score,,5pt scale mean
+cannibalization,overlap_pct,22,pct,launch_sku,Total overlap with launch SKU buyers
+cannibalization,additive_overlap_pp,14,pp,launch_sku,Will buy both
+cannibalization,substitutional_overlap_pp,8,pp,launch_sku,Will swap
+cannibalization,steerco_threshold_pp,12,pp,launch_sku,Substitutional must be < 12pp
+cannibalization,gate_passed,1,bool,launch_sku,8pp < 12pp threshold → passes
+cannibalization,overlap_pct,6,pct,Crunchwell,Overlap with Crunchwell core
+cannibalization,substitutional_overlap_pp,2,pp,Crunchwell,Will swap from Crunchwell
+validation,panel_cohort_match_protein_curious_pp,3,pp,Numerator,Test cohort matches panel cohort within 3pp on key behaviors
+overlay,chocolate_breakfast_preference_protein_curious_vs_cereal_avg_pp,14,pp,U&A Apr 2026,Chocolate as breakfast flavor preference among protein-curious
