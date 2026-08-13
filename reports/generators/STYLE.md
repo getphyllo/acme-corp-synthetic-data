@@ -1,9 +1,22 @@
-# Report authoring contract (lib.py API + house style)
+# Report authoring contract (lib.py / pptx_lib.py / docx_lib.py API + house style)
 
 You are writing one Python module of report builders on top of the **frozen**
 `reports/generators/lib.py`. Do not edit `lib.py`. Match the look, tone, and
 grounding of the reference report in `reports/generators/corporate.py`
 (function `r11_company_q1_qbr`) — read it before you start.
+
+Three output formats, three builders — all sharing `lib.py`'s palette, chart
+helpers and grounding rules:
+
+| Format | Builder | Reference module | Sizing |
+|---|---|---|---|
+| PDF (11–40) | `lib.Doc` | `corporate.py` | 4–8 pages |
+| PPTX (41–60) | `pptx_lib.Deck` | `decks_a.py` | 8–12 slides |
+| DOCX (61–80) | `docx_lib.Memo` | `memos_a.py` | 4–7 pages |
+
+Shared grounded queries live in `qlib.py` — **use them rather than writing the
+same aggregate twice**, so a deck and its companion memo cannot disagree. Add a
+helper there if you need a new one.
 
 ## How to run / verify (REQUIRED)
 From the repo root, generate + self-check with the project venv:
@@ -11,11 +24,15 @@ From the repo root, generate + self-check with the project venv:
 .venv/bin/python reports/generators/<your_module>.py
 ```
 Your module's `__main__` must call every builder and print each returned path.
-Iterate until it runs clean and every PDF is produced. Each builder must
-produce a **4–8 page** PDF. Do a final render and confirm page counts with:
+Iterate until it runs clean and every document is produced. Confirm sizing with:
 ```
+# PDFs — 4-8 pages each
 .venv/bin/python -c "import fitz;print([ (f, fitz.open('reports/'+f).page_count) for f in __import__('os').listdir('reports') if f.endswith('.pdf')])"
+# PPTX — 8-12 slides each
+.venv/bin/python -c "import glob;from pptx import Presentation;print([(f, len(Presentation(f).slides._sldIdLst)) for f in sorted(glob.glob('reports/*.pptx'))])"
 ```
+For slide layout, render each slide to PNG and look at it — a table that overflows
+its band raises at build time, but a chart in the wrong aspect ratio does not.
 
 ## Import (exact)
 ```python
@@ -82,3 +99,67 @@ Use **2–4 charts per report**. Prefer real query output over made-up series.
 
 ## Filenames (use EXACTLY these)
 Your assignment message lists the report numbers, titles, and target filenames. Use them verbatim.
+
+---
+
+# PPTX decks (`pptx_lib.Deck`)
+
+```python
+from pptx_lib import Deck
+k = Deck(filename, title, kicker, subtitle, byline, short, doc_type="...")
+k.agenda([item, ...])                                   # 6-9 items, two columns
+k.exec_summary(lede, tiles=[(value, label), ...], bullets=[...])
+k.tiles(kicker, headline, [(value, label, sub?), ...], body=None, note=None)
+k.chart(kicker, headline, png, note=None, lede=None)    # full-width chart
+k.charts2(kicker, headline, png1, png2, captions=[a, b], note=None)
+k.chart_table(kicker, headline, png, headers, rows, widths=, total_row=, status_col=,
+              align_right_from=, callout=(title, text, kind), note=)
+k.chart_bullets(kicker, headline, png, [bullets], callout=, note=)
+k.table(kicker, headline, headers, rows, widths=, total_row=, status_col=,
+        align_right_from=, lede=, callout=, note=)
+k.bullets(kicker, headline, [bullets], lede=None, tiles=None, note=None)
+k.two_col(kicker, headline, left_title, [left], right_title, [right], note=None)
+k.risk(kicker, headline, [(risk, impact, mitigation, owner), ...])
+k.reco(kicker, headline, [(action, owner, when), ...])
+k.callout(slide, title, text, kind, top=Inches(y))      # place on a returned slide
+k.close(headline, [line, ...])                          # navy closing slide
+path = k.build()
+```
+
+Deck rules:
+- `**bold**` markup works inside any text: bullets, tiles, body, callouts.
+- 8–12 slides. Always: title (automatic) → agenda → `exec_summary` → content → `risk` or a callout →
+  `reco` → `close`.
+- `align_right_from=1` (default) right-aligns every column but the first; pass `9` for text-heavy tables
+  and `3` for action tables. `status_col=n` colour-codes On track / Watch / Action / Reinvest / Reallocate.
+- **A table that cannot fit its band raises `ValueError` at build time.** Roll long tails up with
+  `qlib.roll_up(...)` instead of truncating, so totals still reconcile.
+- Chart aspect: the full-width slot wants the default `h=3.0`; half-width and side-by-side slots read
+  best at `h=2.7–3.2`. Avoid `horizontal=True` bar charts with negative values (labels clip).
+- Every content slide gets a `note=` provenance line naming the tables behind it.
+
+# DOCX documents (`docx_lib.Memo`)
+
+```python
+from docx_lib import Memo
+m = Memo(filename, title, kicker, subtitle, byline, short, meta=[...], doc_type="...")
+m.at_a_glance([(value, label), ...])          # 4-column shaded strip
+m.h1("SECTION KICKER", "1 · Headline");  m.h2("1.1 · Subsection")
+m.lede("..."); m.body("copy with **inline bold**"); m.bullets([...], numbered=False)
+m.table(headers, rows, widths=, total_row=, status_col=, align_right_from=, note=)
+m.callout(title, text, kind)                  # info | risk | action | win
+m.image(png, caption=None); m.source("table1, table2")
+m.decisions([(decision, owner, date, status), ...])
+m.risks([(risk, impact, mitigation, owner), ...])
+m.recommendations([(action, owner, when), ...])
+m.signoff([(approver, what they approve), ...])
+m.pagebreak(); path = m.build()
+```
+
+Document rules:
+- 4–7 pages: masthead (automatic) → `at_a_glance` → 5–8 numbered sections → `risks` / `decisions` →
+  `recommendations` → `signoff` where an approval is genuinely required.
+- 1–3 embedded charts. A document is prose-led; a deck is chart-led. Do not write a deck in Word.
+- Confidentiality footer is automatic and repeats on every page.
+- These documents are **companions, not summaries**. A memo says what a deck cannot: assumptions,
+  objections answered, walk-away limits, decision logs, stop conditions.
